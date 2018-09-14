@@ -142,6 +142,12 @@
     $_SESSION['b1'] = 0;      $_SESSION['b2'] = 3;      $_SESSION['b3'] = 0;      $_SESSION['b4'] = 0;
     $_SESSION['c1'] = 0;      $_SESSION['c2'] = 0;      $_SESSION['c3'] = 2;      $_SESSION['c4'] = 0;
     $_SESSION['d1'] = 4;      $_SESSION['d2'] = 0;      $_SESSION['d3'] = 0;      $_SESSION['d4'] = 0;
+
+    $a1_input = "<input type='radio' name='chek' value='a1' checked>"; $b1_input = "<input type='radio' name='chek' value='b1'>"; $c1_input = "<input type='radio' name='chek' value='c1'>";
+    $a2_input = "<input type='radio' name='chek' value='a2'>"; $c2_input = "<input type='radio' name='chek' value='c2'>"; $d2_input = "<input type='radio' name='chek' value='d2'>";
+    $a3_input = "<input type='radio' name='chek' value='a3'>"; $b3_input = "<input type='radio' name='chek' value='b3'>"; $d3_input = "<input type='radio' name='chek' value='d3'>";
+    $b4_input = "<input type='radio' name='chek' value='b4'>"; $c4_input = "<input type='radio' name='chek' value='c4'>"; $d4_input = "<input type='radio' name='chek' value='d4'>";
+
     }
 
 
@@ -160,6 +166,70 @@
       if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
       if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
       if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+      if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1' checked>";}
+      if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+      $b1_input = "<input type='radio' name='chek' value='b1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']==0 )
+      {$b1_input = "<input type='radio' name='chek' value='b1' checked>";}
+      if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+      $c1_input = "<input type='radio' name='chek' value='c1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']==0 )
+      {$c1_input = "<input type='radio' name='chek' value='c1' checked>";}
+      if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+      $a2_input = "<input type='radio' name='chek' value='a2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']==0 )
+      {$a2_input = "<input type='radio' name='chek' value='a2' checked>";}
+      if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+      $c2_input = "<input type='radio' name='chek' value='c2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']==0  )
+      {$c2_input = "<input type='radio' name='chek' value='c2' checked>";}
+      if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+      $d2_input = "<input type='radio' name='chek' value='d2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']==0 )
+      {$d2_input = "<input type='radio' name='chek' value='d2' checked>";}
+      if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+      $a3_input = "<input type='radio' name='chek' value='a3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']==0 )
+      {$a3_input = "<input type='radio' name='chek' value='a3' checked>";}
+      if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+      $b3_input = "<input type='radio' name='chek' value='b3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']==0 )
+      {$b3_input = "<input type='radio' name='chek' value='b3' checked>";}
+      if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+      $d3_input = "<input type='radio' name='chek' value='d3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']==0 )
+      {$d3_input = "<input type='radio' name='chek' value='d3' checked>";}
+      if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+      $b4_input = "<input type='radio' name='chek' value='b4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']==0 )
+      {$b4_input = "<input type='radio' name='chek' value='b4' checked>";}
+      if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+      $c4_input = "<input type='radio' name='chek' value='c4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']==0 )
+      {$c4_input = "<input type='radio' name='chek' value='c4' checked>";}
+      if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+      $d4_input = "<input type='radio' name='chek' value='d4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']!=0 && $_SESSION['d4']==0 )
+      {$d4_input = "<input type='radio' name='chek' value='d4' checked>";}
+      if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
     }
 
     if (isset($_POST['x6'])){
@@ -177,6 +247,70 @@
       if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
       if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
       if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+      if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1' checked>";}
+      if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+      $b1_input = "<input type='radio' name='chek' value='b1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']==0 )
+      {$b1_input = "<input type='radio' name='chek' value='b1' checked>";}
+      if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+      $c1_input = "<input type='radio' name='chek' value='c1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']==0 )
+      {$c1_input = "<input type='radio' name='chek' value='c1' checked>";}
+      if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+      $a2_input = "<input type='radio' name='chek' value='a2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']==0 )
+      {$a2_input = "<input type='radio' name='chek' value='a2' checked>";}
+      if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+      $c2_input = "<input type='radio' name='chek' value='c2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']==0  )
+      {$c2_input = "<input type='radio' name='chek' value='c2' checked>";}
+      if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+      $d2_input = "<input type='radio' name='chek' value='d2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']==0 )
+      {$d2_input = "<input type='radio' name='chek' value='d2' checked>";}
+      if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+      $a3_input = "<input type='radio' name='chek' value='a3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']==0 )
+      {$a3_input = "<input type='radio' name='chek' value='a3' checked>";}
+      if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+      $b3_input = "<input type='radio' name='chek' value='b3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']==0 )
+      {$b3_input = "<input type='radio' name='chek' value='b3' checked>";}
+      if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+      $d3_input = "<input type='radio' name='chek' value='d3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']==0 )
+      {$d3_input = "<input type='radio' name='chek' value='d3' checked>";}
+      if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+      $b4_input = "<input type='radio' name='chek' value='b4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']==0 )
+      {$b4_input = "<input type='radio' name='chek' value='b4' checked>";}
+      if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+      $c4_input = "<input type='radio' name='chek' value='c4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']==0 )
+      {$c4_input = "<input type='radio' name='chek' value='c4' checked>";}
+      if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+      $d4_input = "<input type='radio' name='chek' value='d4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']!=0 && $_SESSION['d4']==0 )
+      {$d4_input = "<input type='radio' name='chek' value='d4' checked>";}
+      if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
     }
 
     if (isset($_POST['x7'])){
@@ -194,6 +328,70 @@
       if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
       if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
       if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+      if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1' checked>";}
+      if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+      $b1_input = "<input type='radio' name='chek' value='b1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']==0 )
+      {$b1_input = "<input type='radio' name='chek' value='b1' checked>";}
+      if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+      $c1_input = "<input type='radio' name='chek' value='c1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']==0 )
+      {$c1_input = "<input type='radio' name='chek' value='c1' checked>";}
+      if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+      $a2_input = "<input type='radio' name='chek' value='a2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']==0 )
+      {$a2_input = "<input type='radio' name='chek' value='a2' checked>";}
+      if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+      $c2_input = "<input type='radio' name='chek' value='c2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']==0  )
+      {$c2_input = "<input type='radio' name='chek' value='c2' checked>";}
+      if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+      $d2_input = "<input type='radio' name='chek' value='d2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']==0 )
+      {$d2_input = "<input type='radio' name='chek' value='d2' checked>";}
+      if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+      $a3_input = "<input type='radio' name='chek' value='a3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']==0 )
+      {$a3_input = "<input type='radio' name='chek' value='a3' checked>";}
+      if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+      $b3_input = "<input type='radio' name='chek' value='b3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']==0 )
+      {$b3_input = "<input type='radio' name='chek' value='b3' checked>";}
+      if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+      $d3_input = "<input type='radio' name='chek' value='d3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']==0 )
+      {$d3_input = "<input type='radio' name='chek' value='d3' checked>";}
+      if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+      $b4_input = "<input type='radio' name='chek' value='b4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']==0 )
+      {$b4_input = "<input type='radio' name='chek' value='b4' checked>";}
+      if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+      $c4_input = "<input type='radio' name='chek' value='c4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']==0 )
+      {$c4_input = "<input type='radio' name='chek' value='c4' checked>";}
+      if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+      $d4_input = "<input type='radio' name='chek' value='d4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']!=0 && $_SESSION['d4']==0 )
+      {$d4_input = "<input type='radio' name='chek' value='d4' checked>";}
+      if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
     }
 
     if (isset($_POST['x8'])){
@@ -211,6 +409,70 @@
       if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
       if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
       if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+      if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1' checked>";}
+      if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+      $b1_input = "<input type='radio' name='chek' value='b1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']==0 )
+      {$b1_input = "<input type='radio' name='chek' value='b1' checked>";}
+      if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+      $c1_input = "<input type='radio' name='chek' value='c1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']==0 )
+      {$c1_input = "<input type='radio' name='chek' value='c1' checked>";}
+      if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+      $a2_input = "<input type='radio' name='chek' value='a2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']==0 )
+      {$a2_input = "<input type='radio' name='chek' value='a2' checked>";}
+      if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+      $c2_input = "<input type='radio' name='chek' value='c2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']==0  )
+      {$c2_input = "<input type='radio' name='chek' value='c2' checked>";}
+      if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+      $d2_input = "<input type='radio' name='chek' value='d2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']==0 )
+      {$d2_input = "<input type='radio' name='chek' value='d2' checked>";}
+      if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+      $a3_input = "<input type='radio' name='chek' value='a3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']==0 )
+      {$a3_input = "<input type='radio' name='chek' value='a3' checked>";}
+      if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+      $b3_input = "<input type='radio' name='chek' value='b3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']==0 )
+      {$b3_input = "<input type='radio' name='chek' value='b3' checked>";}
+      if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+      $d3_input = "<input type='radio' name='chek' value='d3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']==0 )
+      {$d3_input = "<input type='radio' name='chek' value='d3' checked>";}
+      if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+      $b4_input = "<input type='radio' name='chek' value='b4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']==0 )
+      {$b4_input = "<input type='radio' name='chek' value='b4' checked>";}
+      if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+      $c4_input = "<input type='radio' name='chek' value='c4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']==0 )
+      {$c4_input = "<input type='radio' name='chek' value='c4' checked>";}
+      if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+      $d4_input = "<input type='radio' name='chek' value='d4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']!=0 && $_SESSION['d4']==0 )
+      {$d4_input = "<input type='radio' name='chek' value='d4' checked>";}
+      if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
     }
 
     if (isset($_POST['x9'])){
@@ -228,6 +490,70 @@
       if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
       if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
       if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+      if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1' checked>";}
+      if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+      $b1_input = "<input type='radio' name='chek' value='b1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']==0 )
+      {$b1_input = "<input type='radio' name='chek' value='b1' checked>";}
+      if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+      $c1_input = "<input type='radio' name='chek' value='c1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']==0 )
+      {$c1_input = "<input type='radio' name='chek' value='c1' checked>";}
+      if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+      $a2_input = "<input type='radio' name='chek' value='a2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']==0 )
+      {$a2_input = "<input type='radio' name='chek' value='a2' checked>";}
+      if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+      $c2_input = "<input type='radio' name='chek' value='c2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']==0  )
+      {$c2_input = "<input type='radio' name='chek' value='c2' checked>";}
+      if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+      $d2_input = "<input type='radio' name='chek' value='d2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']==0 )
+      {$d2_input = "<input type='radio' name='chek' value='d2' checked>";}
+      if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+      $a3_input = "<input type='radio' name='chek' value='a3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']==0 )
+      {$a3_input = "<input type='radio' name='chek' value='a3' checked>";}
+      if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+      $b3_input = "<input type='radio' name='chek' value='b3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']==0 )
+      {$b3_input = "<input type='radio' name='chek' value='b3' checked>";}
+      if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+      $d3_input = "<input type='radio' name='chek' value='d3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']==0 )
+      {$d3_input = "<input type='radio' name='chek' value='d3' checked>";}
+      if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+      $b4_input = "<input type='radio' name='chek' value='b4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']==0 )
+      {$b4_input = "<input type='radio' name='chek' value='b4' checked>";}
+      if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+      $c4_input = "<input type='radio' name='chek' value='c4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']==0 )
+      {$c4_input = "<input type='radio' name='chek' value='c4' checked>";}
+      if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+      $d4_input = "<input type='radio' name='chek' value='d4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']!=0 && $_SESSION['d4']==0 )
+      {$d4_input = "<input type='radio' name='chek' value='d4' checked>";}
+      if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
     }
 
     if (isset($_POST['x10'])){
@@ -245,6 +571,70 @@
       if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
       if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
       if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+      if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1' checked>";}
+      if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+      $b1_input = "<input type='radio' name='chek' value='b1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']==0 )
+      {$b1_input = "<input type='radio' name='chek' value='b1' checked>";}
+      if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+      $c1_input = "<input type='radio' name='chek' value='c1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']==0 )
+      {$c1_input = "<input type='radio' name='chek' value='c1' checked>";}
+      if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+      $a2_input = "<input type='radio' name='chek' value='a2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']==0 )
+      {$a2_input = "<input type='radio' name='chek' value='a2' checked>";}
+      if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+      $c2_input = "<input type='radio' name='chek' value='c2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']==0  )
+      {$c2_input = "<input type='radio' name='chek' value='c2' checked>";}
+      if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+      $d2_input = "<input type='radio' name='chek' value='d2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']==0 )
+      {$d2_input = "<input type='radio' name='chek' value='d2' checked>";}
+      if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+      $a3_input = "<input type='radio' name='chek' value='a3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']==0 )
+      {$a3_input = "<input type='radio' name='chek' value='a3' checked>";}
+      if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+      $b3_input = "<input type='radio' name='chek' value='b3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']==0 )
+      {$b3_input = "<input type='radio' name='chek' value='b3' checked>";}
+      if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+      $d3_input = "<input type='radio' name='chek' value='d3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']==0 )
+      {$d3_input = "<input type='radio' name='chek' value='d3' checked>";}
+      if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+      $b4_input = "<input type='radio' name='chek' value='b4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']==0 )
+      {$b4_input = "<input type='radio' name='chek' value='b4' checked>";}
+      if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+      $c4_input = "<input type='radio' name='chek' value='c4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']==0 )
+      {$c4_input = "<input type='radio' name='chek' value='c4' checked>";}
+      if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+      $d4_input = "<input type='radio' name='chek' value='d4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']!=0 && $_SESSION['d4']==0 )
+      {$d4_input = "<input type='radio' name='chek' value='d4' checked>";}
+      if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
     }
 
     if (isset($_POST['x11'])){
@@ -262,6 +652,70 @@
       if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
       if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
       if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+      if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1' checked>";}
+      if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+      $b1_input = "<input type='radio' name='chek' value='b1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']==0 )
+      {$b1_input = "<input type='radio' name='chek' value='b1' checked>";}
+      if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+      $c1_input = "<input type='radio' name='chek' value='c1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']==0 )
+      {$c1_input = "<input type='radio' name='chek' value='c1' checked>";}
+      if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+      $a2_input = "<input type='radio' name='chek' value='a2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']==0 )
+      {$a2_input = "<input type='radio' name='chek' value='a2' checked>";}
+      if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+      $c2_input = "<input type='radio' name='chek' value='c2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']==0  )
+      {$c2_input = "<input type='radio' name='chek' value='c2' checked>";}
+      if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+      $d2_input = "<input type='radio' name='chek' value='d2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']==0 )
+      {$d2_input = "<input type='radio' name='chek' value='d2' checked>";}
+      if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+      $a3_input = "<input type='radio' name='chek' value='a3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']==0 )
+      {$a3_input = "<input type='radio' name='chek' value='a3' checked>";}
+      if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+      $b3_input = "<input type='radio' name='chek' value='b3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']==0 )
+      {$b3_input = "<input type='radio' name='chek' value='b3' checked>";}
+      if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+      $d3_input = "<input type='radio' name='chek' value='d3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']==0 )
+      {$d3_input = "<input type='radio' name='chek' value='d3' checked>";}
+      if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+      $b4_input = "<input type='radio' name='chek' value='b4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']==0 )
+      {$b4_input = "<input type='radio' name='chek' value='b4' checked>";}
+      if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+      $c4_input = "<input type='radio' name='chek' value='c4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']==0 )
+      {$c4_input = "<input type='radio' name='chek' value='c4' checked>";}
+      if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+      $d4_input = "<input type='radio' name='chek' value='d4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']!=0 && $_SESSION['d4']==0 )
+      {$d4_input = "<input type='radio' name='chek' value='d4' checked>";}
+      if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
     }
 
     if (isset($_POST['x12'])){
@@ -279,6 +733,70 @@
       if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
       if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
       if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+      if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1' checked>";}
+      if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+      $b1_input = "<input type='radio' name='chek' value='b1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']==0 )
+      {$b1_input = "<input type='radio' name='chek' value='b1' checked>";}
+      if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+      $c1_input = "<input type='radio' name='chek' value='c1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']==0 )
+      {$c1_input = "<input type='radio' name='chek' value='c1' checked>";}
+      if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+      $a2_input = "<input type='radio' name='chek' value='a2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']==0 )
+      {$a2_input = "<input type='radio' name='chek' value='a2' checked>";}
+      if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+      $c2_input = "<input type='radio' name='chek' value='c2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']==0  )
+      {$c2_input = "<input type='radio' name='chek' value='c2' checked>";}
+      if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+      $d2_input = "<input type='radio' name='chek' value='d2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']==0 )
+      {$d2_input = "<input type='radio' name='chek' value='d2' checked>";}
+      if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+      $a3_input = "<input type='radio' name='chek' value='a3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']==0 )
+      {$a3_input = "<input type='radio' name='chek' value='a3' checked>";}
+      if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+      $b3_input = "<input type='radio' name='chek' value='b3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']==0 )
+      {$b3_input = "<input type='radio' name='chek' value='b3' checked>";}
+      if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+      $d3_input = "<input type='radio' name='chek' value='d3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']==0 )
+      {$d3_input = "<input type='radio' name='chek' value='d3' checked>";}
+      if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+      $b4_input = "<input type='radio' name='chek' value='b4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']==0 )
+      {$b4_input = "<input type='radio' name='chek' value='b4' checked>";}
+      if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+      $c4_input = "<input type='radio' name='chek' value='c4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']==0 )
+      {$c4_input = "<input type='radio' name='chek' value='c4' checked>";}
+      if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+      $d4_input = "<input type='radio' name='chek' value='d4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']!=0 && $_SESSION['d4']==0 )
+      {$d4_input = "<input type='radio' name='chek' value='d4' checked>";}
+      if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
     }
 
     if (isset($_POST['x13'])){
@@ -296,6 +814,70 @@
       if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
       if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
       if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+      if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1' checked>";}
+      if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+      $b1_input = "<input type='radio' name='chek' value='b1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']==0 )
+      {$b1_input = "<input type='radio' name='chek' value='b1' checked>";}
+      if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+      $c1_input = "<input type='radio' name='chek' value='c1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']==0 )
+      {$c1_input = "<input type='radio' name='chek' value='c1' checked>";}
+      if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+      $a2_input = "<input type='radio' name='chek' value='a2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']==0 )
+      {$a2_input = "<input type='radio' name='chek' value='a2' checked>";}
+      if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+      $c2_input = "<input type='radio' name='chek' value='c2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']==0  )
+      {$c2_input = "<input type='radio' name='chek' value='c2' checked>";}
+      if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+      $d2_input = "<input type='radio' name='chek' value='d2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']==0 )
+      {$d2_input = "<input type='radio' name='chek' value='d2' checked>";}
+      if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+      $a3_input = "<input type='radio' name='chek' value='a3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']==0 )
+      {$a3_input = "<input type='radio' name='chek' value='a3' checked>";}
+      if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+      $b3_input = "<input type='radio' name='chek' value='b3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']==0 )
+      {$b3_input = "<input type='radio' name='chek' value='b3' checked>";}
+      if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+      $d3_input = "<input type='radio' name='chek' value='d3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']==0 )
+      {$d3_input = "<input type='radio' name='chek' value='d3' checked>";}
+      if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+      $b4_input = "<input type='radio' name='chek' value='b4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']==0 )
+      {$b4_input = "<input type='radio' name='chek' value='b4' checked>";}
+      if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+      $c4_input = "<input type='radio' name='chek' value='c4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']==0 )
+      {$c4_input = "<input type='radio' name='chek' value='c4' checked>";}
+      if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+      $d4_input = "<input type='radio' name='chek' value='d4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']!=0 && $_SESSION['d4']==0 )
+      {$d4_input = "<input type='radio' name='chek' value='d4' checked>";}
+      if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
     }
 
     if (isset($_POST['x14'])){
@@ -313,6 +895,70 @@
       if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
       if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
       if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+      if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1' checked>";}
+      if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+      $b1_input = "<input type='radio' name='chek' value='b1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']==0 )
+      {$b1_input = "<input type='radio' name='chek' value='b1' checked>";}
+      if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+      $c1_input = "<input type='radio' name='chek' value='c1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']==0 )
+      {$c1_input = "<input type='radio' name='chek' value='c1' checked>";}
+      if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+      $a2_input = "<input type='radio' name='chek' value='a2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']==0 )
+      {$a2_input = "<input type='radio' name='chek' value='a2' checked>";}
+      if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+      $c2_input = "<input type='radio' name='chek' value='c2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']==0  )
+      {$c2_input = "<input type='radio' name='chek' value='c2' checked>";}
+      if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+      $d2_input = "<input type='radio' name='chek' value='d2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']==0 )
+      {$d2_input = "<input type='radio' name='chek' value='d2' checked>";}
+      if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+      $a3_input = "<input type='radio' name='chek' value='a3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']==0 )
+      {$a3_input = "<input type='radio' name='chek' value='a3' checked>";}
+      if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+      $b3_input = "<input type='radio' name='chek' value='b3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']==0 )
+      {$b3_input = "<input type='radio' name='chek' value='b3' checked>";}
+      if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+      $d3_input = "<input type='radio' name='chek' value='d3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']==0 )
+      {$d3_input = "<input type='radio' name='chek' value='d3' checked>";}
+      if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+      $b4_input = "<input type='radio' name='chek' value='b4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']==0 )
+      {$b4_input = "<input type='radio' name='chek' value='b4' checked>";}
+      if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+      $c4_input = "<input type='radio' name='chek' value='c4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']==0 )
+      {$c4_input = "<input type='radio' name='chek' value='c4' checked>";}
+      if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+      $d4_input = "<input type='radio' name='chek' value='d4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']!=0 && $_SESSION['d4']==0 )
+      {$d4_input = "<input type='radio' name='chek' value='d4' checked>";}
+      if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
     }
 
     if (isset($_POST['x15'])){
@@ -330,6 +976,70 @@
       if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
       if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
       if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+      if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1' checked>";}
+      if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+      $b1_input = "<input type='radio' name='chek' value='b1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']==0 )
+      {$b1_input = "<input type='radio' name='chek' value='b1' checked>";}
+      if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+      $c1_input = "<input type='radio' name='chek' value='c1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']==0 )
+      {$c1_input = "<input type='radio' name='chek' value='c1' checked>";}
+      if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+      $a2_input = "<input type='radio' name='chek' value='a2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']==0 )
+      {$a2_input = "<input type='radio' name='chek' value='a2' checked>";}
+      if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+      $c2_input = "<input type='radio' name='chek' value='c2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']==0  )
+      {$c2_input = "<input type='radio' name='chek' value='c2' checked>";}
+      if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+      $d2_input = "<input type='radio' name='chek' value='d2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']==0 )
+      {$d2_input = "<input type='radio' name='chek' value='d2' checked>";}
+      if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+      $a3_input = "<input type='radio' name='chek' value='a3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']==0 )
+      {$a3_input = "<input type='radio' name='chek' value='a3' checked>";}
+      if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+      $b3_input = "<input type='radio' name='chek' value='b3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']==0 )
+      {$b3_input = "<input type='radio' name='chek' value='b3' checked>";}
+      if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+      $d3_input = "<input type='radio' name='chek' value='d3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']==0 )
+      {$d3_input = "<input type='radio' name='chek' value='d3' checked>";}
+      if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+      $b4_input = "<input type='radio' name='chek' value='b4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']==0 )
+      {$b4_input = "<input type='radio' name='chek' value='b4' checked>";}
+      if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+      $c4_input = "<input type='radio' name='chek' value='c4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']==0 )
+      {$c4_input = "<input type='radio' name='chek' value='c4' checked>";}
+      if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+      $d4_input = "<input type='radio' name='chek' value='d4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']!=0 && $_SESSION['d4']==0 )
+      {$d4_input = "<input type='radio' name='chek' value='d4' checked>";}
+      if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
     }
 
     if (isset($_POST['x16'])){
@@ -347,6 +1057,70 @@
       if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
       if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
       if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+      if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1' checked>";}
+      if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+      $b1_input = "<input type='radio' name='chek' value='b1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']==0 )
+      {$b1_input = "<input type='radio' name='chek' value='b1' checked>";}
+      if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+      $c1_input = "<input type='radio' name='chek' value='c1'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']==0 )
+      {$c1_input = "<input type='radio' name='chek' value='c1' checked>";}
+      if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+      $a2_input = "<input type='radio' name='chek' value='a2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']==0 )
+      {$a2_input = "<input type='radio' name='chek' value='a2' checked>";}
+      if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+      $c2_input = "<input type='radio' name='chek' value='c2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']==0  )
+      {$c2_input = "<input type='radio' name='chek' value='c2' checked>";}
+      if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+      $d2_input = "<input type='radio' name='chek' value='d2'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']==0 )
+      {$d2_input = "<input type='radio' name='chek' value='d2' checked>";}
+      if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+      $a3_input = "<input type='radio' name='chek' value='a3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']==0 )
+      {$a3_input = "<input type='radio' name='chek' value='a3' checked>";}
+      if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+      $b3_input = "<input type='radio' name='chek' value='b3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']==0 )
+      {$b3_input = "<input type='radio' name='chek' value='b3' checked>";}
+      if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+      $d3_input = "<input type='radio' name='chek' value='d3'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']==0 )
+      {$d3_input = "<input type='radio' name='chek' value='d3' checked>";}
+      if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+      $b4_input = "<input type='radio' name='chek' value='b4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']==0 )
+      {$b4_input = "<input type='radio' name='chek' value='b4' checked>";}
+      if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+      $c4_input = "<input type='radio' name='chek' value='c4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']==0 )
+      {$c4_input = "<input type='radio' name='chek' value='c4' checked>";}
+      if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+      $d4_input = "<input type='radio' name='chek' value='d4'>";
+      if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+      && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']!=0 && $_SESSION['d4']==0 )
+      {$d4_input = "<input type='radio' name='chek' value='d4' checked>";}
+      if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
     }
 
 
@@ -387,6 +1161,44 @@
     if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
     if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
     if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+    $a1_input = "<input type='radio' name='chek' value='a1' checked>";
+
+    // if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1'>";}
+    // if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+    if($_SESSION['b1']==0){$b1_input = "<input type='radio' name='chek' value='b1'>";}
+    if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+    if($_SESSION['c1']==0){$c1_input = "<input type='radio' name='chek' value='c1'>";}
+    if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+    if($_SESSION['a2']==0){$a2_input = "<input type='radio' name='chek' value='a2'>";}
+    if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+    if($_SESSION['c2']==0){$c2_input = "<input type='radio' name='chek' value='c2'>";}
+    if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+    if($_SESSION['d2']==0){$d2_input = "<input type='radio' name='chek' value='d2'>";}
+    if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+    if($_SESSION['a3']==0){$a3_input = "<input type='radio' name='chek' value='a3'>";}
+    if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+    if($_SESSION['b3']==0){$b3_input = "<input type='radio' name='chek' value='b3'>";}
+    if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+    if($_SESSION['d3']==0){$d3_input = "<input type='radio' name='chek' value='d3'>";}
+    if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+    if($_SESSION['b4']==0){$b4_input = "<input type='radio' name='chek' value='b4'>";}
+    if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+    if($_SESSION['c4']==0){$c4_input = "<input type='radio' name='chek' value='c4'>";}
+    if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+    if($_SESSION['d4']==0){$d4_input = "<input type='radio' name='chek' value='d4'>";}
+    if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
     }
 
     if (isset($_POST['b1_valor'])){
@@ -415,6 +1227,44 @@
     if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
     if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
     if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+    $b1_input = "<input type='radio' name='chek' value='b1' checked>";
+
+    if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1'>";}
+    if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+    // if($_SESSION['b1']==0){$b1_input = "<input type='radio' name='chek' value='b1'>";}
+    // if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+    if($_SESSION['c1']==0){$c1_input = "<input type='radio' name='chek' value='c1'>";}
+    if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+    if($_SESSION['a2']==0){$a2_input = "<input type='radio' name='chek' value='a2'>";}
+    if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+    if($_SESSION['c2']==0){$c2_input = "<input type='radio' name='chek' value='c2'>";}
+    if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+    if($_SESSION['d2']==0){$d2_input = "<input type='radio' name='chek' value='d2'>";}
+    if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+    if($_SESSION['a3']==0){$a3_input = "<input type='radio' name='chek' value='a3'>";}
+    if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+    if($_SESSION['b3']==0){$b3_input = "<input type='radio' name='chek' value='b3'>";}
+    if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+    if($_SESSION['d3']==0){$d3_input = "<input type='radio' name='chek' value='d3'>";}
+    if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+    if($_SESSION['b4']==0){$b4_input = "<input type='radio' name='chek' value='b4'>";}
+    if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+    if($_SESSION['c4']==0){$c4_input = "<input type='radio' name='chek' value='c4'>";}
+    if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+    if($_SESSION['d4']==0){$d4_input = "<input type='radio' name='chek' value='d4'>";}
+    if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
     }
 
     if (isset($_POST['c1_valor'])){
@@ -443,6 +1293,44 @@
     if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
     if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
     if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+    $c1_input = "<input type='radio' name='chek' value='c1' checked>";
+
+    if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1'>";}
+    if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+    if($_SESSION['b1']==0){$b1_input = "<input type='radio' name='chek' value='b1'>";}
+    if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+    // if($_SESSION['c1']==0){$c1_input = "<input type='radio' name='chek' value='c1'>";}
+    // if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+    if($_SESSION['a2']==0){$a2_input = "<input type='radio' name='chek' value='a2'>";}
+    if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+    if($_SESSION['c2']==0){$c2_input = "<input type='radio' name='chek' value='c2'>";}
+    if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+    if($_SESSION['d2']==0){$d2_input = "<input type='radio' name='chek' value='d2'>";}
+    if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+    if($_SESSION['a3']==0){$a3_input = "<input type='radio' name='chek' value='a3'>";}
+    if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+    if($_SESSION['b3']==0){$b3_input = "<input type='radio' name='chek' value='b3'>";}
+    if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+    if($_SESSION['d3']==0){$d3_input = "<input type='radio' name='chek' value='d3'>";}
+    if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+    if($_SESSION['b4']==0){$b4_input = "<input type='radio' name='chek' value='b4'>";}
+    if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+    if($_SESSION['c4']==0){$c4_input = "<input type='radio' name='chek' value='c4'>";}
+    if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+    if($_SESSION['d4']==0){$d4_input = "<input type='radio' name='chek' value='d4'>";}
+    if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
     }
 
     if (isset($_POST['a2_valor'])){
@@ -471,6 +1359,44 @@
     if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
     if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
     if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+    $a2_input = "<input type='radio' name='chek' value='a2' checked>";
+
+    if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1'>";}
+    if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+    if($_SESSION['b1']==0){$b1_input = "<input type='radio' name='chek' value='b1'>";}
+    if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+    if($_SESSION['c1']==0){$c1_input = "<input type='radio' name='chek' value='c1'>";}
+    if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+    // if($_SESSION['a2']==0){$a2_input = "<input type='radio' name='chek' value='a2'>";}
+    // if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+    if($_SESSION['c2']==0){$c2_input = "<input type='radio' name='chek' value='c2'>";}
+    if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+    if($_SESSION['d2']==0){$d2_input = "<input type='radio' name='chek' value='d2'>";}
+    if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+    if($_SESSION['a3']==0){$a3_input = "<input type='radio' name='chek' value='a3'>";}
+    if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+    if($_SESSION['b3']==0){$b3_input = "<input type='radio' name='chek' value='b3'>";}
+    if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+    if($_SESSION['d3']==0){$d3_input = "<input type='radio' name='chek' value='d3'>";}
+    if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+    if($_SESSION['b4']==0){$b4_input = "<input type='radio' name='chek' value='b4'>";}
+    if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+    if($_SESSION['c4']==0){$c4_input = "<input type='radio' name='chek' value='c4'>";}
+    if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+    if($_SESSION['d4']==0){$d4_input = "<input type='radio' name='chek' value='d4'>";}
+    if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
     }
 
     if (isset($_POST['c2_valor'])){
@@ -499,6 +1425,44 @@
     if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
     if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
     if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+    $c2_input = "<input type='radio' name='chek' value='c2' checked>";
+
+    if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1'>";}
+    if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+    if($_SESSION['b1']==0){$b1_input = "<input type='radio' name='chek' value='b1'>";}
+    if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+    if($_SESSION['c1']==0){$c1_input = "<input type='radio' name='chek' value='c1'>";}
+    if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+    if($_SESSION['a2']==0){$a2_input = "<input type='radio' name='chek' value='a2'>";}
+    if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+    // if($_SESSION['c2']==0){$c2_input = "<input type='radio' name='chek' value='c2'>";}
+    // if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+    if($_SESSION['d2']==0){$d2_input = "<input type='radio' name='chek' value='d2'>";}
+    if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+    if($_SESSION['a3']==0){$a3_input = "<input type='radio' name='chek' value='a3'>";}
+    if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+    if($_SESSION['b3']==0){$b3_input = "<input type='radio' name='chek' value='b3'>";}
+    if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+    if($_SESSION['d3']==0){$d3_input = "<input type='radio' name='chek' value='d3'>";}
+    if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+    if($_SESSION['b4']==0){$b4_input = "<input type='radio' name='chek' value='b4'>";}
+    if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+    if($_SESSION['c4']==0){$c4_input = "<input type='radio' name='chek' value='c4'>";}
+    if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+    if($_SESSION['d4']==0){$d4_input = "<input type='radio' name='chek' value='d4'>";}
+    if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
     }
 
     if (isset($_POST['d2_valor'])){
@@ -527,6 +1491,44 @@
     if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
     if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
     if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+    $d2_input = "<input type='radio' name='chek' value='d2' checked>";
+
+    if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1'>";}
+    if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+    if($_SESSION['b1']==0){$b1_input = "<input type='radio' name='chek' value='b1'>";}
+    if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+    if($_SESSION['c1']==0){$c1_input = "<input type='radio' name='chek' value='c1'>";}
+    if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+    if($_SESSION['a2']==0){$a2_input = "<input type='radio' name='chek' value='a2'>";}
+    if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+    if($_SESSION['c2']==0){$c2_input = "<input type='radio' name='chek' value='c2'>";}
+    if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+    // if($_SESSION['d2']==0){$d2_input = "<input type='radio' name='chek' value='d2'>";}
+    // if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+    if($_SESSION['a3']==0){$a3_input = "<input type='radio' name='chek' value='a3'>";}
+    if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+    if($_SESSION['b3']==0){$b3_input = "<input type='radio' name='chek' value='b3'>";}
+    if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+    if($_SESSION['d3']==0){$d3_input = "<input type='radio' name='chek' value='d3'>";}
+    if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+    if($_SESSION['b4']==0){$b4_input = "<input type='radio' name='chek' value='b4'>";}
+    if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+    if($_SESSION['c4']==0){$c4_input = "<input type='radio' name='chek' value='c4'>";}
+    if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+    if($_SESSION['d4']==0){$d4_input = "<input type='radio' name='chek' value='d4'>";}
+    if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
     }
 
     if (isset($_POST['a3_valor'])){
@@ -555,6 +1557,44 @@
     if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
     if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
     if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+    $a3_input = "<input type='radio' name='chek' value='a3' checked>";
+
+    if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1'>";}
+    if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+    if($_SESSION['b1']==0){$b1_input = "<input type='radio' name='chek' value='b1'>";}
+    if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+    if($_SESSION['c1']==0){$c1_input = "<input type='radio' name='chek' value='c1'>";}
+    if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+    if($_SESSION['a2']==0){$a2_input = "<input type='radio' name='chek' value='a2'>";}
+    if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+    if($_SESSION['c2']==0){$c2_input = "<input type='radio' name='chek' value='c2'>";}
+    if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+    if($_SESSION['d2']==0){$d2_input = "<input type='radio' name='chek' value='d2'>";}
+    if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+    // if($_SESSION['a3']==0){$a3_input = "<input type='radio' name='chek' value='a3'>";}
+    // if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+    if($_SESSION['b3']==0){$b3_input = "<input type='radio' name='chek' value='b3'>";}
+    if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+    if($_SESSION['d3']==0){$d3_input = "<input type='radio' name='chek' value='d3'>";}
+    if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+    if($_SESSION['b4']==0){$b4_input = "<input type='radio' name='chek' value='b4'>";}
+    if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+    if($_SESSION['c4']==0){$c4_input = "<input type='radio' name='chek' value='c4'>";}
+    if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+    if($_SESSION['d4']==0){$d4_input = "<input type='radio' name='chek' value='d4'>";}
+    if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
     }
 
     if (isset($_POST['b3_valor'])){
@@ -583,6 +1623,44 @@
     if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
     if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
     if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+    $b3_input = "<input type='radio' name='chek' value='b3' checked>";
+
+    if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1'>";}
+    if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+    if($_SESSION['b1']==0){$b1_input = "<input type='radio' name='chek' value='b1'>";}
+    if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+    if($_SESSION['c1']==0){$c1_input = "<input type='radio' name='chek' value='c1'>";}
+    if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+    if($_SESSION['a2']==0){$a2_input = "<input type='radio' name='chek' value='a2'>";}
+    if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+    if($_SESSION['c2']==0){$c2_input = "<input type='radio' name='chek' value='c2'>";}
+    if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+    if($_SESSION['d2']==0){$d2_input = "<input type='radio' name='chek' value='d2'>";}
+    if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+    if($_SESSION['a3']==0){$a3_input = "<input type='radio' name='chek' value='a3'>";}
+    if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+    // if($_SESSION['b3']==0){$b3_input = "<input type='radio' name='chek' value='b3'>";}
+    // if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+    if($_SESSION['d3']==0){$d3_input = "<input type='radio' name='chek' value='d3'>";}
+    if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+    if($_SESSION['b4']==0){$b4_input = "<input type='radio' name='chek' value='b4'>";}
+    if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+    if($_SESSION['c4']==0){$c4_input = "<input type='radio' name='chek' value='c4'>";}
+    if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+    if($_SESSION['d4']==0){$d4_input = "<input type='radio' name='chek' value='d4'>";}
+    if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
     }
 
     if (isset($_POST['d3_valor'])){
@@ -611,6 +1689,44 @@
     if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
     if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
     if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+    $d3_input = "<input type='radio' name='chek' value='d3' checked>";
+
+    if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1'>";}
+    if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+    if($_SESSION['b1']==0){$b1_input = "<input type='radio' name='chek' value='b1'>";}
+    if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+    if($_SESSION['c1']==0){$c1_input = "<input type='radio' name='chek' value='c1'>";}
+    if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+    if($_SESSION['a2']==0){$a2_input = "<input type='radio' name='chek' value='a2'>";}
+    if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+    if($_SESSION['c2']==0){$c2_input = "<input type='radio' name='chek' value='c2'>";}
+    if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+    if($_SESSION['d2']==0){$d2_input = "<input type='radio' name='chek' value='d2'>";}
+    if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+    if($_SESSION['a3']==0){$a3_input = "<input type='radio' name='chek' value='a3'>";}
+    if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+    if($_SESSION['b3']==0){$b3_input = "<input type='radio' name='chek' value='b3'>";}
+    if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+    // if($_SESSION['d3']==0){$d3_input = "<input type='radio' name='chek' value='d3'>";}
+    // if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+    if($_SESSION['b4']==0){$b4_input = "<input type='radio' name='chek' value='b4'>";}
+    if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+    if($_SESSION['c4']==0){$c4_input = "<input type='radio' name='chek' value='c4'>";}
+    if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+    if($_SESSION['d4']==0){$d4_input = "<input type='radio' name='chek' value='d4'>";}
+    if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
     }
 
     if (isset($_POST['b4_valor'])){
@@ -639,6 +1755,44 @@
     if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
     if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
     if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+    $b4_input = "<input type='radio' name='chek' value='b4' checked>";
+
+    if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1'>";}
+    if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+    if($_SESSION['b1']==0){$b1_input = "<input type='radio' name='chek' value='b1'>";}
+    if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+    if($_SESSION['c1']==0){$c1_input = "<input type='radio' name='chek' value='c1'>";}
+    if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+    if($_SESSION['a2']==0){$a2_input = "<input type='radio' name='chek' value='a2'>";}
+    if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+    if($_SESSION['c2']==0){$c2_input = "<input type='radio' name='chek' value='c2'>";}
+    if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+    if($_SESSION['d2']==0){$d2_input = "<input type='radio' name='chek' value='d2'>";}
+    if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+    if($_SESSION['a3']==0){$a3_input = "<input type='radio' name='chek' value='a3'>";}
+    if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+    if($_SESSION['b3']==0){$b3_input = "<input type='radio' name='chek' value='b3'>";}
+    if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+    if($_SESSION['d3']==0){$d3_input = "<input type='radio' name='chek' value='d3'>";}
+    if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+    // if($_SESSION['b4']==0){$b4_input = "<input type='radio' name='chek' value='b4'>";}
+    // if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+    if($_SESSION['c4']==0){$c4_input = "<input type='radio' name='chek' value='c4'>";}
+    if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+    if($_SESSION['d4']==0){$d4_input = "<input type='radio' name='chek' value='d4'>";}
+    if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
     }
 
     if (isset($_POST['c4_valor'])){
@@ -667,6 +1821,44 @@
     if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
     if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
     if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+    $c4_input = "<input type='radio' name='chek' value='c4' checked>";
+
+    if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1'>";}
+    if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+    if($_SESSION['b1']==0){$b1_input = "<input type='radio' name='chek' value='b1'>";}
+    if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+    if($_SESSION['c1']==0){$c1_input = "<input type='radio' name='chek' value='c1'>";}
+    if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+    if($_SESSION['a2']==0){$a2_input = "<input type='radio' name='chek' value='a2'>";}
+    if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+    if($_SESSION['c2']==0){$c2_input = "<input type='radio' name='chek' value='c2'>";}
+    if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+    if($_SESSION['d2']==0){$d2_input = "<input type='radio' name='chek' value='d2'>";}
+    if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+    if($_SESSION['a3']==0){$a3_input = "<input type='radio' name='chek' value='a3'>";}
+    if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+    if($_SESSION['b3']==0){$b3_input = "<input type='radio' name='chek' value='b3'>";}
+    if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+    if($_SESSION['d3']==0){$d3_input = "<input type='radio' name='chek' value='d3'>";}
+    if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+    if($_SESSION['b4']==0){$b4_input = "<input type='radio' name='chek' value='b4'>";}
+    if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+    // if($_SESSION['c4']==0){$c4_input = "<input type='radio' name='chek' value='c4'>";}
+    // if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+    if($_SESSION['d4']==0){$d4_input = "<input type='radio' name='chek' value='d4'>";}
+    if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
     }
 
     if (isset($_POST['d4_valor'])){
@@ -695,73 +1887,113 @@
     if($_SESSION["x14_subimit_on"]){$_SESSION["x14_view_abertura"] = "<!--";     $_SESSION["x14_view_fechamento"] = "--> 14";}
     if($_SESSION["x15_subimit_on"]){$_SESSION["x15_view_abertura"] = "<!--";     $_SESSION["x15_view_fechamento"] = "--> 15";}
     if($_SESSION["x16_subimit_on"]){$_SESSION["x16_view_abertura"] = "<!--";     $_SESSION["x16_view_fechamento"] = "--> 16";}
+
+    $d4_input = "<input type='radio' name='chek' value='d4' checked>";
+
+    if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1'>";}
+    if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+
+    if($_SESSION['b1']==0){$b1_input = "<input type='radio' name='chek' value='b1'>";}
+    if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+
+    if($_SESSION['c1']==0){$c1_input = "<input type='radio' name='chek' value='c1'>";}
+    if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+
+    if($_SESSION['a2']==0){$a2_input = "<input type='radio' name='chek' value='a2'>";}
+    if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+
+    if($_SESSION['c2']==0){$c2_input = "<input type='radio' name='chek' value='c2'>";}
+    if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+
+    if($_SESSION['d2']==0){$d2_input = "<input type='radio' name='chek' value='d2'>";}
+    if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+
+    if($_SESSION['a3']==0){$a3_input = "<input type='radio' name='chek' value='a3'>";}
+    if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+
+    if($_SESSION['b3']==0){$b3_input = "<input type='radio' name='chek' value='b3'>";}
+    if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+
+    if($_SESSION['d3']==0){$d3_input = "<input type='radio' name='chek' value='d3'>";}
+    if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+
+    if($_SESSION['b4']==0){$b4_input = "<input type='radio' name='chek' value='b4'>";}
+    if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+
+    if($_SESSION['c4']==0){$c4_input = "<input type='radio' name='chek' value='c4'>";}
+    if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+
+    // if($_SESSION['d4']==0){$d4_input = "<input type='radio' name='chek' value='d4'>";}
+    // if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
+
+
     }
 
 
 
-    if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1' checked>";}
-    if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
-
-    $b1_input = "<input type='radio' name='chek' value='b1'>";
-    if($_SESSION['a1']!=0 && $_SESSION['b1']==0 )
-    {$b1_input = "<input type='radio' name='chek' value='b1' checked>";}
-    if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
-
-    $c1_input = "<input type='radio' name='chek' value='c1'>";
-    if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']==0 )
-    {$c1_input = "<input type='radio' name='chek' value='c1' checked>";}
-    if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
-
-    $a2_input = "<input type='radio' name='chek' value='a2'>";
-    if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']==0 )
-    {$a2_input = "<input type='radio' name='chek' value='a2' checked>";}
-    if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
-
-    $c2_input = "<input type='radio' name='chek' value='c2'>";
-    if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']==0  )
-    {$c2_input = "<input type='radio' name='chek' value='c2' checked>";}
-    if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
-
-    $d2_input = "<input type='radio' name='chek' value='d2'>";
-    if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']==0 )
-    {$d2_input = "<input type='radio' name='chek' value='d2' checked>";}
-    if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
-
-    $a3_input = "<input type='radio' name='chek' value='a3'>";
-    if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
-    && $_SESSION['a3']==0 )
-    {$a3_input = "<input type='radio' name='chek' value='a3' checked>";}
-    if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
-
-    $b3_input = "<input type='radio' name='chek' value='b3'>";
-    if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
-    && $_SESSION['a3']!=0 && $_SESSION['b3']==0 )
-    {$b3_input = "<input type='radio' name='chek' value='b3' checked>";}
-    if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
-
-    $d3_input = "<input type='radio' name='chek' value='d3'>";
-    if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
-    && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']==0 )
-    {$d3_input = "<input type='radio' name='chek' value='d3' checked>";}
-    if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
-
-    $b4_input = "<input type='radio' name='chek' value='b4'>";
-    if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
-    && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']==0 )
-    {$b4_input = "<input type='radio' name='chek' value='b4' checked>";}
-    if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
-
-    $c4_input = "<input type='radio' name='chek' value='c4'>";
-    if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
-    && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']==0 )
-    {$c4_input = "<input type='radio' name='chek' value='c4' checked>";}
-    if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
-
-    $d4_input = "<input type='radio' name='chek' value='d4'>";
-    if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
-    && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']!=0 && $_SESSION['d4']==0 )
-    {$d4_input = "<input type='radio' name='chek' value='d4' checked>";}
-    if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
+    // if($_SESSION['a1']==0){$a1_input = "<input type='radio' name='chek' value='a1' checked>";}
+    // if($_SESSION['a1']!=0){$a1_input = "<input type='submit' name='a1_valor' value='".$_SESSION['a1']."'";}
+    //
+    // $b1_input = "<input type='radio' name='chek' value='b1'>";
+    // if($_SESSION['a1']!=0 && $_SESSION['b1']==0 )
+    // {$b1_input = "<input type='radio' name='chek' value='b1' checked>";}
+    // if($_SESSION['b1']!=0){$b1_input = "<input type='submit' name='b1_valor' value='".$_SESSION['b1']."'";}
+    //
+    // $c1_input = "<input type='radio' name='chek' value='c1'>";
+    // if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']==0 )
+    // {$c1_input = "<input type='radio' name='chek' value='c1' checked>";}
+    // if($_SESSION['c1']!=0){$c1_input = "<input type='submit' name='c1_valor' value='".$_SESSION['c1']."'";}
+    //
+    // $a2_input = "<input type='radio' name='chek' value='a2'>";
+    // if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']==0 )
+    // {$a2_input = "<input type='radio' name='chek' value='a2' checked>";}
+    // if($_SESSION['a2']!=0){$a2_input = "<input type='submit' name='a2_valor' value='".$_SESSION['a2']."'";}
+    //
+    // $c2_input = "<input type='radio' name='chek' value='c2'>";
+    // if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']==0  )
+    // {$c2_input = "<input type='radio' name='chek' value='c2' checked>";}
+    // if($_SESSION['c2']!=0){$c2_input = "<input type='submit' name='c2_valor' value='".$_SESSION['c2']."'";}
+    //
+    // $d2_input = "<input type='radio' name='chek' value='d2'>";
+    // if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']==0 )
+    // {$d2_input = "<input type='radio' name='chek' value='d2' checked>";}
+    // if($_SESSION['d2']!=0){$d2_input = "<input type='submit' name='d2_valor' value='".$_SESSION['d2']."'";}
+    //
+    // $a3_input = "<input type='radio' name='chek' value='a3'>";
+    // if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+    // && $_SESSION['a3']==0 )
+    // {$a3_input = "<input type='radio' name='chek' value='a3' checked>";}
+    // if($_SESSION['a3']!=0){$a3_input = "<input type='submit' name='a3_valor' value='".$_SESSION['a3']."'";}
+    //
+    // $b3_input = "<input type='radio' name='chek' value='b3'>";
+    // if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+    // && $_SESSION['a3']!=0 && $_SESSION['b3']==0 )
+    // {$b3_input = "<input type='radio' name='chek' value='b3' checked>";}
+    // if($_SESSION['b3']!=0){$b3_input = "<input type='submit' name='b3_valor' value='".$_SESSION['b3']."'";}
+    //
+    // $d3_input = "<input type='radio' name='chek' value='d3'>";
+    // if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+    // && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']==0 )
+    // {$d3_input = "<input type='radio' name='chek' value='d3' checked>";}
+    // if($_SESSION['d3']!=0){$d3_input = "<input type='submit' name='d3_valor' value='".$_SESSION['d3']."'";}
+    //
+    // $b4_input = "<input type='radio' name='chek' value='b4'>";
+    // if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+    // && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']==0 )
+    // {$b4_input = "<input type='radio' name='chek' value='b4' checked>";}
+    // if($_SESSION['b4']!=0){$b4_input = "<input type='submit' name='b4_valor' value='".$_SESSION['b4']."'";}
+    //
+    // $c4_input = "<input type='radio' name='chek' value='c4'>";
+    // if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+    // && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']==0 )
+    // {$c4_input = "<input type='radio' name='chek' value='c4' checked>";}
+    // if($_SESSION['c4']!=0){$c4_input = "<input type='submit' name='c4_valor' value='".$_SESSION['c4']."'";}
+    //
+    // $d4_input = "<input type='radio' name='chek' value='d4'>";
+    // if($_SESSION['a1']!=0 && $_SESSION['b1']!=0 && $_SESSION['c1']!=0 && $_SESSION['a2']!=0 && $_SESSION['c2']!=0 && $_SESSION['d2']!=0
+    // && $_SESSION['a3']!=0 && $_SESSION['b3']!=0 && $_SESSION['d3']!=0 && $_SESSION['b4']!=0 && $_SESSION['c4']!=0 && $_SESSION['d4']==0 )
+    // {$d4_input = "<input type='radio' name='chek' value='d4' checked>";}
+    // if($_SESSION['d4']!=0){$d4_input = "<input type='submit' name='d4_valor' value='".$_SESSION['d4']."'";}
 
     $soma_linha1 = $_SESSION['a1'] + $_SESSION['b1'] + $_SESSION['c1'] + $_SESSION['d1'];
     $soma_linha2 = $_SESSION['a2'] + $_SESSION['b2'] + $_SESSION['c2'] + $_SESSION['d2'];
