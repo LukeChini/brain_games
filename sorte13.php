@@ -97,9 +97,9 @@ $a6_operador='-';  $b6_operador='-';   $c6_operador='+';   $d6_operador='x';  $e
                                    $b1_op_nu=$b1_operador.$b1_numero; $c1_op_nu=$c1_operador.$c1_numero; $d1_op_nu=$d1_operador.$d1_numero;
 $a2_op_nu=$a2_operador.$a2_numero; $b2_op_nu=$b2_operador.$b2_numero; $c2_op_nu=$c2_operador.$c2_numero; $d2_op_nu=$d2_operador.$d2_numero;
 $a3_op_nu=$a3_operador.$a3_numero; $b3_op_nu=$b3_operador.$b3_numero; $c3_op_nu=$c3_operador.$c3_numero; $d3_op_nu=$d3_operador.$d3_numero;
-$a3_op_nu=$a3_operador.$a3_numero; $b4_op_nu=$b4_operador.$b4_numero; $c4_op_nu=$c4_operador.$c4_numero; $d4_op_nu=$d4_operador.$d4_numero;
-$a3_op_nu=$a3_operador.$a3_numero; $b5_op_nu=$b5_operador.$b5_numero; $c5_op_nu=$c5_operador.$c5_numero; $d5_op_nu=$d5_operador.$d5_numero;
-$a3_op_nu=$a3_operador.$a3_numero; $b6_op_nu=$b6_operador.$b6_numero; $c6_op_nu=$c6_operador.$c6_numero; $d6_op_nu=$d6_operador.$d6_numero;
+$a4_op_nu=$a4_operador.$a4_numero; $b4_op_nu=$b4_operador.$b4_numero; $c4_op_nu=$c4_operador.$c4_numero; $d4_op_nu=$d4_operador.$d4_numero;
+$a5_op_nu=$a5_operador.$a5_numero; $b5_op_nu=$b5_operador.$b5_numero; $c5_op_nu=$c5_operador.$c5_numero; $d5_op_nu=$d5_operador.$d5_numero;
+$a6_op_nu=$a6_operador.$a6_numero; $b6_op_nu=$b6_operador.$b6_numero; $c6_op_nu=$c6_operador.$c6_numero; $d6_op_nu=$d6_operador.$d6_numero;
 
 $e1_op_nu=$e1_operador.$e1_numero; $f1_op_nu=$f1_operador.$f1_numero;
 $e2_op_nu=$e2_operador.$e2_numero; $f2_op_nu=$f2_operador.$f2_numero; $g2_op_nu=$g2_operador.$g2_numero;
@@ -139,71 +139,15 @@ function inverte_operador($operador,$numero)
   else{return 'operador não correspondente';}
 }
 
-//____ xn_td = string que definirá o conteudo da celula na tabela _____
-
-$b1_td_id = 1;
-if($b1_td_id == 0){$b1_td = $b1_op_nu;}
-if($b1_td_id == 1){$b1_td = "<input type='submit' name='b1' value="."'".$b1_op_nu."'>";}
-if($b1_td_id == 2){$b1_td = "<input class='inverso' type='submit' name='b1_inverso' value="."'".inverte_operador($b1_operador,$b1_numero)."'>";}
-
 
 $_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = ""; $_SESSION["passou_de_10"] = "";
 
-$_SESSION["b1_view_abertura"] = ""; $_SESSION["b1_view_fechamento"] = "";
-$_SESSION["c1_view_abertura"] = ""; $_SESSION["c1_view_fechamento"] = "";
-$_SESSION["d1_view_abertura"] = ""; $_SESSION["d1_view_fechamento"] = "";
-$_SESSION["e1_view_abertura"] = ""; $_SESSION["e1_view_fechamento"] = "";
-$_SESSION["f1_view_abertura"] = ""; $_SESSION["f1_view_fechamento"] = "";
-
-$_SESSION["a2_view_abertura"] = ""; $_SESSION["a2_view_fechamento"] = "";
-$_SESSION["b2_view_abertura"] = ""; $_SESSION["b2_view_fechamento"] = "";
-$_SESSION["c2_view_abertura"] = ""; $_SESSION["c2_view_fechamento"] = "";
-$_SESSION["d2_view_abertura"] = ""; $_SESSION["d2_view_fechamento"] = "";
-$_SESSION["e2_view_abertura"] = ""; $_SESSION["e2_view_fechamento"] = "";
-$_SESSION["f2_view_abertura"] = ""; $_SESSION["f2_view_fechamento"] = "";
-$_SESSION["g2_view_abertura"] = ""; $_SESSION["g2_view_fechamento"] = "";
-
-$_SESSION["a3_view_abertura"] = ""; $_SESSION["a3_view_fechamento"] = "";
-$_SESSION["b3_view_abertura"] = ""; $_SESSION["b3_view_fechamento"] = "";
-$_SESSION["c3_view_abertura"] = ""; $_SESSION["c3_view_fechamento"] = "";
-$_SESSION["d3_view_abertura"] = ""; $_SESSION["d3_view_fechamento"] = "";
-$_SESSION["e3_view_abertura"] = ""; $_SESSION["e3_view_fechamento"] = "";
-$_SESSION["f3_view_abertura"] = ""; $_SESSION["f3_view_fechamento"] = "";
-$_SESSION["g3_view_abertura"] = ""; $_SESSION["g3_view_fechamento"] = "";
-
-$_SESSION["a4_view_abertura"] = ""; $_SESSION["a4_view_fechamento"] = "";
-$_SESSION["b4_view_abertura"] = ""; $_SESSION["b4_view_fechamento"] = "";
-$_SESSION["c4_view_abertura"] = ""; $_SESSION["c4_view_fechamento"] = "";
-$_SESSION["d4_view_abertura"] = ""; $_SESSION["d4_view_fechamento"] = "";
-$_SESSION["e4_view_abertura"] = ""; $_SESSION["e4_view_fechamento"] = "";
-$_SESSION["f4_view_abertura"] = ""; $_SESSION["f4_view_fechamento"] = "";
-$_SESSION["g4_view_abertura"] = ""; $_SESSION["g4_view_fechamento"] = "";
-
-$_SESSION["a5_view_abertura"] = ""; $_SESSION["a5_view_fechamento"] = "";
-$_SESSION["b5_view_abertura"] = ""; $_SESSION["b5_view_fechamento"] = "";
-$_SESSION["c5_view_abertura"] = ""; $_SESSION["c5_view_fechamento"] = "";
-$_SESSION["d5_view_abertura"] = ""; $_SESSION["d5_view_fechamento"] = "";
-$_SESSION["e5_view_abertura"] = ""; $_SESSION["e5_view_fechamento"] = "";
-$_SESSION["f5_view_abertura"] = ""; $_SESSION["f5_view_fechamento"] = "";
-$_SESSION["g5_view_abertura"] = ""; $_SESSION["g5_view_fechamento"] = "";
-
-$_SESSION["a6_view_abertura"] = ""; $_SESSION["a6_view_fechamento"] = "";
-$_SESSION["b6_view_abertura"] = ""; $_SESSION["b6_view_fechamento"] = "";
-$_SESSION["c6_view_abertura"] = ""; $_SESSION["c6_view_fechamento"] = "";
-$_SESSION["d6_view_abertura"] = ""; $_SESSION["d6_view_fechamento"] = "";
-$_SESSION["e6_view_abertura"] = ""; $_SESSION["e6_view_fechamento"] = "";
-$_SESSION["f6_view_abertura"] = ""; $_SESSION["f6_view_fechamento"] = "";
-$_SESSION["g6_view_abertura"] = ""; $_SESSION["g6_view_fechamento"] = "";
-
-$_SESSION["a7_view_abertura"] = ""; $_SESSION["a7_view_fechamento"] = "";
-$_SESSION["b7_view_abertura"] = ""; $_SESSION["b7_view_fechamento"] = "";
-$_SESSION["c7_view_abertura"] = ""; $_SESSION["c7_view_fechamento"] = "";
-$_SESSION["d7_view_abertura"] = ""; $_SESSION["d7_view_fechamento"] = "";
-$_SESSION["e7_view_abertura"] = ""; $_SESSION["e7_view_fechamento"] = "";
-$_SESSION["f7_view_abertura"] = ""; $_SESSION["f7_view_fechamento"] = "";
-$_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
-
-
+             $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
+$a2_td_id=1; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=1;
+$a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+$a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+$a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+$a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
 
 
@@ -213,59 +157,12 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
     $_SESSION['resultado'] = $_SESSION['resultado'] *0 +13;
     $_SESSION["count"] = $_SESSION["count"] *0;
 
-    // $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-    $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-    $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-    $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-    // $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
-
-    // $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-    $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-    $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-    $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-    $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-    $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-    // $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-    $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-    $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-    $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-    $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-    $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-    $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-    $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-    $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-    $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-    $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-    $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-    $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-    $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-    $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-    $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-    $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-    $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-    $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-    $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-    $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-    $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-    $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-    $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-    $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-    $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-    $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-    $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-    $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-    $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-    $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-    $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-    $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-    $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-    $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-    $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+                 $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
+    $a2_td_id=1; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=1;
+    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
     $_SESSION["a1_count"] = 0; $_SESSION["a2_count"] = 0; $_SESSION["a3_count"] = 0; $_SESSION["a4_count"] = 0; $_SESSION["a5_count"] = 0; $_SESSION["a6_count"] = 0; $_SESSION["a7_count"] = 0;
     $_SESSION["b1_count"] = 0; $_SESSION["b2_count"] = 0; $_SESSION["b3_count"] = 0; $_SESSION["b4_count"] = 0; $_SESSION["b5_count"] = 0; $_SESSION["b6_count"] = 0; $_SESSION["b7_count"] = 0;
@@ -281,58 +178,13 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
   if (isset($_POST['b1'])){
   $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$b1_operador,$b1_numero);
   $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-  // $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-  $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-  $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-  $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
 
-  $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-  // $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-  $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-  $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-  $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-  $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-  $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-  $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-  $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-  $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-  $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-  $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-  $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-  $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-  $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-  $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-  $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-  $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-  $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-  $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-  $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-  $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-  $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-  $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-  $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-  $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-  $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-  $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-  $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-  $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-  $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-  $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-  $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-  $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-  $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-  $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-  $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-  $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-  $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-  $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-  $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-  $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+             $b1_td_id=2; $c1_td_id=1; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+$a2_td_id=0; $b2_td_id=1; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+$a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+$a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+$a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+$a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
   if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -369,59 +221,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
 
   if (isset($_POST['c1'])){
   $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$c1_operador,$c1_numero);
-  // $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-  $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-  // $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-  $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-  $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
 
-  $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-  $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-  // $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-  $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-  $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-  $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-  $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
+             $b1_td_id=1; $c1_td_id=2; $d1_td_id=1; $e1_td_id=0; $f1_td_id=0;
+$a2_td_id=0; $b2_td_id=0; $c2_td_id=1; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+$a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+$a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+$a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+$a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
-  $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-  $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-  $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-  $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-  $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-  $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-  $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-  $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-  $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-  $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-  $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-  $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-  $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-  $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-  $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-  $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-  $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-  $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-  $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-  $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-  $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-  $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-  $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-  $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-  $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-  $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-  $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-  $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-  $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-  $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-  $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-  $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-  $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-  $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-  $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
   if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -454,61 +261,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
   }
 
   if (isset($_POST['d1'])){
-  $_SESSION['resultado'] = $_SESSION['resultado']*4;
-  $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-  // $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-  $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-  // $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-  $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+    $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$d1_operador,$d1_numero);
 
-  $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-  $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-  $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-  // $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-  $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-  $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-  $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-  $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-  $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-  $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-  $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-  $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-  $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-  $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-  $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-  $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-  $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-  $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-  $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-  $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-  $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-  $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-  $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-  $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-  $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-  $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-  $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-  $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-  $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-  $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-  $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-  $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-  $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-  $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-  $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-  $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-  $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-  $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-  $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-  $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-  $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-  $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
-
+             $b1_td_id=0; $c1_td_id=1; $d1_td_id=2; $e1_td_id=1; $f1_td_id=0;
+$a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=1; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+$a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+$a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+$a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+$a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
@@ -542,60 +302,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
   }
 
   if (isset($_POST['e1'])){
-  $_SESSION['resultado'] = $_SESSION['resultado']+5;
-  $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-  $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-  // $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-  $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-  // $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+    $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$e1_operador,$e1_numero);
 
-  $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-  $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-  $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-  $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-  // $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-  $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-  $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-  $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-  $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-  $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-  $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-  $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-  $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-  $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-  $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-  $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-  $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-  $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-  $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-  $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-  $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-  $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-  $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-  $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-  $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-  $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-  $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-  $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-  $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-  $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-  $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-  $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-  $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-  $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-  $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-  $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-  $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-  $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-  $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-  $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-  $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-  $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+             $b1_td_id=0; $c1_td_id=0; $d1_td_id=1; $e1_td_id=2; $f1_td_id=1;
+$a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=1; $f2_td_id=0; $g2_td_id=0;
+$a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+$a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+$a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+$a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
   if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -628,60 +342,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
   }
 
   if (isset($_POST['f1'])){
-  $_SESSION['resultado'] = $_SESSION['resultado']*4;
-  $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-  $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-  $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-  // $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-  $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+    $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$f1_operador,$f1_numero);
 
-  $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-  $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-  $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-  $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-  $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-  // $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-  $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-  $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-  $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-  $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-  $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-  $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-  $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-  $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-  $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-  $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-  $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-  $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-  $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-  $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-  $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-  $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-  $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-  $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-  $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-  $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-  $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-  $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-  $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-  $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-  $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-  $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-  $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-  $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-  $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-  $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-  $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-  $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-  $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-  $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-  $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-  $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+             $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=1; $f1_td_id=2;
+$a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=1; $g2_td_id=0;
+$a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+$a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+$a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+$a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
   if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -716,60 +384,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
   //_______________Linha_2_______________________________________
 
   if (isset($_POST['a2'])){
-  $_SESSION['resultado'] = $_SESSION['resultado'] * 7;
-  $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-  $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-  $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-  $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-  $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+    $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$a2_operador,$a2_numero);
 
-  $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-  // $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-  $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-  $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-  $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-  $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-  $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-  // $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-  $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-  $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-  $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-  $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-  $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-  $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-  $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-  $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-  $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-  $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-  $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-  $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-  $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-  $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-  $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-  $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-  $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-  $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-  $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-  $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-  $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-  $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-  $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-  $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-  $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-  $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-  $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-  $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-  $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-  $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-  $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-  $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-  $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-  $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+             $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+$a2_td_id=2; $b2_td_id=1; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+$a3_td_id=1; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+$a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+$a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+$a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
   if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -802,60 +424,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
   }
 
   if (isset($_POST['b2'])){
-  $_SESSION['resultado'] = $_SESSION['resultado'] - 41;
-  // $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-  $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-  $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-  $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-  $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+    $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$b2_operador,$b2_numero);
 
-  // $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-  $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-  // $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-  $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-  $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-  $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-  $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-  $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-  // $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-  $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-  $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-  $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-  $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-  $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-  $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-  $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-  $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-  $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-  $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-  $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-  $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-  $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-  $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-  $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-  $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-  $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-  $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-  $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-  $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-  $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-  $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-  $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-  $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-  $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-  $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-  $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-  $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-  $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-  $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-  $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-  $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-  $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+             $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+$a2_td_id=1; $b2_td_id=2; $c2_td_id=1; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+$a3_td_id=0; $b3_td_id=1; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+$a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+$a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+$a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
   if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -889,60 +465,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
 
 
   if (isset($_POST['c2'])){
-  $_SESSION['resultado'] = $_SESSION['resultado']/2;
-  $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-  // $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-  $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-  $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-  $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+    $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$c2_operador,$c2_numero);
 
-  $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-  // $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-  $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-  // $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-  $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-  $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-  $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-  $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-  $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-  // $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-  $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-  $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-  $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-  $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-  $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-  $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-  $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-  $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-  $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-  $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-  $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-  $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-  $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-  $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-  $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-  $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-  $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-  $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-  $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-  $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-  $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-  $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-  $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-  $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-  $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-  $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-  $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-  $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-  $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-  $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-  $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-  $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+             $b1_td_id=0; $c1_td_id=1; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+$a2_td_id=0; $b2_td_id=1; $c2_td_id=2; $d2_td_id=1; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+$a3_td_id=0; $b3_td_id=0; $c3_td_id=1; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+$a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+$a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+$a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
   if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -975,60 +505,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
   }
 
   if (isset($_POST['d2'])){
-  $_SESSION['resultado'] = $_SESSION['resultado']+7;
-  $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-  $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-  // $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-  $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-  $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+    $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$d2_operador,$d2_numero);
 
-  $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-  $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-  // $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-  $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-  // $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-  $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-  $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-  $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-  $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-  $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-  // $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-  $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-  $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-  $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-  $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-  $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-  $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-  $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-  $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-  $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-  $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-  $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-  $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-  $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-  $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-  $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-  $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-  $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-  $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-  $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-  $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-  $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-  $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-  $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-  $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-  $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-  $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-  $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-  $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-  $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-  $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-  $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+             $b1_td_id=0; $c1_td_id=0; $d1_td_id=1; $e1_td_id=0; $f1_td_id=0;
+$a2_td_id=0; $b2_td_id=0; $c2_td_id=1; $d2_td_id=2; $e2_td_id=1; $f2_td_id=0; $g2_td_id=0;
+$a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=1; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+$a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+$a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+$a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
   if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -1061,60 +545,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
   }
 
   if (isset($_POST['e2'])){
-  $_SESSION['resultado'] = $_SESSION['resultado']/3;
-  $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-  $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-  $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-  // $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-  $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+    $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$e2_operador,$e2_numero);
 
-  $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-  $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-  $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-  // $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-  $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-  // $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-  $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-  $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-  $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-  $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-  $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-  // $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-  $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-  $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-  $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-  $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-  $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-  $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-  $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-  $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-  $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-  $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-  $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-  $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-  $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-  $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-  $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-  $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-  $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-  $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-  $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-  $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-  $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-  $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-  $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-  $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-  $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-  $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-  $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-  $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-  $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-  $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+             $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=1; $f1_td_id=0;
+$a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=1; $e2_td_id=2; $f2_td_id=1; $g2_td_id=0;
+$a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=1; $f3_td_id=0; $g3_td_id=0;
+$a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+$a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+$a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
   if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -1147,60 +585,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
   }
 
   if (isset($_POST['f2'])){
-  $_SESSION['resultado'] = $_SESSION['resultado']+11;
-  $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-  $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-  $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-  $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-  // $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+    $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$f2_operador,$f2_numero);
 
-  $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-  $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-  $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-  $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-  // $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-  $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-  // $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-  $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-  $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-  $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-  $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-  $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-  // $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-  $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-  $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-  $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-  $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-  $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-  $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-  $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-  $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-  $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-  $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-  $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-  $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-  $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-  $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-  $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-  $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-  $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-  $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-  $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-  $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-  $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-  $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-  $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-  $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-  $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-  $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-  $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-  $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-  $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+             $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
+$a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=1; $f2_td_id=2; $g2_td_id=1;
+$a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=1; $g3_td_id=0;
+$a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+$a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+$a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
   if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -1233,60 +625,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
   }
 
   if (isset($_POST['g2'])){
-  $_SESSION['resultado'] = $_SESSION['resultado']*8;
-  $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-  $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-  $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-  $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-  $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+    $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$g2_operador,$g2_numero);
 
-  $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-  $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-  $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-  $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-  $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-  // $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-  $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-  $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-  $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-  $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-  $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-  $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-  $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-  // $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-  $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-  $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-  $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-  $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-  $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-  $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-  $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-  $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-  $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-  $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-  $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-  $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-  $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-  $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-  $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-  $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-  $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-  $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-  $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-  $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-  $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-  $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-  $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-  $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-  $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-  $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-  $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-  $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+             $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+$a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=1; $g2_td_id=2;
+$a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=1;
+$a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+$a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+$a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
   if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -1321,60 +667,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
   //______________Linha_3________________________________________
 
   if (isset($_POST['a3'])){
-  $_SESSION['resultado'] = $_SESSION['resultado'] + 14;
-  $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-  $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-  $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-  $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-  $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+    $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$a3_operador,$a3_numero);
 
-  // $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-  $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-  $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-  $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-  $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-  $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-  $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-  $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-  // $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-  $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-  $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-  $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-  $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-  $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-  // $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-  $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-  $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-  $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-  $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-  $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-  $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-  $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-  $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-  $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-  $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-  $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-  $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-  $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-  $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-  $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-  $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-  $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-  $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-  $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-  $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-  $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-  $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-  $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-  $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-  $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-  $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-  $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+             $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+$a2_td_id=1; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+$a3_td_id=2; $b3_td_id=1; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+$a4_td_id=1; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+$a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+$a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
   if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -1407,60 +707,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
   }
 
   if (isset($_POST['b3'])){
-  $_SESSION['resultado'] = $_SESSION['resultado'] /6;
-  $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-  $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-  $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-  $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-  $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+    $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$b3_operador,$b3_numero);
 
-  $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-  // $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-  $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-  $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-  $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-  $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-  $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-  // $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-  $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-  // $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-  $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-  $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-  $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-  $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-  $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-  // $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-  $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-  $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-  $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-  $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-  $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-  $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-  $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-  $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-  $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-  $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-  $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-  $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-  $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-  $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-  $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-  $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-  $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-  $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-  $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-  $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-  $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-  $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-  $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-  $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-  $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-  $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+             $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+$a2_td_id=0; $b2_td_id=1; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+$a3_td_id=1; $b3_td_id=2; $c3_td_id=1; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+$a4_td_id=0; $b4_td_id=1; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+$a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+$a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
   if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -1495,60 +749,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
 
 
   if (isset($_POST['c3'])){
-  $_SESSION['resultado'] = $_SESSION['resultado']*2;
-  $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-  $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-  $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-  $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-  $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+    $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$c3_operador,$c3_numero);
 
-  $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-  $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-  // $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-  $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-  $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-  $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-  $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-  $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-  // $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-  $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-  // $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-  $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-  $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-  $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-  $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-  $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-  // $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-  $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-  $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-  $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-  $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-  $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-  $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-  $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-  $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-  $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-  $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-  $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-  $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-  $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-  $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-  $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-  $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-  $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-  $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-  $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-  $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-  $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-  $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-  $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-  $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-  $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+             $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+$a2_td_id=0; $b2_td_id=0; $c2_td_id=1; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+$a3_td_id=0; $b3_td_id=1; $c3_td_id=2; $d3_td_id=1; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+$a4_td_id=0; $b4_td_id=0; $c4_td_id=1; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+$a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+$a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
   if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -1581,60 +789,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
   }
 
   if (isset($_POST['d3'])){
-  $_SESSION['resultado'] = $_SESSION['resultado']-4;
-  $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-  $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-  $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-  $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-  $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+    $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$d3_operador,$d3_numero);
 
-  $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-  $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-  $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-  // $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-  $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-  $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-  $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-  $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-  $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-  // $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-  $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-  // $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-  $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-  $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-  $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-  $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-  $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-  // $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-  $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-  $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-  $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-  $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-  $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-  $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-  $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-  $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-  $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-  $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-  $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-  $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-  $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-  $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-  $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-  $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-  $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-  $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-  $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-  $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-  $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-  $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-  $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-  $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+             $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+$a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=1; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+$a3_td_id=0; $b3_td_id=0; $c3_td_id=1; $d3_td_id=2; $e3_td_id=1; $f3_td_id=0; $g3_td_id=0;
+$a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=1; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+$a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+$a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
   if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -1667,60 +829,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
   }
 
   if (isset($_POST['e3'])){
-  $_SESSION['resultado'] = $_SESSION['resultado']*17;
-  $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-  $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-  $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-  $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-  $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+    $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$e3_operador,$e3_numero);
 
-  $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-  $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-  $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-  $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-  // $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-  $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-  $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-  $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-  $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-  $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-  // $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-  $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-  // $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-  $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-  $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-  $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-  $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-  $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-  // $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-  $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-  $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-  $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-  $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-  $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-  $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-  $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-  $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-  $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-  $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-  $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-  $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-  $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-  $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-  $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-  $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-  $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-  $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-  $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-  $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-  $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-  $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-  $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+             $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+$a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=1; $f2_td_id=0; $g2_td_id=0;
+$a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=1; $e3_td_id=2; $f3_td_id=1; $g3_td_id=0;
+$a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=1; $f4_td_id=0; $g4_td_id=0;
+$a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+$a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
   if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -1753,60 +869,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
   }
 
   if (isset($_POST['f3'])){
-  $_SESSION['resultado'] = $_SESSION['resultado']/4;
-  $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-  $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-  $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-  $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-  $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+    $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$f3_operador,$f3_numero);
 
-  $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-  $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-  $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-  $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-  $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-  // $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-  $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-  $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-  $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-  $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-  $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-  // $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-  $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-  // $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-  $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-  $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-  $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-  $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-  $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-  // $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-  $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-  $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-  $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-  $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-  $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-  $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-  $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-  $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-  $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-  $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-  $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-  $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-  $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-  $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-  $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-  $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-  $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-  $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-  $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-  $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-  $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-  $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+             $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+$a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=1; $g2_td_id=0;
+$a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=1; $f3_td_id=2; $g3_td_id=1;
+$a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=1; $g4_td_id=0;
+$a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+$a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
   if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -1839,60 +909,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
   }
 
   if (isset($_POST['g3'])){
-  $_SESSION['resultado'] = $_SESSION['resultado']+3;
-  $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-  $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-  $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-  $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-  $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+    $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$g3_operador,$g3_numero);
 
-  $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-  $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-  $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-  $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-  $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-  $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-  // $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-  $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-  $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-  $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-  $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-  $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-  // $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-  $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-  $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-  $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-  $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-  $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-  $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-  $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-  // $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-  $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-  $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-  $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-  $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-  $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-  $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-  $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-  $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-  $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-  $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-  $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-  $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-  $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-  $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-  $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-  $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-  $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-  $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-  $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-  $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-  $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+             $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+$a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=1;
+$a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=1; $g3_td_id=2;
+$a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=1;
+$a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+$a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
   if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -1927,60 +951,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
     //______________Linha_4________________________________________
 
     if (isset($_POST['a4'])){
-    $_SESSION['resultado'] = $_SESSION['resultado'] /5;
-    $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-    $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-    $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-    $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-    $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+      $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$a4_operador,$a4_numero);
 
-    $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-    $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-    $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-    $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-    $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-    $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-    $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-    // $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-    $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-    $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-    $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-    $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-    $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-    $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-    $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-    // $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-    $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-    $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-    $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-    $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-    $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-    // $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-    $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-    $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-    $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-    $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-    $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-    $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-    $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-    $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-    $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-    $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-    $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-    $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-    $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-    $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-    $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-    $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-    $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-    $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-    $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-    $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+               $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+  $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+  $a3_td_id=1; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+  $a4_td_id=2; $b4_td_id=1; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+  $a5_td_id=1; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+  $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
     if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -2013,60 +991,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
     }
 
     if (isset($_POST['b4'])){
-    $_SESSION['resultado'] = $_SESSION['resultado'] -33;
-    $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-    $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-    $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-    $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-    $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+      $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$b4_operador,$b4_numero);
 
-    $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-    $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-    $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-    $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-    $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-    $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-    $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-    $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-    // $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-    $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-    $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-    $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-    $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-    $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-    // $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-    $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-    // $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-    $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-    $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-    $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-    $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-    $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-    // $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-    $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-    $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-    $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-    $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-    $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-    $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-    $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-    $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-    $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-    $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-    $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-    $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-    $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-    $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-    $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-    $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-    $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-    $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-    $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+               $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+  $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+  $a3_td_id=0; $b3_td_id=1; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+  $a4_td_id=1; $b4_td_id=2; $c4_td_id=1; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+  $a5_td_id=0; $b5_td_id=1; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+  $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
     if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -2100,60 +1032,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
 
 
     if (isset($_POST['c4'])){
-    $_SESSION['resultado'] = $_SESSION['resultado']/5;
-    $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-    $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-    $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-    $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-    $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+      $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$c4_operador,$c4_numero);
 
-    $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-    $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-    $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-    $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-    $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-    $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-    $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-    $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-    $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-    // $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-    $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-    $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-    $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-    $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-    $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-    // $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-    $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-    // $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-    $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-    $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-    $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-    $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-    $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-    // $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-    $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-    $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-    $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-    $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-    $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-    $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-    $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-    $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-    $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-    $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-    $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-    $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-    $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-    $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-    $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-    $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-    $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-    $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+               $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+  $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+  $a3_td_id=0; $b3_td_id=0; $c3_td_id=1; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+  $a4_td_id=0; $b4_td_id=1; $c4_td_id=2; $d4_td_id=1; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+  $a5_td_id=0; $b5_td_id=0; $c5_td_id=1; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+  $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
     if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -2186,60 +1072,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
     }
 
     if (isset($_POST['d4'])){
-    $_SESSION['resultado'] = $_SESSION['resultado']+7;
-    $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-    $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-    $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-    $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-    $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+      $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$d4_operador,$d4_numero);
 
-    $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-    $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-    $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-    $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-    $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-    $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-    $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-    $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-    $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-    $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-    // $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-    $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-    $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-    $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-    $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-    $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-    // $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-    $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-    // $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-    $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-    $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-    $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-    $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-    $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-    // $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-    $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-    $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-    $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-    $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-    $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-    $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-    $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-    $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-    $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-    $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-    $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-    $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-    $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-    $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-    $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-    $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-    $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+               $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+  $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+  $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=1; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+  $a4_td_id=0; $b4_td_id=0; $c4_td_id=1; $d4_td_id=2; $e4_td_id=1; $f4_td_id=0; $g4_td_id=0;
+  $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=1; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+  $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
     if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -2272,60 +1112,15 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
     }
 
     if (isset($_POST['e4'])){
-    $_SESSION['resultado'] = $_SESSION['resultado']/8;
-    $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-    $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-    $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-    $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-    $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+      $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$e4_operador,$e4_numero);
 
-    $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-    $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-    $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-    $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-    $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-    $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-    $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
+               $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+  $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+  $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=1; $f3_td_id=0; $g3_td_id=0;
+  $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=1; $e4_td_id=2; $f4_td_id=1; $g4_td_id=0;
+  $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=1; $f5_td_id=0; $g5_td_id=0;
+  $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
-    $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-    $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-    $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-    $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-    // $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-    $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-    $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-    $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-    $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-    $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-    // $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-    $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-    // $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-    $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-    $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-    $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-    $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-    $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-    // $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-    $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-    $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-    $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-    $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-    $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-    $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-    $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-    $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-    $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-    $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-    $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-    $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-    $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-    $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-    $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-    $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
     if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -2358,60 +1153,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
     }
 
     if (isset($_POST['f4'])){
-    $_SESSION['resultado'] = $_SESSION['resultado']*6;
-    $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-    $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-    $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-    $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-    $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+      $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$f4_operador,$f4_numero);
 
-    $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-    $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-    $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-    $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-    $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-    $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-    $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-    $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-    $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-    $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-    $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-    $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-    // $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-    $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-    $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-    $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-    $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-    $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-    // $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-    $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-    // $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-    $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-    $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-    $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-    $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-    $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-    // $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-    $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-    $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-    $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-    $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-    $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-    $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-    $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-    $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-    $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-    $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-    $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-    $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-    $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-    $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-    $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+               $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+  $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+  $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=1; $g3_td_id=0;
+  $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=1; $f4_td_id=2; $g4_td_id=1;
+  $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=1; $g5_td_id=0;
+  $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
     if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -2444,60 +1193,14 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
     }
 
     if (isset($_POST['g4'])){
-    $_SESSION['resultado'] = $_SESSION['resultado']-41;
-    $_SESSION["b1_view_abertura"] = "<!--"; $_SESSION["b1_view_fechamento"] = "--> x3";
-    $_SESSION["c1_view_abertura"] = "<!--"; $_SESSION["c1_view_fechamento"] = "--> -4";
-    $_SESSION["d1_view_abertura"] = "<!--"; $_SESSION["d1_view_fechamento"] = "--> x4";
-    $_SESSION["e1_view_abertura"] = "<!--"; $_SESSION["e1_view_fechamento"] = "--> +5";
-    $_SESSION["f1_view_abertura"] = "<!--"; $_SESSION["f1_view_fechamento"] = "--> x4";
+      $_SESSION['resultado'] = calcula_resultado($_SESSION['resultado'],$g4_operador,$g4_numero);
 
-    $_SESSION["a2_view_abertura"] = "<!--"; $_SESSION["a2_view_fechamento"] = "--> x7";
-    $_SESSION["b2_view_abertura"] = "<!--"; $_SESSION["b2_view_fechamento"] = "--> -41";
-    $_SESSION["c2_view_abertura"] = "<!--"; $_SESSION["c2_view_fechamento"] = "--> ÷2";
-    $_SESSION["d2_view_abertura"] = "<!--"; $_SESSION["d2_view_fechamento"] = "--> +7";
-    $_SESSION["e2_view_abertura"] = "<!--"; $_SESSION["e2_view_fechamento"] = "--> ÷3";
-    $_SESSION["f2_view_abertura"] = "<!--"; $_SESSION["f2_view_fechamento"] = "--> +11";
-    $_SESSION["g2_view_abertura"] = "<!--"; $_SESSION["g2_view_fechamento"] = "--> x8";
-
-    $_SESSION["a3_view_abertura"] = "<!--"; $_SESSION["a3_view_fechamento"] = "--> +14";
-    $_SESSION["b3_view_abertura"] = "<!--"; $_SESSION["b3_view_fechamento"] = "--> ÷6";
-    $_SESSION["c3_view_abertura"] = "<!--"; $_SESSION["c3_view_fechamento"] = "--> x2";
-    $_SESSION["d3_view_abertura"] = "<!--"; $_SESSION["d3_view_fechamento"] = "--> -4";
-    $_SESSION["e3_view_abertura"] = "<!--"; $_SESSION["e3_view_fechamento"] = "--> x17";
-    $_SESSION["f3_view_abertura"] = "<!--"; $_SESSION["f3_view_fechamento"] = "--> ÷4";
-    // $_SESSION["g3_view_abertura"] = "<!--"; $_SESSION["g3_view_fechamento"] = "--> +3";
-
-    $_SESSION["a4_view_abertura"] = "<!--"; $_SESSION["a4_view_fechamento"] = "--> ÷5";
-    $_SESSION["b4_view_abertura"] = "<!--"; $_SESSION["b4_view_fechamento"] = "--> -33";
-    $_SESSION["c4_view_abertura"] = "<!--"; $_SESSION["c4_view_fechamento"] = "--> ÷5";
-    $_SESSION["d4_view_abertura"] = "<!--"; $_SESSION["d4_view_fechamento"] = "--> +7";
-    $_SESSION["e4_view_abertura"] = "<!--"; $_SESSION["e4_view_fechamento"] = "--> ÷8";
-    // $_SESSION["f4_view_abertura"] = "<!--"; $_SESSION["f4_view_fechamento"] = "--> x6";
-    $_SESSION["g4_view_abertura"] = "<!--"; $_SESSION["g4_view_fechamento"] = "--> -41";
-
-    $_SESSION["a5_view_abertura"] = "<!--"; $_SESSION["a5_view_fechamento"] = "--> x21";
-    $_SESSION["b5_view_abertura"] = "<!--"; $_SESSION["b5_view_fechamento"] = "--> +123";
-    $_SESSION["c5_view_abertura"] = "<!--"; $_SESSION["c5_view_fechamento"] = "--> -8";
-    $_SESSION["d5_view_abertura"] = "<!--"; $_SESSION["d5_view_fechamento"] = "--> ÷14";
-    $_SESSION["e5_view_abertura"] = "<!--"; $_SESSION["e5_view_fechamento"] = "--> -2";
-    $_SESSION["f5_view_abertura"] = "<!--"; $_SESSION["f5_view_fechamento"] = "--> ÷3";
-    // $_SESSION["g5_view_abertura"] = "<!--"; $_SESSION["g5_view_fechamento"] = "--> x71";
-
-    $_SESSION["a6_view_abertura"] = "<!--"; $_SESSION["a6_view_fechamento"] = "--> -14";
-    $_SESSION["b6_view_abertura"] = "<!--"; $_SESSION["b6_view_fechamento"] = "--> -6";
-    $_SESSION["c6_view_abertura"] = "<!--"; $_SESSION["c6_view_fechamento"] = "--> +12";
-    $_SESSION["d6_view_abertura"] = "<!--"; $_SESSION["d6_view_fechamento"] = "--> x93";
-    $_SESSION["e6_view_abertura"] = "<!--"; $_SESSION["e6_view_fechamento"] = "--> +4";
-    $_SESSION["f6_view_abertura"] = "<!--"; $_SESSION["f6_view_fechamento"] = "--> -72";
-    $_SESSION["g6_view_abertura"] = "<!--"; $_SESSION["g6_view_fechamento"] = "--> ÷10";
-
-    $_SESSION["a7_view_abertura"] = "<!--"; $_SESSION["a7_view_fechamento"] = "--> = 181";
-    $_SESSION["b7_view_abertura"] = "<!--"; $_SESSION["b7_view_fechamento"] = "--> = 181";
-    $_SESSION["c7_view_abertura"] = "<!--"; $_SESSION["c7_view_fechamento"] = "--> = 181";
-    $_SESSION["d7_view_abertura"] = "<!--"; $_SESSION["d7_view_fechamento"] = "--> = 181";
-    $_SESSION["e7_view_abertura"] = "<!--"; $_SESSION["e7_view_fechamento"] = "--> = 181";
-    $_SESSION["f7_view_abertura"] = "<!--"; $_SESSION["f7_view_fechamento"] = "--> = 181";
-    $_SESSION["g7_view_abertura"] = "<!--"; $_SESSION["g7_view_fechamento"] = "--> = 181";
+               $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+  $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+  $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=1;
+  $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=1; $g4_td_id=2;
+  $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=1;
+  $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
     if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
@@ -4956,11 +3659,184 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
  if($_SESSION["f6_count"] == 9){$f6_div = $cor_9_count;}    if($_SESSION["g6_count"] == 9){$g6_div = $cor_9_count;}
  if($_SESSION["f6_count"] >= 10){$f6_div = $cor_10_count;}  if($_SESSION["g6_count"] >= 10){$g6_div = $cor_10_count;}
 
+ //_______________Linha_1_______________________________________
+
+ if($b1_td_id == 0){$b1_td = $b1_op_nu;}
+ if($b1_td_id == 1){$b1_td = "<input type='submit' name='b1' value="."'".$b1_op_nu."'>";}
+ if($b1_td_id == 2){$b1_td = "<input class='inverso' type='submit' name='b1_inverso' value="."'".inverte_operador($b1_operador,$b1_numero)."'>";}
+
+ if($c1_td_id == 0){$c1_td = $c1_op_nu;}
+ if($c1_td_id == 1){$c1_td = "<input type='submit' name='c1' value="."'".$c1_op_nu."'>";}
+ if($c1_td_id == 2){$c1_td = "<input class='inverso' type='submit' name='c1_inverso' value="."'".inverte_operador($c1_operador,$c1_numero)."'>";}
+
+ if($d1_td_id == 0){$d1_td = $d1_op_nu;}
+ if($d1_td_id == 1){$d1_td = "<input type='submit' name='d1' value="."'".$d1_op_nu."'>";}
+ if($d1_td_id == 2){$d1_td = "<input class='inverso' type='submit' name='d1_inverso' value="."'".inverte_operador($d1_operador,$d1_numero)."'>";}
+
+ if($e1_td_id == 0){$e1_td = $e1_op_nu;}
+ if($e1_td_id == 1){$e1_td = "<input type='submit' name='e1' value="."'".$e1_op_nu."'>";}
+ if($e1_td_id == 2){$e1_td = "<input class='inverso' type='submit' name='e1_inverso' value="."'".inverte_operador($e1_operador,$e1_numero)."'>";}
+
+ if($f1_td_id == 0){$f1_td = $f1_op_nu;}
+ if($f1_td_id == 1){$f1_td = "<input type='submit' name='f1' value="."'".$f1_op_nu."'>";}
+ if($f1_td_id == 2){$f1_td = "<input class='inverso' type='submit' name='f1_inverso' value="."'".inverte_operador($f1_operador,$f1_numero)."'>";}
+
+ //_______________Linha_2_______________________________________
+
+ if($a2_td_id == 0){$a2_td = $a2_op_nu;}
+ if($a2_td_id == 1){$a2_td = "<input type='submit' name='a2' value="."'".$a2_op_nu."'>";}
+ if($a2_td_id == 2){$a2_td = "<input class='inverso' type='submit' name='a2_inverso' value="."'".inverte_operador($a2_operador,$a2_numero)."'>";}
+
+ if($b2_td_id == 0){$b2_td = $b2_op_nu;}
+ if($b2_td_id == 1){$b2_td = "<input type='submit' name='b2' value="."'".$b2_op_nu."'>";}
+ if($b2_td_id == 2){$b2_td = "<input class='inverso' type='submit' name='b2_inverso' value="."'".inverte_operador($b2_operador,$b2_numero)."'>";}
+
+ if($c2_td_id == 0){$c2_td = $c2_op_nu;}
+ if($c2_td_id == 1){$c2_td = "<input type='submit' name='c2' value="."'".$c2_op_nu."'>";}
+ if($c2_td_id == 2){$c2_td = "<input class='inverso' type='submit' name='c2_inverso' value="."'".inverte_operador($c2_operador,$c2_numero)."'>";}
+
+ if($d2_td_id == 0){$d2_td = $d2_op_nu;}
+ if($d2_td_id == 1){$d2_td = "<input type='submit' name='d2' value="."'".$d2_op_nu."'>";}
+ if($d2_td_id == 2){$d2_td = "<input class='inverso' type='submit' name='d2_inverso' value="."'".inverte_operador($d2_operador,$d2_numero)."'>";}
+
+ if($e2_td_id == 0){$e2_td = $e2_op_nu;}
+ if($e2_td_id == 1){$e2_td = "<input type='submit' name='e2' value="."'".$e2_op_nu."'>";}
+ if($e2_td_id == 2){$e2_td = "<input class='inverso' type='submit' name='e2_inverso' value="."'".inverte_operador($e2_operador,$e2_numero)."'>";}
+
+ if($f2_td_id == 0){$f2_td = $f2_op_nu;}
+ if($f2_td_id == 1){$f2_td = "<input type='submit' name='f2' value="."'".$f2_op_nu."'>";}
+ if($f2_td_id == 2){$f2_td = "<input class='inverso' type='submit' name='f2_inverso' value="."'".inverte_operador($f2_operador,$f2_numero)."'>";}
+
+ if($g2_td_id == 0){$g2_td = $g2_op_nu;}
+ if($g2_td_id == 1){$g2_td = "<input type='submit' name='g2' value="."'".$g2_op_nu."'>";}
+ if($g2_td_id == 2){$g2_td = "<input class='inverso' type='submit' name='g2_inverso' value="."'".inverte_operador($g2_operador,$g2_numero)."'>";}
+
+ //_______________Linha_3_______________________________________
+
+ if($a3_td_id == 0){$a3_td = $a3_op_nu;}
+ if($a3_td_id == 1){$a3_td = "<input type='submit' name='a3' value="."'".$a3_op_nu."'>";}
+ if($a3_td_id == 2){$a3_td = "<input class='inverso' type='submit' name='a3_inverso' value="."'".inverte_operador($a3_operador,$a3_numero)."'>";}
+
+ if($b3_td_id == 0){$b3_td = $b3_op_nu;}
+ if($b3_td_id == 1){$b3_td = "<input type='submit' name='b3' value="."'".$b3_op_nu."'>";}
+ if($b3_td_id == 2){$b3_td = "<input class='inverso' type='submit' name='b3_inverso' value="."'".inverte_operador($b3_operador,$b3_numero)."'>";}
+
+ if($c3_td_id == 0){$c3_td = $c3_op_nu;}
+ if($c3_td_id == 1){$c3_td = "<input type='submit' name='c3' value="."'".$c3_op_nu."'>";}
+ if($c3_td_id == 2){$c3_td = "<input class='inverso' type='submit' name='c3_inverso' value="."'".inverte_operador($c3_operador,$c3_numero)."'>";}
+
+ if($d3_td_id == 0){$d3_td = $d3_op_nu;}
+ if($d3_td_id == 1){$d3_td = "<input type='submit' name='d3' value="."'".$d3_op_nu."'>";}
+ if($d3_td_id == 2){$d3_td = "<input class='inverso' type='submit' name='d3_inverso' value="."'".inverte_operador($d3_operador,$d3_numero)."'>";}
+
+ if($e3_td_id == 0){$e3_td = $e3_op_nu;}
+ if($e3_td_id == 1){$e3_td = "<input type='submit' name='e3' value="."'".$e3_op_nu."'>";}
+ if($e3_td_id == 2){$e3_td = "<input class='inverso' type='submit' name='e3_inverso' value="."'".inverte_operador($e3_operador,$e3_numero)."'>";}
+
+ if($f3_td_id == 0){$f3_td = $f3_op_nu;}
+ if($f3_td_id == 1){$f3_td = "<input type='submit' name='f3' value="."'".$f3_op_nu."'>";}
+ if($f3_td_id == 2){$f3_td = "<input class='inverso' type='submit' name='f3_inverso' value="."'".inverte_operador($f3_operador,$f3_numero)."'>";}
+
+ if($g3_td_id == 0){$g3_td = $g3_op_nu;}
+ if($g3_td_id == 1){$g3_td = "<input type='submit' name='g3' value="."'".$g3_op_nu."'>";}
+ if($g3_td_id == 2){$g3_td = "<input class='inverso' type='submit' name='g3_inverso' value="."'".inverte_operador($g3_operador,$g3_numero)."'>";}
+
+ //_______________Linha_4_______________________________________
+
+ if($a4_td_id == 0){$a4_td = $a4_op_nu;}
+ if($a4_td_id == 1){$a4_td = "<input type='submit' name='a4' value="."'".$a4_op_nu."'>";}
+ if($a4_td_id == 2){$a4_td = "<input class='inverso' type='submit' name='a4_inverso' value="."'".inverte_operador($a4_operador,$a4_numero)."'>";}
+
+ if($b4_td_id == 0){$b4_td = $b4_op_nu;}
+ if($b4_td_id == 1){$b4_td = "<input type='submit' name='b4' value="."'".$b4_op_nu."'>";}
+ if($b4_td_id == 2){$b4_td = "<input class='inverso' type='submit' name='b4_inverso' value="."'".inverte_operador($b4_operador,$b4_numero)."'>";}
+
+ if($c4_td_id == 0){$c4_td = $c4_op_nu;}
+ if($c4_td_id == 1){$c4_td = "<input type='submit' name='c4' value="."'".$c4_op_nu."'>";}
+ if($c4_td_id == 2){$c4_td = "<input class='inverso' type='submit' name='c4_inverso' value="."'".inverte_operador($c4_operador,$c4_numero)."'>";}
+
+ if($d4_td_id == 0){$d4_td = $d4_op_nu;}
+ if($d4_td_id == 1){$d4_td = "<input type='submit' name='d4' value="."'".$d4_op_nu."'>";}
+ if($d4_td_id == 2){$d4_td = "<input class='inverso' type='submit' name='d4_inverso' value="."'".inverte_operador($d4_operador,$d4_numero)."'>";}
+
+ if($e4_td_id == 0){$e4_td = $e4_op_nu;}
+ if($e4_td_id == 1){$e4_td = "<input type='submit' name='e4' value="."'".$e4_op_nu."'>";}
+ if($e4_td_id == 2){$e4_td = "<input class='inverso' type='submit' name='e4_inverso' value="."'".inverte_operador($e4_operador,$e4_numero)."'>";}
+
+ if($f4_td_id == 0){$f4_td = $f4_op_nu;}
+ if($f4_td_id == 1){$f4_td = "<input type='submit' name='f4' value="."'".$f4_op_nu."'>";}
+ if($f4_td_id == 2){$f4_td = "<input class='inverso' type='submit' name='f4_inverso' value="."'".inverte_operador($f4_operador,$f4_numero)."'>";}
+
+ if($g4_td_id == 0){$g4_td = $g4_op_nu;}
+ if($g4_td_id == 1){$g4_td = "<input type='submit' name='g4' value="."'".$g4_op_nu."'>";}
+ if($g4_td_id == 2){$g4_td = "<input class='inverso' type='submit' name='g4_inverso' value="."'".inverte_operador($g4_operador,$g4_numero)."'>";}
+
+ //_______________Linha_5_______________________________________
+
+ if($a5_td_id == 0){$a5_td = $a5_op_nu;}
+ if($a5_td_id == 1){$a5_td = "<input type='submit' name='a5' value="."'".$a5_op_nu."'>";}
+ if($a5_td_id == 2){$a5_td = "<input class='inverso' type='submit' name='a5_inverso' value="."'".inverte_operador($a5_operador,$a5_numero)."'>";}
+
+ if($b5_td_id == 0){$b5_td = $b5_op_nu;}
+ if($b5_td_id == 1){$b5_td = "<input type='submit' name='b5' value="."'".$b5_op_nu."'>";}
+ if($b5_td_id == 2){$b5_td = "<input class='inverso' type='submit' name='b5_inverso' value="."'".inverte_operador($b5_operador,$b5_numero)."'>";}
+
+ if($c5_td_id == 0){$c5_td = $c5_op_nu;}
+ if($c5_td_id == 1){$c5_td = "<input type='submit' name='c5' value="."'".$c5_op_nu."'>";}
+ if($c5_td_id == 2){$c5_td = "<input class='inverso' type='submit' name='c5_inverso' value="."'".inverte_operador($c5_operador,$c5_numero)."'>";}
+
+ if($d5_td_id == 0){$d5_td = $d5_op_nu;}
+ if($d5_td_id == 1){$d5_td = "<input type='submit' name='d5' value="."'".$d5_op_nu."'>";}
+ if($d5_td_id == 2){$d5_td = "<input class='inverso' type='submit' name='d5_inverso' value="."'".inverte_operador($d5_operador,$d5_numero)."'>";}
+
+ if($e5_td_id == 0){$e5_td = $e5_op_nu;}
+ if($e5_td_id == 1){$e5_td = "<input type='submit' name='e5' value="."'".$e5_op_nu."'>";}
+ if($e5_td_id == 2){$e5_td = "<input class='inverso' type='submit' name='e5_inverso' value="."'".inverte_operador($e5_operador,$e5_numero)."'>";}
+
+ if($f5_td_id == 0){$f5_td = $f5_op_nu;}
+ if($f5_td_id == 1){$f5_td = "<input type='submit' name='f5' value="."'".$f5_op_nu."'>";}
+ if($f5_td_id == 2){$f5_td = "<input class='inverso' type='submit' name='f5_inverso' value="."'".inverte_operador($f5_operador,$f5_numero)."'>";}
+
+ if($g5_td_id == 0){$g5_td = $g5_op_nu;}
+ if($g5_td_id == 1){$g5_td = "<input type='submit' name='g5' value="."'".$g5_op_nu."'>";}
+ if($g5_td_id == 2){$g5_td = "<input class='inverso' type='submit' name='g5_inverso' value="."'".inverte_operador($g5_operador,$g5_numero)."'>";}
+
+ //_______________Linha_6_______________________________________
+
+ if($a6_td_id == 0){$a6_td = $a6_op_nu;}
+ if($a6_td_id == 1){$a6_td = "<input type='submit' name='a6' value="."'".$a6_op_nu."'>";}
+ if($a6_td_id == 2){$a6_td = "<input class='inverso' type='submit' name='a6_inverso' value="."'".inverte_operador($a6_operador,$a6_numero)."'>";}
+
+ if($b6_td_id == 0){$b6_td = $b6_op_nu;}
+ if($b6_td_id == 1){$b6_td = "<input type='submit' name='b6' value="."'".$b6_op_nu."'>";}
+ if($b6_td_id == 2){$b6_td = "<input class='inverso' type='submit' name='b6_inverso' value="."'".inverte_operador($b6_operador,$b6_numero)."'>";}
+
+ if($c6_td_id == 0){$c6_td = $c6_op_nu;}
+ if($c6_td_id == 1){$c6_td = "<input type='submit' name='c6' value="."'".$c6_op_nu."'>";}
+ if($c6_td_id == 2){$c6_td = "<input class='inverso' type='submit' name='c6_inverso' value="."'".inverte_operador($c6_operador,$c6_numero)."'>";}
+
+ if($d6_td_id == 0){$d6_td = $d6_op_nu;}
+ if($d6_td_id == 1){$d6_td = "<input type='submit' name='d6' value="."'".$d6_op_nu."'>";}
+ if($d6_td_id == 2){$d6_td = "<input class='inverso' type='submit' name='d6_inverso' value="."'".inverte_operador($d6_operador,$d6_numero)."'>";}
+
+ if($e6_td_id == 0){$e6_td = $e6_op_nu;}
+ if($e6_td_id == 1){$e6_td = "<input type='submit' name='e6' value="."'".$e6_op_nu."'>";}
+ if($e6_td_id == 2){$e6_td = "<input class='inverso' type='submit' name='e6_inverso' value="."'".inverte_operador($e6_operador,$e6_numero)."'>";}
+
+ if($f6_td_id == 0){$f6_td = $f6_op_nu;}
+ if($f6_td_id == 1){$f6_td = "<input type='submit' name='f6' value="."'".$f6_op_nu."'>";}
+ if($f6_td_id == 2){$f6_td = "<input class='inverso' type='submit' name='f6_inverso' value="."'".inverte_operador($f6_operador,$f6_numero)."'>";}
+
+ if($g6_td_id == 0){$g6_td = $g6_op_nu;}
+ if($g6_td_id == 1){$g6_td = "<input type='submit' name='g6' value="."'".$g6_op_nu."'>";}
+ if($g6_td_id == 2){$g6_td = "<input class='inverso' type='submit' name='g6_inverso' value="."'".inverte_operador($g6_operador,$g6_numero)."'>";}
+
+
 ?>
 
 <style media="screen">
 
-
+.inverso{background-color: red;}
 
 .a1_div{<?php echo $a1_div; ?>} .b1_div{<?php echo $b1_div; ?>} .c1_div{<?php echo $c1_div; ?>} .d1_div{<?php echo $d1_div; ?>} .e1_div{<?php echo $e1_div; ?>} .f1_div{<?php echo $f1_div; ?>} .g1_div{<?php echo $g1_div; ?>}
 .a2_div{<?php echo $a2_div; ?>} .b2_div{<?php echo $b2_div; ?>} .c2_div{<?php echo $c2_div; ?>} .d2_div{<?php echo $d2_div; ?>} .e2_div{<?php echo $e2_div; ?>} .f2_div{<?php echo $f2_div; ?>} .g2_div{<?php echo $g2_div; ?>}
@@ -4990,61 +3866,61 @@ $_SESSION["g7_view_abertura"] = ""; $_SESSION["g7_view_fechamento"] = "";
   <tr>
   <td class="init_13">13</td>
   <td class="b1_div"><div ><?php echo $b1_td ?></div></td>
-  <td class="c1_div"><div><?php echo $_SESSION["c1_view_abertura"] ?><input type="submit" name="c1" value="-4"><?php echo $_SESSION["c1_view_fechamento"] ?></div></td>
-  <td class="d1_div"><div><?php echo $_SESSION["d1_view_abertura"] ?><input type="submit" name="d1" value="x4"><?php echo $_SESSION["d1_view_fechamento"] ?></div></td>
-  <td class="e1_div"><div><?php echo $_SESSION["e1_view_abertura"] ?><input type="submit" name="e1" value="+5"><?php echo $_SESSION["e1_view_fechamento"] ?></div></td>
-  <td class="f1_div"><div><?php echo $_SESSION["f1_view_abertura"] ?><input type="submit" name="f1" value="x4"><?php echo $_SESSION["f1_view_fechamento"] ?></div></td>
+  <td class="c1_div"><div ><?php echo $c1_td ?></div></td>
+  <td class="d1_div"><div ><?php echo $d1_td ?></div></td>
+  <td class="e1_div"><div ><?php echo $e1_td ?></div></td>
+  <td class="f1_div"><div ><?php echo $f1_td ?></div></td>
   <td class="init_13">13</td>
   </tr>
 
   <tr>
-    <td class="a2_div"><div><?php echo $_SESSION["a2_view_abertura"] ?><input type="submit" name="a2" value="x7"><?php echo $_SESSION["a2_view_fechamento"] ?></div></td>
-    <td class="b2_div"><div><?php echo $_SESSION["b2_view_abertura"] ?><input type="submit" name="b2" value="-41"><?php echo $_SESSION["b2_view_fechamento"] ?></div></td>
-    <td class="c2_div"><div><?php echo $_SESSION["c2_view_abertura"] ?><input type="submit" name="c2" value="÷2"><?php echo $_SESSION["c2_view_fechamento"] ?></div></td>
-    <td class="d2_div"><div><?php echo $_SESSION["d2_view_abertura"] ?><input type="submit" name="d2" value="+7"><?php echo $_SESSION["d2_view_fechamento"] ?></div></td>
-    <td class="e2_div"><div><?php echo $_SESSION["e2_view_abertura"] ?><input type="submit" name="e2" value="÷3"><?php echo $_SESSION["e2_view_fechamento"] ?></div></td>
-    <td class="f2_div"><div><?php echo $_SESSION["f2_view_abertura"] ?><input type="submit" name="f2" value="+11"><?php echo $_SESSION["f2_view_fechamento"] ?></div></td>
-    <td class="g2_div"><div><?php echo $_SESSION["g2_view_abertura"] ?><input type="submit" name="g2" value="x8"><?php echo $_SESSION["g2_view_fechamento"] ?></div></td>
+    <td class="a2_div"><div ><?php echo $a2_td ?></div></td>
+    <td class="b2_div"><div ><?php echo $b2_td ?></div></td>
+    <td class="c2_div"><div ><?php echo $c2_td ?></div></td>
+    <td class="d2_div"><div ><?php echo $d2_td ?></div></td>
+    <td class="e2_div"><div ><?php echo $e2_td ?></div></td>
+    <td class="f2_div"><div ><?php echo $f2_td ?></div></td>
+    <td class="g2_div"><div ><?php echo $g2_td ?></div></td>
   </tr>
 
   <tr>
-    <td class="a3_div"><div><?php echo $_SESSION["a3_view_abertura"] ?><input type="submit" name="a3" value="+14"><?php echo $_SESSION["a3_view_fechamento"] ?></div></td>
-    <td class="b3_div"><div><?php echo $_SESSION["b3_view_abertura"] ?><input type="submit" name="b3" value="÷6"><?php echo $_SESSION["b3_view_fechamento"] ?></div></td>
-    <td class="c3_div"><div><?php echo $_SESSION["c3_view_abertura"] ?><input type="submit" name="c3" value="x2"><?php echo $_SESSION["c3_view_fechamento"] ?></div></td>
-    <td class="d3_div"><div><?php echo $_SESSION["d3_view_abertura"] ?><input type="submit" name="d3" value="-4"><?php echo $_SESSION["d3_view_fechamento"] ?></div></td>
-    <td class="e3_div"><div><?php echo $_SESSION["e3_view_abertura"] ?><input type="submit" name="e3" value="x17"><?php echo $_SESSION["e3_view_fechamento"] ?></div></td>
-    <td class="f3_div"><div><?php echo $_SESSION["f3_view_abertura"] ?><input type="submit" name="f3" value="÷4"><?php echo $_SESSION["f3_view_fechamento"] ?></div></td>
-    <td class="g3_div"><div><?php echo $_SESSION["g3_view_abertura"] ?><input type="submit" name="g3" value="+3"><?php echo $_SESSION["g3_view_fechamento"] ?></div></td>
+    <td class="a3_div"><div ><?php echo $a3_td ?></div></td>
+    <td class="b3_div"><div ><?php echo $b3_td ?></div></td>
+    <td class="c3_div"><div ><?php echo $c3_td ?></div></td>
+    <td class="d3_div"><div ><?php echo $d3_td ?></div></td>
+    <td class="e3_div"><div ><?php echo $e3_td ?></div></td>
+    <td class="f3_div"><div ><?php echo $f3_td ?></div></td>
+    <td class="g3_div"><div ><?php echo $g3_td ?></div></td>
   </tr>
 
   <tr>
-    <td class="a4_div"><div><?php echo $_SESSION["a4_view_abertura"] ?><input type="submit" name="a4" value="÷5"><?php echo $_SESSION["a4_view_fechamento"] ?></div></td>
-    <td class="b4_div"><div><?php echo $_SESSION["b4_view_abertura"] ?><input type="submit" name="b4" value="-33"><?php echo $_SESSION["b4_view_fechamento"] ?></div></td>
-    <td class="c4_div"><div><?php echo $_SESSION["c4_view_abertura"] ?><input type="submit" name="c4" value="÷5"><?php echo $_SESSION["c4_view_fechamento"] ?></div></td>
-    <td class="d4_div"><div><?php echo $_SESSION["d4_view_abertura"] ?><input type="submit" name="d4" value="+7"><?php echo $_SESSION["d4_view_fechamento"] ?></div></td>
-    <td class="e4_div"><div><?php echo $_SESSION["e4_view_abertura"] ?><input type="submit" name="e4" value="÷8"><?php echo $_SESSION["e4_view_fechamento"] ?></div></td>
-    <td class="f4_div"><div><?php echo $_SESSION["f4_view_abertura"] ?><input type="submit" name="f4" value="x6"><?php echo $_SESSION["f4_view_fechamento"] ?></div></td>
-    <td class="g4_div"><div><?php echo $_SESSION["g4_view_abertura"] ?><input type="submit" name="g4" value="-41"><?php echo $_SESSION["g4_view_fechamento"] ?></div></td>
+    <td class="a4_div"><div ><?php echo $a4_td ?></div></td>
+    <td class="b4_div"><div ><?php echo $b4_td ?></div></td>
+    <td class="c4_div"><div ><?php echo $c4_td ?></div></td>
+    <td class="d4_div"><div ><?php echo $d4_td ?></div></td>
+    <td class="e4_div"><div ><?php echo $e4_td ?></div></td>
+    <td class="f4_div"><div ><?php echo $f4_td ?></div></td>
+    <td class="g4_div"><div ><?php echo $g4_td ?></div></td>
   </tr>
 
   <tr>
-    <td class="a5_div"><div><?php echo $_SESSION["a5_view_abertura"] ?><input type="submit" name="a5" value="x21"><?php echo $_SESSION["a5_view_fechamento"] ?></div></td>
-    <td class="b5_div"><div><?php echo $_SESSION["b5_view_abertura"] ?><input type="submit" name="b5" value="+123"><?php echo $_SESSION["b5_view_fechamento"] ?></div></td>
-    <td class="c5_div"><div><?php echo $_SESSION["c5_view_abertura"] ?><input type="submit" name="c5" value="-8"><?php echo $_SESSION["c5_view_fechamento"] ?></div></td>
-    <td class="d5_div"><div><?php echo $_SESSION["d5_view_abertura"] ?><input type="submit" name="d5" value="÷14"><?php echo $_SESSION["d5_view_fechamento"] ?></div></td>
-    <td class="e5_div"><div><?php echo $_SESSION["e5_view_abertura"] ?><input type="submit" name="e5" value="-2"><?php echo $_SESSION["e5_view_fechamento"] ?></div></td>
-    <td class="f5_div"><div><?php echo $_SESSION["f5_view_abertura"] ?><input type="submit" name="f5" value="÷3"><?php echo $_SESSION["f5_view_fechamento"] ?></div></td>
-    <td class="g5_div"><div><?php echo $_SESSION["g5_view_abertura"] ?><input type="submit" name="g5" value="x71"><?php echo $_SESSION["g5_view_fechamento"] ?></div></td>
+    <td class="a5_div"><div ><?php echo $a5_td ?></div></td>
+    <td class="b5_div"><div ><?php echo $b5_td ?></div></td>
+    <td class="c5_div"><div ><?php echo $c5_td ?></div></td>
+    <td class="d5_div"><div ><?php echo $d5_td ?></div></td>
+    <td class="e5_div"><div ><?php echo $e5_td ?></div></td>
+    <td class="f5_div"><div ><?php echo $f5_td ?></div></td>
+    <td class="g5_div"><div ><?php echo $g5_td ?></div></td>
   </tr>
 
   <tr>
-    <td class="a6_div"><div><?php echo $_SESSION["a6_view_abertura"] ?><input type="submit" name="a6" value="-14"><?php echo $_SESSION["a6_view_fechamento"] ?></div></td>
-    <td class="b6_div"><div><?php echo $_SESSION["b6_view_abertura"] ?><input type="submit" name="b6" value="-6"><?php echo $_SESSION["b6_view_fechamento"] ?></div></td>
-    <td class="c6_div"><div><?php echo $_SESSION["c6_view_abertura"] ?><input type="submit" name="c6" value="+12"><?php echo $_SESSION["c6_view_fechamento"] ?></div></td>
-    <td class="d6_div"><div><?php echo $_SESSION["d6_view_abertura"] ?><input type="submit" name="d6" value="x93"><?php echo $_SESSION["d6_view_fechamento"] ?></div></td>
-    <td class="e6_div"><div><?php echo $_SESSION["e6_view_abertura"] ?><input type="submit" name="e6" value="+4"><?php echo $_SESSION["e6_view_fechamento"] ?></div></td>
-    <td class="f6_div"><div><?php echo $_SESSION["f6_view_abertura"] ?><input type="submit" name="f6" value="-72"><?php echo $_SESSION["f6_view_fechamento"] ?></div></td>
-    <td class="g6_div"><div><?php echo $_SESSION["g6_view_abertura"] ?><input type="submit" name="g6" value="÷10"><?php echo $_SESSION["g6_view_fechamento"] ?></div></td>
+    <td class="a6_div"><div ><?php echo $a6_td ?></div></td>
+    <td class="b6_div"><div ><?php echo $b6_td ?></div></td>
+    <td class="c6_div"><div ><?php echo $c6_td ?></div></td>
+    <td class="d6_div"><div ><?php echo $d6_td ?></div></td>
+    <td class="e6_div"><div ><?php echo $e6_td ?></div></td>
+    <td class="f6_div"><div ><?php echo $f6_td ?></div></td>
+    <td class="g6_div"><div ><?php echo $g6_td ?></div></td>
   </tr>
 
   <tr>
