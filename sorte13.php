@@ -147,6 +147,8 @@ function inverte_operador($operador,$numero)
 }
 
 
+//_________as_variaveis_ $xn_string __foram_criadas_para_incrementar_um_array_com_o_histórico_de_jogadas___
+
                   $b1_string='b1';   $c1_string='c1';   $d1_string='d1';  $e1_string='e1';  $f1_string='f1';  $init_string='init';
 $a2_string='a2';  $b2_string='b2';   $c2_string='c2';   $d2_string='d2';  $e2_string='e2';  $f2_string='f2';  $g2_string='g2';
 $a3_string='a3';  $b3_string='b3';   $c3_string='c3';   $d3_string='d3';  $e3_string='e3';  $f3_string='f3';  $g3_string='g3';
@@ -155,8 +157,10 @@ $a5_string='a5';  $b5_string='b5';   $c5_string='c5';   $d5_string='d5';  $e5_st
 $a6_string='a6';  $b6_string='b6';   $c6_string='c6';   $d6_string='d6';  $e6_string='e6';  $f6_string='f6';  $g6_string='g6';
 $a7_string='a7';  $b7_string='b7';   $c7_string='c7';   $d7_string='d7';  $e7_string='e7';  $f7_string='f7';  $g7_string='g7';
 
-
+//_____Resultado_da_partida____________________________________________________________
 $_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = ""; $_SESSION["passou_de_10"] = "";
+
+//__________Esta_variavel:_ $xn_td_id _é_a_variavel_que_determinará_o_conteudo_do_botão_de_jogo___________
 
              $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
 $a2_td_id=1; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=1;
@@ -1960,7 +1964,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
               $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
               $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
-              $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+              $a6_in_id=0; $b6_in_id=1; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
@@ -4709,8 +4713,8 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
 
                                  $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
-                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=1;
-                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=1;
                     $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
                     $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
                     $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
@@ -5873,7 +5877,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
 
                                  $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
                     $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
-                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=1; $g3_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=1; $f3_in_id=0; $g3_in_id=0;
                     $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
                     $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
                     $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
@@ -6180,6 +6184,3777 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     }
                     }
 
+//_______Linha_4______a4_inverso____________________________________________________________________
+                    if (isset($_POST['a4_inverso'])){
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'a3')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$a4_operador,$a4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=1; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=1; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=1; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=1; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["a4_count"] = $_SESSION["a4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'b4')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$a4_operador,$a4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=1; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=1; $b4_td_id=0; $c4_td_id=1; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=1; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=1; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["a4_count"] = $_SESSION["a4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'a5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$a4_operador,$a4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=1; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=1; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=1; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=1; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["a4_count"] = $_SESSION["a4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    }
+//_______Linha_4______b4_inverso____________________________________________________________________
+                    if (isset($_POST['b4_inverso'])){
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'b3')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$b4_operador,$b4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=1; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=1; $b3_td_id=0; $c3_td_id=1; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=1; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=1; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'a4')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$b4_operador,$b4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=1; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=1; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=1; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=1; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'c4')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$b4_operador,$b4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=1; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=1; $c4_td_id=0; $d4_td_id=1; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=1; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=1; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'b5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$b4_operador,$b4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=1; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=1; $b5_td_id=0; $c5_td_id=1; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=1; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=1; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    }
+
+//_______Linha_4______c4_inverso____________________________________________________________________
+                    if (isset($_POST['c4_inverso'])){
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'c3')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$c4_operador,$c4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=1; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=1; $c3_td_id=0; $d3_td_id=1; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=1; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=1; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["c4_count"] = $_SESSION["c4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'b4')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$c4_operador,$c4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=1; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=1; $b4_td_id=0; $c4_td_id=1; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=1; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=1; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["c4_count"] = $_SESSION["c4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'd4')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$c4_operador,$c4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=1; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=1; $d4_td_id=0; $e4_td_id=1; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=1; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=1; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["c4_count"] = $_SESSION["c4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'c5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$c4_operador,$c4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=1; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=1; $c5_td_id=0; $d5_td_id=1; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=1; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=1; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["c4_count"] = $_SESSION["c4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    }
+//_______Linha_4______d4_inverso____________________________________________________________________
+                    if (isset($_POST['d4_inverso'])){
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'd3')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$d4_operador,$d4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=1; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=1; $d3_td_id=0; $e3_td_id=1; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=1; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=1; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'c4')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$d4_operador,$d4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=1; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=1; $c4_td_id=0; $d4_td_id=1; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=1; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=1; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'e4')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$d4_operador,$d4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=1; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=1; $e4_td_id=0; $f4_td_id=1; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=1; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=1; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'd5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$d4_operador,$d4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=1; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=1; $d5_td_id=0; $e5_td_id=1; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=1; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=1; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    }
+//_______Linha_4______e4_inverso____________________________________________________________________
+                    if (isset($_POST['e4_inverso'])){
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'e3')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$e4_operador,$e4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=1; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=1; $e3_td_id=0; $f3_td_id=1; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=1; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=1; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["e4_count"] = $_SESSION["e4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'd4')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$e4_operador,$e4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=1; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=1; $d4_td_id=0; $e4_td_id=1; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=1; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=1; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["e4_count"] = $_SESSION["e4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'f4')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$e4_operador,$e4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=1; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=1; $f4_td_id=0; $g4_td_id=1;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=1; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=1; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["e4_count"] = $_SESSION["e4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'e5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$e4_operador,$e4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=1; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=1; $e5_td_id=0; $f5_td_id=1; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=1; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=1; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["e4_count"] = $_SESSION["e4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    }
+
+//_______Linha_4______f4_inverso____________________________________________________________________
+                    if (isset($_POST['f4_inverso'])){
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'f3')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$f4_operador,$f4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=1; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=1; $f3_td_id=0; $g3_td_id=1;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=1; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=1; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'e4')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$f4_operador,$f4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=1; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=1; $e4_td_id=0; $f4_td_id=1; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=1; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=1; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'g4')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$f4_operador,$f4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=1;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=1; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=1;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=1;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'f5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$f4_operador,$f4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=1; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=1; $f5_td_id=0; $g5_td_id=1;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=1; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=1; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    }
+
+//_______Linha_4______g4_inverso____________________________________________________________________
+                    if (isset($_POST['g4_inverso'])){
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'g3')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$g4_operador,$g4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=1;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=1; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=1;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=1;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["g4_count"] = $_SESSION["g4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'f4')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$g4_operador,$g4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=1; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=1; $f4_td_id=0; $g4_td_id=1;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=1; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=1; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["g4_count"] = $_SESSION["g4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'g5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$g4_operador,$g4_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=1;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=1; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=1;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=1;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["g4_count"] = $_SESSION["g4_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    }
+
+
+//_______Linha_5______a5_inverso____________________________________________________________________
+                    if (isset($_POST['a5_inverso'])){
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'a4')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$a5_operador,$a5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=1; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=1; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=1; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=1; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'b5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$a5_operador,$a5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=1; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=1; $b5_td_id=0; $c5_td_id=1; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=1; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=1; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'a6')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$a5_operador,$a5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=1; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=1; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=1; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=1; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    }
+
+//_______Linha_5______b5_inverso____________________________________________________________________
+                    if (isset($_POST['b5_inverso'])){
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'b4')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$b5_operador,$b5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=1; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=1; $b4_td_id=0; $c4_td_id=1; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=1; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=1; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["b5_count"] = $_SESSION["b5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'a5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$b5_operador,$b5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=1; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=1; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=1; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=1; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["b5_count"] = $_SESSION["b5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'c5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$b5_operador,$b5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=1; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=1; $c5_td_id=0; $d5_td_id=1; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=1; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=1; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["b5_count"] = $_SESSION["b5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'b6')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$b5_operador,$b5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=1; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=1; $b6_td_id=0; $c6_td_id=1; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=1; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=1; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["b5_count"] = $_SESSION["b5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    }
+
+//_______Linha_5______c5_inverso____________________________________________________________________
+                    if (isset($_POST['c5_inverso'])){
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'c4')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$c5_operador,$c5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=1; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=1; $c4_td_id=0; $d4_td_id=1; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=1; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=1; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'b5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$c5_operador,$c5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=1; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=1; $b5_td_id=0; $c5_td_id=1; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=1; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=1; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'd5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$c5_operador,$c5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=1; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=1; $d5_td_id=0; $e5_td_id=1; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=1; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=1; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'c6')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$c5_operador,$c5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=1; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=1; $c6_td_id=0; $d6_td_id=1; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=1; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=1; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    }
+//_______Linha_5______d5_inverso____________________________________________________________________
+                    if (isset($_POST['d5_inverso'])){
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'd4')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$d5_operador,$d5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=1; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=1; $d4_td_id=0; $e4_td_id=1; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=1; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=1; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["d5_count"] = $_SESSION["d5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'c5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$d5_operador,$d5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=1; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=1; $c5_td_id=0; $d5_td_id=1; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=1; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=1; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["d5_count"] = $_SESSION["d5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'e5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$d5_operador,$d5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=1; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=1; $e5_td_id=0; $f5_td_id=1; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=1; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=1; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["d5_count"] = $_SESSION["d5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'd6')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$d5_operador,$d5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=1; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=1; $d6_td_id=0; $e6_td_id=1; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=1; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=1; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["d5_count"] = $_SESSION["d5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    }
+
+//_______Linha_5______e5_inverso____________________________________________________________________
+                    if (isset($_POST['e5_inverso'])){
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'e4')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$e5_operador,$e5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=1; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=1; $e4_td_id=0; $f4_td_id=1; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=1; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=1; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'd5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$e5_operador,$e5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=1; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=1; $d5_td_id=0; $e5_td_id=1; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=1; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=1; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'f5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$e5_operador,$e5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=1; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=1; $f5_td_id=0; $g5_td_id=1;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=1; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=1; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'e6')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$e5_operador,$e5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=1; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=1; $e6_td_id=0; $f6_td_id=1; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=1; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=1; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    }
+
+//_______Linha_5______f5_inverso____________________________________________________________________
+                    if (isset($_POST['f5_inverso'])){
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'f4')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$f5_operador,$f5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=1; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=1; $f4_td_id=0; $g4_td_id=1;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=1; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=1; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["f5_count"] = $_SESSION["f5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'e5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$f5_operador,$f5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=1; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=1; $e5_td_id=0; $f5_td_id=1; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=1; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=1; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["f5_count"] = $_SESSION["f5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'g5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$f5_operador,$f5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=1;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=1; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=1;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=1;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["f5_count"] = $_SESSION["f5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'f6')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$f5_operador,$f5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=1; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=1; $f6_td_id=0; $g6_td_id=1;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=1; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=1; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["f5_count"] = $_SESSION["f5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    }
+//_______Linha_5______g5_inverso____________________________________________________________________
+                    if (isset($_POST['g5_inverso'])){
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'g4')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$g5_operador,$g5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=1;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=1; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=1;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=1;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'f5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$g5_operador,$g5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=1; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=1; $f5_td_id=0; $g5_td_id=1;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=1; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=1; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'g6')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$g5_operador,$g5_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=1;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=1; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=1;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=1;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    }
+
+//_______Linha_6______a6_inverso____________________________________________________________________
+                    if (isset($_POST['a6_inverso'])){
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'a5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$a6_operador,$a6_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=1; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=1; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=1; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=1; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["a6_count"] = $_SESSION["a6_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'b6')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$a6_operador,$a6_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=1; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=1; $b6_td_id=0; $c6_td_id=1; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=1; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=1; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["a6_count"] = $_SESSION["a6_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    }
+//_______Linha_6______b6_inverso____________________________________________________________________
+                    if (isset($_POST['b6_inverso'])){
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'b5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$b6_operador,$b6_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=1; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=1; $b5_td_id=0; $c5_td_id=1; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=1; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=1; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'a6')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$b6_operador,$b6_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=1; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=1; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=1; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=1; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'c6')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$b6_operador,$b6_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=1; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=1; $c6_td_id=0; $d6_td_id=1; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=1; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=1; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    }
+//_______Linha_6______c6_inverso____________________________________________________________________
+                    if (isset($_POST['c6_inverso'])){
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'c5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$c6_operador,$c6_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=1; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=1; $c5_td_id=0; $d5_td_id=1; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=1; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=1; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["c6_count"] = $_SESSION["c6_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'b6')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$c6_operador,$c6_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=1; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=1; $b6_td_id=0; $c6_td_id=1; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=1; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=1; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["c6_count"] = $_SESSION["c6_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'd6')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$c6_operador,$c6_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=1; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=1; $d6_td_id=0; $e6_td_id=1; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=1; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=1; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["c6_count"] = $_SESSION["c6_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    }
+//_______Linha_6______d6_inverso____________________________________________________________________
+                    if (isset($_POST['d6_inverso'])){
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'd5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$d6_operador,$d6_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=1; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=1; $d5_td_id=0; $e5_td_id=1; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=1; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=1; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'c6')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$d6_operador,$d6_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=1; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=1; $c6_td_id=0; $d6_td_id=1; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=1; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=1; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'e6')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$d6_operador,$d6_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=1; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=1; $e6_td_id=0; $f6_td_id=1; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=1; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=1; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    }
+
+//_______Linha_6______e6_inverso____________________________________________________________________
+                    if (isset($_POST['e6_inverso'])){
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'e5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$e6_operador,$e6_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=1; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=1; $e5_td_id=0; $f5_td_id=1; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=1; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=1; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["e6_count"] = $_SESSION["e6_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'd6')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$e6_operador,$e6_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=1; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=1; $d6_td_id=0; $e6_td_id=1; $f6_td_id=0; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=1; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=1; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["e6_count"] = $_SESSION["e6_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'f6')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$e6_operador,$e6_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=1; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=1; $f6_td_id=0; $g6_td_id=1;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=1; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=1; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["e6_count"] = $_SESSION["e6_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    }
+
+//_______Linha_6______f6_inverso____________________________________________________________________
+                    if (isset($_POST['f6_inverso'])){
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'f5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$f6_operador,$f6_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=1; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=1; $f5_td_id=0; $g5_td_id=1;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=1; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=1; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'e6')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$f6_operador,$f6_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=1; $f5_td_id=0; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=1; $e6_td_id=0; $f6_td_id=1; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=1; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=1; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'g6')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$f6_operador,$f6_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=1;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=1; $g6_td_id=0;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=1;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=1;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    }
+
+//_______Linha_6______g6_inverso____________________________________________________________________
+                    if (isset($_POST['g6_inverso'])){
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'g5')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$g6_operador,$g6_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=1;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=1; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=1;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=1;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["g6_count"] = $_SESSION["g6_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'f6')
+                    {
+                    $_SESSION['resultado'] = calcula_resultado_inverso($_SESSION['resultado'],$g6_operador,$g6_numero);
+
+                                 $b1_td_id=0; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=0;
+                    $a2_td_id=0; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=0;
+                    $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+                    $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+                    $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=1; $g5_td_id=0;
+                    $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=1; $f6_td_id=0; $g6_td_id=1;
+                    $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=1; $g7_td_id=0;
+
+                                 $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+                    $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+                    $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+                    $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+                    $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+                    $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=1; $g6_in_id=0;
+                    $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+                    $_SESSION["count"] = $_SESSION["count"] - 1;
+                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+
+                    $_SESSION["g6_count"] = $_SESSION["g6_count"] - 1;
+
+                    $_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["b1_count"] = $_SESSION["b1_count"] + 0;
+                    $_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["d1_count"] = $_SESSION["d1_count"] + 0;
+                    $_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["f1_count"] = $_SESSION["f1_count"] + 0;
+                    $_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0;
+                    $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0;
+                    $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0;
+                    $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0;
+
+                    $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+                    $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+                    $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+                    $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0; $_SESSION["a4_count"] = $_SESSION["a4_count"] + 0;
+                    $_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["c4_count"] = $_SESSION["c4_count"] + 0;
+                    $_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["e4_count"] = $_SESSION["e4_count"] + 0;
+                    $_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["g4_count"] = $_SESSION["g4_count"] + 0;
+
+                    $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0;
+                    $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0;
+                    $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0;
+                    $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+                    $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+                    $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+                    $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+
+                    array_pop($_SESSION['array_jogadas']);
+
+                    }
+                    }
 
 
 
@@ -6438,7 +10213,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
  if($_SESSION["f6_count"] == 9){$f6_div = $cor_9_count;}    if($_SESSION["g6_count"] == 9){$g6_div = $cor_9_count;}
  if($_SESSION["f6_count"] >= 10){$f6_div = $cor_10_count;}  if($_SESSION["g6_count"] >= 10){$g6_div = $cor_10_count;}
 
- //_______________Linha_1_______________________________________
+ //_______________Linha_1________Botão_Submit_______________________________
 
  if($b1_td_id == 0){$b1_td = $b1_op_nu;} if($b1_td_id == 1){$b1_td = "<input type='submit' name='b1' value="."'".$b1_op_nu."'>";}
  if($c1_td_id == 0){$c1_td = $c1_op_nu;} if($c1_td_id == 1){$c1_td = "<input type='submit' name='c1' value="."'".$c1_op_nu."'>";}
@@ -6446,7 +10221,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
  if($e1_td_id == 0){$e1_td = $e1_op_nu;} if($e1_td_id == 1){$e1_td = "<input type='submit' name='e1' value="."'".$e1_op_nu."'>";}
  if($f1_td_id == 0){$f1_td = $f1_op_nu;} if($f1_td_id == 1){$f1_td = "<input type='submit' name='f1' value="."'".$f1_op_nu."'>";}
 
- //_______________Linha_2_______________________________________
+ //_______________Linha_2___________Botão_Submit___________________________________________
 
  if($a2_td_id == 0){$a2_td = $a2_op_nu;} if($a2_td_id == 1){$a2_td = "<input type='submit' name='a2' value="."'".$a2_op_nu."'>";}
  if($b2_td_id == 0){$b2_td = $b2_op_nu;} if($b2_td_id == 1){$b2_td = "<input type='submit' name='b2' value="."'".$b2_op_nu."'>";}
@@ -6456,8 +10231,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
  if($f2_td_id == 0){$f2_td = $f2_op_nu;} if($f2_td_id == 1){$f2_td = "<input type='submit' name='f2' value="."'".$f2_op_nu."'>";}
  if($g2_td_id == 0){$g2_td = $g2_op_nu;} if($g2_td_id == 1){$g2_td = "<input type='submit' name='g2' value="."'".$g2_op_nu."'>";}
 
- //_______________Linha_3_______________________________________
-
+ //_______________Linha_3____________Botão_Submit______________
   if($a3_td_id == 0){$a3_td = $a3_op_nu;} if($a3_td_id == 1){$a3_td = "<input type='submit' name='a3' value="."'".$a3_op_nu."'>";}
   if($b3_td_id == 0){$b3_td = $b3_op_nu;} if($b3_td_id == 1){$b3_td = "<input type='submit' name='b3' value="."'".$b3_op_nu."'>";}
   if($c3_td_id == 0){$c3_td = $c3_op_nu;} if($c3_td_id == 1){$c3_td = "<input type='submit' name='c3' value="."'".$c3_op_nu."'>";}
@@ -6466,7 +10240,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
   if($f3_td_id == 0){$f3_td = $f3_op_nu;} if($f3_td_id == 1){$f3_td = "<input type='submit' name='f3' value="."'".$f3_op_nu."'>";}
   if($g3_td_id == 0){$g3_td = $g3_op_nu;} if($g3_td_id == 1){$g3_td = "<input type='submit' name='g3' value="."'".$g3_op_nu."'>";}
 
- //_______________Linha_4_______________________________________
+ //_______________Linha_4___________Botão_Submit___________________________________________
 
   if($a4_td_id == 0){$a4_td = $a4_op_nu;} if($a4_td_id == 1){$a4_td = "<input type='submit' name='a4' value="."'".$a4_op_nu."'>";}
   if($b4_td_id == 0){$b4_td = $b4_op_nu;} if($b4_td_id == 1){$b4_td = "<input type='submit' name='b4' value="."'".$b4_op_nu."'>";}
@@ -6476,7 +10250,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
   if($f4_td_id == 0){$f4_td = $f4_op_nu;} if($f4_td_id == 1){$f4_td = "<input type='submit' name='f4' value="."'".$f4_op_nu."'>";}
   if($g4_td_id == 0){$g4_td = $g4_op_nu;} if($g4_td_id == 1){$g4_td = "<input type='submit' name='g4' value="."'".$g4_op_nu."'>";}
 
- //_______________Linha_5_______________________________________
+ //_______________Linha_5__________Botão_Submit____________________________________________
 
   if($a5_td_id == 0){$a5_td = $a5_op_nu;} if($a5_td_id == 1){$a5_td = "<input type='submit' name='a5' value="."'".$a5_op_nu."'>";}
   if($b5_td_id == 0){$b5_td = $b5_op_nu;} if($b5_td_id == 1){$b5_td = "<input type='submit' name='b5' value="."'".$b5_op_nu."'>";}
@@ -6486,7 +10260,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
   if($f5_td_id == 0){$f5_td = $f5_op_nu;} if($f5_td_id == 1){$f5_td = "<input type='submit' name='f5' value="."'".$f5_op_nu."'>";}
   if($g5_td_id == 0){$g5_td = $g5_op_nu;} if($g5_td_id == 1){$g5_td = "<input type='submit' name='g5' value="."'".$g5_op_nu."'>";}
 
- //_______________Linha_6_______________________________________
+ //_______________Linha_6__________Botão_Submit____________________________________________
 
   if($a6_td_id == 0){$a6_td = $a6_op_nu;} if($a6_td_id == 1){$a6_td = "<input type='submit' name='a6' value="."'".$a6_op_nu."'>";}
   if($b6_td_id == 0){$b6_td = $b6_op_nu;} if($b6_td_id == 1){$b6_td = "<input type='submit' name='b6' value="."'".$b6_op_nu."'>";}
@@ -6496,7 +10270,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
   if($f6_td_id == 0){$f6_td = $f6_op_nu;} if($f6_td_id == 1){$f6_td = "<input type='submit' name='f6' value="."'".$f6_op_nu."'>";}
   if($g6_td_id == 0){$g6_td = $g6_op_nu;} if($g6_td_id == 1){$g6_td = "<input type='submit' name='g6' value="."'".$g6_op_nu."'>";}
 
-  //_______________Linha_7_______________________________________
+  //_______________Linha_7____________Botão_Submit__________________________________________
 
   if($a7_td_id == 0){$a7_td = $a7_op_nu;} if($a7_td_id == 1 && $_SESSION["count"]==10){$a7_td = "<input type='submit' name='a7' value="."'".$a7_op_nu."'>";}else{$a7_td = $a7_op_nu;}
   if($b7_td_id == 0){$b7_td = $b7_op_nu;} if($b7_td_id == 1 && $_SESSION["count"]==10){$b7_td = "<input type='submit' name='b7' value="."'".$b7_op_nu."'>";}else{$b7_td = $b7_op_nu;}
@@ -6676,7 +10450,6 @@ else{$submit_inverso = "<input type='submit' name='reiniciar' value='Voltar'";}
 
 </form>
 
-    <?php var_dump($_SESSION['array_jogadas']); echo '<br />'; var_dump($_SESSION['array_jogadas'][$_SESSION["count"]-1]); ?>
 
   </body>
 </html>
