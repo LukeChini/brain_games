@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles2.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- <link rel="stylesheet" media="screen, projection, print" href="https://asset.lumosity.com/lumosity/production/train/application-2c19bfac939b4921187f1a38fc013480dee5e14b3e135fd247c9837d2b3c39e6.css" /> -->
@@ -40,6 +40,12 @@
 
     //___utilizar_seguintes_operadores:
     //__ + para somar ______ - para subtrair ________ x para multiplicar ________ ÷ para dividir ___________
+
+    //__!desenvolvedor!__utilize_este_espaço_para_armazenar_a_string_com_o_array_de_gabarito:_(comentar! //___)___
+
+    $visualizar_array = false; // valor true para visualizar e false para omitir
+
+    //_Exemplo:__Array ( [0] => init [1] => a2 [2] => b2 [3] => b3 [4] => c3 [5] => c4 [6] => d4 [7] => e4 [8] => f4 [9] => f5 [10] => g5 [11] => g6 [12] => f6 [13] => e6 [14] => f6 )
 
 
     //_____Mensagem_de_resultado_da_partida____________________________________________________________
@@ -97,6 +103,10 @@ function inverte_operador($operador,$numero)
   if($operador == '-'){return '+'.$numero;}
   else{return 'operador não correspondente';}
 }
+
+//___ If's_para_visualizar_ou_não_o_array_que_percorre_a_tabela ____
+$tag_fechamento_ini = "<!--"; $tag_fechamento_fin = "-->";
+if($visualizar_array){$tag_fechamento_ini =""; $tag_fechamento_fin = "";}
 
 
 //_________as_variaveis_ $xn_string __foram_criadas_para_incrementar_um_array_com_o_histórico_de_jogadas___
@@ -10332,6 +10342,7 @@ else{$submit_inverso = "<input type='submit' name='reiniciar' value='Voltar'></i
     <p> <?php echo $_SESSION["ganhou"];   ?> </p>
     <p> <?php echo $_SESSION["perdeu"];  ?> </p>
     <p> <?php echo $_SESSION["passou_de_max"];  ?> </p>
+    <p> <?php echo $tag_fechamento_ini; print_r ($_SESSION['array_jogadas']); echo $tag_fechamento_fin;  ?> </p>
 
   </div>
 
@@ -10410,14 +10421,14 @@ else{$submit_inverso = "<input type='submit' name='reiniciar' value='Voltar'></i
 </div>
 
 
-  <div class="reiniciar_botao"><?php echo $submit_inverso ?></div>
+  <div class="voltar_botao"><?php echo $submit_inverso ?></div>
 </form>
   <div class="orientacao">
   <h3> Orientações:</h3>
 
   <h4><p> O seu objetivo é ir do <?php echo $numero_inicial ?> ao <?php echo "'=".$resultado_esperado."'" ?> em <?php echo $numero_max_movimentos ?> movimentos,
     executando a função aritimética para o dígito no quadrado selecionado enquanto prossegue.
-    Você pode começar de qualquer canto, mas - aqui está o truque - só um canto é o certo.
+    Você pode começar de qualquer canto.
     Os movimentos podem ser feitos horizontal e verticalmente, mas não em diagonal.
   </p></h4>
   </div>

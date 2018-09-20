@@ -20,22 +20,22 @@
     //______Parametros_iniciais_da_tabela____________________________________________
     //__por_padrão_não_utilizar_o_numero_0(zero)_nas_variaveis_ $xn_numero _ele_pode_dar_erro_com_o_submit_voltar___________
 
-    $numero_inicial = 1;      $numero_max_movimentos = 14;      $resultado_esperado = $re = 14;      $nome_arquivo="sorte13_facil";
+    $numero_inicial = 5;      $numero_max_movimentos = 15;      $resultado_esperado = $re = 71;      $nome_arquivo="sorte13_fase2";
 
-                       $b1_numero=7;       $c1_numero=1;       $d1_numero=1;      $e1_numero=1;      $f1_numero=7;
-    $a2_numero=1;      $b2_numero=1;       $c2_numero=1;       $d2_numero=7;      $e2_numero=1;      $f2_numero=1;      $g2_numero=7;
-    $a3_numero=7;      $b3_numero=7;       $c3_numero=7;       $d3_numero=7;      $e3_numero=7;      $f3_numero=1;      $g3_numero=7;
-    $a4_numero=7;      $b4_numero=7;       $c4_numero=7;       $d4_numero=7;      $e4_numero=7;      $f4_numero=1;      $g4_numero=7;
-    $a5_numero=7;      $b5_numero=7;       $c5_numero=7;       $d5_numero=7;      $e5_numero=7;      $f5_numero=1;      $g5_numero=7;
-    $a6_numero=7;      $b6_numero=7;       $c6_numero=7;       $d6_numero=7;      $e6_numero=1;      $f6_numero=1;      $g6_numero=7;
+                       $b1_numero=7;       $c1_numero=3;       $d1_numero=7;      $e1_numero=8;      $f1_numero=2;
+    $a2_numero=1;      $b2_numero=9;       $c2_numero=1;       $d2_numero=9;      $e2_numero=1;      $f2_numero=1;      $g2_numero=3;
+    $a3_numero=7;      $b3_numero=1;       $c3_numero=7;       $d3_numero=1;      $e3_numero=3;      $f3_numero=3;      $g3_numero=7;
+    $a4_numero=12;     $b4_numero=7;       $c4_numero=3;       $d4_numero=8;      $e4_numero=7;      $f4_numero=1;      $g4_numero=8;
+    $a5_numero=7;      $b5_numero=2;       $c5_numero=4;       $d5_numero=7;      $e5_numero=4;      $f5_numero=7;      $g5_numero=7;
+    $a6_numero=1;      $b6_numero=9;       $c6_numero=7;       $d6_numero=2;      $e6_numero=8;      $f6_numero=1;      $g6_numero=5;
     $a7_numero=$re;    $b7_numero=$re;     $c7_numero=$re;     $d7_numero=$re;    $e7_numero=$re;    $f7_numero=$re;    $g7_numero=$re;
 
-                       $b1_operador='x';   $c1_operador='+';   $d1_operador='+';  $e1_operador='+';  $f1_operador='x';
-    $a2_operador='+';  $b2_operador='+';   $c2_operador='+';   $d2_operador='x';  $e2_operador='+';  $f2_operador='+';  $g2_operador='x';
-    $a3_operador='x';  $b3_operador='x';   $c3_operador='x';   $d3_operador='x';  $e3_operador='x';  $f3_operador='+';  $g3_operador='x';
-    $a4_operador='x';  $b4_operador='x';   $c4_operador='x';   $d4_operador='x';  $e4_operador='x';  $f4_operador='+';  $g4_operador='x';
-    $a5_operador='x';  $b5_operador='x';   $c5_operador='x';   $d5_operador='x';  $e5_operador='x';  $f5_operador='+';  $g5_operador='x';
-    $a6_operador='x';  $b6_operador='x';   $c6_operador='x';   $d6_operador='x';  $e6_operador='+';  $f6_operador='+';  $g6_operador='x';
+                       $b1_operador='+';   $c1_operador='+';   $d1_operador='+';  $e1_operador='+';  $f1_operador='+';
+    $a2_operador='+';  $b2_operador='+';   $c2_operador='+';   $d2_operador='+';  $e2_operador='+';  $f2_operador='+';  $g2_operador='+';
+    $a3_operador='+';  $b3_operador='+';   $c3_operador='+';   $d3_operador='+';  $e3_operador='+';  $f3_operador='+';  $g3_operador='+';
+    $a4_operador='+';  $b4_operador='+';   $c4_operador='+';   $d4_operador='+';  $e4_operador='+';  $f4_operador='+';  $g4_operador='+';
+    $a5_operador='+';  $b5_operador='+';   $c5_operador='+';   $d5_operador='+';  $e5_operador='+';  $f5_operador='+';  $g5_operador='+';
+    $a6_operador='+';  $b6_operador='+';   $c6_operador='+';   $d6_operador='+';  $e6_operador='+';  $f6_operador='+';  $g6_operador='+';
     $a7_operador='=';  $b7_operador='=';   $c7_operador='=';   $d7_operador='=';  $e7_operador='=';  $f7_operador='=';  $g7_operador='=';
 
     //___utilizar_seguintes_operadores:
@@ -43,9 +43,11 @@
 
     //__!desenvolvedor!__utilize_este_espaço_para_armazenar_a_string_com_o_array_de_gabarito:_(comentar! //___)___
 
-    $visualizar_array = false; // valor true para visualizar e false para omitir
+    $visualizar_array = true; // valor true para visualizar e false para omitir
 
-    //_Exemplo:__Array ( [0] => init [1] => a2 [2] => b2 [3] => b3 [4] => c3 [5] => c4 [6] => d4 [7] => e4 [8] => f4 [9] => f5 [10] => g5 [11] => g6 [12] => f6 [13] => e6 [14] => f6 )
+    //___Array ( [0] => init [1] => a2 [2] => b2 [3] => b3 [4] => c3 [5] => c4 [6] => d4 [7] => e4 [8] => f4 [9] => f5 [10] => g5 [11] => g6 [12] => f6 [13] => e6 [14] => f6 )
+    //___Array ( [0] => init [1] => a2 [2] => b2 [3] => b1 [4] => c1 [5] => c2 [6] => d2 [7] => d3 [8] => d4 [9] => c4 [10] => c5 [11] => d5 [12] => e5 [13] => e6 [14] => f6 )
+    //___Array ( [0] => init [1] => f1 [2] => e1 [3] => e2 [4] => d2 [5] => c2 [6] => c3 [7] => c4 [8] => b4 [9] => b5 [10] => a5 [11] => a6 [12] => b6 [13] => c6 [14] => d6 )
 
 
     //_____Mensagem_de_resultado_da_partida____________________________________________________________
