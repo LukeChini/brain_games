@@ -3,98 +3,50 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <style>
-    table
-    {
-      border-collapse: collapse;
-    }
+    <!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    td
-    {
-      width: 50px;
-      height: 50px;
-      border-width: 1px;
-      border-style: solid;
-      border-color: black;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    input[type="submit"]
-    {
-      width: 50px;
-      height: 50px;
-    }
-
-    .counteiner1
-    {
-      width: 30%;
-      height: 400px;
-      float: left;
-      display: block;
-
-    }
-
-    .conteiner2
-    {
-      width: 70%;
-      height: 400px;
-      display: inline-block;
-      float: right;
-      font-size: 30px;
-    }
-
-    .init_13
-    {
-      background-color: yellow;
-    }
-
-    .result_181
-    {
-      background-color: yellow;
-    }
-
-
-
-
-
-
-
-    </style>
-
+    <!-- <link rel="stylesheet" media="screen, projection, print" href="https://asset.lumosity.com/lumosity/production/train/application-2c19bfac939b4921187f1a38fc013480dee5e14b3e135fd247c9837d2b3c39e6.css" /> -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
 
   </head>
   <body>
 
-<h2> Orientações:</h2>
 
-<h3><p> O seu objetivo é ir do 13 ao "=181" em 11 movimentos,
-  executando a função aritimética para o dígito no quadrado selecionado enquanto prossegue.
-  Você pode começar de qualquer canto, mas - aqui está o truque - só um canto é o certo.
-  Os movimentos podem ser feitos horizontal e verticalmente, mas não em diagonal.
-</p></h3>
+    <?php
+    session_start();
+
+    //______Parametros_iniciais_da_tabela____________________________________________
+    //__por_padrão_não_utilizar_o_numero_0(zero)_nas_variaveis_ $xn_numero _ele_pode_dar_erro_com_o_submit_voltar___________
+
+    $numero_inicial = 13;      $numero_max_movimentos = 11;      $resultado_esperado = $re = 181;      $nome_arquivo="sorte13";
+
+                       $b1_numero=3;       $c1_numero=4;       $d1_numero=4;      $e1_numero=5;      $f1_numero=4;
+    $a2_numero=7;      $b2_numero=41;      $c2_numero=2;       $d2_numero=7;      $e2_numero=3;      $f2_numero=11;     $g2_numero=8;
+    $a3_numero=14;     $b3_numero=6;       $c3_numero=2;       $d3_numero=4;      $e3_numero=17;     $f3_numero=4;      $g3_numero=3;
+    $a4_numero=5;      $b4_numero=33;      $c4_numero=5;       $d4_numero=7;      $e4_numero=8;      $f4_numero=6;      $g4_numero=41;
+    $a5_numero=21;     $b5_numero=123;     $c5_numero=8;       $d5_numero=14;     $e5_numero=2;      $f5_numero=3;      $g5_numero=71;
+    $a6_numero=14;     $b6_numero=6;       $c6_numero=12;      $d6_numero=93;     $e6_numero=4;      $f6_numero=72;     $g6_numero=10;
+    $a7_numero=$re;    $b7_numero=$re;     $c7_numero=$re;     $d7_numero=$re;    $e7_numero=$re;    $f7_numero=$re;    $g7_numero=$re;
+
+                       $b1_operador='x';   $c1_operador='-';   $d1_operador='x';  $e1_operador='+';  $f1_operador='x';
+    $a2_operador='x';  $b2_operador='-';   $c2_operador='÷';   $d2_operador='+';  $e2_operador='÷';  $f2_operador='+';  $g2_operador='x';
+    $a3_operador='+';  $b3_operador='÷';   $c3_operador='x';   $d3_operador='-';  $e3_operador='x';  $f3_operador='÷';  $g3_operador='+';
+    $a4_operador='÷';  $b4_operador='-';   $c4_operador='÷';   $d4_operador='+';  $e4_operador='÷';  $f4_operador='x';  $g4_operador='-';
+    $a5_operador='x';  $b5_operador='+';   $c5_operador='-';   $d5_operador='÷';  $e5_operador='-';  $f5_operador='÷';  $g5_operador='x';
+    $a6_operador='-';  $b6_operador='-';   $c6_operador='+';   $d6_operador='x';  $e6_operador='+';  $f6_operador='-';  $g6_operador='÷';
+    $a7_operador='=';  $b7_operador='=';   $c7_operador='=';   $d7_operador='=';  $e7_operador='=';  $f7_operador='=';  $g7_operador='=';
+
+    //___utilizar_seguintes_operadores:
+    //__ + para somar ______ - para subtrair ________ x para multiplicar ________ ÷ para dividir ___________
 
 
-<?php
-session_start();
+    //_____Mensagem_de_resultado_da_partida____________________________________________________________
+           $_SESSION["ganhou"] = ""; $ganhou_mensagem        = "Parabéns você é um gênio!";
+           $_SESSION["perdeu"] = ""; $ganhou_perdeu          = "Tente novamente!";
+    $_SESSION["passou_de_max"] = ""; $passou_de_max_mensagem = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";
 
-//______Parametros_iniciais_da_tabela____________________________________________
-
-                   $b1_numero=3;       $c1_numero=4;       $d1_numero=4;      $e1_numero=5;      $f1_numero=4;
-$a2_numero=7;      $b2_numero=41;      $c2_numero=2;       $d2_numero=7;      $e2_numero=3;      $f2_numero=11;     $g2_numero=8;
-$a3_numero=14;     $b3_numero=6;       $c3_numero=2;       $d3_numero=4;      $e3_numero=17;     $f3_numero=4;      $g3_numero=3;
-$a4_numero=5;      $b4_numero=33;      $c4_numero=5;       $d4_numero=7;      $e4_numero=8;      $f4_numero=6;      $g4_numero=41;
-$a5_numero=21;     $b5_numero=123;     $c5_numero=8;       $d5_numero=14;     $e5_numero=2;      $f5_numero=3;      $g5_numero=71;
-$a6_numero=14;     $b6_numero=6;       $c6_numero=12;      $d6_numero=93;     $e6_numero=4;      $f6_numero=72;     $g6_numero=10;
-$a7_numero=181;    $b7_numero=181;     $c7_numero=181;     $d7_numero=181;    $e7_numero=181;    $f7_numero=181;    $g7_numero=181;
-
-                   $b1_operador='x';   $c1_operador='-';   $d1_operador='x';  $e1_operador='+';  $f1_operador='x';
-$a2_operador='x';  $b2_operador='-';   $c2_operador='÷';   $d2_operador='+';  $e2_operador='÷';  $f2_operador='+';  $g2_operador='x';
-$a3_operador='+';  $b3_operador='÷';   $c3_operador='x';   $d3_operador='-';  $e3_operador='x';  $f3_operador='÷';  $g3_operador='+';
-$a4_operador='÷';  $b4_operador='-';   $c4_operador='÷';   $d4_operador='+';  $e4_operador='÷';  $f4_operador='x';  $g4_operador='-';
-$a5_operador='x';  $b5_operador='+';   $c5_operador='-';   $d5_operador='÷';  $e5_operador='-';  $f5_operador='÷';  $g5_operador='x';
-$a6_operador='-';  $b6_operador='-';   $c6_operador='+';   $d6_operador='x';  $e6_operador='+';  $f6_operador='-';  $g6_operador='÷';
-$a7_operador='=';  $b7_operador='=';   $c7_operador='=';   $d7_operador='=';  $e7_operador='=';  $f7_operador='=';  $g7_operador='=';
 
 //__ $xn_op_nu = operador concatenado com numero __________________________________
 
@@ -157,8 +109,6 @@ $a5_string='a5';  $b5_string='b5';   $c5_string='c5';   $d5_string='d5';  $e5_st
 $a6_string='a6';  $b6_string='b6';   $c6_string='c6';   $d6_string='d6';  $e6_string='e6';  $f6_string='f6';  $g6_string='g6';
 $a7_string='a7';  $b7_string='b7';   $c7_string='c7';   $d7_string='d7';  $e7_string='e7';  $f7_string='f7';  $g7_string='g7';
 
-//_____Resultado_da_partida____________________________________________________________
-$_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = ""; $_SESSION["passou_de_10"] = "";
 
 //__________Esta_variavel:_ $xn_td_id _é_a_variavel_que_determinará_o_conteudo_do_botão_de_jogo___________
 
@@ -185,7 +135,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
 //_______________Linha_1_______________________________________
 
   if (isset($_POST['reiniciar'])){
-    $_SESSION['resultado'] = $_SESSION['resultado'] *0 +13;
+    $_SESSION['resultado'] = $_SESSION['resultado'] *0 +$numero_inicial;
     $_SESSION["count"] = $_SESSION["count"] *0;
 
                  $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
@@ -239,7 +189,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
 
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
   $_SESSION["b1_count"] = $_SESSION["b1_count"] + 1;
 
@@ -292,7 +242,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
 
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
   $_SESSION["c1_count"] = $_SESSION["c1_count"] + 1;
 
@@ -344,7 +294,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
 
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
     $_SESSION["d1_count"] = $_SESSION["d1_count"] + 1;
 
@@ -395,7 +345,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
     $_SESSION["e1_count"] = $_SESSION["e1_count"] + 1;
 
@@ -446,7 +396,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
     $_SESSION["f1_count"] = $_SESSION["f1_count"] + 1;
 
@@ -499,7 +449,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
     $_SESSION["a2_count"] = $_SESSION["a2_count"] + 1;
 
@@ -549,7 +499,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
     $_SESSION["b2_count"] = $_SESSION["b2_count"] + 1;
 
@@ -600,7 +550,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
     $_SESSION["c2_count"] = $_SESSION["c2_count"] + 1;
 
@@ -650,7 +600,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
     $_SESSION["d2_count"] = $_SESSION["d2_count"] + 1;
 
@@ -700,7 +650,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
     $_SESSION["e2_count"] = $_SESSION["e2_count"] + 1;
 
@@ -750,7 +700,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
     $_SESSION["f2_count"] = $_SESSION["f2_count"] + 1;
 
@@ -800,7 +750,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
     $_SESSION["g2_count"] = $_SESSION["g2_count"] + 1;
 
@@ -852,7 +802,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
     $_SESSION["a3_count"] = $_SESSION["a3_count"] + 1;
 
@@ -902,7 +852,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
 
     $_SESSION["b3_count"] = $_SESSION["b3_count"] + 1;
@@ -954,7 +904,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
     $_SESSION["c3_count"] = $_SESSION["c3_count"] + 1;
 
@@ -1004,7 +954,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
     $_SESSION["d3_count"] = $_SESSION["d3_count"] + 1;
 
@@ -1054,7 +1004,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
     $_SESSION["e3_count"] = $_SESSION["e3_count"] + 1;
 
@@ -1104,7 +1054,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
     $_SESSION["f3_count"] = $_SESSION["f3_count"] + 1;
 
@@ -1154,7 +1104,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
   $_SESSION["count"] = $_SESSION["count"] + 1;
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
     $_SESSION["g3_count"] = $_SESSION["g3_count"] + 1;
 
@@ -1206,7 +1156,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
-    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
       $_SESSION["a4_count"] = $_SESSION["a4_count"] + 1;
 
@@ -1256,7 +1206,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
-    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
       $_SESSION["b4_count"] = $_SESSION["b4_count"] + 1;
 
@@ -1307,7 +1257,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
-    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
     $_SESSION["c4_count"] = $_SESSION["c4_count"] + 1;
 
@@ -1357,7 +1307,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
-    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
         $_SESSION["d4_count"] = $_SESSION["d4_count"] + 1;
 
@@ -1408,7 +1358,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
 
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
-    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
         $_SESSION["e4_count"] = $_SESSION["e4_count"] + 1;
 
@@ -1458,7 +1408,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
-    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
         $_SESSION["f4_count"] = $_SESSION["f4_count"] + 1;
 
@@ -1508,7 +1458,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
-    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
         $_SESSION["g4_count"] = $_SESSION["g4_count"] + 1;
 
@@ -1562,7 +1512,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
-    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
             $_SESSION["a5_count"] = $_SESSION["a5_count"] + 1;
 
@@ -1612,7 +1562,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
-    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                 $_SESSION["b5_count"] = $_SESSION["b5_count"] + 1;
 
@@ -1663,7 +1613,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
-    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
     $_SESSION["c5_count"] = $_SESSION["c5_count"] + 1;
 
@@ -1713,7 +1663,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
-    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
         $_SESSION["d5_count"] = $_SESSION["d5_count"] + 1;
 
@@ -1763,7 +1713,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
-    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
         $_SESSION["e5_count"] = $_SESSION["e5_count"] + 1;
 
@@ -1813,7 +1763,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
-    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
         $_SESSION["f5_count"] = $_SESSION["f5_count"] + 1;
 
@@ -1863,7 +1813,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
-    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
         $_SESSION["g5_count"] = $_SESSION["g5_count"] + 1;
 
@@ -1918,7 +1868,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
 
-    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
     $_SESSION["a6_count"] = $_SESSION["a6_count"] + 1;
 
@@ -1969,7 +1919,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
 
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
   $_SESSION["b6_count"] = $_SESSION["b6_count"] + 1;
 
@@ -2021,7 +1971,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
 
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
   $_SESSION["c6_count"] = $_SESSION["c6_count"] + 1;
 
@@ -2072,7 +2022,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
 
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
   $_SESSION["d6_count"] = $_SESSION["d6_count"] + 1;
 
@@ -2123,7 +2073,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
 
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
   $_SESSION["e6_count"] = $_SESSION["e6_count"] + 1;
 
@@ -2174,7 +2124,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
 
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
   $_SESSION["f6_count"] = $_SESSION["f6_count"] + 1;
 
@@ -2225,7 +2175,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
 
     $_SESSION["count"] = $_SESSION["count"] + 1;
 
-  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
   $_SESSION["g6_count"] = $_SESSION["g6_count"] + 1;
 
@@ -2261,9 +2211,9 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
   $_SESSION['resultado'] = $_SESSION['resultado'] + 0;
   $_SESSION["count"] = $_SESSION["count"] + 1;
 
-  if($_SESSION['resultado']==$a7_numero && $_SESSION["count"]==11)
+  if($_SESSION['resultado']==$a7_numero && $_SESSION["count"]==$numero_max_movimentos)
   {
-    $_SESSION['resultado'] = $_SESSION['resultado'] *0 +13;
+    $_SESSION['resultado'] = $_SESSION['resultado'] *0 +$numero_inicial;
     $_SESSION["count"] = $_SESSION["count"] *0;
 
                          $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
@@ -2282,14 +2232,14 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
             $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
-    $_SESSION["ganhou"] = "Parabéns você é um gênio!"; $_SESSION["perdeu"] = "";
+    $_SESSION["ganhou"] = $ganhou_mensagem; $_SESSION["perdeu"] = "";
     $_SESSION['array_jogadas'] = array($init_string);
   }
 
 
   else
   {
-    $_SESSION['resultado'] = $_SESSION['resultado'] *0 +13;
+    $_SESSION['resultado'] = $_SESSION['resultado'] *0 +$numero_inicial;
     $_SESSION["count"] = $_SESSION["count"] *0;
 
                          $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
@@ -2308,7 +2258,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
             $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
-    $_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = "Tente novamente!";
+    $_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = $ganhou_perdeu;
     $_SESSION['array_jogadas'] = array($init_string);
   }
   }
@@ -2317,9 +2267,9 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
     $_SESSION['resultado'] = $_SESSION['resultado'] + 0;
     $_SESSION["count"] = $_SESSION["count"] + 1;
 
-    if($_SESSION['resultado']==$b7_numero && $_SESSION["count"]==11)
+    if($_SESSION['resultado']==$b7_numero && $_SESSION["count"]==$numero_max_movimentos)
     {
-      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +13;
+      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +$numero_inicial;
       $_SESSION["count"] = $_SESSION["count"] *0;
 
                            $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
@@ -2338,14 +2288,14 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
-      $_SESSION["ganhou"] = "Parabéns você é um gênio!"; $_SESSION["perdeu"] = "";
+      $_SESSION["ganhou"] = $ganhou_mensagem; $_SESSION["perdeu"] = "";
       $_SESSION['array_jogadas'] = array($init_string);
     }
 
 
     else
     {
-      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +13;
+      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +$numero_inicial;
       $_SESSION["count"] = $_SESSION["count"] *0;
 
                            $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
@@ -2364,7 +2314,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
-      $_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = "Tente novamente!";
+      $_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = $ganhou_perdeu;
       $_SESSION['array_jogadas'] = array($init_string);
     }
     }
@@ -2373,9 +2323,9 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
     $_SESSION['resultado'] = $_SESSION['resultado'] + 0;
     $_SESSION["count"] = $_SESSION["count"] + 1;
 
-    if($_SESSION['resultado']==$c7_numero && $_SESSION["count"]==11)
+    if($_SESSION['resultado']==$c7_numero && $_SESSION["count"]==$numero_max_movimentos)
     {
-      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +13;
+      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +$numero_inicial;
       $_SESSION["count"] = $_SESSION["count"] *0;
 
                            $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
@@ -2394,14 +2344,14 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
-      $_SESSION["ganhou"] = "Parabéns você é um gênio!"; $_SESSION["perdeu"] = "";
+      $_SESSION["ganhou"] = $ganhou_mensagem; $_SESSION["perdeu"] = "";
       $_SESSION['array_jogadas'] = array($init_string);
     }
 
 
     else
     {
-      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +13;
+      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +$numero_inicial;
       $_SESSION["count"] = $_SESSION["count"] *0;
 
                            $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
@@ -2420,7 +2370,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
-      $_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = "Tente novamente!";
+      $_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = $ganhou_perdeu;
       $_SESSION['array_jogadas'] = array($init_string);
     }
     }
@@ -2429,9 +2379,9 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
     $_SESSION['resultado'] = $_SESSION['resultado'] + 0;
     $_SESSION["count"] = $_SESSION["count"] + 1;
 
-    if($_SESSION['resultado']==$d7_numero && $_SESSION["count"]==11)
+    if($_SESSION['resultado']==$d7_numero && $_SESSION["count"]==$numero_max_movimentos)
     {
-      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +13;
+      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +$numero_inicial;
       $_SESSION["count"] = $_SESSION["count"] *0;
 
                            $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
@@ -2450,14 +2400,14 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
-      $_SESSION["ganhou"] = "Parabéns você é um gênio!"; $_SESSION["perdeu"] = "";
+      $_SESSION["ganhou"] = $ganhou_mensagem; $_SESSION["perdeu"] = "";
       $_SESSION['array_jogadas'] = array($init_string);
     }
 
 
     else
     {
-      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +13;
+      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +$numero_inicial;
       $_SESSION["count"] = $_SESSION["count"] *0;
 
                            $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
@@ -2476,7 +2426,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
-      $_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = "Tente novamente!";
+      $_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = $ganhou_perdeu;
       $_SESSION['array_jogadas'] = array($init_string);
     }
     }
@@ -2486,9 +2436,9 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
     $_SESSION['resultado'] = $_SESSION['resultado'] + 0;
     $_SESSION["count"] = $_SESSION["count"] + 1;
 
-    if($_SESSION['resultado']==$e7_numero && $_SESSION["count"]==11)
+    if($_SESSION['resultado']==$e7_numero && $_SESSION["count"]==$numero_max_movimentos)
     {
-      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +13;
+      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +$numero_inicial;
       $_SESSION["count"] = $_SESSION["count"] *0;
 
                            $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
@@ -2507,14 +2457,14 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
-      $_SESSION["ganhou"] = "Parabéns você é um gênio!"; $_SESSION["perdeu"] = "";
+      $_SESSION["ganhou"] = $ganhou_mensagem; $_SESSION["perdeu"] = "";
       $_SESSION['array_jogadas'] = array($init_string);
     }
 
 
     else
     {
-      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +13;
+      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +$numero_inicial;
       $_SESSION["count"] = $_SESSION["count"] *0;
 
                            $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
@@ -2533,7 +2483,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
-      $_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = "Tente novamente!";
+      $_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = $ganhou_perdeu;
       $_SESSION['array_jogadas'] = array($init_string);
     }
     }
@@ -2544,9 +2494,9 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
     $_SESSION['resultado'] = $_SESSION['resultado'] + 0;
     $_SESSION["count"] = $_SESSION["count"] + 1;
 
-    if($_SESSION['resultado']==$f7_numero && $_SESSION["count"]==11)
+    if($_SESSION['resultado']==$f7_numero && $_SESSION["count"]==$numero_max_movimentos)
     {
-      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +13;
+      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +$numero_inicial;
       $_SESSION["count"] = $_SESSION["count"] *0;
 
                            $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
@@ -2565,14 +2515,14 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
-      $_SESSION["ganhou"] = "Parabéns você é um gênio!"; $_SESSION["perdeu"] = "";
+      $_SESSION["ganhou"] = $ganhou_mensagem; $_SESSION["perdeu"] = "";
       $_SESSION['array_jogadas'] = array($init_string);
     }
 
 
     else
     {
-      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +13;
+      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +$numero_inicial;
       $_SESSION["count"] = $_SESSION["count"] *0;
 
                            $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
@@ -2591,7 +2541,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
-      $_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = "Tente novamente!";
+      $_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = $ganhou_perdeu;
       $_SESSION['array_jogadas'] = array($init_string);
     }
     }
@@ -2601,9 +2551,9 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
     $_SESSION['resultado'] = $_SESSION['resultado'] + 0;
     $_SESSION["count"] = $_SESSION["count"] + 1;
 
-    if($_SESSION['resultado']==$g7_numero && $_SESSION["count"]==11)
+    if($_SESSION['resultado']==$g7_numero && $_SESSION["count"]==$numero_max_movimentos)
     {
-      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +13;
+      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +$numero_inicial;
       $_SESSION["count"] = $_SESSION["count"] *0;
 
                            $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
@@ -2622,14 +2572,14 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
-      $_SESSION["ganhou"] = "Parabéns você é um gênio!"; $_SESSION["perdeu"] = "";
+      $_SESSION["ganhou"] = $ganhou_mensagem; $_SESSION["perdeu"] = "";
       $_SESSION['array_jogadas'] = array($init_string);
     }
 
 
     else
     {
-      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +13;
+      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +$numero_inicial;
       $_SESSION["count"] = $_SESSION["count"] *0;
 
                            $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
@@ -2648,7 +2598,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
-      $_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = "Tente novamente!";
+      $_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = $ganhou_perdeu;
       $_SESSION['array_jogadas'] = array($init_string);
     }
     }
@@ -2677,7 +2627,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
               $_SESSION["count"] = $_SESSION["count"] - 1;
-              if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+              if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
               $_SESSION["b1_count"] = $_SESSION["b1_count"] - 1;
 
@@ -2730,7 +2680,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
               $_SESSION["count"] = $_SESSION["count"] - 1;
-              if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+              if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
               $_SESSION["b1_count"] = $_SESSION["b1_count"] - 1;
 
@@ -2762,7 +2712,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
         }
         else
         {
-          $_SESSION['resultado'] = $_SESSION['resultado'] *0 +13;
+          $_SESSION['resultado'] = $_SESSION['resultado'] *0 +$numero_inicial;
           $_SESSION["count"] = $_SESSION["count"] *0;
 
                        $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
@@ -2819,7 +2769,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
               $_SESSION["count"] = $_SESSION["count"] - 1;
-              if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+              if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
               $_SESSION["c1_count"] = $_SESSION["c1_count"] - 1;
 
@@ -2872,7 +2822,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
               $_SESSION["count"] = $_SESSION["count"] - 1;
-              if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+              if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
               $_SESSION["c1_count"] = $_SESSION["c1_count"] - 1;
 
@@ -2925,7 +2875,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
               $_SESSION["count"] = $_SESSION["count"] - 1;
-              if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+              if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
               $_SESSION["c1_count"] = $_SESSION["c1_count"] - 1;
 
@@ -2982,7 +2932,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                   $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                   $_SESSION["count"] = $_SESSION["count"] - 1;
-                  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                   $_SESSION["d1_count"] = $_SESSION["d1_count"] - 1;
 
@@ -3035,7 +2985,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                   $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                   $_SESSION["count"] = $_SESSION["count"] - 1;
-                  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                   $_SESSION["d1_count"] = $_SESSION["d1_count"] - 1;
 
@@ -3088,7 +3038,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                   $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                   $_SESSION["count"] = $_SESSION["count"] - 1;
-                  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                   $_SESSION["d1_count"] = $_SESSION["d1_count"] - 1;
 
@@ -3146,7 +3096,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                         $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                         $_SESSION["count"] = $_SESSION["count"] - 1;
-                        if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                        if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                         $_SESSION["e1_count"] = $_SESSION["e1_count"] - 1;
 
@@ -3199,7 +3149,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                         $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                         $_SESSION["count"] = $_SESSION["count"] - 1;
-                        if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                        if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                         $_SESSION["e1_count"] = $_SESSION["e1_count"] - 1;
 
@@ -3252,7 +3202,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                         $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                         $_SESSION["count"] = $_SESSION["count"] - 1;
-                        if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                        if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                         $_SESSION["e1_count"] = $_SESSION["e1_count"] - 1;
 
@@ -3310,7 +3260,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                                   $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                                   $_SESSION["count"] = $_SESSION["count"] - 1;
-                                  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                                  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                                   $_SESSION["f1_count"] = $_SESSION["f1_count"] - 1;
 
@@ -3363,7 +3313,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                                   $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                                   $_SESSION["count"] = $_SESSION["count"] - 1;
-                                  if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                                  if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                                   $_SESSION["f1_count"] = $_SESSION["f1_count"] - 1;
 
@@ -3396,7 +3346,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                             }
                             else
                             {
-                              $_SESSION['resultado'] = $_SESSION['resultado'] *0 +13;
+                              $_SESSION['resultado'] = $_SESSION['resultado'] *0 +$numero_inicial;
                               $_SESSION["count"] = $_SESSION["count"] *0;
 
                                            $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
@@ -3452,7 +3402,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                                     $_SESSION["a2_count"] = $_SESSION["a2_count"] - 1;
 
@@ -3505,7 +3455,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                                     $_SESSION["a2_count"] = $_SESSION["a2_count"] - 1;
 
@@ -3538,7 +3488,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                               }
                               else
                               {
-                                $_SESSION['resultado'] = $_SESSION['resultado'] *0 +13;
+                                $_SESSION['resultado'] = $_SESSION['resultado'] *0 +$numero_inicial;
                                 $_SESSION["count"] = $_SESSION["count"] *0;
 
                                              $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
@@ -3593,7 +3543,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                             $_SESSION["count"] = $_SESSION["count"] - 1;
-                            if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                            if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                             $_SESSION["b2_count"] = $_SESSION["b2_count"] - 1;
 
@@ -3646,7 +3596,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                             $_SESSION["count"] = $_SESSION["count"] - 1;
-                            if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                            if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                             $_SESSION["b2_count"] = $_SESSION["b2_count"] - 1;
 
@@ -3699,7 +3649,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                             $_SESSION["count"] = $_SESSION["count"] - 1;
-                            if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                            if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                             $_SESSION["b2_count"] = $_SESSION["b2_count"] - 1;
 
@@ -3752,7 +3702,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                             $_SESSION["count"] = $_SESSION["count"] - 1;
-                            if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                            if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                             $_SESSION["b2_count"] = $_SESSION["b2_count"] - 1;
 
@@ -3808,7 +3758,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                           $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                           $_SESSION["count"] = $_SESSION["count"] - 1;
-                          if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                          if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                           $_SESSION["c2_count"] = $_SESSION["c2_count"] - 1;
 
@@ -3861,7 +3811,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                           $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                           $_SESSION["count"] = $_SESSION["count"] - 1;
-                          if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                          if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                           $_SESSION["c2_count"] = $_SESSION["c2_count"] - 1;
 
@@ -3914,7 +3864,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                           $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                           $_SESSION["count"] = $_SESSION["count"] - 1;
-                          if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                          if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                           $_SESSION["c2_count"] = $_SESSION["c2_count"] - 1;
 
@@ -3967,7 +3917,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                           $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                           $_SESSION["count"] = $_SESSION["count"] - 1;
-                          if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                          if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                           $_SESSION["c2_count"] = $_SESSION["c2_count"] - 1;
 
@@ -4023,7 +3973,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                         $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                         $_SESSION["count"] = $_SESSION["count"] - 1;
-                        if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                        if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                         $_SESSION["d2_count"] = $_SESSION["d2_count"] - 1;
 
@@ -4076,7 +4026,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                         $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                         $_SESSION["count"] = $_SESSION["count"] - 1;
-                        if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                        if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                         $_SESSION["d2_count"] = $_SESSION["d2_count"] - 1;
 
@@ -4129,7 +4079,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                         $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                         $_SESSION["count"] = $_SESSION["count"] - 1;
-                        if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                        if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                         $_SESSION["d2_count"] = $_SESSION["d2_count"] - 1;
 
@@ -4182,7 +4132,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                         $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                         $_SESSION["count"] = $_SESSION["count"] - 1;
-                        if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                        if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                         $_SESSION["d2_count"] = $_SESSION["d2_count"] - 1;
 
@@ -4238,7 +4188,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                       $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                       $_SESSION["count"] = $_SESSION["count"] - 1;
-                      if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                      if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                       $_SESSION["e2_count"] = $_SESSION["e2_count"] - 1;
 
@@ -4291,7 +4241,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                       $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                       $_SESSION["count"] = $_SESSION["count"] - 1;
-                      if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                      if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                       $_SESSION["e2_count"] = $_SESSION["e2_count"] - 1;
 
@@ -4344,7 +4294,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                       $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                       $_SESSION["count"] = $_SESSION["count"] - 1;
-                      if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                      if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                       $_SESSION["e2_count"] = $_SESSION["e2_count"] - 1;
 
@@ -4397,7 +4347,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                       $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                       $_SESSION["count"] = $_SESSION["count"] - 1;
-                      if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                      if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                       $_SESSION["e2_count"] = $_SESSION["e2_count"] - 1;
 
@@ -4455,7 +4405,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f2_count"] = $_SESSION["f2_count"] - 1;
 
@@ -4508,7 +4458,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f2_count"] = $_SESSION["f2_count"] - 1;
 
@@ -4560,7 +4510,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f2_count"] = $_SESSION["f2_count"] - 1;
 
@@ -4612,7 +4562,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f2_count"] = $_SESSION["f2_count"] - 1;
 
@@ -4669,7 +4619,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g2_count"] = $_SESSION["g2_count"] - 1;
 
@@ -4721,7 +4671,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g2_count"] = $_SESSION["g2_count"] - 1;
 
@@ -4754,7 +4704,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     }
                     else
                     {
-                      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +13;
+                      $_SESSION['resultado'] = $_SESSION['resultado'] *0 +$numero_inicial;
                       $_SESSION["count"] = $_SESSION["count"] *0;
 
                                    $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
@@ -4810,7 +4760,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["a3_count"] = $_SESSION["a3_count"] - 1;
 
@@ -4863,7 +4813,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["a3_count"] = $_SESSION["a3_count"] - 1;
 
@@ -4916,7 +4866,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["a3_count"] = $_SESSION["a3_count"] - 1;
 
@@ -4972,7 +4922,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b3_count"] = $_SESSION["b3_count"] - 1;
 
@@ -5025,7 +4975,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b3_count"] = $_SESSION["b3_count"] - 1;
 
@@ -5078,7 +5028,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b3_count"] = $_SESSION["b3_count"] - 1;
 
@@ -5131,7 +5081,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b3_count"] = $_SESSION["b3_count"] - 1;
 
@@ -5187,7 +5137,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c3_count"] = $_SESSION["c3_count"] - 1;
 
@@ -5239,7 +5189,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c3_count"] = $_SESSION["c3_count"] - 1;
 
@@ -5291,7 +5241,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c3_count"] = $_SESSION["c3_count"] - 1;
 
@@ -5343,7 +5293,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c3_count"] = $_SESSION["c3_count"] - 1;
 
@@ -5401,7 +5351,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d3_count"] = $_SESSION["d3_count"] - 1;
 
@@ -5454,7 +5404,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d3_count"] = $_SESSION["d3_count"] - 1;
 
@@ -5507,7 +5457,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d3_count"] = $_SESSION["d3_count"] - 1;
 
@@ -5560,7 +5510,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d3_count"] = $_SESSION["d3_count"] - 1;
 
@@ -5616,7 +5566,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e3_count"] = $_SESSION["e3_count"] - 1;
 
@@ -5669,7 +5619,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e3_count"] = $_SESSION["e3_count"] - 1;
 
@@ -5722,7 +5672,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e3_count"] = $_SESSION["e3_count"] - 1;
 
@@ -5775,7 +5725,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e3_count"] = $_SESSION["e3_count"] - 1;
 
@@ -5831,7 +5781,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f3_count"] = $_SESSION["f3_count"] - 1;
 
@@ -5884,7 +5834,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f3_count"] = $_SESSION["f3_count"] - 1;
 
@@ -5937,7 +5887,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f3_count"] = $_SESSION["f3_count"] - 1;
 
@@ -5990,7 +5940,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f3_count"] = $_SESSION["f3_count"] - 1;
 
@@ -6046,7 +5996,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g3_count"] = $_SESSION["g3_count"] - 1;
 
@@ -6099,7 +6049,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g3_count"] = $_SESSION["g3_count"] - 1;
 
@@ -6151,7 +6101,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g3_count"] = $_SESSION["g3_count"] - 1;
 
@@ -6207,7 +6157,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["a4_count"] = $_SESSION["a4_count"] - 1;
 
@@ -6260,7 +6210,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["a4_count"] = $_SESSION["a4_count"] - 1;
 
@@ -6312,7 +6262,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["a4_count"] = $_SESSION["a4_count"] - 1;
 
@@ -6367,7 +6317,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b4_count"] = $_SESSION["b4_count"] - 1;
 
@@ -6419,7 +6369,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b4_count"] = $_SESSION["b4_count"] - 1;
 
@@ -6471,7 +6421,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b4_count"] = $_SESSION["b4_count"] - 1;
 
@@ -6523,7 +6473,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b4_count"] = $_SESSION["b4_count"] - 1;
 
@@ -6579,7 +6529,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c4_count"] = $_SESSION["c4_count"] - 1;
 
@@ -6631,7 +6581,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c4_count"] = $_SESSION["c4_count"] - 1;
 
@@ -6683,7 +6633,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c4_count"] = $_SESSION["c4_count"] - 1;
 
@@ -6735,7 +6685,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c4_count"] = $_SESSION["c4_count"] - 1;
 
@@ -6790,7 +6740,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d4_count"] = $_SESSION["d4_count"] - 1;
 
@@ -6842,7 +6792,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d4_count"] = $_SESSION["d4_count"] - 1;
 
@@ -6894,7 +6844,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d4_count"] = $_SESSION["d4_count"] - 1;
 
@@ -6946,7 +6896,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d4_count"] = $_SESSION["d4_count"] - 1;
 
@@ -7001,7 +6951,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e4_count"] = $_SESSION["e4_count"] - 1;
 
@@ -7053,7 +7003,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e4_count"] = $_SESSION["e4_count"] - 1;
 
@@ -7105,7 +7055,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e4_count"] = $_SESSION["e4_count"] - 1;
 
@@ -7157,7 +7107,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e4_count"] = $_SESSION["e4_count"] - 1;
 
@@ -7213,7 +7163,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f4_count"] = $_SESSION["f4_count"] - 1;
 
@@ -7265,7 +7215,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f4_count"] = $_SESSION["f4_count"] - 1;
 
@@ -7317,7 +7267,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f4_count"] = $_SESSION["f4_count"] - 1;
 
@@ -7369,7 +7319,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f4_count"] = $_SESSION["f4_count"] - 1;
 
@@ -7425,7 +7375,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g4_count"] = $_SESSION["g4_count"] - 1;
 
@@ -7477,7 +7427,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g4_count"] = $_SESSION["g4_count"] - 1;
 
@@ -7529,7 +7479,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g4_count"] = $_SESSION["g4_count"] - 1;
 
@@ -7586,7 +7536,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["a5_count"] = $_SESSION["a5_count"] - 1;
 
@@ -7638,7 +7588,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["a5_count"] = $_SESSION["a5_count"] - 1;
 
@@ -7690,7 +7640,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["a5_count"] = $_SESSION["a5_count"] - 1;
 
@@ -7746,7 +7696,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b5_count"] = $_SESSION["b5_count"] - 1;
 
@@ -7798,7 +7748,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b5_count"] = $_SESSION["b5_count"] - 1;
 
@@ -7850,7 +7800,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b5_count"] = $_SESSION["b5_count"] - 1;
 
@@ -7902,7 +7852,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b5_count"] = $_SESSION["b5_count"] - 1;
 
@@ -7958,7 +7908,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c5_count"] = $_SESSION["c5_count"] - 1;
 
@@ -8010,7 +7960,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c5_count"] = $_SESSION["c5_count"] - 1;
 
@@ -8062,7 +8012,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c5_count"] = $_SESSION["c5_count"] - 1;
 
@@ -8114,7 +8064,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c5_count"] = $_SESSION["c5_count"] - 1;
 
@@ -8169,7 +8119,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d5_count"] = $_SESSION["d5_count"] - 1;
 
@@ -8222,7 +8172,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d5_count"] = $_SESSION["d5_count"] - 1;
 
@@ -8274,7 +8224,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d5_count"] = $_SESSION["d5_count"] - 1;
 
@@ -8326,7 +8276,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d5_count"] = $_SESSION["d5_count"] - 1;
 
@@ -8382,7 +8332,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e5_count"] = $_SESSION["e5_count"] - 1;
 
@@ -8434,7 +8384,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e5_count"] = $_SESSION["e5_count"] - 1;
 
@@ -8486,7 +8436,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e5_count"] = $_SESSION["e5_count"] - 1;
 
@@ -8538,7 +8488,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e5_count"] = $_SESSION["e5_count"] - 1;
 
@@ -8594,7 +8544,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f5_count"] = $_SESSION["f5_count"] - 1;
 
@@ -8646,7 +8596,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f5_count"] = $_SESSION["f5_count"] - 1;
 
@@ -8698,7 +8648,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f5_count"] = $_SESSION["f5_count"] - 1;
 
@@ -8750,7 +8700,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f5_count"] = $_SESSION["f5_count"] - 1;
 
@@ -8805,7 +8755,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g5_count"] = $_SESSION["g5_count"] - 1;
 
@@ -8858,7 +8808,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g5_count"] = $_SESSION["g5_count"] - 1;
 
@@ -8910,7 +8860,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g5_count"] = $_SESSION["g5_count"] - 1;
 
@@ -8966,7 +8916,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["a6_count"] = $_SESSION["a6_count"] - 1;
 
@@ -9018,7 +8968,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["a6_count"] = $_SESSION["a6_count"] - 1;
 
@@ -9073,7 +9023,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b6_count"] = $_SESSION["b6_count"] - 1;
 
@@ -9125,7 +9075,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b6_count"] = $_SESSION["b6_count"] - 1;
 
@@ -9177,7 +9127,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b6_count"] = $_SESSION["b6_count"] - 1;
 
@@ -9232,7 +9182,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c6_count"] = $_SESSION["c6_count"] - 1;
 
@@ -9284,7 +9234,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c6_count"] = $_SESSION["c6_count"] - 1;
 
@@ -9336,7 +9286,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c6_count"] = $_SESSION["c6_count"] - 1;
 
@@ -9391,7 +9341,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d6_count"] = $_SESSION["d6_count"] - 1;
 
@@ -9443,7 +9393,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d6_count"] = $_SESSION["d6_count"] - 1;
 
@@ -9495,7 +9445,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d6_count"] = $_SESSION["d6_count"] - 1;
 
@@ -9551,7 +9501,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e6_count"] = $_SESSION["e6_count"] - 1;
 
@@ -9603,7 +9553,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e6_count"] = $_SESSION["e6_count"] - 1;
 
@@ -9655,7 +9605,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e6_count"] = $_SESSION["e6_count"] - 1;
 
@@ -9711,7 +9661,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] - 1;
 
@@ -9763,7 +9713,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] - 1;
 
@@ -9815,7 +9765,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] - 1;
 
@@ -9871,7 +9821,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g6_count"] = $_SESSION["g6_count"] - 1;
 
@@ -9923,7 +9873,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
-                    if($_SESSION["count"]>10){$_SESSION["passou_de_10"] = "Reinicie o jogo, infelizmente você não tem mais possibilidades de ganhar.";}
+                    if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g6_count"] = $_SESSION["g6_count"] - 1;
 
@@ -9963,7 +9913,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
 
 //__________Padrão_de_Cores_______________________________________
 
-  $cor_1_count = "background-color:rgb( 200 , 165 , 250);";
+  $cor_1_count = "background-color:rgb( 200 , 200 , 200);";
   $cor_2_count = "background-color:rgb( 0 , 110 , 160);";
   $cor_3_count = "background-color:rgb( 110 , 50 , 160);";
   $cor_4_count = "background-color:rgb( 200 , 0 , 90);";
@@ -10272,72 +10222,72 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
 
   //_______________Linha_7____________Botão_Submit__________________________________________
 
-  if($a7_td_id == 0){$a7_td = $a7_op_nu;} if($a7_td_id == 1 && $_SESSION["count"]==10){$a7_td = "<input type='submit' name='a7' value="."'".$a7_op_nu."'>";}else{$a7_td = $a7_op_nu;}
-  if($b7_td_id == 0){$b7_td = $b7_op_nu;} if($b7_td_id == 1 && $_SESSION["count"]==10){$b7_td = "<input type='submit' name='b7' value="."'".$b7_op_nu."'>";}else{$b7_td = $b7_op_nu;}
-  if($c7_td_id == 0){$c7_td = $c7_op_nu;} if($c7_td_id == 1 && $_SESSION["count"]==10){$c7_td = "<input type='submit' name='c7' value="."'".$c7_op_nu."'>";}else{$c7_td = $c7_op_nu;}
-  if($d7_td_id == 0){$d7_td = $d7_op_nu;} if($d7_td_id == 1 && $_SESSION["count"]==10){$d7_td = "<input type='submit' name='d7' value="."'".$d7_op_nu."'>";}else{$d7_td = $d7_op_nu;}
-  if($e7_td_id == 0){$e7_td = $e7_op_nu;} if($e7_td_id == 1 && $_SESSION["count"]==10){$e7_td = "<input type='submit' name='e7' value="."'".$e7_op_nu."'>";}else{$e7_td = $e7_op_nu;}
-  if($f7_td_id == 0){$f7_td = $f7_op_nu;} if($f7_td_id == 1 && $_SESSION["count"]==10){$f7_td = "<input type='submit' name='f7' value="."'".$f7_op_nu."'>";}else{$f7_td = $f7_op_nu;}
-  if($g7_td_id == 0){$g7_td = $g7_op_nu;} if($g7_td_id == 1 && $_SESSION["count"]==10){$g7_td = "<input type='submit' name='g7' value="."'".$g7_op_nu."'>";}else{$g7_td = $g7_op_nu;}
+  if($a7_td_id == 0){$a7_td = $a7_op_nu;} if($a7_td_id == 1 && $_SESSION["count"]==($numero_max_movimentos-1)){$a7_td = "<input type='submit' name='a7' value="."'".$a7_op_nu."'>";}else{$a7_td = $a7_op_nu;}
+  if($b7_td_id == 0){$b7_td = $b7_op_nu;} if($b7_td_id == 1 && $_SESSION["count"]==($numero_max_movimentos-1)){$b7_td = "<input type='submit' name='b7' value="."'".$b7_op_nu."'>";}else{$b7_td = $b7_op_nu;}
+  if($c7_td_id == 0){$c7_td = $c7_op_nu;} if($c7_td_id == 1 && $_SESSION["count"]==($numero_max_movimentos-1)){$c7_td = "<input type='submit' name='c7' value="."'".$c7_op_nu."'>";}else{$c7_td = $c7_op_nu;}
+  if($d7_td_id == 0){$d7_td = $d7_op_nu;} if($d7_td_id == 1 && $_SESSION["count"]==($numero_max_movimentos-1)){$d7_td = "<input type='submit' name='d7' value="."'".$d7_op_nu."'>";}else{$d7_td = $d7_op_nu;}
+  if($e7_td_id == 0){$e7_td = $e7_op_nu;} if($e7_td_id == 1 && $_SESSION["count"]==($numero_max_movimentos-1)){$e7_td = "<input type='submit' name='e7' value="."'".$e7_op_nu."'>";}else{$e7_td = $e7_op_nu;}
+  if($f7_td_id == 0){$f7_td = $f7_op_nu;} if($f7_td_id == 1 && $_SESSION["count"]==($numero_max_movimentos-1)){$f7_td = "<input type='submit' name='f7' value="."'".$f7_op_nu."'>";}else{$f7_td = $f7_op_nu;}
+  if($g7_td_id == 0){$g7_td = $g7_op_nu;} if($g7_td_id == 1 && $_SESSION["count"]==($numero_max_movimentos-1)){$g7_td = "<input type='submit' name='g7' value="."'".$g7_op_nu."'>";}else{$g7_td = $g7_op_nu;}
 
   //_______________Botão_Voltar_(if's)_______Linha_1________________________________
 
-if($b1_in_id == 1){$submit_inverso = "<input type='submit' name='b1_inverso' value='Voltar'";}
-elseif($c1_in_id == 1){$submit_inverso = "<input type='submit' name='c1_inverso' value='Voltar'";}
-elseif($d1_in_id == 1){$submit_inverso = "<input type='submit' name='d1_inverso' value='Voltar'";}
-elseif($e1_in_id == 1){$submit_inverso = "<input type='submit' name='e1_inverso' value='Voltar'";}
-elseif($f1_in_id == 1){$submit_inverso = "<input type='submit' name='f1_inverso' value='Voltar'";}
+if($b1_in_id == 1){$submit_inverso = "<input type='submit' name='b1_inverso' value='Voltar'></input>";}
+elseif($c1_in_id == 1){$submit_inverso = "<input type='submit' name='c1_inverso' value='Voltar'></input>";}
+elseif($d1_in_id == 1){$submit_inverso = "<input type='submit' name='d1_inverso' value='Voltar'></input>";}
+elseif($e1_in_id == 1){$submit_inverso = "<input type='submit' name='e1_inverso' value='Voltar'></input>";}
+elseif($f1_in_id == 1){$submit_inverso = "<input type='submit' name='f1_inverso' value='Voltar'></input>";}
 
 //_______________Botão_Voltar_(if's)_______Linha_2________________________________
 
-elseif($a2_in_id == 1){$submit_inverso = "<input type='submit' name='a2_inverso' value='Voltar'";}
-elseif($b2_in_id == 1){$submit_inverso = "<input type='submit' name='b2_inverso' value='Voltar'";}
-elseif($c2_in_id == 1){$submit_inverso = "<input type='submit' name='c2_inverso' value='Voltar'";}
-elseif($d2_in_id == 1){$submit_inverso = "<input type='submit' name='d2_inverso' value='Voltar'";}
-elseif($e2_in_id == 1){$submit_inverso = "<input type='submit' name='e2_inverso' value='Voltar'";}
-elseif($f2_in_id == 1){$submit_inverso = "<input type='submit' name='f2_inverso' value='Voltar'";}
-elseif($g2_in_id == 1){$submit_inverso = "<input type='submit' name='g2_inverso' value='Voltar'";}
+elseif($a2_in_id == 1){$submit_inverso = "<input type='submit' name='a2_inverso' value='Voltar'></input>";}
+elseif($b2_in_id == 1){$submit_inverso = "<input type='submit' name='b2_inverso' value='Voltar'></input>";}
+elseif($c2_in_id == 1){$submit_inverso = "<input type='submit' name='c2_inverso' value='Voltar'></input>";}
+elseif($d2_in_id == 1){$submit_inverso = "<input type='submit' name='d2_inverso' value='Voltar'></input>";}
+elseif($e2_in_id == 1){$submit_inverso = "<input type='submit' name='e2_inverso' value='Voltar'></input>";}
+elseif($f2_in_id == 1){$submit_inverso = "<input type='submit' name='f2_inverso' value='Voltar'></input>";}
+elseif($g2_in_id == 1){$submit_inverso = "<input type='submit' name='g2_inverso' value='Voltar'></input>";}
 
 //_______________Botão_Voltar_(if's)_______Linha_3________________________________
 
-elseif($a3_in_id == 1){$submit_inverso = "<input type='submit' name='a3_inverso' value='Voltar'";}
-elseif($b3_in_id == 1){$submit_inverso = "<input type='submit' name='b3_inverso' value='Voltar'";}
-elseif($c3_in_id == 1){$submit_inverso = "<input type='submit' name='c3_inverso' value='Voltar'";}
-elseif($d3_in_id == 1){$submit_inverso = "<input type='submit' name='d3_inverso' value='Voltar'";}
-elseif($e3_in_id == 1){$submit_inverso = "<input type='submit' name='e3_inverso' value='Voltar'";}
-elseif($f3_in_id == 1){$submit_inverso = "<input type='submit' name='f3_inverso' value='Voltar'";}
-elseif($g3_in_id == 1){$submit_inverso = "<input type='submit' name='g3_inverso' value='Voltar'";}
+elseif($a3_in_id == 1){$submit_inverso = "<input type='submit' name='a3_inverso' value='Voltar'></input>";}
+elseif($b3_in_id == 1){$submit_inverso = "<input type='submit' name='b3_inverso' value='Voltar'></input>";}
+elseif($c3_in_id == 1){$submit_inverso = "<input type='submit' name='c3_inverso' value='Voltar'></input>";}
+elseif($d3_in_id == 1){$submit_inverso = "<input type='submit' name='d3_inverso' value='Voltar'></input>";}
+elseif($e3_in_id == 1){$submit_inverso = "<input type='submit' name='e3_inverso' value='Voltar'></input>";}
+elseif($f3_in_id == 1){$submit_inverso = "<input type='submit' name='f3_inverso' value='Voltar'></input>";}
+elseif($g3_in_id == 1){$submit_inverso = "<input type='submit' name='g3_inverso' value='Voltar'></input>";}
 
 //_______________Botão_Voltar_(if's)_______Linha_4________________________________
 
-elseif($a4_in_id == 1){$submit_inverso = "<input type='submit' name='a4_inverso' value='Voltar'";}
-elseif($b4_in_id == 1){$submit_inverso = "<input type='submit' name='b4_inverso' value='Voltar'";}
-elseif($c4_in_id == 1){$submit_inverso = "<input type='submit' name='c4_inverso' value='Voltar'";}
-elseif($d4_in_id == 1){$submit_inverso = "<input type='submit' name='d4_inverso' value='Voltar'";}
-elseif($e4_in_id == 1){$submit_inverso = "<input type='submit' name='e4_inverso' value='Voltar'";}
-elseif($f4_in_id == 1){$submit_inverso = "<input type='submit' name='f4_inverso' value='Voltar'";}
-elseif($g4_in_id == 1){$submit_inverso = "<input type='submit' name='g4_inverso' value='Voltar'";}
+elseif($a4_in_id == 1){$submit_inverso = "<input type='submit' name='a4_inverso' value='Voltar'></input>";}
+elseif($b4_in_id == 1){$submit_inverso = "<input type='submit' name='b4_inverso' value='Voltar'></input>";}
+elseif($c4_in_id == 1){$submit_inverso = "<input type='submit' name='c4_inverso' value='Voltar'></input>";}
+elseif($d4_in_id == 1){$submit_inverso = "<input type='submit' name='d4_inverso' value='Voltar'></input>";}
+elseif($e4_in_id == 1){$submit_inverso = "<input type='submit' name='e4_inverso' value='Voltar'></input>";}
+elseif($f4_in_id == 1){$submit_inverso = "<input type='submit' name='f4_inverso' value='Voltar'></input>";}
+elseif($g4_in_id == 1){$submit_inverso = "<input type='submit' name='g4_inverso' value='Voltar'></input>";}
 
 //_______________Botão_Voltar_(if's)_______Linha_5________________________________
 
-elseif($a5_in_id == 1){$submit_inverso = "<input type='submit' name='a5_inverso' value='Voltar'";}
-elseif($b5_in_id == 1){$submit_inverso = "<input type='submit' name='b5_inverso' value='Voltar'";}
-elseif($c5_in_id == 1){$submit_inverso = "<input type='submit' name='c5_inverso' value='Voltar'";}
-elseif($d5_in_id == 1){$submit_inverso = "<input type='submit' name='d5_inverso' value='Voltar'";}
-elseif($e5_in_id == 1){$submit_inverso = "<input type='submit' name='e5_inverso' value='Voltar'";}
-elseif($f5_in_id == 1){$submit_inverso = "<input type='submit' name='f5_inverso' value='Voltar'";}
-elseif($g5_in_id == 1){$submit_inverso = "<input type='submit' name='g5_inverso' value='Voltar'";}
+elseif($a5_in_id == 1){$submit_inverso = "<input type='submit' name='a5_inverso' value='Voltar'></input>";}
+elseif($b5_in_id == 1){$submit_inverso = "<input type='submit' name='b5_inverso' value='Voltar'></input>";}
+elseif($c5_in_id == 1){$submit_inverso = "<input type='submit' name='c5_inverso' value='Voltar'></input>";}
+elseif($d5_in_id == 1){$submit_inverso = "<input type='submit' name='d5_inverso' value='Voltar'></input>";}
+elseif($e5_in_id == 1){$submit_inverso = "<input type='submit' name='e5_inverso' value='Voltar'></input>";}
+elseif($f5_in_id == 1){$submit_inverso = "<input type='submit' name='f5_inverso' value='Voltar'></input>";}
+elseif($g5_in_id == 1){$submit_inverso = "<input type='submit' name='g5_inverso' value='Voltar'></input>";}
 
 //_______________Botão_Voltar_(if's)_______Linha_6________________________________
 
-elseif($a6_in_id == 1){$submit_inverso = "<input type='submit' name='a6_inverso' value='Voltar'";}
-elseif($b6_in_id == 1){$submit_inverso = "<input type='submit' name='b6_inverso' value='Voltar'";}
-elseif($c6_in_id == 1){$submit_inverso = "<input type='submit' name='c6_inverso' value='Voltar'";}
-elseif($d6_in_id == 1){$submit_inverso = "<input type='submit' name='d6_inverso' value='Voltar'";}
-elseif($e6_in_id == 1){$submit_inverso = "<input type='submit' name='e6_inverso' value='Voltar'";}
-elseif($f6_in_id == 1){$submit_inverso = "<input type='submit' name='f6_inverso' value='Voltar'";}
-elseif($g6_in_id == 1){$submit_inverso = "<input type='submit' name='g6_inverso' value='Voltar'";}
-else{$submit_inverso = "<input type='submit' name='reiniciar' value='Voltar'";}
+elseif($a6_in_id == 1){$submit_inverso = "<input type='submit' name='a6_inverso' value='Voltar'></input>";}
+elseif($b6_in_id == 1){$submit_inverso = "<input type='submit' name='b6_inverso' value='Voltar'></input>";}
+elseif($c6_in_id == 1){$submit_inverso = "<input type='submit' name='c6_inverso' value='Voltar'></input>";}
+elseif($d6_in_id == 1){$submit_inverso = "<input type='submit' name='d6_inverso' value='Voltar'></input>";}
+elseif($e6_in_id == 1){$submit_inverso = "<input type='submit' name='e6_inverso' value='Voltar'></input>";}
+elseif($f6_in_id == 1){$submit_inverso = "<input type='submit' name='f6_inverso' value='Voltar'></input>";}
+elseif($g6_in_id == 1){$submit_inverso = "<input type='submit' name='g6_inverso' value='Voltar'></input>";}
+else{$submit_inverso = "<input type='submit' name='reiniciar' value='Voltar'></input>";}
 
 
 
@@ -10360,31 +10310,41 @@ else{$submit_inverso = "<input type='submit' name='reiniciar' value='Voltar'";}
 
 
 </style>
+<div class="topo">
+  <ul class="nav nav-pills">
+  <li class="primeira_li"><a href="">Início</a></li>
+  <li><a href="">Seu Status</a></li>
+  <li><a href="">Jogos</a></li>
+  <li><a href="">Descobertas</a></li>
+  </ul></div>
 
+</div>
 
-<form class="" action="sorte13.php" method="post">
-  <div class="reiniciar_botao"><input type="submit" name="reiniciar" value="Iniciar"><div>
-  <div class="reiniciar_botao"><?php echo $submit_inverso ?><div>
-  <br /><br />
+<div class="geral">
+
+<form class="" action="<?php echo $nome_arquivo ?>.php" method="post">
+  <div class="reiniciar_botao"><input type="submit" name="reiniciar" value="Iniciar"></input></div>
+
 
   <div class="conteiner2">
     <p> <?php echo "Resultado: ".$_SESSION['resultado'];   ?> </p>
-    <p> <?php echo "Jogadas: ".$_SESSION['count'];   ?> </p>
+    <p> <?php echo "Jogadas: ".$_SESSION['count']." Max[".$numero_max_movimentos."]";   ?> </p>
     <p> <?php echo $_SESSION["ganhou"];   ?> </p>
     <p> <?php echo $_SESSION["perdeu"];  ?> </p>
-    <p> <?php echo $_SESSION["passou_de_10"];  ?> </p>
+    <p> <?php echo $_SESSION["passou_de_max"];  ?> </p>
+
   </div>
 
 <div class="counteiner1">
   <table class="tabela">
   <tr>
-  <td class="init_13">13</td>
+  <td class="init_numero"><?php echo $numero_inicial ?></td>
   <td class="b1_div"><div ><?php echo $b1_td ?></div></td>
   <td class="c1_div"><div ><?php echo $c1_td ?></div></td>
   <td class="d1_div"><div ><?php echo $d1_td ?></div></td>
   <td class="e1_div"><div ><?php echo $e1_td ?></div></td>
   <td class="f1_div"><div ><?php echo $f1_td ?></div></td>
-  <td class="init_13">13</td>
+  <td class="init_numero"><?php echo $numero_inicial ?></td>
   </tr>
 
   <tr>
@@ -10438,17 +10398,33 @@ else{$submit_inverso = "<input type='submit' name='reiniciar' value='Voltar'";}
   </tr>
 
   <tr>
-    <td class="result_181"><div ><?php echo $a7_td ?></div></td>
-    <td class="result_181"><div ><?php echo $b7_td ?></div></td>
-    <td class="result_181"><div ><?php echo $c7_td ?></div></td>
-    <td class="result_181"><div ><?php echo $d7_td ?></div></td>
-    <td class="result_181"><div ><?php echo $e7_td ?></div></td>
-    <td class="result_181"><div ><?php echo $f7_td ?></div></td>
-    <td class="result_181"><div ><?php echo $g7_td ?></div></td>
+    <td class="result_esperado"><div ><?php echo $a7_td ?></div></td>
+    <td class="result_esperado"><div ><?php echo $b7_td ?></div></td>
+    <td class="result_esperado"><div ><?php echo $c7_td ?></div></td>
+    <td class="result_esperado"><div ><?php echo $d7_td ?></div></td>
+    <td class="result_esperado"><div ><?php echo $e7_td ?></div></td>
+    <td class="result_esperado"><div ><?php echo $f7_td ?></div></td>
+    <td class="result_esperado"><div ><?php echo $g7_td ?></div></td>
   </tr>
+</table>
 </div>
 
+
+  <div class="reiniciar_botao"><?php echo $submit_inverso ?></div>
 </form>
+  <div class="orientacao">
+  <h3> Orientações:</h3>
+
+  <h4><p> O seu objetivo é ir do <?php echo $numero_inicial ?> ao <?php echo "'=".$resultado_esperado."'" ?> em <?php echo $numero_max_movimentos ?> movimentos,
+    executando a função aritimética para o dígito no quadrado selecionado enquanto prossegue.
+    Você pode começar de qualquer canto, mas - aqui está o truque - só um canto é o certo.
+    Os movimentos podem ser feitos horizontal e verticalmente, mas não em diagonal.
+  </p></h4>
+  </div>
+  <div class="fases"></div>
+
+</div>
+
 
 
   </body>
