@@ -5,14 +5,24 @@
     <title></title>
     <!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
     <link rel="stylesheet" type="text/css" href="css/styles2.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <!-- <link rel="stylesheet" media="screen, projection, print" href="https://asset.lumosity.com/lumosity/production/train/application-2c19bfac939b4921187f1a38fc013480dee5e14b3e135fd247c9837d2b3c39e6.css" /> -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
 
   </head>
   <body>
-
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
 
     <?php
     session_start();
@@ -48,6 +58,12 @@
     //___Array ( [0] => init [1] => a2 [2] => b2 [3] => b3 [4] => c3 [5] => c4 [6] => d4 [7] => e4 [8] => f4 [9] => f5 [10] => g5 [11] => g6 [12] => f6 [13] => e6 [14] => f6 )
     //___Array ( [0] => init [1] => a2 [2] => b2 [3] => b1 [4] => c1 [5] => c2 [6] => d2 [7] => d3 [8] => d4 [9] => c4 [10] => c5 [11] => d5 [12] => e5 [13] => e6 [14] => f6 )
     //___Array ( [0] => init [1] => f1 [2] => e1 [3] => e2 [4] => d2 [5] => c2 [6] => c3 [7] => c4 [8] => b4 [9] => b5 [10] => a5 [11] => a6 [12] => b6 [13] => c6 [14] => d6 )
+    //___Array ( [0] => init [1] => b1 [2] => c1 [3] => c2 [4] => c3 [5] => c4 [6] => c5 [7] => d5 [8] => e5 [9] => f5 [10] => g5 [11] => g6 [12] => f6 [13] => e6 [14] => d6 )
+    //___Array ( [0] => init [1] => g2 [2] => g3 [3] => g4 [4] => g5 [5] => f5 [6] => f4 [7] => f3 [8] => e3 [9] => d3 [10] => d4 [11] => d5 [12] => d6 [13] => e6 [14] => f6 )
+    //___Array ( [0] => init [1] => g2 [2] => f2 [3] => e2 [4] => d2 [5] => c2 [6] => b2 [7] => a2 [8] => a3 [9] => a4 [10] => b4 [11] => b5 [12] => c5 [13] => c6 [14] => d6 )
+    //___Array ( [0] => init [1] => g2 [2] => g3 [3] => f3 [4] => e3 [5] => e2 [6] => d2 [7] => d3 [8] => d4 [9] => e4 [10] => e5 [11] => f5 [12] => g5 [13] => g6 [14] => f6 )
+    //___Array ( [0] => init [1] => f1 [2] => e1 [3] => d1 [4] => c1 [5] => b1 [6] => b2 [7] => c2 [8] => d2 [9] => d3 [10] => e3 [11] => e4 [12] => f4 [13] => f5 [14] => f6 )
+
 
 
     //_____Mensagem_de_resultado_da_partida____________________________________________________________
@@ -10320,19 +10336,23 @@ else{$submit_inverso = "<input type='submit' name='reiniciar' value='Voltar'></i
 .a5_div{<?php echo $a5_div; ?>} .b5_div{<?php echo $b5_div; ?>} .c5_div{<?php echo $c5_div; ?>} .d5_div{<?php echo $d5_div; ?>} .e5_div{<?php echo $e5_div; ?>} .f5_div{<?php echo $f5_div; ?>} .g5_div{<?php echo $g5_div; ?>}
 .a6_div{<?php echo $a6_div; ?>} .b6_div{<?php echo $b6_div; ?>} .c6_div{<?php echo $c6_div; ?>} .d6_div{<?php echo $d6_div; ?>} .e6_div{<?php echo $e6_div; ?>} .f6_div{<?php echo $f6_div; ?>} .g6_div{<?php echo $g6_div; ?>}
 
+/* body{background-color: rgb(14,145,161);} */
 
 </style>
-<div class="topo">
-  <ul class="nav nav-pills">
-  <li class="primeira_li"><a href="">Início</a></li>
-  <li><a href="">Seu Status</a></li>
-  <li><a href="">Jogos</a></li>
-  <li><a href="">Descobertas</a></li>
-  </ul></div>
+<div class="media border border-primary container" style="background-color:rgb(14,145,161)">
+  <img src="images/human-brain-azul.jpg" alt="logo" style="width:100px">
+  <div class="media-body">
+    <h2 class="mt-0 text-white font-weight-bold" style="padding-left:5px">Brain Games</h2>
+      <ul class="nav nav-pills">
+      <li><a href="" class="text-white" style="padding-left:5px">Início</a></li>
+      <li><a href="" class="text-white" style="padding-left:20px">Jogos</a></li>
+      <li><a href="" class="text-white" style="padding-left:20px">Descobertas</a></li>
+      </ul></div>
+  </div>
 
 </div>
 
-<div class="geral">
+<div class="container">
 
 <form class="" action="<?php echo $nome_arquivo ?>.php" method="post">
   <div class="reiniciar_botao"><input type="submit" name="reiniciar" value="Iniciar"></input></div>
