@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>Compra - Mensal</title>
+    <title>Compra - Vitalício</title>
   </head>
   <body>
     <div class="" style="background-color:rgb(14,145,161)">
@@ -29,7 +29,8 @@
 
       <div class="bg-light container" >
 
-        <div class="col-12 col-lg-6 border mb-3 p-3 font-weight-bold" style="background-color:rgb(238,238,238); font-size:25px">Mensal - Simples e Fácil <a href="planos.php" style="font-size:15px">Mudar plano</a> </div>
+        <div class="col-12 col-lg-6 border mb-3 p-3 font-weight-bold" style="background-color:rgb(238,238,238); font-size:25px">Vitalício -
+          <span style="font-size:15px">(Garantia de devolução integral do dinheiro por 30 dias)</span>   <a href="planos.php" style="font-size:15px">Mudar plano</a> </div>
 
         <div class=" col-12 col-lg-6 bg-white border">
 
@@ -70,12 +71,11 @@
               <input type="text" class="form-control col-5 col-lg-3" id="exampleInputEmail1" aria-describedby="emailHelp" >
             </div>
 
-            <p class="ml-2 text-danger font-weight-bold" style="font-size:25px;">Você paga: R$ 11,95</p>
+            <p class="ml-2 text-danger font-weight-bold" style="font-size:25px;">Você paga: R$ 299,95</p>
 
             <p class="ml-2">Ao adquirir, eu concordo com a assinatura recorrente para o serviço da Brain Games,
                sujeito aos <a href="#">Termos de serviço</a> e <a href="#">Política de pagamento</a>, da Brain Games,
-                e os seguintes termos: Cobrança mensal, R$ 11,95 por ciclo de cobrança, cobrado antecipadamente.
-                 Posso cancelá-lo a qualquer momento após a efetivação do ciclo de cobrança seguinte.</p>
+                e os seguintes termos: Assinatura Vitalício para um pagamento único de R$ 299,95.</p>
 
                 <input type="submit" name="enviar" value="Enviar" class="btn btn-danger mb-3"></input>
               </form>

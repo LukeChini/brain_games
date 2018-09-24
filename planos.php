@@ -18,7 +18,7 @@
         <h2 class="mt-0 text-white font-weight-bold" style="padding-left:5px">Brain Games</h2>
           <ul class="nav nav-pills">
           <li><a href="" class="text-white font-weight-bold" style="padding-left:5px">Início</a></li>
-          <li><a href="" class="text-white font-weight-bold" style="padding-left:20px">Jogos</a></li>
+          <li><a href="abajogos.php" class="text-white font-weight-bold" style="padding-left:20px">Jogos</a></li>
           <li><a href="" class="text-white font-weight-bold" style="padding-left:20px">Descobertas</a></li>
           </ul></div>
       </div>
@@ -43,7 +43,7 @@
                 <div class="card-header bg-white text-center font-weight-bold" style="font-size:25px"> Mensal <br /> <span class="text-secondary" style="font-size:15px">SIMPLES E FÁCIL</span> </div>
                 <div class="card-body text-center font-weight-bold" style="font-size:30px"><span>R$</span> 11,95 <span style="font-size:15px">por mês</span></div>
                 <div class="card-body text-center" style="color:white">--</div>
-                <div class="card-body text-center"><button type="button" class="btn btn-danger">Selecionar</button></div>
+                <div class="card-body text-center"><a href="planomensal.php" class="btn btn-danger">Selecionar</a></div>
                 <div class="card-footer text-center text-secondary">Cobrança recorrente <br /> <span style="color:rgb(247,247,247)">-------------------------------------------------------------------------</span> </div>
                 </div>
               </div>
@@ -54,7 +54,7 @@
                   <div class="card-header bg-info text-center font-weight-bold text-white" style="font-size:25px"> Anual <br /> <button type="button" class="btn" style="font-size:10px; background-color:rgb(10,90,100); color:white">MAIS POPULAR</button> </div>
                   <div class="card-body text-center font-weight-bold" style="font-size:30px"><span>R$</span> 4,95 <span style="font-size:15px">por mês</span></div>
                   <div class="card-body text-center text-secondary" >Total R$ 59,40</div>
-                  <div class="card-body text-center"><button type="button" class="btn btn-danger">Selecionar</button></div>
+                  <div class="card-body text-center"><a href="planoanual.php" class="btn btn-danger">Selecionar</a></div>
                   <div class="card-footer text-center text-secondary">Cobrança recorrente <br /> Garantia de devolução integral do dinheiro por 30 dias </div>
                   </div>
                 </div>
@@ -64,7 +64,7 @@
                     <div class="card-header bg-white text-center font-weight-bold" style="font-size:25px"> Dois anos <br /> <span style="font-size:15px; color:white" > -- </span> </div>
                     <div class="card-body text-center font-weight-bold" style="font-size:30px"><span>R$</span> 3,74 <span style="font-size:15px">por mês</span></div>
                     <div class="card-body text-center text-secondary" >Total R$ 89,76</div>
-                    <div class="card-body text-center"><button type="button" class="btn btn-danger">Selecionar</button></div>
+                    <div class="card-body text-center"><a href="planobianual.php" class="btn btn-danger">Selecionar</a></div>
                     <div class="card-footer text-center text-secondary">Cobrança recorrente <br /> Garantia de devolução integral do dinheiro por 30 dias </div>
                     </div>
                   </div>
@@ -74,7 +74,7 @@
                       <div class="card-header bg-white text-center font-weight-bold" style="font-size:25px"> Vitalício <br /> <span class="text-secondary" style="font-size:15px">PAGAMENTO ÚNICO</span> </div>
                       <div class="card-body text-center font-weight-bold" style="font-size:30px"><span>R$</span> 299,95</div>
                       <div class="card-body text-center" style="color:white">--</div>
-                      <div class="card-body text-center"><button type="button" class="btn btn-danger">Selecionar</button></div>
+                      <div class="card-body text-center"><a href="planovitalicio.php" class="btn btn-danger">Selecionar</a></div>
                       <div class="card-footer text-center text-secondary"><br /> Garantia de devolução integral do dinheiro por 30 dias </div>
                       </div>
                     </div>
@@ -85,7 +85,7 @@
             </div>
             </div>
 
-            <footer class="container">
+            <footer class="container mt-3">
                 <ul class="nav border-top border-bottom col-12">
                 <li class="nav-item col-12 col-lg-2 text-center"><a class="nav-link text-secondary" href="#">Sobre Nós</a></li>
                 <li class="nav-item col-12 col-lg-2 text-center"><a class="nav-link text-secondary" href="#">Contato</a></li>
