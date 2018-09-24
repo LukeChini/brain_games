@@ -53,7 +53,7 @@
 
     //__!desenvolvedor!__utilize_este_espaço_para_armazenar_a_string_com_o_array_de_gabarito:_(comentar! //___)___
 
-    $visualizar_array = true; // valor true para visualizar e false para omitir
+    $visualizar_array = false; // valor true para visualizar e false para omitir
 
     //___Array ( [0] => init [1] => a2 [2] => b2 [3] => b3 [4] => c3 [5] => c4 [6] => d4 [7] => e4 [8] => f4 [9] => f5 [10] => g5 [11] => g6 [12] => f6 [13] => e6 [14] => f6 )
     //___Array ( [0] => init [1] => a2 [2] => b2 [3] => b1 [4] => c1 [5] => c2 [6] => d2 [7] => d3 [8] => d4 [9] => c4 [10] => c5 [11] => d5 [12] => e5 [13] => e6 [14] => f6 )

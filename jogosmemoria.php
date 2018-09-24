@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Jogos Memoria</title>
   </head>
   <body>
     <div class="" style="background-color:rgb(14,145,161)">
@@ -46,7 +46,7 @@
 
           <div class="row mt-3 mb-2" >
 
-            <div class="col-12 mb-4 font-weight-bold" style="font-size:25px">Função Executiva</div>
+            <div class="col-12 mb-4 font-weight-bold" style="font-size:25px">Funções da Memória</div>
 
             <div class="col-12 col-lg-4" >
               <div class="card">
