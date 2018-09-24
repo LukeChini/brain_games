@@ -58,8 +58,8 @@
 
             <div class="col-12 col-lg-4" >
               <div class="card">
-                <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img src="images/executivoimages.png" alt="trinta e quatro" class="card-img-top p-3"> </div>
+                <div class="card-header bg-info bg-info text-center font-weight-bold text-white"><a href="sorte13_fase2.php" style="color:white">Numero da Sorte</a></div>
+                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <a href="sorte13_fase2.php" style="color:white"><img src="images/numero_da_sorte.png" alt="trinta e quatro" class="card-img-top p-3"></a> </div>
                 <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
               </div>
             </div>
