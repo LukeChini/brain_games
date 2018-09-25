@@ -107,22 +107,24 @@
 
 
   </head>
-  <body>
+  <body  >
+<!-- onload=ClickBotao() -->
 
     <?php
 
     session_start();
 
 
-
-
+    // $clickBotao = "";
+    // if($_SESSION['load']<5){$clickBotao="function ClickBotao(){document.getElementById('reset').click();}";}
+    // else{$clickBotao="";}
 
     $_SESSION["x5_view_abertura"] = "";     $_SESSION["x5_view_fechamento"] = "";
     $_SESSION["x6_view_abertura"] = "";     $_SESSION["x6_view_fechamento"] = "";
     $_SESSION["x7_view_abertura"] = "";     $_SESSION["x7_view_fechamento"] = "";
     $_SESSION["x8_view_abertura"] = "";     $_SESSION["x8_view_fechamento"] = "";
 
-    $_SESSION["x9_view_abertura"] = "";     $_SESSION["x9_view_fechamento"] = "";
+    $_SESSION["x9_view_abertura"] = "";      $_SESSION["x9_view_fechamento"] = "";
     $_SESSION["x10_view_abertura"] = "";     $_SESSION["x10_view_fechamento"] = "";
     $_SESSION["x11_view_abertura"] = "";     $_SESSION["x11_view_fechamento"] = "";
     $_SESSION["x12_view_abertura"] = "";     $_SESSION["x12_view_fechamento"] = "";
@@ -148,6 +150,7 @@
     $a3_input = "<input type='radio' name='chek' value='a3'>"; $b3_input = "<input type='radio' name='chek' value='b3'>"; $d3_input = "<input type='radio' name='chek' value='d3'>";
     $b4_input = "<input type='radio' name='chek' value='b4'>"; $c4_input = "<input type='radio' name='chek' value='c4'>"; $d4_input = "<input type='radio' name='chek' value='d4'>";
 
+    $_SESSION['load'] = $_SESSION['load'] + 1;
     }
 
 
@@ -2044,6 +2047,13 @@
 
      </style>
 
+     <script type="text/javascript">
+
+     <?php echo $clickBotao; ?>
+
+
+     </script>
+
 
 <form action="trinta_e_quatro.php" method="post">
 
@@ -2138,11 +2148,14 @@
   <table class="tabela">
   <tr>
     <td class="coluna_invisivel"></td>
-    <td> <input type="submit" name="reset" value="reset"></input></td>
+    <td> <input type="submit" id="reset" name="reset" value="reset"></input></td>
   </table>
 <div class="box_parabens">
   <h1><?php echo $parabens ?></h1>
 </div>
+
+
+
   </div>
   </form>
 </div>

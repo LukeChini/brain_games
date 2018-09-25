@@ -158,6 +158,37 @@ $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g
 $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
 $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
+//____Iniciando_as_Session______________________________________________________________________________________
+
+$_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0; $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0;
+$_SESSION["a4_count"] = $_SESSION["a4_count"] + 0; $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
+$_SESSION["a7_count"] = $_SESSION["a7_count"] + 0;
+
+$_SESSION["b1_count"] = $_SESSION["b1_count"] + 0; $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
+$_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0; $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0;
+$_SESSION["b7_count"] = $_SESSION["b7_count"] + 0;
+
+$_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0; $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0;
+$_SESSION["c4_count"] = $_SESSION["c4_count"] + 0; $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
+$_SESSION["c7_count"] = $_SESSION["c7_count"] + 0;
+
+$_SESSION["d1_count"] = $_SESSION["d1_count"] + 0; $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
+$_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0; $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0;
+$_SESSION["d7_count"] = $_SESSION["d7_count"] + 0;
+
+$_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0; $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0;
+$_SESSION["e4_count"] = $_SESSION["e4_count"] + 0; $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
+$_SESSION["e7_count"] = $_SESSION["e7_count"] + 0;
+
+$_SESSION["f1_count"] = $_SESSION["f1_count"] + 0; $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
+$_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0; $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0;
+$_SESSION["f7_count"] = $_SESSION["f7_count"] + 0;
+
+$_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0; $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0;
+$_SESSION["g4_count"] = $_SESSION["g4_count"] + 0; $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
+$_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
+
+
 
 
 //_______________Linha_1_______________________________________
