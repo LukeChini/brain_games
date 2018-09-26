@@ -25,18 +25,18 @@
       </div>
       </div>
 
-      <div class="bg-light">
-      <div class="container bg-light" >
+      <div class="bg-light" >
+      <div class=" bg-light"  >
         <div class="text-center font-weight-bold p-3" style="font-size:30px">
           <p>Criar conta gratuita</p>
         </div>
 
-        <div class="row">
+        <div class="row container" style="margin: 0 auto">
 
 
-        <div class="col-12 col-lg-5 bg-info" >
-          <div class="text-center p-3" ><img src="images/brain-areas-cards-fundo-info.png" alt="" style="width:360px"></img></div>
-          <div class="text-center font-weight-bold text-white" style="width:360px;font-size:30px; overflow:hidden"> <p style="">Crie uma conta para:</p>
+        <div class="col-12 col-lg-5 bg-info">
+          <div class="text-center p-3" ><img src="images/brain-areas-cards-fundo-info.png" alt="" class="col-12"></img></div>
+          <div class="text-center font-weight-bold text-white col-12" style="width:360px;font-size:30px;"> <p style="">Crie uma conta para:</p>
             <p class="ml-5" style="font-size:25px; text-align:left"> - Experimentar 2 execícios cerebrais</p>
             <p class="ml-5" style="font-size:25px; text-align:left"> - Garantir um alto desempenho no trabalho</p>
             <p class="ml-5 mb-5" style="font-size:25px; text-align:left"> - Reduzir a perda de atividades dos neurônios</p>
@@ -47,7 +47,7 @@
 
         </div>
 
-        <div class="col-12 col-lg-7 " style="background-color:rgb(238,238,238)">
+        <div class="col-12 col-lg-7 " style="background-color:rgb(238,238,238);margin: 0 auto">
 
 
       <form action="index.html" method="post">
@@ -73,11 +73,11 @@
                           </div>
 
                           <div class="form-row">
-                            <div class="form-group col-3">
+                            <div class="form-group col-12 col-lg-3">
                               <a href="#" class="btn btn-light border-0" style="background-color:rgb(238,238,238)">Data de nascimento</a>
                             </div>
 
-                            <div class="form-group col-3">
+                            <div class="form-group col-6 col-lg-3">
                               <select class="form-control dorm-control-lg" name="aniversario">
                                 <option value="">Mês</option>
                                 <option value="1">Janeiro</option>  <option value="2">Fevereiro</option> <option value="3">Março</option>
@@ -87,7 +87,7 @@
                                 </select>
                             </div>
 
-                            <div class="form-group col-3">
+                            <div class="form-group col-3 col-lg-3">
                               <select class="form-control dorm-control-lg" name="aniversario">
                                 <option  value="">Dia</option>
                                 <option  value="1">1</option>  <option value="2">2</option>   <option value="3">3</option>
@@ -111,7 +111,7 @@
                             </div>
 
                             <div class="form-check form-check-inline p-3">
-                              <a href="#" class="btn btn-light border-0 col-4 ml-5" style="background-color:rgb(238,238,238)">Sexo:</a>
+                              <a href="#" class="btn btn-light border-0 " style="background-color:rgb(238,238,238)">Sexo:</a>
                               <input class="form-check-input " type="radio" name="sexo" value="masculino">Masculino</input>
                               <input class="form-check-input ml-5" type="radio" name="sexo" value="feminino">Feminino</input>
                             </div>
@@ -141,7 +141,7 @@
 
 
 
-
+                          </div>
 
 
 
@@ -152,7 +152,7 @@
           <p>Já tem uma conta? <a href="entrar.php">Clique aqui para entrar</a> </p>
         </div>
 
-        </div>
+
 
 
 
