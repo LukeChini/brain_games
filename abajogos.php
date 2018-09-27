@@ -97,8 +97,10 @@
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"><img src="images/human-brain-white.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
+                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"><img id="jogoExecutiva3" src="images/human-brain-white.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
                 <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
+
+
               </div>
             </div>
 
@@ -109,7 +111,7 @@
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img src="images/depositphotos_90095212-stock-illustration-illustration-of-albert-einstein.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
+                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id="jogoExecutiva4" src="images/depositphotos_90095212-stock-illustration-illustration-of-albert-einstein.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
                 <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
               </div>
             </div>
@@ -117,7 +119,7 @@
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img src="images/913183098-1024x1024.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
+                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id="jogoExecutiva5" src="images/913183098-1024x1024.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
                 <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
               </div>
             </div>
@@ -125,7 +127,7 @@
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img src="images/9170503-en-forme-de-dessin-monochrome-éléments-de-puzzle.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
+                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id="jogoExecutiva6" src="images/9170503-en-forme-de-dessin-monochrome-éléments-de-puzzle.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
                 <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
               </div>
             </div>
@@ -133,6 +135,33 @@
         </div>
             </div>
             </div>
+
+            <script type="text/javascript">
+
+
+              const jogoExecutiva3 = document.querySelector('#jogoExecutiva3')
+              const jogoExecutiva4 = document.querySelector('#jogoExecutiva4')
+              const jogoExecutiva5 = document.querySelector('#jogoExecutiva5')
+              const jogoExecutiva6 = document.querySelector('#jogoExecutiva6')
+
+
+
+              jogoExecutiva3.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoExecutiva3.addEventListener('mouseout', function() {this.src = 'images/human-brain-white.jpg'})
+
+              jogoExecutiva4.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoExecutiva4.addEventListener('mouseout', function() {this.src = 'images/depositphotos_90095212-stock-illustration-illustration-of-albert-einstein.jpg'})
+
+              jogoExecutiva5.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoExecutiva5.addEventListener('mouseout', function() {this.src = 'images/913183098-1024x1024.jpg'})
+
+              jogoExecutiva6.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoExecutiva6.addEventListener('mouseout', function() {this.src = 'images/9170503-en-forme-de-dessin-monochrome-éléments-de-puzzle.jpg'})
+
+
+
+
+            </script>
 
             <footer class="container mt-3">
                 <ul class="nav border-top border-bottom col-12">
