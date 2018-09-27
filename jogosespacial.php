@@ -12,17 +12,46 @@
   </head>
   <body>
     <div class="" style="background-color:rgb(14,145,161)">
-    <div class="media container" style="background-color:rgb(14,145,161)">
-      <img src="images/human-brain-azul.jpg" alt="logo" style="width:100px">
-      <div class="media-body">
-        <h2 class="mt-0 text-white font-weight-bold" style="padding-left:5px">Brain Games</h2>
-          <ul class="nav nav-pills">
-          <li><a href="" class="text-white font-weight-bold" style="padding-left:5px">Início</a></li>
-          <li><a href="" class="text-white font-weight-bold" style="padding-left:20px">Jogos</a></li>
-          <li><a href="" class="text-white font-weight-bold" style="padding-left:20px">Descobertas</a></li>
-          </ul></div>
+
+
+    <div class="container">
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgb(14,145,161)">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand text-white font-weight-bold" href="#">Brain Games</a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link text-white" href="inicio-logado.php">Início <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Jogos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white disabled" href="#">Descobertas</a>
+          </li>
+        </ul>
+        <div class="nav-item dropdown">
+          <div class="row">
+          <div class=" border" style="height:50px; width:50px; margin: 0 auto; overflow:hidden; text-align:center;">
+            <img src="images/astronauta.jpg" alt="" style="height:50px;"></img>
+          </div>
+            <a class="nav-link dropdown-toggle text-white font-weight-bold mt-1" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Lucas Cornachini</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="conta.php">Configurações da conta</a>
+              <a class="dropdown-item" href="#">Ajuda</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Sair</a>
+            </div>
+          </div>
       </div>
       </div>
+    </nav>
+    </div>
+
+</div>
 
       <div class="bg-light">
 
@@ -31,15 +60,14 @@
         <div class="row">
 
 
-        <div class="col-12 col-sm-3 col-lg-2 list-group mb-3 text-align" id="list-tab" role="tablist" role="group">
-
-
-          <a class="list-group-item list-group-item-action active" id="list-executiva-list" data-toggle="list" href="jogosexecutiva.php" role="tab" aria-controls="executiva">Executiva</a>
-          <a class="list-group-item list-group-item-action" id="list-memoria-list" data-toggle="list" href="jogosmemoria.php" role="tab" aria-controls="memoria">Memória</a>
-          <a class="list-group-item list-group-item-action" id="list-calculo-list" data-toggle="list" href="jogoscalculo.php" role="tab" aria-controls="calculo">Calculo</a>
-          <a class="list-group-item list-group-item-action" id="list-espacial-list" data-toggle="list" href="jogosespacial.php" role="tab" aria-controls="linguagem">Espacial</a>
-          <a class="list-group-item list-group-item-action" id="list-linguagem-list" data-toggle="list" href="jogoslinguagem.php" role="tab" aria-controls="linguagem">Linguagem</a>
-        </div>
+          <div id="list-example" class="col-12 col-sm-3 col-lg-2 list-group mb-3 text-align">
+            <p class="list-group-item list-group-item-action bg-info text-center font-weight-bold text-white">Funções</p>
+            <a class="list-group-item list-group-item-action" href="abajogos.php">Executiva</a>
+            <a class="list-group-item list-group-item-action" href="jogosmemoria.php">Memória</a>
+            <a class="list-group-item list-group-item-action bg-primary font-weight-bold text-white" href="jogosespacial.php">Espacial</a>
+            <a class="list-group-item list-group-item-action" href="jogoscalculo.php">Cálculo</a>
+            <a class="list-group-item list-group-item-action" href="jogoslinguagem.php">Linguagem</a>
+          </div>
 
 
         <div class="col-12 col-sm-9 col-lg-10 bg-white border">
