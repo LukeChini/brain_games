@@ -50,27 +50,37 @@
         <div class="col-12 col-lg-7 " style="background-color:rgb(238,238,238);margin: 0 auto">
 
 
-      <form action="index.html" method="post">
+      <form action="salvando_usuarios.php" method="post">
+
+
         <div class="input-group mt-3 mb-5">
                 <div class="input-group-prepend">
                   <div class="input-group-text" style="background-color:white"> <img src="images/usuario.png" alt="" style="height:20px"> </div>
                 </div>
-                <input type="text" class="form-control form-control-lg" id="inlineFormInputGroup" placeholder="Username">
+                <input type="text" required class="form-control form-control-lg" id="inlineFormInputGroup" placeholder="Username" name="user_name">
               </div>
 
               <div class="input-group mb-5">
                       <div class="input-group-prepend">
                         <div class="input-group-text" style="background-color:white"> <img src="images/email.png" alt="" style="height:20px"> </div>
                       </div>
-                      <input type="email" class="form-control form-control-lg" id="inlineFormInputGroup" placeholder="E-mail">
+                      <input type="email" required class="form-control form-control-lg" id="inlineFormInputGroup" placeholder="E-mail" name="email">
                     </div>
 
                     <div class="input-group mb-5">
                             <div class="input-group-prepend">
                               <div class="input-group-text" style="background-color:white"> <img src="images/senha.png" alt="" style="height:20px"> </div>
                             </div>
-                            <input type="password" class="form-control form-control-lg" id="inlineFormInputGroup" placeholder="Senha">
+                            <input type="password" required class="form-control form-control-lg senha" id="inlineFormInputGroup" placeholder="Senha" name="senha">
                           </div>
+
+                          <div class="input-group mb-5" style="margin-top:-40px">
+                                  <div class="input-group-prepend">
+                                    <div class="input-group-text" style="background-color:white"> <img src="images/senha.png" alt="" style="height:20px"> </div>
+                                  </div>
+                                  <input type="password" required class="form-control form-control-lg confirmar_senha" id="inlineFormInputGroup" placeholder="Confirmar Senha" name="confirmar_senha">
+                                </div>
+
 
                           <div class="form-row">
                             <div class="form-group col-12 col-lg-3">
@@ -78,11 +88,11 @@
                             </div>
 
                             <div class="form-group col-3 col-lg-3">
-                              <select class="form-control dorm-control-lg" name="aniversario">
+                              <select required class="form-control dorm-control-lg" name="dia_nascimento">
                                 <option  value="">Dia</option>
-                                <option  value="1">1</option>  <option value="2">2</option>   <option value="3">3</option>
-                                <option  value="4">4</option>  <option value="5">5</option>   <option value="6">6</option>
-                                <option  value="7">7</option>  <option value="8">8</option>   <option value="9">9</option>
+                                <option  value="01">1</option>  <option value="02">2</option>   <option value="03">3</option>
+                                <option  value="04">4</option>  <option value="05">5</option>   <option value="06">6</option>
+                                <option  value="07">7</option>  <option value="08">8</option>   <option value="09">9</option>
                                 <option value="10">10</option> <option value="11">11</option> <option value="12">12</option>
                                 <option value="13">13</option> <option value="14">14</option> <option value="15">15</option>
                                 <option value="16">16</option> <option value="17">17</option> <option value="18">18</option>
@@ -95,11 +105,11 @@
                             </div>
 
                             <div class="form-group col-6 col-lg-3">
-                              <select class="form-control dorm-control-lg" name="aniversario">
+                              <select required class="form-control dorm-control-lg" name="mes_nascimento">
                                 <option value="">Mês</option>
-                                <option value="1">Janeiro</option>  <option value="2">Fevereiro</option> <option value="3">Março</option>
-                                <option value="4">Abril</option>    <option value="5">Maio</option>      <option value="6">Junho</option>
-                                <option value="7">Julho</option>    <option value="8">Agosto</option>    <option value="9">Setembro</option>
+                                <option value="01">Janeiro</option>  <option value="02">Fevereiro</option> <option value="03">Março</option>
+                                <option value="04">Abril</option>    <option value="05">Maio</option>      <option value="06">Junho</option>
+                                <option value="07">Julho</option>    <option value="08">Agosto</option>    <option value="09">Setembro</option>
                                 <option value="10">Outubro</option> <option value="11">Novembro</option> <option value="12">Dezembro</option>
                                 </select>
                             </div>
@@ -108,20 +118,20 @@
 
 
                             <div class="form-group col-3">
-                              <input type="text" name="" value="" class="form-control dorm-control-lg" placeholder="Ano">
+                              <input type="text" required name="ano_nascimento" value="" class="form-control dorm-control-lg" placeholder="Ano">
                             </div>
                             </div>
 
                             <div class="form-check form-check-inline p-3">
                               <a href="#" class="btn btn-light border-0 " style="background-color:rgb(238,238,238)">Sexo:</a>
-                              <input class="form-check-input " type="radio" name="sexo" value="masculino">Masculino</input>
+                              <input class="form-check-input" checked type="radio" name="sexo" value="masculino">Masculino</input>
                               <input class="form-check-input ml-5" type="radio" name="sexo" value="feminino">Feminino</input>
                             </div>
 
 
                             <div class="form-row">
                               <div class="form-group col-1 mr-2">
-                                <input type="checkbox" name="termos" value=""></input>
+                                <input required type="checkbox" name="termos" value=""></input>
                               </div>
 
                               <div class="form-group col-10">

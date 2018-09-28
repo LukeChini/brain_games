@@ -11,21 +11,39 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <div class="" style="background-color:white">
-    <div class="media container" style="background-color:white">
-      <img src="images/human-brain-white -menor.jpg" alt="logo" style="width:100px">
-      <div class="media-body">
-        <h2 class="mt-0 text-info font-weight-bold" style="padding-left:5px">Brain Games</h2>
-      </div>
-      <a href="criar_conta.php" class="btn btn-danger mr-3 mt-2" style="-webkit-text-stroke-width: 0px;">Comece Agora</a>
-      <button type="button" class="btn btn-light mt-2">Entrar</button>
-      </div>
-      </div>
+    <div class='' style='background-color:rgb(255,255,255)'>
+    <div class='container'>
+    <nav class='navbar navbar-expand-lg navbar-light' style='background-color:rgb(255,255,255)'>
+    <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarTogglerDemo03' aria-controls='navbarTogglerDemo03' aria-expanded='false' aria-label='Toggle navigation'>
+    <span class='navbar-toggler-icon'></span>
+    </button>
+    <img src="images/human-brain-white -menor.jpg" alt="logo" style="width:60px">
+    <a class='navbar-brand text-info font-weight-bold' href='#'>Brain Games</a>
+    <div class='collapse navbar-collapse' id='navbarTogglerDemo03'>
+    <ul class='navbar-nav mr-auto mt-2 mt-lg-0'>
+    <li class='nav-item active'>
+    </li>
+    <li class='nav-item'>
+    </li>
+    <li class='nav-item'>
+    </li>
+    </ul>
+    <a href="criar_conta.php" class="btn btn-danger mr-3 mt-2" style="-webkit-text-stroke-width: 0px;">Comece Agora</a>
+    <button type="button" class="btn btn-light mt-2">Entrar</button>
+    </div>
+    </div>
+    </div>
+    </div>
+    </nav>
+  </div>
 
       <div class="bg-light">
-          <div style="display:inline-block"><img src="images/9443xadrez3.jpg" alt="" style="width:100%; position:relative; filter: grayscale(25%);">
-          <div class=" text-center text-white font-weight-bold text-secundary" style="position:absolute; width:100%; top:20%; display:inline-block; font-size:30px;">
-            <p style="-webkit-text-stroke-width: 0.3px; -webkit-text-stroke-color: black;">Quebra-cabeças Divertidos para Aperfeiçoar seu Cérebro<br />
+          <div style="display:inline-block"><img id='div-img' src="images/9443xadrez3.jpg" alt="" style="width:100%; position:relative; filter: grayscale(25%);">
+          <div class=" text-center text-white font-weight-bold text-secundary" style="position:absolute; width:100%; top:20%; display:inline-block; font-size:40px;">
+            <p id='text-img-chess' style="-webkit-text-stroke-width: 0.3px; -webkit-text-stroke-color: black;">Quebra-cabeças Divertidos para Aperfeiçoar seu Cérebro<br />
+              <style media='screen'>
+              @media (max-width: 992px){#text-img-chess{font-size:20px;}}
+              </style>
                     <a href="criar_conta.php" class="btn btn-danger mr-3 mt-2" style="-webkit-text-stroke-width: 0px;">Comece Agora</a></p></div>
           </img>
           </div>

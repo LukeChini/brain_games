@@ -35,36 +35,33 @@
 
       <div class="col-12" >
 
-      <form action="index.html" method="post" >
+      <form action="tratar_entrar.php" method="post" >
 
         <div class="input-group mb-5 col-12 col-lg-5" style="margin:0 auto">
         <div class="input-group-prepend">
         <div class="input-group-text" style="background-color:white"> <img src="images/email.png" alt="" style="height:20px"> </div>
         </div>
-        <input type="email" class="form-control form-control-lg" id="inlineFormInputGroup" placeholder="E-mail">
+        <input type="email" name="email" class="form-control form-control-lg" id="inlineFormInputGroup" placeholder="E-mail">
         </div>
 
         <div class="input-group mb-5 col-12 col-lg-5" style="margin:0 auto">
         <div class="input-group-prepend">
         <div class="input-group-text" style="background-color:white"> <img src="images/senha.png" alt="" style="height:20px"> </div>
         </div>
-        <input type="password" class="form-control form-control-lg" placeholder="Senha">
+        <input type="password" name="senha" class="form-control form-control-lg" placeholder="Senha">
         </div>
 
-        <!-- <div class="input-group mb-5">
-        <div class="input-group-prepend">
-        <div class="input-group-text" style="background-color:white"> <img src="images/senha.png" alt="" style="height:20px"> </div>
-        </div>
-        <input type="password" class="form-control form-control-lg" id="inlineFormInputGroup" placeholder="Senha">
-        </div> -->
+
 
         <div class="text-center" style="margin: 0 auto">
-        <input type="submit" class="btn btn-danger mr-3 mt-2 mb-3" style="width:300px; height:50px; font-size:20px" value="Entrar"></input>
+        <input type="submit" name="entrar" class="btn btn-danger mr-3 mt-2 mb-3" style="width:300px; height:50px; font-size:20px" value="Entrar"></input>
         </div>
 
 
 
         </form>
+
+
         </div>
 
         </div>
