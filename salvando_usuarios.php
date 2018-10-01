@@ -60,7 +60,7 @@
    $senha_e_confirmar_senha_nao_conferem = "";
    if($senha !== $confirmar_senha){$senha_e_confirmar_senha_nao_conferem ="Senha e Confirmar Senha não conferem";}
 
-   $stmt = $conn->prepare('INSERT INTO usuarios (username, email, senha, aniversario, sexo) VALUES (:username, :email, :senha, :aniversario, :sexo )');
+   $stmt = $conn->prepare('INSERT INTO usuarios(username, email, senha, aniversario, sexo) VALUES (:username, :email, :senha, :aniversario, :sexo )');
 
    $stmt->bindParam(':username', $user_name, PDO::PARAM_STR);
    $stmt->bindParam(':email', $email, PDO::PARAM_STR);

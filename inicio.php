@@ -29,7 +29,7 @@
     </li>
     </ul>
     <a href="criar_conta.php" class="btn btn-danger mr-3 mt-2" style="-webkit-text-stroke-width: 0px;">Comece Agora</a>
-    <button type="button" class="btn btn-light mt-2">Entrar</button>
+    <a href="entrar.php" class="btn btn-light mt-2">Entrar</a>
     </div>
     </div>
     </div>

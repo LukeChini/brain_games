@@ -41,29 +41,17 @@
 
 <?php
 session_start();
-include ('conn.php');
 
-$email = $_POST['email'];
-$senha = $_POST['senha'];
+$_SESSION['username_logado'] = NULL;
+$_SESSION['email_logado'] = NULL;
+$_SESSION['sexo_logado'] = NULL;
+$_SESSION['aniversario_logado'] = NULL;
+$_SESSION['validade_premium_logado'] = NULL;
+$_SESSION['id_logado'] = NULL;
+$_SESSION['src_perfil'] = NULL;
 
-$verificação = $conn->prepare('SELECT * FROM usuarios WHERE email LIKE :email AND senha LIKE :senha');
-$verificação->bindParam(':email', $email, PDO::PARAM_STR);
-$verificação->bindParam(':senha', $senha, PDO::PARAM_STR);
-$verificação->execute();
-$verifica = $verificação->fetch(PDO::FETCH_ASSOC);
+header("location:inicio.php");
 
-$_SESSION['username_logado'] = $verifica['username'];
-$_SESSION['email_logado'] = $verifica['email'];
-$_SESSION['sexo_logado'] = $verifica['sexo'];
-$_SESSION['aniversario_logado'] = $verifica['aniversario'];
-$_SESSION['validade_premium_logado'] = $verifica['validade_premium'];
-$_SESSION['id_logado'] = $verifica['id'];
-$_SESSION['src_perfil'] = $verifica['src_perfil'];
-
-    if($_SESSION['src_perfil'] == NULL && $_SESSION['sexo_logado'] == 'masculino'){$_SESSION['src_perfil']='images/perfil_masculino.jpg';}
-elseif($_SESSION['src_perfil'] == NULL && $_SESSION['sexo_logado'] == 'feminino' ){$_SESSION['src_perfil']='images/perfil_feminino.jpg'; }
-
-if($verifica['email']==NULL){;}else{return header("location:inicio-logado.php");}
 
 
 
@@ -74,8 +62,8 @@ if($verifica['email']==NULL){;}else{return header("location:inicio-logado.php");
     <div class="bg-light text-center">
 
 
-      <p style="font-size:40px"> Email e Senha Senha não conferem! </p>
-     <a href="entrar.php" class="btn btn-danger mt-2">Retornar</a>
+      <p style="font-size:40px"> Email já cadastrado no Brain Games! </p>
+     <a href="alterar-email.php" class="btn btn-danger mt-2">Retornar</a>
 
 
       </div>

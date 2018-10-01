@@ -14,6 +14,8 @@
     <title>Alterar Email</title>
   </head>
   <body>
+
+
     <?php require('variaveisPHPecho.php'); echo $html_nav; ?>
     </div>
 

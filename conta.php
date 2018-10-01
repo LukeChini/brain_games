@@ -14,6 +14,8 @@
     <title>Conta</title>
   </head>
   <body>
+<?php if(!isset($_SESSION)){session_start();} ?>
+
 <?php require('variaveisPHPecho.php'); echo $html_nav; ?>
     </div>
 
@@ -37,7 +39,7 @@
           <p class="p-3 col-12" style="font-size:25px">Informações de acesso</p>
           <div class="row">
           <p class="p-3 ml-3 col-lg-4 col-12" style="font-size:15px">Email:</p>
-          <p class="p-3 ml-3 col-lg-4 col-12 font-weight-bold" style="font-size:15px">lucas.cornachini@hotmail.com</p>
+          <p class="p-3 ml-3 col-lg-4 col-12 font-weight-bold" style="font-size:15px"><?php echo $_SESSION['email_logado']; ?></p>
           <a href="alterar-email.php" class="p-3 col-lg-3 col-12 ml-3 font-weight-bold" style="font-size:15px">Alterar email</a>
           </div>
 
@@ -51,7 +53,7 @@
           <div class="row">
             <div class="col-lg-3 col-12">
               <div class="m-3 border" style="height:150px; width:150px; margin: 0 auto; overflow:hidden; text-align:center;">
-                <img src="images/astronauta.jpg" alt="" style="height:150px;"></img>
+                <img src="<?php echo $_SESSION['src_perfil'] ?>" alt="" style="height:150px;"></img>
               </div>
             </div>
 
@@ -61,15 +63,32 @@
                   <tbody>
                     <tr>
                       <th scope="row">Nome</th>
-                      <td>Lucas Cornachini</td>
+                      <td><?php echo $_SESSION['username_logado']; ?></td>
                     </tr>
                     <tr>
                       <th scope="row">Nascimento</th>
-                      <td>14 de setembro de 1993</td>
+
+                      <?php
+                      $ano = substr ( $_SESSION['aniversario_logado'] , 0 , 4 );
+                      $mes = substr ( $_SESSION['aniversario_logado'] , 5 , 2 );
+                      $dia = substr ( $_SESSION['aniversario_logado'] , 8 , 2 );
+
+                      if('01' === $mes ){$mes="Janeiro";}   if('07' === $mes ){$mes="Julho";}
+                      if('02' === $mes ){$mes="Fevereiro";} if('08' === $mes ){$mes="Agosto";}
+                      if('03' === $mes ){$mes="Março";}     if('09' === $mes ){$mes="Setembro";}
+                      if('04' === $mes ){$mes="Abril";}     if('10' === $mes ){$mes="Outubro";}
+                      if('05' === $mes ){$mes="Maio";}      if('11' === $mes ){$mes="Novembro";}
+                      if('06' === $mes ){$mes="Junho";}     if('12' === $mes ){$mes="Dezembro";}
+
+                      $aniversario = $dia." de "."$mes"." "."$ano";
+
+                       ?>
+                      <!-- <td>14 de setembro de 1993</td> -->
+                      <td><?php echo $aniversario; ?></td>
                     </tr>
                     <tr>
                       <th scope="row">Sexo</th>
-                      <td >Masculino</td>
+                      <td ><?php echo ucfirst($_SESSION['sexo_logado']); ?></td>
                     </tr>
 
                     <tr>

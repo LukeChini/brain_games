@@ -1,6 +1,18 @@
 <?php
 
+if(!isset($_SESSION))
+{
+    session_start();
+}
+
+$usuario_logado = $_SESSION['username_logado'];
+$src = $_SESSION['src_perfil'];
+
+
+
+
 $html_nav = "
+<?php session_start(); ".'$'."usuario_logado = ".'$'."_SESSION['usuario_logado'];if(".'$'."_SESSION['username_logado']==NULL){header('location:entrar.php');}?>
 <div class='' style='background-color:rgb(14,145,161)'>
 <div class='container'>
 <nav class='navbar navbar-expand-lg navbar-light' style='background-color:rgb(14,145,161)'>
@@ -26,14 +38,14 @@ $html_nav = "
 <style media='screen'>
 @media (max-width: 992px) {#div-img{display:none;}}
 </style>
-<img src='images/astronauta.jpg' alt='' style='height:50px;'></img>
+<img src="." ' ".$src." ' "."alt='' style='height:50px;'></img>
 </div>
-<a class='nav-link dropdown-toggle text-white font-weight-bold mt-1' data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false'>Lucas Cornachini</a>
+<a class='nav-link dropdown-toggle text-white font-weight-bold mt-1' data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false'>".$usuario_logado."</a>
 <div class='dropdown-menu'>
 <a class='dropdown-item' href='conta.php'>Configurações da conta</a>
 <a class='dropdown-item' href='#'>Ajuda</a>
 <div class='dropdown-divider'></div>
-<a class='dropdown-item' href='#'>Sair</a>
+<a class='dropdown-item' href='tratar_sair.php'>Sair</a>
 </div>
 </div>
 </div>

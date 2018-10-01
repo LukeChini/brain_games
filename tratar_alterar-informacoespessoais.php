@@ -42,28 +42,53 @@
 <?php
 session_start();
 include ('conn.php');
+$username = $_POST['username'];
+$dia = $_POST['dia'];
+$mes = $_POST['mes'];
+$ano = $_POST['ano'];
+$sexo = $_POST['sexo'];
+$id = $_SESSION['id_logado'];
+$img_perfil = $_FILES['imagem'];
 
-$email = $_POST['email'];
-$senha = $_POST['senha'];
+$aniversario = $ano.'-'.$mes.'-'.$dia;
 
-$verificação = $conn->prepare('SELECT * FROM usuarios WHERE email LIKE :email AND senha LIKE :senha');
-$verificação->bindParam(':email', $email, PDO::PARAM_STR);
-$verificação->bindParam(':senha', $senha, PDO::PARAM_STR);
-$verificação->execute();
-$verifica = $verificação->fetch(PDO::FETCH_ASSOC);
 
-$_SESSION['username_logado'] = $verifica['username'];
-$_SESSION['email_logado'] = $verifica['email'];
-$_SESSION['sexo_logado'] = $verifica['sexo'];
-$_SESSION['aniversario_logado'] = $verifica['aniversario'];
-$_SESSION['validade_premium_logado'] = $verifica['validade_premium'];
-$_SESSION['id_logado'] = $verifica['id'];
-$_SESSION['src_perfil'] = $verifica['src_perfil'];
+$validar = checkdate($mes,$dia,$ano);
 
-    if($_SESSION['src_perfil'] == NULL && $_SESSION['sexo_logado'] == 'masculino'){$_SESSION['src_perfil']='images/perfil_masculino.jpg';}
-elseif($_SESSION['src_perfil'] == NULL && $_SESSION['sexo_logado'] == 'feminino' ){$_SESSION['src_perfil']='images/perfil_feminino.jpg'; }
+$src_perfil = NULL;
 
-if($verifica['email']==NULL){;}else{return header("location:inicio-logado.php");}
+if($img_perfil !== NULL){move_uploaded_file($_FILES['imagem']['tmp_name'], 'upload/'.$_SESSION['id_logado']);}
+if($img_perfil !== NULL){$src_perfil = 'upload/'.$_SESSION['id_logado'];}
+
+
+
+
+
+if($validar){
+  $alteração_nome = $conn->prepare('UPDATE usuarios SET username = :username WHERE id = :id');
+  $alteração_nome->bindParam(':username', $username, PDO::PARAM_STR);
+  $alteração_nome->bindParam(':id', $id, PDO::PARAM_INT);
+  $alteração_nome->execute();
+
+  $alteração_aniversario = $conn->prepare('UPDATE usuarios SET aniversario = :aniversario WHERE id = :id');
+  $alteração_aniversario->bindParam(':aniversario', $aniversario, PDO::PARAM_STR);
+  $alteração_aniversario->bindParam(':id', $id, PDO::PARAM_INT);
+  $alteração_aniversario->execute();
+
+  $alteração_sexo = $conn->prepare('UPDATE usuarios SET sexo = :sexo WHERE id = :id');
+  $alteração_sexo->bindParam(':sexo', $sexo, PDO::PARAM_STR);
+  $alteração_sexo->bindParam(':id', $id, PDO::PARAM_INT);
+  $alteração_sexo->execute();
+
+  $alteração_sexo = $conn->prepare('UPDATE usuarios SET src_perfil = :src_perfil WHERE id = :id');
+  $alteração_sexo->bindParam(':src_perfil', $src_perfil, PDO::PARAM_STR);
+  $alteração_sexo->bindParam(':id', $id, PDO::PARAM_INT);
+  $alteração_sexo->execute();
+
+
+  header("location:entrar.php");}
+
+
 
 
 
@@ -71,11 +96,12 @@ if($verifica['email']==NULL){;}else{return header("location:inicio-logado.php");
 
  ?>
 
+
     <div class="bg-light text-center">
 
 
-      <p style="font-size:40px"> Email e Senha Senha não conferem! </p>
-     <a href="entrar.php" class="btn btn-danger mt-2">Retornar</a>
+      <p style="font-size:40px"> Data de Nascimento Invalida! </p>
+     <a href="alterar-informacoes-pessoais.php" class="btn btn-danger mt-2">Retornar</a>
 
 
       </div>

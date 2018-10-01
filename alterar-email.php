@@ -14,6 +14,7 @@
     <title>Alterar Email</title>
   </head>
   <body>
+    <?php if(!isset($_SESSION)){session_start();} ?>
 <?php require('variaveisPHPecho.php'); echo $html_nav; ?>
     </div>
 
@@ -27,9 +28,11 @@
 
         <div class="border-top mt-3">
         <div class="p-3">
+          <form action="tratar_alterar-email.php" method="post">
           <label class="col-12">E-mail:</label>
-          <input type="text" value="lucas.cornachini@hotmail.com" class="col-8 form-control form-control-lg" id="inlineFormInputGroup"></input><br/>
-          <a href="planos.php" class="btn btn-danger mr-3 mt-2" style="-webkit-text-stroke-width: 0px;">Salvar alterações</a>
+          <input type="email" name="email" value=<?php echo '"'.$_SESSION['email_logado'].'"'; ?> class="col-8 form-control form-control-lg" id="inlineFormInputGroup"></input><br/>
+          <input type="submit" value="Salvar alterações" class="btn btn-danger mr-3 mt-2" style="-webkit-text-stroke-width: 0px;"></input>
+          </form>
         </div>
       </div>
 

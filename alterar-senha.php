@@ -27,12 +27,14 @@
 
         <div class="border-top mt-3">
         <div class="p-3">
+          <form class="" action="tratar_alterar-senha.php" method="post">
           <label class="col-12">Nova senha</label>
           <input type="password" name="senha" class="col-8 form-control form-control-lg" id="inlineFormInputGroup"></input><br/>
 
           <label class="col-12">Digite novamente</label>
           <input type="password" name="confirmarsenha" class="col-8 form-control form-control-lg" id="inlineFormInputGroup"></input><br/>
-          <a href="planos.php" class="btn btn-danger mr-3 mt-2" style="-webkit-text-stroke-width: 0px;">Salvar alterações</a>
+          <input type="submit" value="Salvar alterações" class="btn btn-danger mr-3 mt-2" style="-webkit-text-stroke-width: 0px;"></input>
+        </form>
         </div>
       </div>
 
