@@ -57,10 +57,19 @@ $validar = checkdate($mes,$dia,$ano);
 
 $src_perfil = NULL;
 
-if($img_perfil !== NULL){move_uploaded_file($_FILES['imagem']['tmp_name'], 'upload/'.$_SESSION['id_logado']);}
-if($img_perfil !== NULL){$src_perfil = 'upload/'.$_SESSION['id_logado'];}
+if($_FILES['imagem']['tmp_name'] != NULL){move_uploaded_file($_FILES['imagem']['tmp_name'], 'upload/'.$_SESSION['id_logado']);}
+if($_FILES['imagem']['tmp_name'] != NULL){$src_perfil = 'upload/'.$_SESSION['id_logado'];}
 
+$_SESSION['username_logado'] = $username;
+// $_SESSION['email_logado'] = $verifica['email'];
+$_SESSION['sexo_logado'] = $sexo;
+$_SESSION['aniversario_logado'] = $aniversario;
+// $_SESSION['validade_premium_logado'] = $verifica['validade_premium'];
+// $_SESSION['id_logado'] = $verifica['id'];
+if($_FILES['imagem']['tmp_name'] != NULL){$_SESSION['src_perfil'] = $src_perfil;}
 
+    if($src_perfil == NULL && $sexo == 'masculino'){$_SESSION['src_perfil']='images/perfil_masculino.jpg';}
+elseif($src_perfil == NULL && $sexo == 'feminino' ){$_SESSION['src_perfil']='images/perfil_feminino.jpg'; }
 
 
 
@@ -80,13 +89,13 @@ if($validar){
   $alteração_sexo->bindParam(':id', $id, PDO::PARAM_INT);
   $alteração_sexo->execute();
 
-  $alteração_sexo = $conn->prepare('UPDATE usuarios SET src_perfil = :src_perfil WHERE id = :id');
-  $alteração_sexo->bindParam(':src_perfil', $src_perfil, PDO::PARAM_STR);
-  $alteração_sexo->bindParam(':id', $id, PDO::PARAM_INT);
-  $alteração_sexo->execute();
+  $alteração_src = $conn->prepare('UPDATE usuarios SET src_perfil = :src_perfil WHERE id = :id');
+  $alteração_src->bindParam(':src_perfil', $src_perfil, PDO::PARAM_STR);
+  $alteração_src->bindParam(':id', $id, PDO::PARAM_INT);
+  $alteração_src->execute();
 
 
-  header("location:entrar.php");}
+  header("location:conta.php");}
 
 
 

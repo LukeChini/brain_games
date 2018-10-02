@@ -56,11 +56,13 @@
 
 
    $aniversario = $ano_nascimento.'-'.$mes_nascimento.'-'.$dia_nascimento;
+   $validar_data = checkdate($mes_nascimento,$dia_nascimento,$ano_nascimento);
 
    $senha_e_confirmar_senha_nao_conferem = "";
    if($senha !== $confirmar_senha){$senha_e_confirmar_senha_nao_conferem ="Senha e Confirmar Senha não conferem";}
 
    $stmt = $conn->prepare('INSERT INTO usuarios(username, email, senha, aniversario, sexo) VALUES (:username, :email, :senha, :aniversario, :sexo )');
+
 
    $stmt->bindParam(':username', $user_name, PDO::PARAM_STR);
    $stmt->bindParam(':email', $email, PDO::PARAM_STR);
@@ -69,7 +71,7 @@
    $stmt->bindParam(':sexo', $sexo, PDO::PARAM_STR);
 
 
-   if ($senha === $confirmar_senha) { $stmt->execute();}
+   if ($senha === $confirmar_senha && $validar_data) { $stmt->execute();}
 
 
 
@@ -77,7 +79,20 @@
   <a href="entrar.php" class="btn btn-danger mt-2">Entrar</a>';
 
     $conta_insucesso ='<p style="font-size:40px"> Senha e Confirmar Senha não conferem! </p>
-  <a href="criar_conta.php" class="btn btn-danger mt-2">Confirmar Cadastro</a>';
+  <a href="criar_conta.php" class="btn btn-danger mt-2">Confirmar Cadastro</a><br />';
+
+    if(!$validar_data && $senha === $confirmar_senha)
+    {
+      $conta_insucesso ='<p style="font-size:40px"> Data inserida não é válida! </p>
+    <a href="criar_conta.php" class="btn btn-danger mt-2">Confirmar Cadastro</a><br />';
+    }
+
+    if(!$validar_data && $senha !== $confirmar_senha)
+    {
+      $conta_insucesso ='<p style="font-size:40px"> Data inserida não é válida! </p><br />
+                         <p style="font-size:40px"> Senha e Confirmar Senha não conferem! </p><br />
+    <a href="criar_conta.php" class="btn btn-danger mt-2">Confirmar Cadastro</a><br />';
+    }
 
 
     ?>
@@ -85,7 +100,14 @@
        <div class="bg-light text-center">
 
 
-         <?php if($senha !== $confirmar_senha){echo $conta_insucesso;}else{echo $conta_sucesso; }?>
+         <?php
+         if($senha === $confirmar_senha && $validar_data){echo $conta_sucesso;}
+         if($senha !== $confirmar_senha || !$validar_data){echo $conta_insucesso;}
+
+
+
+
+         ?>
 
 
          </div>

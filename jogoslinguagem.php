@@ -42,7 +42,7 @@
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info text-center font-weight-bold text-white"> <a href="trinta_e_quatro.php" style="color:white">Quadrado Trinta e Quatro</a> </div>
-                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <a href="trinta_e_quatro.php" style="color:white"><img id="jogo1" src="images/trintaEquatro.png" alt="trinta e quatro" class="card-img-top p-3"></a> </div>
+                <div id='divjogoLinguagem1' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <a href="trinta_e_quatro.php" style="color:white"><img id='jogoLinguagem1' src="images/trintaEquatro.png" alt="trinta e quatro" class="card-img-top p-3"></a> </div>
                 <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
               </div>
             </div>
@@ -50,7 +50,7 @@
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id="jogo2" src="images/executivoimages.png" alt="trinta e quatro" class="card-img-top p-3"> </div>
+                <div id='divjogoLinguagem2' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id='jogoLinguagem2'src="images/executivoimages.png" alt="trinta e quatro" class="card-img-top p-3"> </div>
                 <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
               </div>
             </div>
@@ -58,7 +58,7 @@
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"><img id="jogo3" src="images/human-brain-white.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
+                <div id='divjogoLinguagem3' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"><img id='jogoLinguagem3'src="images/human-brain-white.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
                 <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
               </div>
             </div>
@@ -70,7 +70,7 @@
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id="jogo4" src="images/depositphotos_90095212-stock-illustration-illustration-of-albert-einstein.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
+                <div id='divjogoLinguagem4' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id='jogoLinguagem4' src="images/depositphotos_90095212-stock-illustration-illustration-of-albert-einstein.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
                 <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
               </div>
             </div>
@@ -78,7 +78,7 @@
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id="jogo5" src="images/913183098-1024x1024.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
+                <div id='divjogoLinguagem5' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id='jogoLinguagem5' src="images/913183098-1024x1024.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
                 <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
               </div>
             </div>
@@ -86,7 +86,7 @@
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id="jogo6" src="images/9170503-en-forme-de-dessin-monochrome-éléments-de-puzzle.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
+                <div id='divjogoLinguagem6' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id='jogoLinguagem6' src="images/9170503-en-forme-de-dessin-monochrome-éléments-de-puzzle.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
                 <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
               </div>
             </div>
@@ -97,32 +97,48 @@
             </div>
             <script type="text/javascript">
 
-              const jogo1 = document.querySelector('#jogo1')
-              const jogo2 = document.querySelector('#jogo2')
-              const jogo3 = document.querySelector('#jogo3')
-              const jogo4 = document.querySelector('#jogo4')
-              const jogo5 = document.querySelector('#jogo5')
-              const jogo6 = document.querySelector('#jogo6')
+              const jogoLinguagem1 = document.querySelector('#jogoLinguagem1')
+              const jogoLinguagem2 = document.querySelector('#jogoLinguagem2')
+              const jogoLinguagem3 = document.querySelector('#jogoLinguagem3')
+              const jogoLinguagem4 = document.querySelector('#jogoLinguagem4')
+              const jogoLinguagem5 = document.querySelector('#jogoLinguagem5')
+              const jogoLinguagem6 = document.querySelector('#jogoLinguagem6')
 
-              jogo1.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogo1.addEventListener('mouseout', function() {this.src = 'images/trintaEquatro.png'})
+              jogoLinguagem1.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoLinguagem1.addEventListener('mouseout', function() {this.src = 'images/trintaEquatro.png'})
 
-              jogo2.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogo2.addEventListener('mouseout', function() {this.src = 'images/executivoimages.png'})
+              jogoLinguagem2.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoLinguagem2.addEventListener('mouseout', function() {this.src = 'images/executivoimages.png'})
 
-              jogo3.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogo3.addEventListener('mouseout', function() {this.src = 'images/human-brain-white.jpg'})
+              jogoLinguagem3.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoLinguagem3.addEventListener('mouseout', function() {this.src = 'images/human-brain-white.jpg'})
 
-              jogo4.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogo4.addEventListener('mouseout', function() {this.src = 'images/depositphotos_90095212-stock-illustration-illustration-of-albert-einstein.jpg'})
+              jogoLinguagem4.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoLinguagem4.addEventListener('mouseout', function() {this.src = 'images/depositphotos_90095212-stock-illustration-illustration-of-albert-einstein.jpg'})
 
-              jogo5.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogo5.addEventListener('mouseout', function() {this.src = 'images/913183098-1024x1024.jpg'})
+              jogoLinguagem5.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoLinguagem5.addEventListener('mouseout', function() {this.src = 'images/913183098-1024x1024.jpg'})
 
-              jogo6.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogo6.addEventListener('mouseout', function() {this.src = 'images/9170503-en-forme-de-dessin-monochrome-éléments-de-puzzle.jpg'})
+              jogoLinguagem6.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoLinguagem6.addEventListener('mouseout', function() {this.src = 'images/9170503-en-forme-de-dessin-monochrome-éléments-de-puzzle.jpg'})
 
+              const divjogoLinguagem1 = document.querySelector('#divjogoLinguagem1')
+              const divjogoLinguagem2 = document.querySelector('#divjogoLinguagem2')
+              const divjogoLinguagem3 = document.querySelector('#divjogoLinguagem3')
+              const divjogoLinguagem4 = document.querySelector('#divjogoLinguagem4')
+              const divjogoLinguagem5 = document.querySelector('#divjogoLinguagem5')
+              const divjogoLinguagem6 = document.querySelector('#divjogoLinguagem6')
 
+              if(window.innerWidth > 991)
+              {
+                divjogoLinguagem1.style.height = "300px";
+                divjogoLinguagem2.style.height = "300px";
+                divjogoLinguagem3.style.height = "300px";
+
+                divjogoLinguagem4.style.height = "300px";
+                divjogoLinguagem5.style.height = "300px";
+                divjogoLinguagem6.style.height = "300px";
+              }
 
 
             </script>

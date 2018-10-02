@@ -11,7 +11,7 @@
 
 
 
-    <title>Alterar informações pessoais</title>
+    <title>Alterar informaÃ§Ãµes pessoais</title>
   </head>
   <body>
     <?php if(!isset($_SESSION)){session_start();} ?>
@@ -20,28 +20,43 @@
 
 </div>
 
+
+
       <div class="bg-light p-3">
       <div class="container bg-white border col-lg-8" >
         <div class="text-center font-weight-bold p-3" style="font-size:30px">
-          <p>Alterar informações pessoais</p>
+          <p>Alterar informaÃ§Ãµes pessoais</p>
         </div>
 
         <div class="border-top mt-3 mb-3">
         <div class="row">
           <div class="col-lg-3 col-12">
-            <div class="m-3 border" style="height:150px; width:150px; margin: 0 auto; overflow:hidden; text-align:center;">
-              <img src="<?php echo $_SESSION['src_perfil'] ?>" alt="" style="height:150px;"></img>
+            <div class="m-3 border"  style="height:150px; width:150px; margin: 0 auto; overflow:hidden; text-align:center;">
+              <img id="src_img"  src="<?php echo $_SESSION['src_perfil'] ?>" alt="" style="height:150px;"></img>
             </div>
             </div>
-            <div class="col-lg-8 col-12 mt-3 ">
+            <div  class="col-lg-8 col-12 mt-3 ">
               <form enctype="multipart/form-data" action="tratar_alterar-informacoespessoais.php" method="post">
-                <div class="input-group">
+                <div  onclick="alterarParaLoad()" class="input-group">
                   <div class="custom-file">
                     <input type="file" name="imagem" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
-                    <label class="custom-file-label" for="inputGroupFile04">Carregar nova foto</label>
+                    <label   class="custom-file-label" for="inputGroupFile04">Carregar nova foto</label>
                   </div>
 
                 </div>
+
+                <script type="text/javascript">
+                const src_img = document.querySelector('#src_img')
+
+                function alterarParaLoad(){
+                  src_img.src = 'images/load.gif'
+                  src_img.style.marginLeft = "-25px"
+                }
+
+                </script>
+
+
+
 
           </div>
 
@@ -54,10 +69,12 @@
 
             <div class="input-group mt-3 mb-5">
                     <div class="input-group-prepend">
-                      <div class="input-group-text" style="background-color:white"> <img src="images/usuario.png" alt="" style="height:20px"> </div>
+                      <div class="input-group-text" style="background-color:white"> <img  src="images/usuario.png" alt="" style="height:20px"> </div>
                     </div>
                     <input type="text" required name="username" class="form-control form-control-lg" id="inlineFormInputGroup" placeholder="Username" value=<?php echo '"'.$_SESSION['username_logado'].'"'; ?>>
                   </div>
+
+
 
 
 

@@ -9,10 +9,10 @@ $usuario_logado = $_SESSION['username_logado'];
 $src = $_SESSION['src_perfil'];
 
 
-
+if($_SESSION['username_logado']==NULL){header('location:entrar.php');}
 
 $html_nav = "
-<?php session_start(); ".'$'."usuario_logado = ".'$'."_SESSION['usuario_logado'];if(".'$'."_SESSION['username_logado']==NULL){header('location:entrar.php');}?>
+<?php session_start(); ".'$'."usuario_logado = ".'$'."_SESSION['usuario_logado'];?>
 <div class='' style='background-color:rgb(14,145,161)'>
 <div class='container'>
 <nav class='navbar navbar-expand-lg navbar-light' style='background-color:rgb(14,145,161)'>

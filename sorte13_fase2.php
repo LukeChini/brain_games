@@ -17,15 +17,11 @@
 
   </head>
   <body>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<?php session_start(); require('variaveisPHPecho.php'); echo $html_nav; ?>
     </body>
 
     <?php
-    session_start();
+
 
     //______Parametros_iniciais_da_tabela____________________________________________
     //__por_padrão_não_utilizar_o_numero_0(zero)_nas_variaveis_ $xn_numero _ele_pode_dar_erro_com_o_submit_voltar___________
@@ -10370,18 +10366,9 @@ else{$submit_inverso = "<input type='submit' name='reiniciar' value='Voltar'></i
 /* body{background-color: rgb(14,145,161);} */
 
 </style>
-<div class="media border border-primary container" style="background-color:rgb(14,145,161)">
-  <img src="images/human-brain-azul.jpg" alt="logo" style="width:100px">
-  <div class="media-body">
-    <h2 class="mt-0 text-white font-weight-bold" style="padding-left:5px">Brain Games</h2>
-      <ul class="nav nav-pills">
-      <li><a href="" class="text-white" style="padding-left:5px">Início</a></li>
-      <li><a href="" class="text-white" style="padding-left:20px">Jogos</a></li>
-      <li><a href="" class="text-white" style="padding-left:20px">Descobertas</a></li>
-      </ul></div>
-  </div>
 
-</div>
+
+</div></div>
 
 <div class="container">
 
@@ -10391,7 +10378,7 @@ else{$submit_inverso = "<input type='submit' name='reiniciar' value='Voltar'></i
 
   <div class="conteiner2">
     <p> <?php echo "Resultado: ".$_SESSION['resultado'];   ?> </p>
-    <p> <?php echo "Jogadas: ".$_SESSION['count']." Max[".$numero_max_movimentos."]";   ?> </p>
+    <p> <?php echo "Jogadas: ".$_SESSION['count']." N°[".$numero_max_movimentos."]";   ?> </p>
     <p> <?php echo $_SESSION["ganhou"];   ?> </p>
     <p> <?php echo $_SESSION["perdeu"];  ?> </p>
     <p> <?php echo $_SESSION["passou_de_max"];  ?> </p>
@@ -10485,10 +10472,16 @@ else{$submit_inverso = "<input type='submit' name='reiniciar' value='Voltar'></i
     Os movimentos podem ser feitos horizontal e verticalmente, mas não em diagonal.
   </p></h4>
   </div>
-  <div class="fases"></div>
 
-</div>
+  <div class="" >
+  <?php require('variaveisPHPecho.php'); echo $html_footer; ?>
+  </div>
 
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 
   </body>

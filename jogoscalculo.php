@@ -42,7 +42,7 @@
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info text-center font-weight-bold text-white"> <a href="trinta_e_quatro.php" style="color:white">Quadrado Trinta e Quatro</a> </div>
-                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <a href="trinta_e_quatro.php" style="color:white"><img id="jogo1" src="images/trintaEquatro.png" alt="trinta e quatro" class="card-img-top p-3"></a> </div>
+                <div id='divjogoCalculo1' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <a href="trinta_e_quatro.php" style="color:white"><img id='jogoCalculo1' src="images/trintaEquatro.png" alt="trinta e quatro" class="card-img-top p-3"></a> </div>
                 <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
               </div>
             </div>
@@ -50,7 +50,7 @@
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id="jogo2" src="images/executivoimages.png" alt="trinta e quatro" class="card-img-top p-3"> </div>
+                <div id='divjogoCalculo2' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id='jogoCalculo2'src="images/executivoimages.png" alt="trinta e quatro" class="card-img-top p-3"> </div>
                 <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
               </div>
             </div>
@@ -58,7 +58,7 @@
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"><img id="jogo3" src="images/human-brain-white.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
+                <div id='divjogoCalculo3' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"><img id='jogoCalculo3'src="images/human-brain-white.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
                 <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
               </div>
             </div>
@@ -70,7 +70,7 @@
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id="jogo4" src="images/depositphotos_90095212-stock-illustration-illustration-of-albert-einstein.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
+                <div id='divjogoCalculo4' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id='jogoCalculo4' src="images/depositphotos_90095212-stock-illustration-illustration-of-albert-einstein.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
                 <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
               </div>
             </div>
@@ -78,7 +78,7 @@
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id="jogo5" src="images/913183098-1024x1024.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
+                <div id='divjogoCalculo5' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id='jogoCalculo5' src="images/913183098-1024x1024.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
                 <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
               </div>
             </div>
@@ -86,7 +86,7 @@
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id="jogo6" src="images/9170503-en-forme-de-dessin-monochrome-éléments-de-puzzle.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
+                <div id='divjogoCalculo6' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id='jogoCalculo6' src="images/9170503-en-forme-de-dessin-monochrome-éléments-de-puzzle.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
                 <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
               </div>
             </div>
@@ -97,32 +97,48 @@
             </div>
             <script type="text/javascript">
 
-              const jogo1 = document.querySelector('#jogo1')
-              const jogo2 = document.querySelector('#jogo2')
-              const jogo3 = document.querySelector('#jogo3')
-              const jogo4 = document.querySelector('#jogo4')
-              const jogo5 = document.querySelector('#jogo5')
-              const jogo6 = document.querySelector('#jogo6')
+              const jogoCalculo1 = document.querySelector('#jogoCalculo1')
+              const jogoCalculo2 = document.querySelector('#jogoCalculo2')
+              const jogoCalculo3 = document.querySelector('#jogoCalculo3')
+              const jogoCalculo4 = document.querySelector('#jogoCalculo4')
+              const jogoCalculo5 = document.querySelector('#jogoCalculo5')
+              const jogoCalculo6 = document.querySelector('#jogoCalculo6')
 
-              jogo1.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogo1.addEventListener('mouseout', function() {this.src = 'images/trintaEquatro.png'})
+              jogoCalculo1.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoCalculo1.addEventListener('mouseout', function() {this.src = 'images/trintaEquatro.png'})
 
-              jogo2.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogo2.addEventListener('mouseout', function() {this.src = 'images/executivoimages.png'})
+              jogoCalculo2.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoCalculo2.addEventListener('mouseout', function() {this.src = 'images/executivoimages.png'})
 
-              jogo3.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogo3.addEventListener('mouseout', function() {this.src = 'images/human-brain-white.jpg'})
+              jogoCalculo3.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoCalculo3.addEventListener('mouseout', function() {this.src = 'images/human-brain-white.jpg'})
 
-              jogo4.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogo4.addEventListener('mouseout', function() {this.src = 'images/depositphotos_90095212-stock-illustration-illustration-of-albert-einstein.jpg'})
+              jogoCalculo4.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoCalculo4.addEventListener('mouseout', function() {this.src = 'images/depositphotos_90095212-stock-illustration-illustration-of-albert-einstein.jpg'})
 
-              jogo5.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogo5.addEventListener('mouseout', function() {this.src = 'images/913183098-1024x1024.jpg'})
+              jogoCalculo5.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoCalculo5.addEventListener('mouseout', function() {this.src = 'images/913183098-1024x1024.jpg'})
 
-              jogo6.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogo6.addEventListener('mouseout', function() {this.src = 'images/9170503-en-forme-de-dessin-monochrome-éléments-de-puzzle.jpg'})
+              jogoCalculo6.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoCalculo6.addEventListener('mouseout', function() {this.src = 'images/9170503-en-forme-de-dessin-monochrome-éléments-de-puzzle.jpg'})
 
+              const divjogoCalculo1 = document.querySelector('#divjogoCalculo1')
+              const divjogoCalculo2 = document.querySelector('#divjogoCalculo2')
+              const divjogoCalculo3 = document.querySelector('#divjogoCalculo3')
+              const divjogoCalculo4 = document.querySelector('#divjogoCalculo4')
+              const divjogoCalculo5 = document.querySelector('#divjogoCalculo5')
+              const divjogoCalculo6 = document.querySelector('#divjogoCalculo6')
 
+              if(window.innerWidth > 991)
+              {
+                divjogoCalculo1.style.height = "300px";
+                divjogoCalculo2.style.height = "300px";
+                divjogoCalculo3.style.height = "300px";
+
+                divjogoCalculo4.style.height = "300px";
+                divjogoCalculo5.style.height = "300px";
+                divjogoCalculo6.style.height = "300px";
+              }
 
 
             </script>

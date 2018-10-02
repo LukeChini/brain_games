@@ -8,15 +8,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-
-
-    <title>Hello, world!</title>
+    <title>Jogos Memoria</title>
   </head>
   <body>
-
-    <?php require('variaveisPHPecho.php'); echo $html_nav; ?>
-
-
+<?php require('variaveisPHPecho.php'); echo $html_nav; ?>
     </div>
 
 </div>
@@ -26,7 +21,6 @@
 
       <div class="container bg-light" style="padding-top:20px">
         <div class="row">
-
 
 
           <div id="list-example" class="col-12 col-sm-3 col-lg-2 list-group mb-3 text-align">
@@ -39,17 +33,16 @@
           </div>
 
 
-
         <div class="col-12 col-sm-9 col-lg-10 bg-white border">
 
           <div class="row mt-3 mb-2" >
 
-            <div class="col-12 mb-4 font-weight-bold" style="font-size:25px">Função Executiva</div>
+            <div class="col-12 mb-4 font-weight-bold" style="font-size:25px">Funções da Memória</div>
 
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info text-center font-weight-bold text-white"> <a href="trinta_e_quatro.php" style="color:white">Quadrado Trinta e Quatro</a> </div>
-                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <a href="trinta_e_quatro.php" style="color:white"><img src="images/trintaEquatro.png" alt="trinta e quatro" class="card-img-top p-3"></a> </div>
+                <div id='divjogoMemoria1'class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <a href="trinta_e_quatro.php" style="color:white"><img src="images/trintaEquatro.png" alt="trinta e quatro" class="card-img-top p-3"></a> </div>
                 <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
               </div>
             </div>
@@ -57,7 +50,7 @@
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info bg-info text-center font-weight-bold text-white"><a href="sorte13_fase2.php" style="color:white">Numero da Sorte</a></div>
-                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <a href="sorte13_fase2.php" style="color:white"><img src="images/numero_da_sorte.png" alt="trinta e quatro" class="card-img-top p-3"></a> </div>
+                <div id='divjogoMemoria2'class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <a href="sorte13_fase2.php" style="color:white"><img src="images/numero_da_sorte.png" alt="trinta e quatro" class="card-img-top p-3"></a> </div>
                 <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
               </div>
             </div>
@@ -65,10 +58,8 @@
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"><img id="jogoExecutiva3" src="images/human-brain-white.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
+                <div id='divjogoMemoria3' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"><img id='jogoMemoria3'src="images/human-brain-white.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
                 <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
-
-
               </div>
             </div>
 
@@ -79,7 +70,7 @@
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id="jogoExecutiva4" src="images/depositphotos_90095212-stock-illustration-illustration-of-albert-einstein.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
+                <div id='divjogoMemoria4' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id='jogoMemoria4' src="images/depositphotos_90095212-stock-illustration-illustration-of-albert-einstein.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
                 <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
               </div>
             </div>
@@ -87,7 +78,7 @@
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id="jogoExecutiva5" src="images/913183098-1024x1024.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
+                <div id='divjogoMemoria5' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id='jogoMemoria5' src="images/913183098-1024x1024.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
                 <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
               </div>
             </div>
@@ -95,7 +86,7 @@
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id="jogoExecutiva6" src="images/9170503-en-forme-de-dessin-monochrome-éléments-de-puzzle.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
+                <div id='divjogoMemoria6' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id='jogoMemoria6' src="images/9170503-en-forme-de-dessin-monochrome-éléments-de-puzzle.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
                 <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
               </div>
             </div>
@@ -103,35 +94,56 @@
         </div>
             </div>
             </div>
-
+            </div>
             <script type="text/javascript">
 
 
-              const jogoExecutiva3 = document.querySelector('#jogoExecutiva3')
-              const jogoExecutiva4 = document.querySelector('#jogoExecutiva4')
-              const jogoExecutiva5 = document.querySelector('#jogoExecutiva5')
-              const jogoExecutiva6 = document.querySelector('#jogoExecutiva6')
+              const jogoMemoria3 = document.querySelector('#jogoMemoria3')
+              const jogoMemoria4 = document.querySelector('#jogoMemoria4')
+              const jogoMemoria5 = document.querySelector('#jogoMemoria5')
+              const jogoMemoria6 = document.querySelector('#jogoMemoria6')
 
 
 
-              jogoExecutiva3.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogoExecutiva3.addEventListener('mouseout', function() {this.src = 'images/human-brain-white.jpg'})
+              jogoMemoria3.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoMemoria3.addEventListener('mouseout', function() {this.src = 'images/human-brain-white.jpg'})
 
-              jogoExecutiva4.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogoExecutiva4.addEventListener('mouseout', function() {this.src = 'images/depositphotos_90095212-stock-illustration-illustration-of-albert-einstein.jpg'})
+              jogoMemoria4.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoMemoria4.addEventListener('mouseout', function() {this.src = 'images/depositphotos_90095212-stock-illustration-illustration-of-albert-einstein.jpg'})
 
-              jogoExecutiva5.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogoExecutiva5.addEventListener('mouseout', function() {this.src = 'images/913183098-1024x1024.jpg'})
+              jogoMemoria5.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoMemoria5.addEventListener('mouseout', function() {this.src = 'images/913183098-1024x1024.jpg'})
 
-              jogoExecutiva6.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogoExecutiva6.addEventListener('mouseout', function() {this.src = 'images/9170503-en-forme-de-dessin-monochrome-éléments-de-puzzle.jpg'})
+              jogoMemoria6.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoMemoria6.addEventListener('mouseout', function() {this.src = 'images/9170503-en-forme-de-dessin-monochrome-éléments-de-puzzle.jpg'})
+
+              const divjogoMemoria1 = document.querySelector('#divjogoMemoria1')
+              const divjogoMemoria2 = document.querySelector('#divjogoMemoria2')
+              const divjogoMemoria3 = document.querySelector('#divjogoMemoria3')
+              const divjogoMemoria4 = document.querySelector('#divjogoMemoria4')
+              const divjogoMemoria5 = document.querySelector('#divjogoMemoria5')
+              const divjogoMemoria6 = document.querySelector('#divjogoMemoria6')
+
+              if(window.innerWidth > 991)
+              {
+                divjogoMemoria1.style.height = "300px";
+                divjogoMemoria2.style.height = "300px";
+                divjogoMemoria3.style.height = "300px";
+
+                divjogoMemoria4.style.height = "300px";
+                divjogoMemoria5.style.height = "300px";
+                divjogoMemoria6.style.height = "300px";
+
+
+
+              }
 
 
 
 
             </script>
 
-            <?php require('variaveisPHPecho.php'); echo $html_footer; ?>
+<?php require('variaveisPHPecho.php'); echo $html_footer; ?>
 
             </div>
 
