@@ -60,7 +60,7 @@ $html_footer =
 <li class='nav-item col-12 col-lg-2 text-center'><a class='nav-link text-secondary' href='sobrenos.php'>Sobre Nós</a></li>
 <li class='nav-item col-12 col-lg-2 text-center'><a class='nav-link text-secondary' href='contato.php'>Contato</a></li>
 <li class='nav-item col-12 col-lg-3 text-center'><a class='nav-link text-secondary' href='termosdeservico.php'>Termos de Serviço</a></li>
-<li class='nav-item col-12 col-lg-3 text-center'><a class='nav-link text-secondary' href='#'>Política de Privacidade</a></li>
+<li class='nav-item col-12 col-lg-3 text-center'><a class='nav-link text-secondary' href='politicadeprivacidade.php'>Política de Privacidade</a></li>
 <li class='nav-item col-12 col-lg-2 text-center'><a class='nav-link text-secondary' href='#'>Ajuda</a></li>
 </ul>
 </footer>";

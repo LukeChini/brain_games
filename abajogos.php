@@ -37,7 +37,7 @@
 
           <div class="row mt-3 mb-2" >
 
-            <div class="col-12 mb-4 font-weight-bold" style="font-size:25px">Funções da Memória</div>
+            <div class="col-12 mb-4 font-weight-bold" style="font-size:25px">Funçõe Executiva</div>
 
             <div class="col-12 col-lg-4" >
               <div class="card">

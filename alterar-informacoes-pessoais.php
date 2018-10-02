@@ -25,7 +25,7 @@
       <div class="bg-light p-3">
       <div class="container bg-white border col-lg-8" >
         <div class="text-center font-weight-bold p-3" style="font-size:30px">
-          <p>Alterar informaÃ§Ãµes pessoais</p>
+          <p>Alterar informações pessoais</p>
         </div>
 
         <div class="border-top mt-3 mb-3">
@@ -104,9 +104,9 @@ $dia_10="";if('10' === $dia ){$dia_10="selected";} $dia_20="";if('20' === $dia )
                                 <div class="form-group col-3 col-lg-3">
                                   <select required class="form-control dorm-control-lg" name="dia">
                                                      <option  value="">Dia</option>
-<option  value="1" <?php echo $dia_01 ?>>1</option>  <option value="02" <?php echo $dia_02 ?>>2</option>   <option value="03" <?php echo $dia_03 ?>>3</option>
-<option  value="4" <?php echo $dia_04 ?>>4</option>  <option value="05" <?php echo $dia_05 ?>>5</option>   <option value="06" <?php echo $dia_06 ?>>6</option>
-<option  value="7" <?php echo $dia_07 ?>>7</option>  <option value="08" <?php echo $dia_08 ?>>8</option>   <option value="09" <?php echo $dia_09 ?>>9</option>
+<option  value="01" <?php echo $dia_01 ?>>1</option>  <option value="02" <?php echo $dia_02 ?>>2</option>   <option value="03" <?php echo $dia_03 ?>>3</option>
+<option  value="04" <?php echo $dia_04 ?>>4</option>  <option value="05" <?php echo $dia_05 ?>>5</option>   <option value="06" <?php echo $dia_06 ?>>6</option>
+<option  value="07" <?php echo $dia_07 ?>>7</option>  <option value="08" <?php echo $dia_08 ?>>8</option>   <option value="09" <?php echo $dia_09 ?>>9</option>
 <option value="10" <?php echo $dia_10 ?>>10</option> <option value="11" <?php echo $dia_11 ?>>11</option> <option value="12" <?php echo $dia_12 ?>>12</option>
 <option value="13" <?php echo $dia_13 ?>>13</option> <option value="14" <?php echo $dia_14 ?>>14</option> <option value="15" <?php echo $dia_15 ?>>15</option>
 <option value="16" <?php echo $dia_16 ?>>16</option> <option value="17" <?php echo $dia_17 ?>>17</option> <option value="18" <?php echo $dia_18 ?>>18</option>
@@ -187,7 +187,7 @@ $mes_06="";if('06' === $mes ){$mes_06="selected";} $mes_12="";if('12' === $mes )
 
 
 
-</div>
+</div></div>
 
 <?php require('variaveisPHPecho.php'); echo $html_footer; ?>
 
