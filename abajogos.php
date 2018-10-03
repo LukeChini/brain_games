@@ -11,7 +11,7 @@
     <title>Jogos Memoria</title>
   </head>
   <body>
-<?php require('variaveisPHPecho.php'); echo $html_nav; ?>
+    <?php require('nav.php'); ?>
     </div>
 
 </div>
@@ -32,6 +32,32 @@
             <a class="list-group-item list-group-item-action" href="jogoslinguagem.php">Linguagem</a>
           </div>
 
+          <?php
+          include ('conn.php');
+
+          $funcao = 'executiva';
+
+          $verificação = $conn->query('SELECT * FROM jogos');
+          $verificação->bindParam(':funcao', $funcao, PDO::PARAM_STR);
+          $array = [];
+
+          $n = $verificação->fetchAll();
+          $c = count($n);
+
+
+          $array_abertura = []; $array_fechamento = [];
+          for ($i=0; $i < 100; $i++)
+          {
+            if($i>$c || $i==$c){array_push($array_abertura,"<!--");}
+            else{array_push($array_abertura,"");}
+
+            if($i>$c || $i==$c){array_push($array_fechamento,"-->");}
+            else{array_push($array_fechamento,"");}
+          }
+
+
+
+           ?>
 
         <div class="col-12 col-sm-9 col-lg-10 bg-white border">
 
@@ -39,57 +65,75 @@
 
             <div class="col-12 mb-4 font-weight-bold" style="font-size:25px">Funçõe Executiva</div>
 
-            <div class="col-12 col-lg-4" >
+            <?php echo $array_abertura[0]; ?><div class="col-12 col-lg-4" >
               <div class="card">
-                <div class="card-header bg-info text-center font-weight-bold text-white"> <a href="trinta_e_quatro.php" style="color:white">Quadrado Trinta e Quatro</a> </div>
-                <div id='divjogoMemoria1'class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <a href="trinta_e_quatro.php" style="color:white"><img src="images/trintaEquatro.png" alt="trinta e quatro" class="card-img-top p-3"></a> </div>
-                <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
+                <div class="card-header bg-info text-center font-weight-bold text-white"> <p style="color:white">
+                  <?php echo $n[0]['nome']; ?></p> </div>
+                <div id='divjogoMemoria1'class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px">
+                  <a href="<?php echo $n[0]['nome_arquivo']; ?>" style="color:white">
+                    <img src="<?php echo $n[0]['src_perfil']; ?>" class="card-img-top p-3"></a> </div>
+                <div class="card-body"><?php echo $n[0]['descricao']; ?></div>
               </div>
-            </div>
+            </div><?php echo $array_fechamento[0]; ?>
 
-            <div class="col-12 col-lg-4" >
+            <?php echo $array_abertura[1]; ?><div class="col-12 col-lg-4" >
               <div class="card">
-                <div class="card-header bg-info bg-info text-center font-weight-bold text-white"><a href="sorte13_fase2.php" style="color:white">Numero da Sorte</a></div>
-                <div id='divjogoMemoria2'class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <a href="sorte13_fase2.php" style="color:white"><img src="images/numero_da_sorte.png" alt="trinta e quatro" class="card-img-top p-3"></a> </div>
-                <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
+                <div class="card-header bg-info text-center font-weight-bold text-white"> <p style="color:white">
+                  <?php echo $n[1]['nome']; ?></p> </div>
+                <div id='divjogoMemoria2'class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px">
+                  <a href="<?php echo $n[1]['nome_arquivo']; ?>" style="color:white">
+                    <img src="<?php echo $n[1]['src_perfil']; ?>" class="card-img-top p-3"></a> </div>
+                <div class="card-body"><?php echo $n[1]['descricao']; ?></div>
               </div>
-            </div>
+            </div> <?php echo $array_fechamento[1]; ?>
 
-            <div class="col-12 col-lg-4" >
+          <?php echo $array_abertura[2]; ?>  <div class="col-12 col-lg-4" >
               <div class="card">
-                <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div id='divjogoMemoria3' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"><img id='jogoMemoria3'src="images/human-brain-white.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
-                <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
+                <div class="card-header bg-info text-center font-weight-bold text-white"> <p style="color:white">
+                  <?php echo $n[2]['nome']; ?></p> </div>
+                <div id='divjogoMemoria3'class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px">
+                  <a href="<?php echo $n[2]['nome_arquivo']; ?>" style="color:white">
+                    <img src="<?php echo $n[2]['src_perfil']; ?>" class="card-img-top p-3"></a> </div>
+                <div class="card-body"><?php echo $n[2]['descricao']; ?></div>
               </div>
-            </div>
+            </div> <?php echo $array_fechamento[2]; ?>
 
           </div>
 
           <div class="row mt-1 mb-2" >
 
-            <div class="col-12 col-lg-4" >
+            <?php echo $array_abertura[3]; ?><div class="col-12 col-lg-4" >
               <div class="card">
-                <div class="card-header bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div id='divjogoMemoria4' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id='jogoMemoria4' src="images/depositphotos_90095212-stock-illustration-illustration-of-albert-einstein.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
-                <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
+                <div class="card-header bg-info text-center font-weight-bold text-white"> <p style="color:white">
+                  <?php echo $n[3]['nome']; ?></p> </div>
+                <div id='divjogoMemoria4'class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px">
+                  <a href="<?php echo $n[3]['nome_arquivo']; ?>" style="color:white">
+                    <img src="<?php echo $n[3]['src_perfil']; ?>" class="card-img-top p-3"></a> </div>
+                <div class="card-body"><?php echo $n[3]['descricao']; ?></div>
               </div>
-            </div>
+            </div><?php echo $array_fechamento[3]; ?>
 
-            <div class="col-12 col-lg-4" >
+            <?php echo $array_abertura[4]; ?><div class="col-12 col-lg-4" >
               <div class="card">
-                <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div id='divjogoMemoria5' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id='jogoMemoria5' src="images/913183098-1024x1024.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
-                <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
+                <div class="card-header bg-info text-center font-weight-bold text-white"> <p style="color:white">
+                  <?php echo $n[4]['nome']; ?></p> </div>
+                <div id='divjogoMemoria5'class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px">
+                  <a href="<?php echo $n[4]['nome_arquivo']; ?>" style="color:white">
+                    <img src="<?php echo $n[4]['src_perfil']; ?>" class="card-img-top p-3"></a> </div>
+                <div class="card-body"><?php echo $n[4]['descricao']; ?></div>
               </div>
-            </div>
+            </div> <?php echo $array_fechamento[4]; ?>
 
-            <div class="col-12 col-lg-4" >
+          <?php echo $array_abertura[5]; ?>  <div class="col-12 col-lg-4" >
               <div class="card">
-                <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div id='divjogoMemoria6' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id='jogoMemoria6' src="images/9170503-en-forme-de-dessin-monochrome-éléments-de-puzzle.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
-                <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
+                <div class="card-header bg-info text-center font-weight-bold text-white"> <p style="color:white">
+                  <?php echo $n[5]['nome']; ?></p> </div>
+                <div id='divjogoMemoria6'class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px">
+                  <a href="<?php echo $n[5]['nome_arquivo']; ?>" style="color:white">
+                    <img src="<?php echo $n[5]['src_perfil']; ?>" class="card-img-top p-3"></a> </div>
+                <div class="card-body"><?php echo $n[5]['descricao']; ?></div>
               </div>
-            </div>
+            </div> <?php echo $array_fechamento[5]; ?>
 
         </div>
             </div>

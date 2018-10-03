@@ -10,19 +10,7 @@
 
     <title>Jogos gratuitos </title>
   </head>
-  <body>
-    <div class="" style="background-color:rgb(14,145,161)">
-    <div class="media container" style="background-color:rgb(14,145,161)">
-      <img src="images/human-brain-azul.jpg" alt="logo" style="width:100px">
-      <div class="media-body">
-        <h2 class="mt-0 text-white font-weight-bold" style="padding-left:5px">Brain Games</h2>
-          <ul class="nav nav-pills">
-          <li><a href="" class="text-white font-weight-bold" style="padding-left:5px">Início</a></li>
-          <li><a href="abajogos.php" class="text-white font-weight-bold" style="padding-left:20px">Jogos</a></li>
-          <li><a href="" class="text-white font-weight-bold" style="padding-left:20px">Descobertas</a></li>
-          </ul></div>
-    </div>
-    </div>
+<?php require('nav.php'); ?>
       <div class="bg-light pt-3">
       <div class="container">
 

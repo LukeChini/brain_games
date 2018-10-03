@@ -13,17 +13,7 @@
 
     <title>Criar Conta</title>
   </head>
-  <body>
-    <div class="" style="background-color:white">
-    <div class="media container" style="background-color:white">
-      <img src="images/human-brain-white -menor.jpg" alt="logo" style="width:100px">
-      <div class="media-body">
-        <h2 class="mt-0 text-info font-weight-bold" style="padding-left:5px">Brain Games</h2>
-      </div>
-      <a href="#" class="btn btn-light mr-3 mt-2 border-0" style="background-color:white">Já tem uma conta?</a>
-      <a href="entrar.php" class="btn btn-light mt-2">Entrar</a>
-      </div>
-      </div>
+<?php require('nav.php'); ?>
 
       <div class="bg-light" >
       <div class=" bg-light"  >

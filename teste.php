@@ -7,31 +7,25 @@ include ('conn.php');
 
 
 
-$verificação = $conn->query('SELECT * FROM usuarios');
+$verificação = $conn->query('SELECT * FROM jogos');
 // $verifica = $verificação->fetch(PDO::FETCH_ASSOC);
 $array = [];
 
-if($n = $verificação->fetchAll()){
-  var_dump( $n[0]['username']);
+
+$n = $verificação->fetchAll();
+$c = count($n);
+
+
+$array_abertura = []; $array_fechamento = [];
+for ($i=0; $i < 50; $i++)
+{
+  if($i>$c || $i==$c){array_push($array_abertura,"<!--");}
+  else{array_push($array_abertura,"");}
+
+  if($i>$c || $i==$c){array_push($array_fechamento,"-->");}
+  else{array_push($array_fechamento,"");}
 }
-// while($nova=$verificação->fetch(PDO::FETCH_ASSOC))
-// {
-//   array_push($array, $nova['username']);
-// }
-//
-// for ($i=0; $i < 100; $i++)
-// {
-//     echo $array[$i].'<br />';
-// }
 
-
-
-
-
-
-
-
-
-
+var_dump($array_abertura);
 
  ?>

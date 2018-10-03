@@ -11,7 +11,7 @@
     <title>Jogos Calculo</title>
   </head>
   <body>
-    <?php require('variaveisPHPecho.php'); echo $html_nav; ?>
+<?php require('nav.php'); ?>
     </div>
 
 </div>

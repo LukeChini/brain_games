@@ -16,7 +16,7 @@
   <body>
 <?php if(!isset($_SESSION)){session_start();} ?>
 
-<?php require('variaveisPHPecho.php'); echo $html_nav; ?>
+<?php require('nav.php'); ?>
     </div>
 
 </div>

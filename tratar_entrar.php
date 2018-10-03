@@ -50,7 +50,7 @@ $verificação = $conn->prepare('SELECT * FROM usuarios WHERE email LIKE :email 
 $verificação->bindParam(':email', $email, PDO::PARAM_STR);
 $verificação->bindParam(':senha', $senha, PDO::PARAM_STR);
 $verificação->execute();
-$verifica = $verificação->fetchAll(PDO::FETCH_ASSOC);
+$verifica = $verificação->fetch(PDO::FETCH_ASSOC);
 
 $_SESSION['username_logado'] = $verifica['username'];
 $_SESSION['email_logado'] = $verifica['email'];

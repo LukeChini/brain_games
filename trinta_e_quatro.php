@@ -113,7 +113,7 @@
   </head>
   <body  >
 
-<?php session_start(); require('variaveisPHPecho.php'); echo $html_nav; ?>
+<?php require('nav.php'); ?>
 
 
 
