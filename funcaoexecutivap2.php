@@ -70,6 +70,26 @@
           if($c>63){$tg_ap8="";$tg_fp8="";}
           if($c>72){$tg_ap9="";$tg_fp9="";}
 
+          function printar_jogos($valor_inicial,$valor_final,$n,$array_abertura,$array_fechamento,$c)
+          {
+          for ($i=$valor_inicial; $i <= $valor_final; $i++) {
+            if($i<$c){
+            echo
+            $array_abertura[$i]."<div class='col-12 col-lg-4'>
+              <div class='card'>
+                <div class='card-header bg-info text-center font-weight-bold text-white'>
+                <p style='color:white'>".$n[$i]['nome']."</p> </div>
+
+                <div class='border-bottom divh300' style='overflow:hidden; min-height:100px; max-height:300px'>
+                <style media='screen'>@media (min-width: 992px){.divh300{height:300px;}}</style>
+                  <a href='".$n[$i]['nome_arquivo']."'style='color:white'>
+                    <img src='".$n[$i]['src_perfil']."' class='card-img-top p-3'></a> </div>
+                <div class='card-body'>".$n[$i]['descricao']."</div>
+              </div>
+            </div>".$array_fechamento[$i];
+          }
+        }}
+
 
 
            ?>
@@ -80,117 +100,22 @@
 
             <div class="col-12 mb-4 font-weight-bold" style="font-size:25px">Funçõe Executiva</div>
 
-            <?php echo $array_abertura[9]; ?><div class="col-12 col-lg-4" >
-              <div class="card">
-                <div class="card-header bg-info text-center font-weight-bold text-white"> <p style="color:white">
-                  <?php echo $n[9]['nome']; ?></p> </div>
-                <div id='divjogoMemoria1'class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px">
-                  <a href="<?php echo $n[9]['nome_arquivo']; ?>" style="color:white">
-                    <img src="<?php echo $n[9]['src_perfil']; ?>" class="card-img-top p-3"></a> </div>
-                <div class="card-body"><?php echo $n[9]['descricao']; ?></div>
-              </div>
-            </div><?php echo $array_fechamento[9]; ?>
 
-            <?php echo $array_abertura[10]; ?><div class="col-12 col-lg-4" >
-              <div class="card">
-                <div class="card-header bg-info text-center font-weight-bold text-white"> <p style="color:white">
-                  <?php echo $n[11]['nome']; ?></p> </div>
-                <div id='divjogoMemoria2'class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px">
-                  <a href="<?php echo $n[11]['nome_arquivo']; ?>" style="color:white">
-                    <img src="<?php echo $n[11]['src_perfil']; ?>" class="card-img-top p-3"></a> </div>
-                <div class="card-body"><?php echo $n[11]['descricao']; ?></div>
-              </div>
-            </div> <?php echo $array_fechamento[10]; ?>
+            <?php printar_jogos(9,11,$n,$array_abertura,$array_fechamento,$c); ?>
 
-            <?php echo $array_abertura[10]; ?><div class="col-12 col-lg-4" >
-              <div class="card">
-                <div class="card-header bg-info text-center font-weight-bold text-white"> <p style="color:white">
-                  <?php echo $n[11]['nome']; ?></p> </div>
-                <div id='divjogoMemoria2'class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px">
-                  <a href="<?php echo $n[11]['nome_arquivo']; ?>" style="color:white">
-                    <img src="<?php echo $n[11]['src_perfil']; ?>" class="card-img-top p-3"></a> </div>
-                <div class="card-body"><?php echo $n[11]['descricao']; ?></div>
-              </div>
-            </div> <?php echo $array_fechamento[11]; ?>
-
-
+          </div>
 
           <div class="row mt-1 mb-2" >
 
-            <?php echo $array_abertura[12]; ?>  <div class="col-12 col-lg-4" >
-                <div class="card">
-                  <div class="card-header bg-info text-center font-weight-bold text-white"> <p style="color:white">
-                    <?php echo $n[12]['nome']; ?></p> </div>
-                  <div id='divjogoMemoria3'class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px">
-                    <a href="<?php echo $n[12]['nome_arquivo']; ?>" style="color:white">
-                      <img src="<?php echo $n[12]['src_perfil']; ?>" class="card-img-top p-3"></a> </div>
-                  <div class="card-body"><?php echo $n[12]['descricao']; ?></div>
-                </div>
-              </div> <?php echo $array_fechamento[12]; ?>
-
-            </div>
-
-            <?php echo $array_abertura[13]; ?><div class="col-12 col-lg-4" >
-              <div class="card">
-                <div class="card-header bg-info text-center font-weight-bold text-white"> <p style="color:white">
-                  <?php echo $n[13]['nome']; ?></p> </div>
-                <div id='divjogoMemoria4'class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px">
-                  <a href="<?php echo $n[13]['nome_arquivo']; ?>" style="color:white">
-                    <img src="<?php echo $n[13]['src_perfil']; ?>" class="card-img-top p-3"></a> </div>
-                <div class="card-body"><?php echo $n[13]['descricao']; ?></div>
-              </div>
-            </div><?php echo $array_fechamento[13]; ?>
-
-            <?php echo $array_abertura[14]; ?><div class="col-12 col-lg-4" >
-              <div class="card">
-                <div class="card-header bg-info text-center font-weight-bold text-white"> <p style="color:white">
-                  <?php echo $n[14]['nome']; ?></p> </div>
-                <div id='divjogoMemoria5'class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px">
-                  <a href="<?php echo $n[14]['nome_arquivo']; ?>" style="color:white">
-                    <img src="<?php echo $n[14]['src_perfil']; ?>" class="card-img-top p-3"></a> </div>
-                <div class="card-body"><?php echo $n[14]['descricao']; ?></div>
-              </div>
-            </div> <?php echo $array_fechamento[14]; ?>
-
-
+            <?php printar_jogos(12,14,$n,$array_abertura,$array_fechamento,$c); ?>
 
         </div>
 
 
         <div class="row mt-1 mb-2" >
 
-          <?php echo $array_abertura[15]; ?>  <div class="col-12 col-lg-4" >
-              <div class="card">
-                <div class="card-header bg-info text-center font-weight-bold text-white"> <p style="color:white">
-                  <?php echo $n[15]['nome']; ?></p> </div>
-                <div id='divjogoMemoria6'class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px">
-                  <a href="<?php echo $n[15]['nome_arquivo']; ?>" style="color:white">
-                    <img src="<?php echo $n[15]['src_perfil']; ?>" class="card-img-top p-3"></a> </div>
-                <div class="card-body"><?php echo $n[15]['descricao']; ?></div>
-              </div>
-            </div> <?php echo $array_fechamento[15]; ?>
+          <?php printar_jogos(15,17,$n,$array_abertura,$array_fechamento,$c); ?>
 
-          <?php echo $array_abertura[16]; ?><div class="col-12 col-lg-4" >
-            <div class="card">
-              <div class="card-header bg-info text-center font-weight-bold text-white"> <p style="color:white">
-                <?php echo $n[16]['nome']; ?></p> </div>
-              <div id='divjogoMemoria4'class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px">
-                <a href="<?php echo $n[16]['nome_arquivo']; ?>" style="color:white">
-                  <img src="<?php echo $n[16]['src_perfil']; ?>" class="card-img-top p-3"></a> </div>
-              <div class="card-body"><?php echo $n[16]['descricao']; ?></div>
-            </div>
-          </div><?php echo $array_fechamento[16]; ?>
-
-          <?php echo $array_abertura[17]; ?><div class="col-12 col-lg-4" >
-            <div class="card">
-              <div class="card-header bg-info text-center font-weight-bold text-white"> <p style="color:white">
-                <?php echo $n[17]['nome']; ?></p> </div>
-              <div id='divjogoMemoria5'class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px">
-                <a href="<?php echo $n[17]['nome_arquivo']; ?>" style="color:white">
-                  <img src="<?php echo $n[17]['src_perfil']; ?>" class="card-img-top p-3"></a> </div>
-              <div class="card-body"><?php echo $n[17]['descricao']; ?></div>
-            </div>
-          </div> <?php echo $array_fechamento[17]; ?>
 
 
 
