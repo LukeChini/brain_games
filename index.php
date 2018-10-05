@@ -28,8 +28,8 @@
             </button>
 
             <div class="botoes-topo collapse navbar-collapse mx-3 mx-sm-5 mr-lg-2 mt-1 mt-sm-2 flex-column flex-md-row col-lg-4" id="navbarSupportedContent">
-                <a href="criar_conta.php" class="btn btn-danger btn-block btn-sm my-1 mt-sm-2 mr-sm-3">Cadastre-se agora</a>
-                <a href="entrar.php" class="btn btn-info btn-block btn-sm mt-sm-2 my-1">Entrar</a>
+                <a href="criar_conta.php" class="btn btn-danger btn-block my-1 mt-sm-2 mr-sm-3">Cadastre-se agora</a>
+                <a href="entrar.php" class="btn btn-info btn-block mt-sm-2 my-1">Entrar</a>
             </div>
         </nav>
     </header>
@@ -37,7 +37,7 @@
     <main>
       <section class="principal text-center">
         <h2 class="text-center pt-5 px-4" id='text-img-chess'>Quebra-cabeças Divertidos para Aperfeiçoar seu Cérebro</h2>
-        <a href="criar_conta.php" class="btn btn-danger btn-sm mr-3 mt-4">Cadastre-se agora</a>
+        <a href="criar_conta.php" class="btn btn-danger mr-3 mt-4">Cadastre-se agora</a>
       </section>
     </main>
 

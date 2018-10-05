@@ -10,7 +10,7 @@
   </head>
   <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light w-100 d-flex justify-content-around align-items-center row mx-0 px-1">
+        <nav class="navbar navbar-expand-lg navbar-light w-100 d-flex justify-content-between align-items-center row mx-0 px-1">
             <div class="logo-box col-2 p-1">
                 <a class="nav-link p-0" href="index.php">
                     <img src="images/logo.jpg" alt="logo" class="img-fluid">
@@ -25,8 +25,8 @@
                 <span class="navbar-toggler-icon top-menu-button"></span>
             </button>
 
-            <div class="botoes-topo collapse navbar-collapse mx-3 mx-sm-5 mr-lg-2 mt-1 mt-sm-2 flex-column flex-md-row col-lg-4" id="navbarSupportedContent">
-                <a href="criar_conta.php" class="btn btn-danger btn-block btn-sm my-1 mt-sm-2 mr-sm-3">Cadastre-se agora!</a>
+            <div class="botoes-topo collapse navbar-collapse mx-3 mx-sm-5 mr-lg-2 mt-1 mt-sm-2 flex-column flex-md-row col-lg-3" id="navbarSupportedContent">
+                <a href="criar_conta.php" class="cadastre btn btn-danger my-1 mt-sm-2">Cadastre-se agora!</a>
             </div>
         </nav>
     </header>
@@ -41,7 +41,7 @@
               <div class="input-group-prepend">
                 <div class="input-group-text"><i class="fas fa-envelope"></i></div>
               </div>
-              <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Coloque seu e-mail">
+              <input type="email" class="form-control form-control-lg" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Coloque seu e-mail">
             </div>
           </div>
 
@@ -50,7 +50,7 @@
               <div class="input-group-prepend">
                 <div class="input-group-text"><i class="fas fa-lock"></i></div>
               </div>
-              <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Coloque sua senha">
+              <input type="password" name="senha" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Coloque sua senha">
             </div>
           </div>
 
