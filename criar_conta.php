@@ -13,7 +13,6 @@
 
     <title>Criar Conta</title>
   </head>
-<?php require('nav.php'); ?>
 
       <div class="bg-light" >
       <div class=" bg-light"  >
@@ -121,7 +120,7 @@
 
                             <div class="form-row">
                               <div class="form-group col-1 mr-2">
-                                <input required type="checkbox" name="termos" value=""></input>
+                                <input required type="checkbox" name="termos" value="">
                               </div>
 
                               <div class="form-group col-10">
