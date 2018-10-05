@@ -9,17 +9,9 @@
     <title>Jogos Memoria</title>
   </head>
   <body>
-    </div>
-
-</div>
-
-      <div class="bg-light">
-
-
+    <div class="bg-light">
       <div class="container bg-light" style="padding-top:20px">
         <div class="row">
-
-
           <div id="list-example" class="col-12 col-sm-3 col-lg-2 list-group mb-3 text-align">
             <p class="list-group-item list-group-item-action bg-info text-center font-weight-bold text-white">Funções</p>
             <a class="list-group-item list-group-item-action" href="abajogos.php">Executiva</a>
@@ -28,8 +20,6 @@
             <a class="list-group-item list-group-item-action" href="jogoscalculo.php">Cálculo</a>
             <a class="list-group-item list-group-item-action" href="jogoslinguagem.php">Linguagem</a>
           </div>
-
-
         <div class="col-12 col-sm-9 col-lg-10 bg-white border">
 
           <div class="row mt-3 mb-2" >
