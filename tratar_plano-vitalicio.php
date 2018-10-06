@@ -11,7 +11,7 @@ $today = date("Y-m-d");
 $validade_premium = date('Y-m-d', strtotime('+10000 days', strtotime($today)));
 $plano = 'vitalicio';
 
-//teste
+//teste2
 
 
 
