@@ -36,7 +36,7 @@ $c = count($n);
         <div class="container">
 
           <div class="col-12 bg-white border text-center">
-            <h1>Alterar Jogos</h1>
+            <h1>Excluir Jogos</h1>
             <div class="row mt-3 mb-2 text-center" >
 
 
@@ -47,10 +47,10 @@ $c = count($n);
               <a href="excluir_jogos.php" type="button" class="btn btn-dark total mt-3 mb-3 font-weight-bold" style="width:200px">Excluir Jogos</a>
               </div>
 
-          <div class="col-12 bg-danger" style="margin: 0 auto;">
+          <div class="col-12 bg-dark" style="margin: 0 auto;">
 
             <div class="col-12 mb-4 font-weight-bold" style="font-size:25px">
-              <form class="" action="alterar_jogos.php" method="post">
+              <form class="" action="excluir_jogos.php" method="post">
               <label for="id_jogo" class="mt-3 text-white">Jogo:</label>
               <select name="id_jogo">
                 <?php
@@ -89,14 +89,8 @@ $c = count($n);
           <div class="row mt-3 mb-2" >
 
             <div class="col-12 mb-4 font-weight-bold" style="font-size:25px">
-              <label for="funcao">Função</label>
-              <select name="funcao">
-                <option <?php if($n[ $_POST['id_jogo'] ]['funcao'] == 'executiva'){echo 'selected';} ?> value="executiva">Executiva</option>
-                <option <?php if($n[ $_POST['id_jogo'] ]['funcao'] == 'memoria'){echo 'selected';} ?> value="memoria">Memória</option>
-                <option <?php if($n[ $_POST['id_jogo'] ]['funcao'] == 'espacial'){echo 'selected';} ?> value="espacial">Espacial</option>
-                <option <?php if($n[ $_POST['id_jogo'] ]['funcao'] == 'calculo'){echo 'selected';} ?> value="calculo">Cálculo</option>
-                <option <?php if($n[ $_POST['id_jogo'] ]['funcao'] == 'linguagem'){echo 'selected';} ?> value="linguagem">Linguagem</option>
-              </select>
+              <p>Função <?php echo ucfirst($n[ $_POST['id_jogo'] ]['funcao']);  ?></p>
+
 
               <input type="text" style="display:none;" name="id" value="<?php echo $n[ $_POST['id_jogo'] ]['id']; ?>"></input>
             </div>
@@ -106,32 +100,24 @@ $c = count($n);
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info text-center font-weight-bold text-white">
-                  <input required type="text" name="nome" value="<?php echo $n[ $_POST['id_jogo'] ]['nome']; ?>"class="card-header bg-info text-center font-weight-bold text-white" style="color:white; margin-left:-12px;" placeholder="Nome do Jogo"></input>
+                  <p class="card-header bg-info text-center font-weight-bold text-white" style="color:white; margin-left:-12px;"><?php echo $n[ $_POST['id_jogo'] ]['nome']; ?></p>
                 </div>
                 <div id='divjogoMemoria1'class="border-bottom" style="overflow:hidden; height:300px">
-                  <input name="arquivo_img" type="file" style="color:white;font-size:15px"></input>
+
                   <img class="card-img-top p-3 text-center" src="<?php echo $n[ $_POST['id_jogo'] ]['src_perfil']; ?>"></img>
                 </div>
                 <div class="card-body">
-                  <input required type="text" name="descricao" value="<?php echo $n[ $_POST['id_jogo'] ]['descricao']; ?>" placeholder="Insira Descrição curta do jogo" style="width:100%; height:50px;"></input>
+                  <p style="width:100%; height:50px;"><?php echo $n[ $_POST['id_jogo'] ]['descricao']; ?></p>
                 </div>
               </div>
             </div>
 
             <div class="col-12 col-lg-5 mb-4 font-weight-bold" style="font-size:25px">
-              <label for="funcao">Esse Jogo é Gratuito?</label>
-              <select name="gratuito">
-                <option   value="0">Não</option>
-                <option <?php if($n[ $_POST['id_jogo'] ]['gratuito']){echo 'selected';} ?> value="1">Sim</option>
-              </select>
+              <p>Esse Jogo é Gratuito? <?php if($n[ $_POST['id_jogo'] ]['gratuito']){echo "Sim";}else{echo "Não";} ?></p>
+
               <hr />
 
-              <label for="arquivo_php">Insira o arquivo do Jogo</label>
-              <div class=""style="display:inline-block;font-size:15px">
-              <input type="file" name="arquivo_php" >
-              </div>
-              <hr />
-              <div class="text-center" ><input type="submit" class="btn btn-danger mr-3 mt-2" name="alterar_jogo" value="Alterar Jogo">  </div>
+              <div class="text-center" ><input type="submit" class="btn btn-dark mr-3 mt-2" name="alterar_jogo" value="Excluir Jogo">  </div>
             </div>
           </form>
 

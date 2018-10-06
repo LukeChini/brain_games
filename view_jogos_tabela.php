@@ -15,7 +15,7 @@
    <body>
 <?php require('nav.php'); ?>
    </div>
-
+<?php if(!$_SESSION['admin']){header('location:inicio-logado.php');} ?>
 
 <?php
 include ('conn.php');
@@ -37,15 +37,21 @@ $c = count($n);
 
     <div class="bg-light text-center">
 
-      <div class="col-12 text-center">
+      <div class="col-12 bg-white border text-center">
+        <h1>Tabela Jogos</h1>
+        <div class="row mt-3 mb-2 text-center" >
 
-        <a href="inserir_jogos.php" class="btn btn-danger m-3" style="-webkit-text-stroke-width: 0px;">Inserir Novo Jogo</a>
 
-      </div>
+          <div class=" text-center" role="group" style="margin:0 auto" aria-label="Basic example">
+            <a href="view_jogos_tabela.php" type="button" class="btn btn-success total mt-3 mb-3 font-weight-bold" style="width:200px">Tabela de Jogos</a>
+            <a href="inserir_jogos.php" type="button" class="btn btn-info total mt-3 mb-3 font-weight-bold" style="width:200px">Inserir Jogos</a>
+            <a href="alterar_jogos.php" type="button" class="btn btn-danger total mt-3 mb-3 font-weight-bold" style="width:200px">Alterar Jogos</a>
+              <a href="excluir_jogos.php" type="button" class="btn btn-dark total mt-3 mb-3 font-weight-bold" style="width:200px">Excluir Jogos</a>
+          </div>
 
 
       <table class="table table-hover">
-        <thead class="bg-secondary text-white">
+        <thead class="bg-success text-white">
           <tr class="">
             <th scope="col">id</th>
             <th scope="col">Nome</th>

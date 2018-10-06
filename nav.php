@@ -7,9 +7,11 @@ if(!isset($_SESSION))
 
 $usuario_logado = $_SESSION['username_logado'];
 $src = $_SESSION['src_perfil'];
-
+$admin = $_SESSION['admin'];
 
 if($_SESSION['username_logado']==NULL){header('location:entrar.php');}
+
+
 
  ?>
 
@@ -32,12 +34,15 @@ if($_SESSION['username_logado']==NULL){header('location:entrar.php');}
      <li class='nav-item'>
      <a class='nav-link text-white' href='abajogos.php'>Jogos</a>
      </li>
-     <li class='nav-item'>
-     <a class='nav-link text-white disabled' href='#'>Descobertas</a>
-     </li>
      </ul>
      <div class='nav-item dropdown'>
      <div class='row'>
+
+
+       <?php if(!$_SESSION['premium_logado'])
+       {echo '<div><a href="planos.php" class="btn btn-danger mr-3 mt-1" >Torne-se premium</a></div>';} ?>
+
+
      <div class=' border' id='div-img' style='height:50px; width:50px; margin: 0 auto; overflow:hidden; text-align:center;'>
      <style media='screen'>
      @media (max-width: 992px) {#div-img{display:none;}}
@@ -48,6 +53,7 @@ if($_SESSION['username_logado']==NULL){header('location:entrar.php');}
      <div class='dropdown-menu'>
      <a class='dropdown-item' href='conta.php'>Configurações da conta</a>
      <a class='dropdown-item' href='#'>Ajuda</a>
+     <?php if(!$admin){echo '<!--';} ?><a class='dropdown-item' href='acesso_restrito.php'>Acesso Restrito</a><?php if(!$admin){echo '-->';} ?>
      <div class='dropdown-divider'></div>
      <a class='dropdown-item' href='tratar_sair.php'>Sair</a>
      </div>

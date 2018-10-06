@@ -27,13 +27,30 @@
           <p>Conta</p>
         </div>
 
-        <div class="border-top mt-3">
-        <div class="p-3" style="font-size:25px">
-          <p>Você tem Acesso Limitado ao Brain Games</p>
 
-          <a href="planos.php" class="btn btn-danger mr-3 mt-2" style="-webkit-text-stroke-width: 0px;">Liberar Acesso Total</a>
+
+        <div class="border-top mt-3">
+          <?php
+          if(!$_SESSION['premium_logado'])
+          {
+            echo
+            '<div class="p-3" style="font-size:25px">
+            <p>Você tem Acesso Limitado ao Brain Games</p>
+            <a href="planos.php" class="btn btn-danger mr-3 mt-2" style="-webkit-text-stroke-width: 0px;">Liberar Acesso Total</a>
+          </div>';
+          }
+
+          if($_SESSION['plano_logado'])
+          {
+            echo
+            '<div class="p-3 text-center" style="font-size:25px">
+            <p>Você é um Usuario Premium '.ucfirst($_SESSION['plano_logado']).'</p>
+          </div>';
+          }
+
+
+          ?>
         </div>
-      </div>
 
         <div class="border-top ">
           <p class="p-3 col-12" style="font-size:25px">Informações de acesso</p>

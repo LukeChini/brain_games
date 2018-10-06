@@ -55,10 +55,13 @@ $aniversario = $ano.'-'.$mes.'-'.$dia;
 
 $validar = checkdate($mes,$dia,$ano);
 
+$type_img = substr($_FILES['imagem']['name'],-3);
+$src_img_nome = 'jogos_img/'.$nome_sem_espaco.'.'.$type_img;
+
 $src_perfil = NULL;
 
-if($_FILES['imagem']['tmp_name'] != NULL){move_uploaded_file($_FILES['imagem']['tmp_name'], 'upload/'.$_SESSION['id_logado']);}
-if($_FILES['imagem']['tmp_name'] != NULL){$src_perfil = 'upload/'.$_SESSION['id_logado'];}
+if($_FILES['imagem']['tmp_name'] != NULL){move_uploaded_file($_FILES['imagem']['tmp_name'], 'upload/'.$_SESSION['id_logado'].$src_img_nome);}
+if($_FILES['imagem']['tmp_name'] != NULL){$src_perfil = 'upload/'.$_SESSION['id_logado'].$src_img_nome;}
 
 $_SESSION['username_logado'] = $username;
 // $_SESSION['email_logado'] = $verifica['email'];

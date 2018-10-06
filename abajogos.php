@@ -35,11 +35,10 @@
           <?php
           include ('conn.php');
 
-          $funcao = 'executiva';
 
-          $verificação = $conn->query('SELECT * FROM jogos');
-          $verificação->bindParam(':funcao', $funcao, PDO::PARAM_STR);
-          $array = [];
+          // WHERE funcao = 'executiva'
+          $verificação = $conn->query("SELECT * FROM jogos WHERE funcao = 'executiva' ");
+
 
           $n = $verificação->fetchAll();
           $c = count($n);
@@ -97,9 +96,10 @@
 
         <div class="col-12 col-sm-9 col-lg-10 bg-white border">
 
-          <div class="row mt-3 mb-2" >
+
             <div class="col-12 mb-4 font-weight-bold" style="font-size:25px">Função Executiva</div>
 
+            <div class="row mt-3 mb-2" >
             <?php printar_jogos(0,2,$n,$array_abertura,$array_fechamento,$c); ?>
 
           </div>
@@ -118,12 +118,6 @@
 
           <?php echo $tg_ap1; ?><nav class="col-12 mt-3" aria-label="Page navigation example">
             <ul class="pagination">
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                  <span class="sr-only">Previous</span>
-                </a>
-              </li>
               <li class="page-item"><a class="page-link bg-info text-white" href="abajogos.php">1</a></li>
               <?php echo $tg_ap2; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap2.php">2</a></li><?php echo $tg_fp2; ?>
               <?php echo $tg_ap3; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap3.php">3</a></li><?php echo $tg_fp3; ?>
@@ -138,12 +132,7 @@
 
 
 
-              <?php echo $tg_ap1; ?><li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </li>
+              <?php echo $tg_ap1; ?>
             </ul>
           </nav><?php echo $tg_fp1; ?>
 

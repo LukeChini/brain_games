@@ -14,6 +14,8 @@
 <?php require('nav.php'); ?>
     </div>
 
+    <?php if($_SESSION['premium_logado']){header('location:inicio-logado.php');} ?>
+
 </div>
       <div class="bg-light">
 

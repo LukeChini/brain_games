@@ -57,8 +57,17 @@ $_SESSION['email_logado'] = $verifica['email'];
 $_SESSION['sexo_logado'] = $verifica['sexo'];
 $_SESSION['aniversario_logado'] = $verifica['aniversario'];
 $_SESSION['validade_premium_logado'] = $verifica['validade_premium'];
+$_SESSION['plano_logado'] = $verifica['plano'];
 $_SESSION['id_logado'] = $verifica['id'];
 $_SESSION['src_perfil'] = $verifica['src_perfil'];
+$_SESSION['admin'] = $verifica['admin'];
+
+$today = date("Y-m-d"); $_SESSION['premium_logado'] = false;
+if($verifica['validade_premium']>$today || $verifica['plano'] == 'vitalicio'){$_SESSION['premium_logado'] = true;}
+
+
+
+
 
     if($_SESSION['src_perfil'] == NULL && $_SESSION['sexo_logado'] == 'masculino'){$_SESSION['src_perfil']='images/perfil_masculino.jpg';}
 elseif($_SESSION['src_perfil'] == NULL && $_SESSION['sexo_logado'] == 'feminino' ){$_SESSION['src_perfil']='images/perfil_feminino.jpg'; }

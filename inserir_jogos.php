@@ -14,17 +14,37 @@
     <?php require('nav.php'); ?>
     </div>
 
+    <?php if(!$_SESSION['admin']){header('location:inicio-logado.php');} ?>
+
 </div>
 
       <div class="bg-light">
 
         <div class="container">
 
+          <div class="col-12 bg-white border text-center">
+            <h1>Inserir Jogos</h1>
+            <div class="row mt-3 mb-2 text-center" >
+
+
+              <div class=" text-center" role="group" style="margin:0 auto" aria-label="Basic example">
+                <a href="view_jogos_tabela.php" type="button" class="btn btn-success total mt-3 mb-3 font-weight-bold" style="width:200px">Tabela de Jogos</a>
+                <a href="inserir_jogos.php" type="button" class="btn btn-info total mt-3 mb-3 font-weight-bold" style="width:200px">Inserir Jogos</a>
+                <a href="alterar_jogos.php" type="button" class="btn btn-danger total mt-3 mb-3 font-weight-bold" style="width:200px">Alterar Jogos</a>
+              <a href="excluir_jogos.php" type="button" class="btn btn-dark total mt-3 mb-3 font-weight-bold" style="width:200px">Excluir Jogos</a>
+              </div>
+
+
+
 <form class="" enctype="multipart/form-data" action="tratar_inserir-jogos.php" method="post">
 
 
 
-        <div class="col-12 col-sm-9 col-lg-10 bg-white border">
+        <div class="col-12 col-sm-9 col-lg-10 bg-white border" style="margin: 0 auto;">
+
+          <div class="bg-info" style="height:50px;">
+
+          </div>
 
           <div class="row mt-3 mb-2" >
 

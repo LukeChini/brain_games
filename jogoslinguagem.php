@@ -8,10 +8,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>Jogos Linguagem</title>
+    <title>Jogos Memoria</title>
   </head>
   <body>
-<?php require('nav.php'); ?>
+    <?php require('nav.php'); ?>
     </div>
 
 </div>
@@ -32,118 +32,123 @@
             <a class="list-group-item list-group-item-action bg-primary font-weight-bold text-white" href="jogoslinguagem.php">Linguagem</a>
           </div>
 
+          <?php
+          include ('conn.php');
+
+
+
+          $verificação = $conn->query("SELECT * FROM jogos WHERE funcao = 'linguagem' ");
+
+
+          $n = $verificação->fetchAll();
+          $c = count($n);
+
+
+
+          $array_abertura = []; $array_fechamento = [];
+          for ($i=0; $i < 9; $i++)
+          {
+            if($i>$c || $i==$c){array_push($array_abertura,"<!--");}
+            else{array_push($array_abertura,"");}
+
+            if($i>$c || $i==$c){array_push($array_fechamento,"-->");}
+            else{array_push($array_fechamento,"");}
+          }
+
+          //tag abertura e fechamento das paginas $tg_ap1 = Tag abertura da página 1 $tg_fp1 = Tag fechamento da página 1
+
+          $tg_ap1="<!--";$tg_ap2="<!--";$tg_ap3="<!--";$tg_ap4="<!--";$tg_ap5="<!--";$tg_ap6="<!--";$tg_ap7="<!--";$tg_ap8="<!--";$tg_ap9="<!--";
+          $tg_fp1="-->";$tg_fp2="-->";$tg_fp3="-->";$tg_fp4="-->";$tg_fp5="-->";$tg_fp6="-->";$tg_fp7="-->";$tg_fp8="-->";$tg_fp9="-->";
+
+          if($c>9){$tg_ap1="";$tg_ap2="";$tg_fp1="";$tg_fp2="";}
+          if($c>18){$tg_ap3="";$tg_fp3="";}
+          if($c>27){$tg_ap4="";$tg_fp4="";}
+          if($c>36){$tg_ap5="";$tg_fp5="";}
+          if($c>45){$tg_ap6="";$tg_fp6="";}
+          if($c>54){$tg_ap7="";$tg_fp7="";}
+          if($c>63){$tg_ap8="";$tg_fp8="";}
+          if($c>72){$tg_ap9="";$tg_fp9="";}
+
+
+          function printar_jogos($valor_inicial,$valor_final,$n,$array_abertura,$array_fechamento,$c)
+          {
+          for ($i=$valor_inicial; $i <= $valor_final; $i++) {
+            if($i<$c){
+            echo
+            $array_abertura[$i]."<div class='col-12 col-lg-4'>
+              <div class='card'>
+                <div class='card-header bg-info text-center font-weight-bold text-white'>
+                <p style='color:white'>".$n[$i]['nome']."</p> </div>
+
+                <div class='border-bottom divh300' style='overflow:hidden; min-height:100px; max-height:300px'>
+                <style media='screen'>@media (min-width: 992px){.divh300{height:300px;}}</style>
+                  <a href='".$n[$i]['nome_arquivo']."'style='color:white'>
+                    <img src='".$n[$i]['src_perfil']."' class='card-img-top p-3'></a> </div>
+                <div class='card-body'>".$n[$i]['descricao']."</div>
+              </div>
+            </div>".$array_fechamento[$i];
+          }
+        }}
+
+
+
+           ?>
 
         <div class="col-12 col-sm-9 col-lg-10 bg-white border">
 
-          <div class="row mt-3 mb-2" >
 
-            <div class="col-12 mb-4 font-weight-bold" style="font-size:25px">Função de Linguagem</div>
+            <div class="col-12 mb-4 font-weight-bold" style="font-size:25px">Função Linguagem</div>
 
-            <div class="col-12 col-lg-4" >
-              <div class="card">
-                <div class="card-header bg-info text-center font-weight-bold text-white"> <a href="trinta_e_quatro.php" style="color:white">Quadrado Trinta e Quatro</a> </div>
-                <div id='divjogoLinguagem1' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <a href="trinta_e_quatro.php" style="color:white"><img id='jogoLinguagem1' src="images/trintaEquatro.png" alt="trinta e quatro" class="card-img-top p-3"></a> </div>
-                <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
-              </div>
-            </div>
-
-            <div class="col-12 col-lg-4" >
-              <div class="card">
-                <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div id='divjogoLinguagem2' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id='jogoLinguagem2'src="images/executivoimages.png" alt="trinta e quatro" class="card-img-top p-3"> </div>
-                <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
-              </div>
-            </div>
-
-            <div class="col-12 col-lg-4" >
-              <div class="card">
-                <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div id='divjogoLinguagem3' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"><img id='jogoLinguagem3'src="images/human-brain-white.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
-                <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
-              </div>
-            </div>
+            <div class="row mt-3 mb-2" >
+            <?php printar_jogos(0,2,$n,$array_abertura,$array_fechamento,$c); ?>
 
           </div>
 
           <div class="row mt-1 mb-2" >
 
-            <div class="col-12 col-lg-4" >
-              <div class="card">
-                <div class="card-header bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div id='divjogoLinguagem4' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id='jogoLinguagem4' src="images/depositphotos_90095212-stock-illustration-illustration-of-albert-einstein.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
-                <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
-              </div>
-            </div>
-
-            <div class="col-12 col-lg-4" >
-              <div class="card">
-                <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div id='divjogoLinguagem5' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id='jogoLinguagem5' src="images/913183098-1024x1024.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
-                <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
-              </div>
-            </div>
-
-            <div class="col-12 col-lg-4" >
-              <div class="card">
-                <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div id='divjogoLinguagem6' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id='jogoLinguagem6' src="images/9170503-en-forme-de-dessin-monochrome-éléments-de-puzzle.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
-                <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
-              </div>
-            </div>
+            <?php printar_jogos(3,5,$n,$array_abertura,$array_fechamento,$c); ?>
 
         </div>
+
+
+        <div class="row mt-1 mb-2" >
+
+          <?php printar_jogos(6,8,$n,$array_abertura,$array_fechamento,$c); ?>
+
+
+          <?php echo $tg_ap1; ?><nav class="col-12 mt-3" aria-label="Page navigation example">
+            <ul class="pagination">
+
+              <li class="page-item"><a class="page-link bg-info text-white" href="abajogos.php">1</a></li>
+              <?php echo $tg_ap2; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap2.php">2</a></li><?php echo $tg_fp2; ?>
+              <?php echo $tg_ap3; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap3.php">3</a></li><?php echo $tg_fp3; ?>
+
+              <?php echo $tg_ap4; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap4.php">4</a></li><?php echo $tg_fp4; ?>
+              <?php echo $tg_ap5; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap5.php">5</a></li><?php echo $tg_fp5; ?>
+              <?php echo $tg_ap6; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap6.php">6</a></li><?php echo $tg_fp6; ?>
+
+              <?php echo $tg_ap7; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap7.php">7</a></li><?php echo $tg_fp7; ?>
+              <?php echo $tg_ap8; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap8.php">8</a></li><?php echo $tg_fp8; ?>
+              <?php echo $tg_ap9; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap9.php">9</a></li><?php echo $tg_fp9; ?>
+
+
+
+              <?php echo $tg_ap1; ?>
+            </ul>
+          </nav><?php echo $tg_fp1; ?>
+
+      </div>
+
+
+
+
+
             </div>
             </div>
             </div>
-            <script type="text/javascript">
-
-              const jogoLinguagem1 = document.querySelector('#jogoLinguagem1')
-              const jogoLinguagem2 = document.querySelector('#jogoLinguagem2')
-              const jogoLinguagem3 = document.querySelector('#jogoLinguagem3')
-              const jogoLinguagem4 = document.querySelector('#jogoLinguagem4')
-              const jogoLinguagem5 = document.querySelector('#jogoLinguagem5')
-              const jogoLinguagem6 = document.querySelector('#jogoLinguagem6')
-
-              jogoLinguagem1.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogoLinguagem1.addEventListener('mouseout', function() {this.src = 'images/trintaEquatro.png'})
-
-              jogoLinguagem2.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogoLinguagem2.addEventListener('mouseout', function() {this.src = 'images/executivoimages.png'})
-
-              jogoLinguagem3.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogoLinguagem3.addEventListener('mouseout', function() {this.src = 'images/human-brain-white.jpg'})
-
-              jogoLinguagem4.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogoLinguagem4.addEventListener('mouseout', function() {this.src = 'images/depositphotos_90095212-stock-illustration-illustration-of-albert-einstein.jpg'})
-
-              jogoLinguagem5.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogoLinguagem5.addEventListener('mouseout', function() {this.src = 'images/913183098-1024x1024.jpg'})
-
-              jogoLinguagem6.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogoLinguagem6.addEventListener('mouseout', function() {this.src = 'images/9170503-en-forme-de-dessin-monochrome-éléments-de-puzzle.jpg'})
-
-              const divjogoLinguagem1 = document.querySelector('#divjogoLinguagem1')
-              const divjogoLinguagem2 = document.querySelector('#divjogoLinguagem2')
-              const divjogoLinguagem3 = document.querySelector('#divjogoLinguagem3')
-              const divjogoLinguagem4 = document.querySelector('#divjogoLinguagem4')
-              const divjogoLinguagem5 = document.querySelector('#divjogoLinguagem5')
-              const divjogoLinguagem6 = document.querySelector('#divjogoLinguagem6')
-
-              if(window.innerWidth > 991)
-              {
-                divjogoLinguagem1.style.height = "300px";
-                divjogoLinguagem2.style.height = "300px";
-                divjogoLinguagem3.style.height = "300px";
-
-                divjogoLinguagem4.style.height = "300px";
-                divjogoLinguagem5.style.height = "300px";
-                divjogoLinguagem6.style.height = "300px";
-              }
 
 
-            </script>
-
-            <?php require('variaveisPHPecho.php'); echo $html_footer; ?>
+<?php require('variaveisPHPecho.php'); echo $html_footer; ?>
 
             </div>
 

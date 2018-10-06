@@ -35,16 +35,14 @@
           <?php
           include ('conn.php');
 
-          $funcao = 'executiva';
 
-          $verificação = $conn->query('SELECT * FROM jogos');
-          $verificação->bindParam(':funcao', $funcao, PDO::PARAM_STR);
-          $array = [];
+          $verificação = $conn->query("SELECT * FROM jogos WHERE funcao = 'executiva' ");
+
 
           $n = $verificação->fetchAll();
           $c = count($n);
 
-
+          if($c<9){header('location:inicio-logado.php');}
 
           $array_abertura = []; $array_fechamento = [];
           for ($i=0; $i < 18; $i++)
@@ -122,12 +120,7 @@
 
           <?php echo $tg_ap1; ?><nav class="col-12 mt-3" aria-label="Page navigation example">
             <ul class="pagination">
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                  <span class="sr-only">Previous</span>
-                </a>
-              </li>
+
               <li class="page-item"><a class="page-link" href="abajogos.php">1</a></li>
 <?php echo $tg_ap2; ?><li class="page-item"><a class="page-link bg-info text-white" href="funcaoexecutivap2.php">2</a></li><?php echo $tg_fp2; ?>
 <?php echo $tg_ap3; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap3.php">3</a></li><?php echo $tg_fp3; ?>
@@ -142,12 +135,7 @@
 
 
 
-              <?php echo $tg_ap1; ?><li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </li>
+              <?php echo $tg_ap1; ?>
             </ul>
           </nav><?php echo $tg_fp1; ?>
 

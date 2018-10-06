@@ -13,7 +13,7 @@
   <body>
 <?php require('nav.php'); ?>
     </div>
-
+    <?php if($_SESSION['premium_logado']){header('location:inicio-logado.php');} ?>
 </div>
       <div class="bg-light pt-3">
 
@@ -30,7 +30,9 @@
 
 
 
-          <form>
+          <form action="tratar_plano-anual.php" method="post">
+
+
             <div class="form-group p-2">
               <label for="nome_titular">Nome do titular do cartão:</label>
               <input type="text" class="form-control col-12 col-lg-8" id="exampleInputEmail1" aria-describedby="emailHelp" >

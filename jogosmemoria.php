@@ -11,7 +11,7 @@
     <title>Jogos Memoria</title>
   </head>
   <body>
-<?php require('nav.php'); ?>
+    <?php require('nav.php'); ?>
     </div>
 
 </div>
@@ -32,116 +32,121 @@
             <a class="list-group-item list-group-item-action" href="jogoslinguagem.php">Linguagem</a>
           </div>
 
+          <?php
+          include ('conn.php');
+
+
+
+          $verificação = $conn->query("SELECT * FROM jogos WHERE funcao = 'memoria' ");
+
+
+          $n = $verificação->fetchAll();
+          $c = count($n);
+
+
+
+          $array_abertura = []; $array_fechamento = [];
+          for ($i=0; $i < 9; $i++)
+          {
+            if($i>$c || $i==$c){array_push($array_abertura,"<!--");}
+            else{array_push($array_abertura,"");}
+
+            if($i>$c || $i==$c){array_push($array_fechamento,"-->");}
+            else{array_push($array_fechamento,"");}
+          }
+
+          //tag abertura e fechamento das paginas $tg_ap1 = Tag abertura da página 1 $tg_fp1 = Tag fechamento da página 1
+
+          $tg_ap1="<!--";$tg_ap2="<!--";$tg_ap3="<!--";$tg_ap4="<!--";$tg_ap5="<!--";$tg_ap6="<!--";$tg_ap7="<!--";$tg_ap8="<!--";$tg_ap9="<!--";
+          $tg_fp1="-->";$tg_fp2="-->";$tg_fp3="-->";$tg_fp4="-->";$tg_fp5="-->";$tg_fp6="-->";$tg_fp7="-->";$tg_fp8="-->";$tg_fp9="-->";
+
+          if($c>9){$tg_ap1="";$tg_ap2="";$tg_fp1="";$tg_fp2="";}
+          if($c>18){$tg_ap3="";$tg_fp3="";}
+          if($c>27){$tg_ap4="";$tg_fp4="";}
+          if($c>36){$tg_ap5="";$tg_fp5="";}
+          if($c>45){$tg_ap6="";$tg_fp6="";}
+          if($c>54){$tg_ap7="";$tg_fp7="";}
+          if($c>63){$tg_ap8="";$tg_fp8="";}
+          if($c>72){$tg_ap9="";$tg_fp9="";}
+
+
+          function printar_jogos($valor_inicial,$valor_final,$n,$array_abertura,$array_fechamento,$c)
+          {
+          for ($i=$valor_inicial; $i <= $valor_final; $i++) {
+            if($i<$c){
+            echo
+            $array_abertura[$i]."<div class='col-12 col-lg-4'>
+              <div class='card'>
+                <div class='card-header bg-info text-center font-weight-bold text-white'>
+                <p style='color:white'>".$n[$i]['nome']."</p> </div>
+
+                <div class='border-bottom divh300' style='overflow:hidden; min-height:100px; max-height:300px'>
+                <style media='screen'>@media (min-width: 992px){.divh300{height:300px;}}</style>
+                  <a href='".$n[$i]['nome_arquivo']."'style='color:white'>
+                    <img src='".$n[$i]['src_perfil']."' class='card-img-top p-3'></a> </div>
+                <div class='card-body'>".$n[$i]['descricao']."</div>
+              </div>
+            </div>".$array_fechamento[$i];
+          }
+        }}
+
+
+
+           ?>
 
         <div class="col-12 col-sm-9 col-lg-10 bg-white border">
 
-          <div class="row mt-3 mb-2" >
 
-            <div class="col-12 mb-4 font-weight-bold" style="font-size:25px">Funções da Memória</div>
+            <div class="col-12 mb-4 font-weight-bold" style="font-size:25px">Função Memoria</div>
 
-            <div class="col-12 col-lg-4" >
-              <div class="card">
-                <div class="card-header bg-info text-center font-weight-bold text-white"> <a href="trinta_e_quatro.php" style="color:white">Quadrado Trinta e Quatro</a> </div>
-                <div id='divjogoMemoria1' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <a href="trinta_e_quatro.php" style="color:white"><img id='jogoMemoria1' src="images/trintaEquatro.png" alt="trinta e quatro" class="card-img-top p-3"></a> </div>
-                <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
-              </div>
-            </div>
-
-            <div class="col-12 col-lg-4" >
-              <div class="card">
-                <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div id='divjogoMemoria2' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id='jogoMemoria2'src="images/executivoimages.png" alt="trinta e quatro" class="card-img-top p-3"> </div>
-                <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
-              </div>
-            </div>
-
-            <div class="col-12 col-lg-4" >
-              <div class="card">
-                <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div id='divjogoMemoria3' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"><img id='jogoMemoria3'src="images/human-brain-white.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
-                <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
-              </div>
-            </div>
+            <div class="row mt-3 mb-2" >
+            <?php printar_jogos(0,2,$n,$array_abertura,$array_fechamento,$c); ?>
 
           </div>
 
           <div class="row mt-1 mb-2" >
 
-            <div class="col-12 col-lg-4" >
-              <div class="card">
-                <div class="card-header bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div id='divjogoMemoria4' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id='jogoMemoria4' src="images/depositphotos_90095212-stock-illustration-illustration-of-albert-einstein.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
-                <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
-              </div>
-            </div>
-
-            <div class="col-12 col-lg-4" >
-              <div class="card">
-                <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div id='divjogoMemoria5' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id='jogoMemoria5' src="images/913183098-1024x1024.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
-                <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
-              </div>
-            </div>
-
-            <div class="col-12 col-lg-4" >
-              <div class="card">
-                <div class="card-header bg-info bg-info text-center font-weight-bold text-white">Quadrado Trinta e Quatro</div>
-                <div id='divjogoMemoria6' class="border-bottom" style="overflow:hidden; min-height:100px; max-height:300px"> <img id='jogoMemoria6' src="images/9170503-en-forme-de-dessin-monochrome-éléments-de-puzzle.jpg" alt="trinta e quatro" class="card-img-top p-3"> </div>
-                <div class="card-body">Teste sua capacidade Executiva com este jogo lógico</div>
-              </div>
-            </div>
+            <?php printar_jogos(3,5,$n,$array_abertura,$array_fechamento,$c); ?>
 
         </div>
+
+
+        <div class="row mt-1 mb-2" >
+
+          <?php printar_jogos(6,8,$n,$array_abertura,$array_fechamento,$c); ?>
+
+
+          <?php echo $tg_ap1; ?><nav class="col-12 mt-3" aria-label="Page navigation example">
+            <ul class="pagination">
+
+              <li class="page-item"><a class="page-link bg-info text-white" href="abajogos.php">1</a></li>
+              <?php echo $tg_ap2; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap2.php">2</a></li><?php echo $tg_fp2; ?>
+              <?php echo $tg_ap3; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap3.php">3</a></li><?php echo $tg_fp3; ?>
+
+              <?php echo $tg_ap4; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap4.php">4</a></li><?php echo $tg_fp4; ?>
+              <?php echo $tg_ap5; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap5.php">5</a></li><?php echo $tg_fp5; ?>
+              <?php echo $tg_ap6; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap6.php">6</a></li><?php echo $tg_fp6; ?>
+
+              <?php echo $tg_ap7; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap7.php">7</a></li><?php echo $tg_fp7; ?>
+              <?php echo $tg_ap8; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap8.php">8</a></li><?php echo $tg_fp8; ?>
+              <?php echo $tg_ap9; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap9.php">9</a></li><?php echo $tg_fp9; ?>
+
+
+
+              <?php echo $tg_ap1; ?>
+            </ul>
+          </nav><?php echo $tg_fp1; ?>
+
+      </div>
+
+
+
+
+
             </div>
             </div>
             </div>
-            <script type="text/javascript">
 
-              const jogoMemoria1 = document.querySelector('#jogoMemoria1')
-              const jogoMemoria2 = document.querySelector('#jogoMemoria2')
-              const jogoMemoria3 = document.querySelector('#jogoMemoria3')
-              const jogoMemoria4 = document.querySelector('#jogoMemoria4')
-              const jogoMemoria5 = document.querySelector('#jogoMemoria5')
-              const jogoMemoria6 = document.querySelector('#jogoMemoria6')
-
-              jogoMemoria1.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogoMemoria1.addEventListener('mouseout', function() {this.src = 'images/trintaEquatro.png'})
-
-              jogoMemoria2.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogoMemoria2.addEventListener('mouseout', function() {this.src = 'images/executivoimages.png'})
-
-              jogoMemoria3.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogoMemoria3.addEventListener('mouseout', function() {this.src = 'images/human-brain-white.jpg'})
-
-              jogoMemoria4.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogoMemoria4.addEventListener('mouseout', function() {this.src = 'images/depositphotos_90095212-stock-illustration-illustration-of-albert-einstein.jpg'})
-
-              jogoMemoria5.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogoMemoria5.addEventListener('mouseout', function() {this.src = 'images/913183098-1024x1024.jpg'})
-
-              jogoMemoria6.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogoMemoria6.addEventListener('mouseout', function() {this.src = 'images/9170503-en-forme-de-dessin-monochrome-éléments-de-puzzle.jpg'})
-
-              const divjogoMemoria1 = document.querySelector('#divjogoMemoria1')
-              const divjogoMemoria2 = document.querySelector('#divjogoMemoria2')
-              const divjogoMemoria3 = document.querySelector('#divjogoMemoria3')
-              const divjogoMemoria4 = document.querySelector('#divjogoMemoria4')
-              const divjogoMemoria5 = document.querySelector('#divjogoMemoria5')
-              const divjogoMemoria6 = document.querySelector('#divjogoMemoria6')
-
-              if(window.innerWidth > 991)
-              {
-                divjogoMemoria1.style.height = "300px";
-                divjogoMemoria2.style.height = "300px";
-                divjogoMemoria3.style.height = "300px";
-
-                divjogoMemoria4.style.height = "300px";
-                divjogoMemoria5.style.height = "300px";
-                divjogoMemoria6.style.height = "300px";
-              }
-
-
-            </script>
 
 <?php require('variaveisPHPecho.php'); echo $html_footer; ?>
 

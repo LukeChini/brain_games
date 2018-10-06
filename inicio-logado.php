@@ -37,7 +37,7 @@
                 <div class="col-lg-8 col-12" style="margin: 0 auto;display:flex;flex-direction: row;flex-wrap: wrap;justify-content: center;">
                   <p class="font-weight-bold text-white text-center mt-3 ">Experimente diversas tarefas cognitivas todos os dias. </p>
                   <br/>
-                  <a href="#" class="btn btn-light mt-2 mb-3" style="width:200px; height:50px; font-size:20px;margin: 0 auto;">Começar o treino</a>
+                  <a href="abajogos.php" class="btn btn-light mt-2 mb-3" style="width:200px; height:50px; font-size:20px;margin: 0 auto;">Começar o treino</a>
 
                   </div> </div> </div> </div>
 

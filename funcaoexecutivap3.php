@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>Jogos Memoria</title>
+    <title>Jogos Executiva - p3</title>
   </head>
   <body>
     <?php require('nav.php'); ?>
@@ -25,9 +25,9 @@
 
           <div id="list-example" class="col-12 col-sm-3 col-lg-2 list-group mb-3 text-align">
             <p class="list-group-item list-group-item-action bg-info text-center font-weight-bold text-white">Funções</p>
-            <a class="list-group-item list-group-item-action" href="abajogos.php">Executiva</a>
+            <a class="list-group-item list-group-item-action bg-primary font-weight-bold text-white" href="abajogos.php">Executiva</a>
             <a class="list-group-item list-group-item-action" href="jogosmemoria.php">Memória</a>
-            <a class="list-group-item list-group-item-action bg-primary font-weight-bold text-white" href="jogosespacial.php">Espacial</a>
+            <a class="list-group-item list-group-item-action" href="jogosespacial.php">Espacial</a>
             <a class="list-group-item list-group-item-action" href="jogoscalculo.php">Cálculo</a>
             <a class="list-group-item list-group-item-action" href="jogoslinguagem.php">Linguagem</a>
           </div>
@@ -36,17 +36,17 @@
           include ('conn.php');
 
 
-
-          $verificação = $conn->query("SELECT * FROM jogos WHERE funcao = 'espacial' ");
+          $verificação = $conn->query("SELECT * FROM jogos WHERE funcao = 'executiva' ");
 
 
           $n = $verificação->fetchAll();
           $c = count($n);
 
+          if($c<18){header('location:inicio-logado.php');}
 
 
           $array_abertura = []; $array_fechamento = [];
-          for ($i=0; $i < 9; $i++)
+          for ($i=0; $i < 100; $i++)
           {
             if($i>$c || $i==$c){array_push($array_abertura,"<!--");}
             else{array_push($array_abertura,"");}
@@ -54,6 +54,8 @@
             if($i>$c || $i==$c){array_push($array_fechamento,"-->");}
             else{array_push($array_fechamento,"");}
           }
+
+
 
           //tag abertura e fechamento das paginas $tg_ap1 = Tag abertura da página 1 $tg_fp1 = Tag fechamento da página 1
 
@@ -68,7 +70,6 @@
           if($c>54){$tg_ap7="";$tg_fp7="";}
           if($c>63){$tg_ap8="";$tg_fp8="";}
           if($c>72){$tg_ap9="";$tg_fp9="";}
-
 
           function printar_jogos($valor_inicial,$valor_final,$n,$array_abertura,$array_fechamento,$c)
           {
@@ -96,44 +97,49 @@
 
         <div class="col-12 col-sm-9 col-lg-10 bg-white border">
 
+          <div class="row mt-3 mb-2" >
 
-            <div class="col-12 mb-4 font-weight-bold" style="font-size:25px">Função Espacial</div>
+            <div class="col-12 mb-4 font-weight-bold" style="font-size:25px">Funçõe Executiva</div>
 
-            <div class="row mt-3 mb-2" >
-            <?php printar_jogos(0,2,$n,$array_abertura,$array_fechamento,$c); ?>
+
+            <?php printar_jogos(18,20,$n,$array_abertura,$array_fechamento,$c); ?>
 
           </div>
 
           <div class="row mt-1 mb-2" >
 
-            <?php printar_jogos(3,5,$n,$array_abertura,$array_fechamento,$c); ?>
+            <?php printar_jogos(21,23,$n,$array_abertura,$array_fechamento,$c); ?>
 
         </div>
 
 
         <div class="row mt-1 mb-2" >
 
-          <?php printar_jogos(6,8,$n,$array_abertura,$array_fechamento,$c); ?>
+          <?php printar_jogos(24,26,$n,$array_abertura,$array_fechamento,$c); ?>
+
+
+
 
 
           <?php echo $tg_ap1; ?><nav class="col-12 mt-3" aria-label="Page navigation example">
             <ul class="pagination">
-              
-              <li class="page-item"><a class="page-link bg-info text-white" href="abajogos.php">1</a></li>
-              <?php echo $tg_ap2; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap2.php">2</a></li><?php echo $tg_fp2; ?>
-              <?php echo $tg_ap3; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap3.php">3</a></li><?php echo $tg_fp3; ?>
 
-              <?php echo $tg_ap4; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap4.php">4</a></li><?php echo $tg_fp4; ?>
-              <?php echo $tg_ap5; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap5.php">5</a></li><?php echo $tg_fp5; ?>
-              <?php echo $tg_ap6; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap6.php">6</a></li><?php echo $tg_fp6; ?>
+              <li class="page-item"><a class="page-link" href="abajogos.php">1</a></li>
+<?php echo $tg_ap2; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap2.php">2</a></li><?php echo $tg_fp2; ?>
+<?php echo $tg_ap3; ?><li class="page-item"><a class="page-link bg-info text-white" href="funcaoexecutivap3.php">3</a></li><?php echo $tg_fp3; ?>
 
-              <?php echo $tg_ap7; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap7.php">7</a></li><?php echo $tg_fp7; ?>
-              <?php echo $tg_ap8; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap8.php">8</a></li><?php echo $tg_fp8; ?>
-              <?php echo $tg_ap9; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap9.php">9</a></li><?php echo $tg_fp9; ?>
+<?php echo $tg_ap4; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap4.php">4</a></li><?php echo $tg_fp4; ?>
+<?php echo $tg_ap5; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap5.php">5</a></li><?php echo $tg_fp5; ?>
+<?php echo $tg_ap6; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap6.php">6</a></li><?php echo $tg_fp6; ?>
+
+<?php echo $tg_ap7; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap7.php">7</a></li><?php echo $tg_fp7; ?>
+<?php echo $tg_ap8; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap8.php">8</a></li><?php echo $tg_fp8; ?>
+<?php echo $tg_ap9; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap9.php">9</a></li><?php echo $tg_fp9; ?>
 
 
 
               <?php echo $tg_ap1; ?>
+
             </ul>
           </nav><?php echo $tg_fp1; ?>
 
@@ -146,7 +152,53 @@
             </div>
             </div>
             </div>
+            <script type="text/javascript">
 
+
+              const jogoMemoria3 = document.querySelector('#jogoMemoria3')
+              const jogoMemoria4 = document.querySelector('#jogoMemoria4')
+              const jogoMemoria5 = document.querySelector('#jogoMemoria5')
+              const jogoMemoria6 = document.querySelector('#jogoMemoria6')
+
+
+
+              jogoMemoria3.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoMemoria3.addEventListener('mouseout', function() {this.src = 'images/human-brain-white.jpg'})
+
+              jogoMemoria4.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoMemoria4.addEventListener('mouseout', function() {this.src = 'images/depositphotos_90095212-stock-illustration-illustration-of-albert-einstein.jpg'})
+
+              jogoMemoria5.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoMemoria5.addEventListener('mouseout', function() {this.src = 'images/913183098-1024x1024.jpg'})
+
+              jogoMemoria6.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
+              jogoMemoria6.addEventListener('mouseout', function() {this.src = 'images/9170503-en-forme-de-dessin-monochrome-éléments-de-puzzle.jpg'})
+
+              const divjogoMemoria1 = document.querySelector('#divjogoMemoria1')
+              const divjogoMemoria2 = document.querySelector('#divjogoMemoria2')
+              const divjogoMemoria3 = document.querySelector('#divjogoMemoria3')
+              const divjogoMemoria4 = document.querySelector('#divjogoMemoria4')
+              const divjogoMemoria5 = document.querySelector('#divjogoMemoria5')
+              const divjogoMemoria6 = document.querySelector('#divjogoMemoria6')
+
+              if(window.innerWidth > 991)
+              {
+                divjogoMemoria1.style.height = "300px";
+                divjogoMemoria2.style.height = "300px";
+                divjogoMemoria3.style.height = "300px";
+
+                divjogoMemoria4.style.height = "300px";
+                divjogoMemoria5.style.height = "300px";
+                divjogoMemoria6.style.height = "300px";
+
+
+
+              }
+
+
+
+
+            </script>
 
 <?php require('variaveisPHPecho.php'); echo $html_footer; ?>
 
