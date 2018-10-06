@@ -211,34 +211,7 @@ $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g
 
 //____Iniciando_as_Session______________________________________________________________________________________
 
-$_SESSION["a1_count"] = $_SESSION["a1_count"] + 0; $_SESSION["a2_count"] = $_SESSION["a2_count"] + 0; $_SESSION["a3_count"] = $_SESSION["a3_count"] + 0;
-$_SESSION["a4_count"] = $_SESSION["a4_count"] + 0; $_SESSION["a5_count"] = $_SESSION["a5_count"] + 0; $_SESSION["a6_count"] = $_SESSION["a6_count"] + 0;
-$_SESSION["a7_count"] = $_SESSION["a7_count"] + 0;
-
-$_SESSION["b1_count"] = $_SESSION["b1_count"] + 0; $_SESSION["b2_count"] = $_SESSION["b2_count"] + 0; $_SESSION["b3_count"] = $_SESSION["b3_count"] + 0;
-$_SESSION["b4_count"] = $_SESSION["b4_count"] + 0; $_SESSION["b5_count"] = $_SESSION["b5_count"] + 0; $_SESSION["b6_count"] = $_SESSION["b6_count"] + 0;
-$_SESSION["b7_count"] = $_SESSION["b7_count"] + 0;
-
-$_SESSION["c1_count"] = $_SESSION["c1_count"] + 0; $_SESSION["c2_count"] = $_SESSION["c2_count"] + 0; $_SESSION["c3_count"] = $_SESSION["c3_count"] + 0;
-$_SESSION["c4_count"] = $_SESSION["c4_count"] + 0; $_SESSION["c5_count"] = $_SESSION["c5_count"] + 0; $_SESSION["c6_count"] = $_SESSION["c6_count"] + 0;
-$_SESSION["c7_count"] = $_SESSION["c7_count"] + 0;
-
-$_SESSION["d1_count"] = $_SESSION["d1_count"] + 0; $_SESSION["d2_count"] = $_SESSION["d2_count"] + 0; $_SESSION["d3_count"] = $_SESSION["d3_count"] + 0;
-$_SESSION["d4_count"] = $_SESSION["d4_count"] + 0; $_SESSION["d5_count"] = $_SESSION["d5_count"] + 0; $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0;
-$_SESSION["d7_count"] = $_SESSION["d7_count"] + 0;
-
-$_SESSION["e1_count"] = $_SESSION["e1_count"] + 0; $_SESSION["e2_count"] = $_SESSION["e2_count"] + 0; $_SESSION["e3_count"] = $_SESSION["e3_count"] + 0;
-$_SESSION["e4_count"] = $_SESSION["e4_count"] + 0; $_SESSION["e5_count"] = $_SESSION["e5_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
-$_SESSION["e7_count"] = $_SESSION["e7_count"] + 0;
-
-$_SESSION["f1_count"] = $_SESSION["f1_count"] + 0; $_SESSION["f2_count"] = $_SESSION["f2_count"] + 0; $_SESSION["f3_count"] = $_SESSION["f3_count"] + 0;
-$_SESSION["f4_count"] = $_SESSION["f4_count"] + 0; $_SESSION["f5_count"] = $_SESSION["f5_count"] + 0; $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0;
-$_SESSION["f7_count"] = $_SESSION["f7_count"] + 0;
-
-$_SESSION["g1_count"] = $_SESSION["g1_count"] + 0; $_SESSION["g2_count"] = $_SESSION["g2_count"] + 0; $_SESSION["g3_count"] = $_SESSION["g3_count"] + 0;
-$_SESSION["g4_count"] = $_SESSION["g4_count"] + 0; $_SESSION["g5_count"] = $_SESSION["g5_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
-$_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
-
+$validar = 1;
 
 
 
@@ -274,6 +247,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
     $_SESSION["f1_count"] = 0; $_SESSION["f2_count"] = 0; $_SESSION["f3_count"] = 0; $_SESSION["f4_count"] = 0; $_SESSION["f5_count"] = 0; $_SESSION["f6_count"] = 0; $_SESSION["f7_count"] = 0;
     $_SESSION["g1_count"] = 0; $_SESSION["g2_count"] = 0; $_SESSION["g3_count"] = 0; $_SESSION["g4_count"] = 0; $_SESSION["g5_count"] = 0; $_SESSION["g6_count"] = 0; $_SESSION["g7_count"] = 0;
 
+    $validar = 0;
   }
 
 
@@ -328,6 +302,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
   $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
   array_push($_SESSION['array_jogadas'],$b1_string);
+  $validar = 0;
   }
 
 
@@ -381,6 +356,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
   $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
   array_push($_SESSION['array_jogadas'],$c1_string);
+  $validar = 0;
   }
 
   if (isset($_POST['d1'])){
@@ -433,6 +409,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
     array_push($_SESSION['array_jogadas'],$d1_string);
+    $validar = 0;
     }
 
   if (isset($_POST['e1'])){
@@ -484,6 +461,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
     array_push($_SESSION['array_jogadas'],$e1_string);
+    $validar = 0;
     }
 
   if (isset($_POST['f1'])){
@@ -535,6 +513,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
     array_push($_SESSION['array_jogadas'],$f1_string);
+    $validar = 0;
     }
 
   //_______________Linha_2_______________________________________
@@ -587,6 +566,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
     $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
     array_push($_SESSION['array_jogadas'],$a2_string);
+    $validar = 0;
     }
 
   if (isset($_POST['b2'])){
@@ -637,6 +617,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
     $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
     array_push($_SESSION['array_jogadas'],$b2_string);
+    $validar = 0;
     }
 
 
@@ -688,6 +669,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
     $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
     array_push($_SESSION['array_jogadas'],$c2_string);
+    $validar = 0;
     }
 
   if (isset($_POST['d2'])){
@@ -738,6 +720,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
     $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
     array_push($_SESSION['array_jogadas'],$d2_string);
+    $validar = 0;
     }
 
   if (isset($_POST['e2'])){
@@ -788,6 +771,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
     $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
     array_push($_SESSION['array_jogadas'],$e2_string);
+    $validar = 0;
     }
 
   if (isset($_POST['f2'])){
@@ -838,6 +822,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
     $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
     array_push($_SESSION['array_jogadas'],$f2_string);
+    $validar = 0;
     }
 
   if (isset($_POST['g2'])){
@@ -888,6 +873,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
     $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
     array_push($_SESSION['array_jogadas'],$g2_string);
+    $validar = 0;
     }
 
   //______________Linha_3________________________________________
@@ -940,6 +926,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
     $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
     array_push($_SESSION['array_jogadas'],$a3_string);
+    $validar = 0;
     }
 
   if (isset($_POST['b3'])){
@@ -991,6 +978,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
     $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
     array_push($_SESSION['array_jogadas'],$b3_string);
+    $validar = 0;
     }
 
 
@@ -1042,6 +1030,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
     $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
     array_push($_SESSION['array_jogadas'],$c3_string);
+    $validar = 0;
     }
 
   if (isset($_POST['d3'])){
@@ -1092,6 +1081,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
     $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
     array_push($_SESSION['array_jogadas'],$d3_string);
+    $validar = 0;
     }
 
   if (isset($_POST['e3'])){
@@ -1142,6 +1132,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
     $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
     array_push($_SESSION['array_jogadas'],$e3_string);
+    $validar = 0;
     }
 
   if (isset($_POST['f3'])){
@@ -1192,6 +1183,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
     $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
     array_push($_SESSION['array_jogadas'],$f3_string);
+    $validar = 0;
     }
 
   if (isset($_POST['g3'])){
@@ -1242,6 +1234,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
     $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
     array_push($_SESSION['array_jogadas'],$g3_string);
+    $validar = 0;
     }
 
     //______________Linha_4________________________________________
@@ -1294,6 +1287,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
       $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
       $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
       array_push($_SESSION['array_jogadas'],$a4_string);
+      $validar = 0;
       }
 
     if (isset($_POST['b4'])){
@@ -1344,6 +1338,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
       $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
       $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
       array_push($_SESSION['array_jogadas'],$b4_string);
+      $validar = 0;
       }
 
 
@@ -1395,6 +1390,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
     $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
     array_push($_SESSION['array_jogadas'],$c4_string);
+    $validar = 0;
     }
 
     if (isset($_POST['d4'])){
@@ -1445,6 +1441,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
         $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
         $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
         array_push($_SESSION['array_jogadas'],$d4_string);
+        $validar = 0;
         }
 
     if (isset($_POST['e4'])){
@@ -1496,6 +1493,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
         $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
         $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
         array_push($_SESSION['array_jogadas'],$e4_string);
+        $validar = 0;
         }
 
     if (isset($_POST['f4'])){
@@ -1546,6 +1544,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
         $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
         $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
         array_push($_SESSION['array_jogadas'],$f4_string);
+        $validar = 0;
         }
 
     if (isset($_POST['g4'])){
@@ -1596,6 +1595,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
         $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
         $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
         array_push($_SESSION['array_jogadas'],$g4_string);
+        $validar = 0;
         }
 
 
@@ -1650,6 +1650,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
             $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
             $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
             array_push($_SESSION['array_jogadas'],$a5_string);
+            $validar = 0;
             }
 
     if (isset($_POST['b5'])){
@@ -1700,6 +1701,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                 $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
                 $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
                 array_push($_SESSION['array_jogadas'],$b5_string);
+                $validar = 0;
                 }
 
 
@@ -1751,6 +1753,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
     $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
     array_push($_SESSION['array_jogadas'],$c5_string);
+    $validar = 0;
     }
 
     if (isset($_POST['d5'])){
@@ -1801,6 +1804,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
         $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
         $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
         array_push($_SESSION['array_jogadas'],$d5_string);
+        $validar = 0;
         }
 
     if (isset($_POST['e5'])){
@@ -1851,6 +1855,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
         $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
         $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
         array_push($_SESSION['array_jogadas'],$e5_string);
+        $validar = 0;
         }
 
     if (isset($_POST['f5'])){
@@ -1901,6 +1906,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
         $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
         $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
         array_push($_SESSION['array_jogadas'],$f5_string);
+        $validar = 0;
         }
 
     if (isset($_POST['g5'])){
@@ -1951,6 +1957,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
         $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
         $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
         array_push($_SESSION['array_jogadas'],$g5_string);
+        $validar = 0;
         }
 
 
@@ -2006,6 +2013,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
             $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
             $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
             array_push($_SESSION['array_jogadas'],$a6_string);
+            $validar = 0;
             }
 
     if (isset($_POST['b6'])){
@@ -2057,6 +2065,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
           $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
           $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
           array_push($_SESSION['array_jogadas'],$b6_string);
+          $validar = 0;
           }
 
 
@@ -2109,6 +2118,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
           $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
           $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
           array_push($_SESSION['array_jogadas'],$c6_string);
+          $validar = 0;
           }
 
     if (isset($_POST['d6'])){
@@ -2160,6 +2170,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
           $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
           $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
           array_push($_SESSION['array_jogadas'],$d6_string);
+          $validar = 0;
           }
 
     if (isset($_POST['e6'])){
@@ -2211,6 +2222,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
           $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
           $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
           array_push($_SESSION['array_jogadas'],$e6_string);
+          $validar = 0;
           }
 
     if (isset($_POST['f6'])){
@@ -2262,6 +2274,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
           $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
           $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
           array_push($_SESSION['array_jogadas'],$f6_string);
+          $validar = 0;
           }
 
     if (isset($_POST['g6'])){
@@ -2313,6 +2326,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
           $_SESSION["d6_count"] = $_SESSION["d6_count"] + 0; $_SESSION["e6_count"] = $_SESSION["e6_count"] + 0;
           $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
           array_push($_SESSION['array_jogadas'],$g6_string);
+          $validar = 0;
           }
 
   //______________Linha_7________________________________________
@@ -2344,6 +2358,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
 
     $_SESSION["ganhou"] = $ganhou_mensagem; $_SESSION["perdeu"] = "";
     $_SESSION['array_jogadas'] = array($init_string);
+    $validar = 0;
   }
 
 
@@ -2370,6 +2385,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
 
     $_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = $ganhou_perdeu;
     $_SESSION['array_jogadas'] = array($init_string);
+    $validar = 0;
   }
   }
 
@@ -2400,6 +2416,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
 
       $_SESSION["ganhou"] = $ganhou_mensagem; $_SESSION["perdeu"] = "";
       $_SESSION['array_jogadas'] = array($init_string);
+      $validar = 0;
     }
 
 
@@ -2426,6 +2443,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
 
       $_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = $ganhou_perdeu;
       $_SESSION['array_jogadas'] = array($init_string);
+      $validar = 0;
     }
     }
 
@@ -2456,6 +2474,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
 
       $_SESSION["ganhou"] = $ganhou_mensagem; $_SESSION["perdeu"] = "";
       $_SESSION['array_jogadas'] = array($init_string);
+      $validar = 0;
     }
 
 
@@ -2482,6 +2501,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
 
       $_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = $ganhou_perdeu;
       $_SESSION['array_jogadas'] = array($init_string);
+      $validar = 0;
     }
     }
 
@@ -2512,6 +2532,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
 
       $_SESSION["ganhou"] = $ganhou_mensagem; $_SESSION["perdeu"] = "";
       $_SESSION['array_jogadas'] = array($init_string);
+      $validar = 0;
     }
 
 
@@ -2538,6 +2559,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
 
       $_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = $ganhou_perdeu;
       $_SESSION['array_jogadas'] = array($init_string);
+      $validar = 0;
     }
     }
 
@@ -2569,6 +2591,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
 
       $_SESSION["ganhou"] = $ganhou_mensagem; $_SESSION["perdeu"] = "";
       $_SESSION['array_jogadas'] = array($init_string);
+      $validar = 0;
     }
 
 
@@ -2595,6 +2618,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
 
       $_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = $ganhou_perdeu;
       $_SESSION['array_jogadas'] = array($init_string);
+      $validar = 0;
     }
     }
 
@@ -2627,6 +2651,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
 
       $_SESSION["ganhou"] = $ganhou_mensagem; $_SESSION["perdeu"] = "";
       $_SESSION['array_jogadas'] = array($init_string);
+      $validar = 0;
     }
 
 
@@ -2653,6 +2678,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
 
       $_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = $ganhou_perdeu;
       $_SESSION['array_jogadas'] = array($init_string);
+      $validar = 0;
     }
     }
 
@@ -2684,6 +2710,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
 
       $_SESSION["ganhou"] = $ganhou_mensagem; $_SESSION["perdeu"] = "";
       $_SESSION['array_jogadas'] = array($init_string);
+      $validar = 0;
     }
 
 
@@ -2710,6 +2737,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
 
       $_SESSION["ganhou"] = ""; $_SESSION["perdeu"] = $ganhou_perdeu;
       $_SESSION['array_jogadas'] = array($init_string);
+      $validar = 0;
     }
     }
 
@@ -2737,6 +2765,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
               $_SESSION["count"] = $_SESSION["count"] - 1;
+              $validar = 0;
               if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
               $_SESSION["b1_count"] = $_SESSION["b1_count"] - 1;
@@ -2766,6 +2795,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
               $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
               array_pop($_SESSION['array_jogadas']);
+              $validar = 0;
 
         }
 
@@ -2790,6 +2820,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
               $_SESSION["count"] = $_SESSION["count"] - 1;
+              $validar = 0;
               if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
               $_SESSION["b1_count"] = $_SESSION["b1_count"] - 1;
@@ -2819,6 +2850,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
               $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
               array_pop($_SESSION['array_jogadas']);
+              $validar = 0;
         }
         else
         {
@@ -2851,6 +2883,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
           $_SESSION["f1_count"] = 0; $_SESSION["f2_count"] = 0; $_SESSION["f3_count"] = 0; $_SESSION["f4_count"] = 0; $_SESSION["f5_count"] = 0; $_SESSION["f6_count"] = 0; $_SESSION["f7_count"] = 0;
           $_SESSION["g1_count"] = 0; $_SESSION["g2_count"] = 0; $_SESSION["g3_count"] = 0; $_SESSION["g4_count"] = 0; $_SESSION["g5_count"] = 0; $_SESSION["g6_count"] = 0; $_SESSION["g7_count"] = 0;
 
+          $validar = 0;
         }
 
     }
@@ -2879,6 +2912,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
               $_SESSION["count"] = $_SESSION["count"] - 1;
+              $validar = 0;
               if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
               $_SESSION["c1_count"] = $_SESSION["c1_count"] - 1;
@@ -2908,6 +2942,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
               $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
               array_pop($_SESSION['array_jogadas']);
+              $validar = 0;
 
         }
 
@@ -2932,6 +2967,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
               $_SESSION["count"] = $_SESSION["count"] - 1;
+              $validar = 0;
               if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
               $_SESSION["c1_count"] = $_SESSION["c1_count"] - 1;
@@ -2961,6 +2997,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
               $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
               array_pop($_SESSION['array_jogadas']);
+              $validar = 0;
 
         }
 
@@ -2985,6 +3022,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
               $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
               $_SESSION["count"] = $_SESSION["count"] - 1;
+              $validar = 0;
               if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
               $_SESSION["c1_count"] = $_SESSION["c1_count"] - 1;
@@ -3014,6 +3052,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
               $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
               array_pop($_SESSION['array_jogadas']);
+              $validar = 0;
 
         }
     }
@@ -3042,6 +3081,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                   $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                   $_SESSION["count"] = $_SESSION["count"] - 1;
+                  $validar = 0;
                   if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                   $_SESSION["d1_count"] = $_SESSION["d1_count"] - 1;
@@ -3071,6 +3111,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                   $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                   array_pop($_SESSION['array_jogadas']);
+                  $validar = 0;
 
             }
 
@@ -3095,6 +3136,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                   $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                   $_SESSION["count"] = $_SESSION["count"] - 1;
+                  $validar = 0;
                   if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                   $_SESSION["d1_count"] = $_SESSION["d1_count"] - 1;
@@ -3124,6 +3166,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                   $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                   array_pop($_SESSION['array_jogadas']);
+                  $validar = 0;
 
             }
 
@@ -3148,6 +3191,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                   $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                   $_SESSION["count"] = $_SESSION["count"] - 1;
+                  $validar = 0;
                   if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                   $_SESSION["d1_count"] = $_SESSION["d1_count"] - 1;
@@ -3177,6 +3221,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                   $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                   array_pop($_SESSION['array_jogadas']);
+                  $validar = 0;
 
             }
 
@@ -3206,6 +3251,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                         $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                         $_SESSION["count"] = $_SESSION["count"] - 1;
+                        $validar = 0;
                         if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                         $_SESSION["e1_count"] = $_SESSION["e1_count"] - 1;
@@ -3235,6 +3281,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                         $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                         array_pop($_SESSION['array_jogadas']);
+                        $validar = 0;
 
                   }
 
@@ -3259,6 +3306,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                         $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                         $_SESSION["count"] = $_SESSION["count"] - 1;
+                        $validar = 0;
                         if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                         $_SESSION["e1_count"] = $_SESSION["e1_count"] - 1;
@@ -3288,6 +3336,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                         $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                         array_pop($_SESSION['array_jogadas']);
+                        $validar = 0;
 
                   }
 
@@ -3312,6 +3361,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                         $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                         $_SESSION["count"] = $_SESSION["count"] - 1;
+                        $validar = 0;
                         if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                         $_SESSION["e1_count"] = $_SESSION["e1_count"] - 1;
@@ -3341,6 +3391,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                         $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                         array_pop($_SESSION['array_jogadas']);
+                        $validar = 0;
 
                   }
 
@@ -3370,6 +3421,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                                   $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                                   $_SESSION["count"] = $_SESSION["count"] - 1;
+                                  $validar = 0;
                                   if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                                   $_SESSION["f1_count"] = $_SESSION["f1_count"] - 1;
@@ -3399,6 +3451,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                                   $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                                   array_pop($_SESSION['array_jogadas']);
+                                  $validar = 0;
 
                             }
 
@@ -3423,6 +3476,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                                   $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                                   $_SESSION["count"] = $_SESSION["count"] - 1;
+                                  $validar = 0;
                                   if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                                   $_SESSION["f1_count"] = $_SESSION["f1_count"] - 1;
@@ -3452,6 +3506,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                                   $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                                   array_pop($_SESSION['array_jogadas']);
+                                  $validar = 0;
 
                             }
                             else
@@ -3485,6 +3540,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                               $_SESSION["f1_count"] = 0; $_SESSION["f2_count"] = 0; $_SESSION["f3_count"] = 0; $_SESSION["f4_count"] = 0; $_SESSION["f5_count"] = 0; $_SESSION["f6_count"] = 0; $_SESSION["f7_count"] = 0;
                               $_SESSION["g1_count"] = 0; $_SESSION["g2_count"] = 0; $_SESSION["g3_count"] = 0; $_SESSION["g4_count"] = 0; $_SESSION["g5_count"] = 0; $_SESSION["g6_count"] = 0; $_SESSION["g7_count"] = 0;
 
+                              $validar = 0;
                             }
 
                           }
@@ -3512,6 +3568,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                                    $validar = 0;
                                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                                     $_SESSION["a2_count"] = $_SESSION["a2_count"] - 1;
@@ -3541,6 +3598,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                                     array_pop($_SESSION['array_jogadas']);
+                                    $validar = 0;
 
                               }
 
@@ -3565,6 +3623,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                                    $validar = 0;
                                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                                     $_SESSION["a2_count"] = $_SESSION["a2_count"] - 1;
@@ -3594,6 +3653,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                                     array_pop($_SESSION['array_jogadas']);
+                                    $validar = 0;
 
                               }
                               else
@@ -3627,6 +3687,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                                 $_SESSION["f1_count"] = 0; $_SESSION["f2_count"] = 0; $_SESSION["f3_count"] = 0; $_SESSION["f4_count"] = 0; $_SESSION["f5_count"] = 0; $_SESSION["f6_count"] = 0; $_SESSION["f7_count"] = 0;
                                 $_SESSION["g1_count"] = 0; $_SESSION["g2_count"] = 0; $_SESSION["g3_count"] = 0; $_SESSION["g4_count"] = 0; $_SESSION["g5_count"] = 0; $_SESSION["g6_count"] = 0; $_SESSION["g7_count"] = 0;
 
+                                $validar = 0;
                               }
                             }
 
@@ -3653,6 +3714,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                             $_SESSION["count"] = $_SESSION["count"] - 1;
+                            $validar = 0;
                             if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                             $_SESSION["b2_count"] = $_SESSION["b2_count"] - 1;
@@ -3682,6 +3744,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                             $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                             array_pop($_SESSION['array_jogadas']);
+                            $validar = 0;
 
                             }
 
@@ -3706,6 +3769,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                             $_SESSION["count"] = $_SESSION["count"] - 1;
+                            $validar = 0;
                             if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                             $_SESSION["b2_count"] = $_SESSION["b2_count"] - 1;
@@ -3735,6 +3799,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                             $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                             array_pop($_SESSION['array_jogadas']);
+                            $validar = 0;
 
                             }
 
@@ -3759,6 +3824,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                             $_SESSION["count"] = $_SESSION["count"] - 1;
+                            $validar = 0;
                             if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                             $_SESSION["b2_count"] = $_SESSION["b2_count"] - 1;
@@ -3788,6 +3854,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                             $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                             array_pop($_SESSION['array_jogadas']);
+                            $validar = 0;
 
                             }
 
@@ -3812,6 +3879,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                             $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                             $_SESSION["count"] = $_SESSION["count"] - 1;
+                            $validar = 0;
                             if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                             $_SESSION["b2_count"] = $_SESSION["b2_count"] - 1;
@@ -3841,6 +3909,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                             $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                             array_pop($_SESSION['array_jogadas']);
+                            $validar = 0;
 
                             }
                           }
@@ -3868,6 +3937,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                           $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                           $_SESSION["count"] = $_SESSION["count"] - 1;
+                          $validar = 0;
                           if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                           $_SESSION["c2_count"] = $_SESSION["c2_count"] - 1;
@@ -3897,6 +3967,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                           $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                           array_pop($_SESSION['array_jogadas']);
+                          $validar = 0;
 
                           }
 
@@ -3921,6 +3992,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                           $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                           $_SESSION["count"] = $_SESSION["count"] - 1;
+                          $validar = 0;
                           if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                           $_SESSION["c2_count"] = $_SESSION["c2_count"] - 1;
@@ -3950,6 +4022,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                           $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                           array_pop($_SESSION['array_jogadas']);
+                          $validar = 0;
 
                           }
 
@@ -3974,6 +4047,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                           $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                           $_SESSION["count"] = $_SESSION["count"] - 1;
+                          $validar = 0;
                           if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                           $_SESSION["c2_count"] = $_SESSION["c2_count"] - 1;
@@ -4003,6 +4077,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                           $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                           array_pop($_SESSION['array_jogadas']);
+                          $validar = 0;
 
                           }
 
@@ -4027,6 +4102,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                           $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                           $_SESSION["count"] = $_SESSION["count"] - 1;
+                          $validar = 0;
                           if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                           $_SESSION["c2_count"] = $_SESSION["c2_count"] - 1;
@@ -4056,6 +4132,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                           $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                           array_pop($_SESSION['array_jogadas']);
+                          $validar = 0;
 
                           }
                         }
@@ -4083,6 +4160,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                         $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                         $_SESSION["count"] = $_SESSION["count"] - 1;
+                        $validar = 0;
                         if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                         $_SESSION["d2_count"] = $_SESSION["d2_count"] - 1;
@@ -4112,6 +4190,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                         $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                         array_pop($_SESSION['array_jogadas']);
+                        $validar = 0;
 
                         }
 
@@ -4136,6 +4215,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                         $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                         $_SESSION["count"] = $_SESSION["count"] - 1;
+                        $validar = 0;
                         if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                         $_SESSION["d2_count"] = $_SESSION["d2_count"] - 1;
@@ -4165,6 +4245,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                         $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                         array_pop($_SESSION['array_jogadas']);
+                        $validar = 0;
 
                         }
 
@@ -4189,6 +4270,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                         $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                         $_SESSION["count"] = $_SESSION["count"] - 1;
+                        $validar = 0;
                         if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                         $_SESSION["d2_count"] = $_SESSION["d2_count"] - 1;
@@ -4218,6 +4300,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                         $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                         array_pop($_SESSION['array_jogadas']);
+                        $validar = 0;
 
                         }
 
@@ -4242,6 +4325,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                         $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                         $_SESSION["count"] = $_SESSION["count"] - 1;
+                        $validar = 0;
                         if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                         $_SESSION["d2_count"] = $_SESSION["d2_count"] - 1;
@@ -4271,6 +4355,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                         $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                         array_pop($_SESSION['array_jogadas']);
+                        $validar = 0;
 
                         }
                       }
@@ -4298,6 +4383,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                       $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                       $_SESSION["count"] = $_SESSION["count"] - 1;
+                      $validar = 0;
                       if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                       $_SESSION["e2_count"] = $_SESSION["e2_count"] - 1;
@@ -4327,6 +4413,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                       $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                       array_pop($_SESSION['array_jogadas']);
+                      $validar = 0;
 
                       }
 
@@ -4351,6 +4438,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                       $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                       $_SESSION["count"] = $_SESSION["count"] - 1;
+                      $validar = 0;
                       if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                       $_SESSION["e2_count"] = $_SESSION["e2_count"] - 1;
@@ -4380,6 +4468,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                       $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                       array_pop($_SESSION['array_jogadas']);
+                      $validar = 0;
 
                       }
 
@@ -4404,6 +4493,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                       $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                       $_SESSION["count"] = $_SESSION["count"] - 1;
+                      $validar = 0;
                       if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                       $_SESSION["e2_count"] = $_SESSION["e2_count"] - 1;
@@ -4433,6 +4523,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                       $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                       array_pop($_SESSION['array_jogadas']);
+                      $validar = 0;
 
                       }
 
@@ -4457,6 +4548,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                       $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                       $_SESSION["count"] = $_SESSION["count"] - 1;
+                      $validar = 0;
                       if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                       $_SESSION["e2_count"] = $_SESSION["e2_count"] - 1;
@@ -4486,6 +4578,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                       $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                       array_pop($_SESSION['array_jogadas']);
+                      $validar = 0;
 
                       }
 
@@ -4515,6 +4608,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f2_count"] = $_SESSION["f2_count"] - 1;
@@ -4544,6 +4638,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
 
@@ -4568,6 +4663,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f2_count"] = $_SESSION["f2_count"] - 1;
@@ -4597,6 +4693,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'g2')
@@ -4620,6 +4717,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f2_count"] = $_SESSION["f2_count"] - 1;
@@ -4649,6 +4747,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'f3')
@@ -4672,6 +4771,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f2_count"] = $_SESSION["f2_count"] - 1;
@@ -4701,6 +4801,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -4729,6 +4830,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g2_count"] = $_SESSION["g2_count"] - 1;
@@ -4758,6 +4860,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     elseif($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'g3')
@@ -4781,6 +4884,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g2_count"] = $_SESSION["g2_count"] - 1;
@@ -4810,6 +4914,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     else
@@ -4843,6 +4948,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                       $_SESSION["f1_count"] = 0; $_SESSION["f2_count"] = 0; $_SESSION["f3_count"] = 0; $_SESSION["f4_count"] = 0; $_SESSION["f5_count"] = 0; $_SESSION["f6_count"] = 0; $_SESSION["f7_count"] = 0;
                       $_SESSION["g1_count"] = 0; $_SESSION["g2_count"] = 0; $_SESSION["g3_count"] = 0; $_SESSION["g4_count"] = 0; $_SESSION["g5_count"] = 0; $_SESSION["g6_count"] = 0; $_SESSION["g7_count"] = 0;
 
+                      $validar = 0;
                     }
 
                     }
@@ -4870,6 +4976,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["a3_count"] = $_SESSION["a3_count"] - 1;
@@ -4899,6 +5006,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
 
@@ -4923,6 +5031,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["a3_count"] = $_SESSION["a3_count"] - 1;
@@ -4952,6 +5061,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
 
@@ -4976,6 +5086,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["a3_count"] = $_SESSION["a3_count"] - 1;
@@ -5005,6 +5116,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -5032,6 +5144,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b3_count"] = $_SESSION["b3_count"] - 1;
@@ -5061,6 +5174,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
 
@@ -5085,6 +5199,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b3_count"] = $_SESSION["b3_count"] - 1;
@@ -5114,6 +5229,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
 
@@ -5138,6 +5254,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b3_count"] = $_SESSION["b3_count"] - 1;
@@ -5167,6 +5284,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
 
@@ -5191,6 +5309,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b3_count"] = $_SESSION["b3_count"] - 1;
@@ -5220,6 +5339,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -5247,6 +5367,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c3_count"] = $_SESSION["c3_count"] - 1;
@@ -5276,6 +5397,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'b3')
@@ -5299,6 +5421,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c3_count"] = $_SESSION["c3_count"] - 1;
@@ -5328,6 +5451,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'd3')
@@ -5351,6 +5475,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c3_count"] = $_SESSION["c3_count"] - 1;
@@ -5380,6 +5505,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'c4')
@@ -5403,6 +5529,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c3_count"] = $_SESSION["c3_count"] - 1;
@@ -5432,6 +5559,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
                   }
                 }
 
@@ -5461,6 +5589,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d3_count"] = $_SESSION["d3_count"] - 1;
@@ -5490,6 +5619,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
 
@@ -5514,6 +5644,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d3_count"] = $_SESSION["d3_count"] - 1;
@@ -5543,6 +5674,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
 
@@ -5567,6 +5699,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d3_count"] = $_SESSION["d3_count"] - 1;
@@ -5596,6 +5729,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
 
@@ -5620,6 +5754,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d3_count"] = $_SESSION["d3_count"] - 1;
@@ -5649,6 +5784,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -5676,6 +5812,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e3_count"] = $_SESSION["e3_count"] - 1;
@@ -5705,6 +5842,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
 
@@ -5729,6 +5867,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e3_count"] = $_SESSION["e3_count"] - 1;
@@ -5758,6 +5897,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
 
@@ -5782,6 +5922,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e3_count"] = $_SESSION["e3_count"] - 1;
@@ -5811,6 +5952,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
 
@@ -5835,6 +5977,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e3_count"] = $_SESSION["e3_count"] - 1;
@@ -5864,6 +6007,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -5891,6 +6035,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f3_count"] = $_SESSION["f3_count"] - 1;
@@ -5920,6 +6065,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
 
@@ -5944,6 +6090,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f3_count"] = $_SESSION["f3_count"] - 1;
@@ -5973,6 +6120,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
 
@@ -5997,6 +6145,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f3_count"] = $_SESSION["f3_count"] - 1;
@@ -6026,6 +6175,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
 
@@ -6050,6 +6200,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f3_count"] = $_SESSION["f3_count"] - 1;
@@ -6079,6 +6230,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -6106,6 +6258,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g3_count"] = $_SESSION["g3_count"] - 1;
@@ -6135,6 +6288,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
 
@@ -6159,6 +6313,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g3_count"] = $_SESSION["g3_count"] - 1;
@@ -6188,6 +6343,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'g4')
@@ -6211,6 +6367,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g3_count"] = $_SESSION["g3_count"] - 1;
@@ -6240,6 +6397,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -6267,6 +6425,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["a4_count"] = $_SESSION["a4_count"] - 1;
@@ -6296,6 +6455,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
 
@@ -6320,6 +6480,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["a4_count"] = $_SESSION["a4_count"] - 1;
@@ -6349,6 +6510,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'a5')
@@ -6372,6 +6534,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["a4_count"] = $_SESSION["a4_count"] - 1;
@@ -6401,6 +6564,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -6427,6 +6591,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b4_count"] = $_SESSION["b4_count"] - 1;
@@ -6456,6 +6621,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'a4')
@@ -6479,6 +6645,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b4_count"] = $_SESSION["b4_count"] - 1;
@@ -6508,6 +6675,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'c4')
@@ -6531,6 +6699,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b4_count"] = $_SESSION["b4_count"] - 1;
@@ -6560,6 +6729,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'b5')
@@ -6583,6 +6753,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b4_count"] = $_SESSION["b4_count"] - 1;
@@ -6612,6 +6783,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -6639,6 +6811,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c4_count"] = $_SESSION["c4_count"] - 1;
@@ -6668,6 +6841,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'b4')
@@ -6691,6 +6865,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c4_count"] = $_SESSION["c4_count"] - 1;
@@ -6720,6 +6895,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'd4')
@@ -6743,6 +6919,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c4_count"] = $_SESSION["c4_count"] - 1;
@@ -6772,6 +6949,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'c5')
@@ -6795,6 +6973,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c4_count"] = $_SESSION["c4_count"] - 1;
@@ -6824,6 +7003,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -6850,6 +7030,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d4_count"] = $_SESSION["d4_count"] - 1;
@@ -6879,6 +7060,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'c4')
@@ -6902,6 +7084,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d4_count"] = $_SESSION["d4_count"] - 1;
@@ -6931,6 +7114,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'e4')
@@ -6954,6 +7138,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d4_count"] = $_SESSION["d4_count"] - 1;
@@ -6983,6 +7168,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'd5')
@@ -7006,6 +7192,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d4_count"] = $_SESSION["d4_count"] - 1;
@@ -7035,6 +7222,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -7061,6 +7249,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e4_count"] = $_SESSION["e4_count"] - 1;
@@ -7090,6 +7279,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'd4')
@@ -7113,6 +7303,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e4_count"] = $_SESSION["e4_count"] - 1;
@@ -7142,6 +7333,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'f4')
@@ -7165,6 +7357,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e4_count"] = $_SESSION["e4_count"] - 1;
@@ -7194,6 +7387,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'e5')
@@ -7217,6 +7411,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e4_count"] = $_SESSION["e4_count"] - 1;
@@ -7246,6 +7441,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -7273,6 +7469,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f4_count"] = $_SESSION["f4_count"] - 1;
@@ -7302,6 +7499,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'e4')
@@ -7325,6 +7523,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f4_count"] = $_SESSION["f4_count"] - 1;
@@ -7354,6 +7553,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'g4')
@@ -7377,6 +7577,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f4_count"] = $_SESSION["f4_count"] - 1;
@@ -7406,6 +7607,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'f5')
@@ -7429,6 +7631,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f4_count"] = $_SESSION["f4_count"] - 1;
@@ -7458,6 +7661,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -7485,6 +7689,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g4_count"] = $_SESSION["g4_count"] - 1;
@@ -7514,6 +7719,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'f4')
@@ -7537,6 +7743,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g4_count"] = $_SESSION["g4_count"] - 1;
@@ -7566,6 +7773,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'g5')
@@ -7589,6 +7797,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g4_count"] = $_SESSION["g4_count"] - 1;
@@ -7618,6 +7827,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -7646,6 +7856,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["a5_count"] = $_SESSION["a5_count"] - 1;
@@ -7675,6 +7886,9 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+
+                    $validar = 0;
+
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'b5')
@@ -7698,6 +7912,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["a5_count"] = $_SESSION["a5_count"] - 1;
@@ -7727,6 +7942,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'a6')
@@ -7750,6 +7966,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["a5_count"] = $_SESSION["a5_count"] - 1;
@@ -7779,6 +7996,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -7806,6 +8024,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b5_count"] = $_SESSION["b5_count"] - 1;
@@ -7835,6 +8054,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'a5')
@@ -7858,6 +8078,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b5_count"] = $_SESSION["b5_count"] - 1;
@@ -7887,6 +8108,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'c5')
@@ -7910,6 +8132,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b5_count"] = $_SESSION["b5_count"] - 1;
@@ -7939,6 +8162,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'b6')
@@ -7962,6 +8186,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b5_count"] = $_SESSION["b5_count"] - 1;
@@ -7991,6 +8216,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -8018,6 +8244,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c5_count"] = $_SESSION["c5_count"] - 1;
@@ -8047,6 +8274,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'b5')
@@ -8070,6 +8298,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c5_count"] = $_SESSION["c5_count"] - 1;
@@ -8099,6 +8328,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'd5')
@@ -8122,6 +8352,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c5_count"] = $_SESSION["c5_count"] - 1;
@@ -8151,6 +8382,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'c6')
@@ -8174,6 +8406,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c5_count"] = $_SESSION["c5_count"] - 1;
@@ -8203,6 +8436,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -8229,6 +8463,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d5_count"] = $_SESSION["d5_count"] - 1;
@@ -8258,6 +8493,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
 
@@ -8282,6 +8518,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d5_count"] = $_SESSION["d5_count"] - 1;
@@ -8311,6 +8548,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'e5')
@@ -8334,6 +8572,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d5_count"] = $_SESSION["d5_count"] - 1;
@@ -8363,6 +8602,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'd6')
@@ -8386,6 +8626,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d5_count"] = $_SESSION["d5_count"] - 1;
@@ -8415,6 +8656,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -8442,6 +8684,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e5_count"] = $_SESSION["e5_count"] - 1;
@@ -8471,6 +8714,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'd5')
@@ -8494,6 +8738,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e5_count"] = $_SESSION["e5_count"] - 1;
@@ -8523,6 +8768,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'f5')
@@ -8546,6 +8792,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e5_count"] = $_SESSION["e5_count"] - 1;
@@ -8575,6 +8822,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'e6')
@@ -8598,6 +8846,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e5_count"] = $_SESSION["e5_count"] - 1;
@@ -8627,6 +8876,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -8654,6 +8904,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f5_count"] = $_SESSION["f5_count"] - 1;
@@ -8683,6 +8934,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'e5')
@@ -8706,6 +8958,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f5_count"] = $_SESSION["f5_count"] - 1;
@@ -8735,6 +8988,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'g5')
@@ -8758,6 +9012,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f5_count"] = $_SESSION["f5_count"] - 1;
@@ -8787,6 +9042,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'f6')
@@ -8810,6 +9066,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f5_count"] = $_SESSION["f5_count"] - 1;
@@ -8839,6 +9096,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -8865,6 +9123,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g5_count"] = $_SESSION["g5_count"] - 1;
@@ -8894,6 +9153,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
 
@@ -8918,6 +9178,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g5_count"] = $_SESSION["g5_count"] - 1;
@@ -8947,6 +9208,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'g6')
@@ -8970,6 +9232,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g5_count"] = $_SESSION["g5_count"] - 1;
@@ -8999,6 +9262,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -9026,6 +9290,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["a6_count"] = $_SESSION["a6_count"] - 1;
@@ -9055,6 +9320,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'b6')
@@ -9078,6 +9344,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["a6_count"] = $_SESSION["a6_count"] - 1;
@@ -9107,6 +9374,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -9133,6 +9401,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b6_count"] = $_SESSION["b6_count"] - 1;
@@ -9162,6 +9431,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'a6')
@@ -9185,6 +9455,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b6_count"] = $_SESSION["b6_count"] - 1;
@@ -9214,6 +9485,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'c6')
@@ -9237,6 +9509,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["b6_count"] = $_SESSION["b6_count"] - 1;
@@ -9266,6 +9539,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -9292,6 +9566,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c6_count"] = $_SESSION["c6_count"] - 1;
@@ -9321,6 +9596,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'b6')
@@ -9344,6 +9620,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c6_count"] = $_SESSION["c6_count"] - 1;
@@ -9373,6 +9650,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'd6')
@@ -9396,6 +9674,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["c6_count"] = $_SESSION["c6_count"] - 1;
@@ -9425,6 +9704,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -9451,6 +9731,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d6_count"] = $_SESSION["d6_count"] - 1;
@@ -9480,6 +9761,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'c6')
@@ -9503,6 +9785,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d6_count"] = $_SESSION["d6_count"] - 1;
@@ -9532,6 +9815,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'e6')
@@ -9555,6 +9839,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["d6_count"] = $_SESSION["d6_count"] - 1;
@@ -9584,6 +9869,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -9611,6 +9897,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e6_count"] = $_SESSION["e6_count"] - 1;
@@ -9640,6 +9927,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'd6')
@@ -9663,6 +9951,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e6_count"] = $_SESSION["e6_count"] - 1;
@@ -9692,6 +9981,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'f6')
@@ -9715,6 +10005,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["e6_count"] = $_SESSION["e6_count"] - 1;
@@ -9744,6 +10035,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -9771,6 +10063,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] - 1;
@@ -9800,6 +10093,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'e6')
@@ -9823,6 +10117,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] - 1;
@@ -9852,6 +10147,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'g6')
@@ -9875,6 +10171,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] - 1;
@@ -9904,6 +10201,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
@@ -9931,6 +10229,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g6_count"] = $_SESSION["g6_count"] - 1;
@@ -9960,6 +10259,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     if($_SESSION['array_jogadas'][$_SESSION["count"]-1] == 'f6')
@@ -9983,6 +10283,7 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
 
                     $_SESSION["count"] = $_SESSION["count"] - 1;
+                    $validar = 0;
                     if($_SESSION["count"]>=$numero_max_movimentos){$_SESSION["passou_de_max"] = $passou_de_max_mensagem;}
 
                     $_SESSION["g6_count"] = $_SESSION["g6_count"] - 1;
@@ -10012,12 +10313,45 @@ $_SESSION["g7_count"] = $_SESSION["g7_count"] + 0;
                     $_SESSION["f6_count"] = $_SESSION["f6_count"] + 0; $_SESSION["g6_count"] = $_SESSION["g6_count"] + 0;
 
                     array_pop($_SESSION['array_jogadas']);
+                    $validar = 0;
 
                     }
                     }
 
+//________________________Iniciando_as_Session's_____________________________
 
+if ($validar){
+  $_SESSION['resultado'] = $numero_inicial;
+  $_SESSION["count"] = 0;
 
+               $b1_td_id=1; $c1_td_id=0; $d1_td_id=0; $e1_td_id=0; $f1_td_id=1;
+  $a2_td_id=1; $b2_td_id=0; $c2_td_id=0; $d2_td_id=0; $e2_td_id=0; $f2_td_id=0; $g2_td_id=1;
+  $a3_td_id=0; $b3_td_id=0; $c3_td_id=0; $d3_td_id=0; $e3_td_id=0; $f3_td_id=0; $g3_td_id=0;
+  $a4_td_id=0; $b4_td_id=0; $c4_td_id=0; $d4_td_id=0; $e4_td_id=0; $f4_td_id=0; $g4_td_id=0;
+  $a5_td_id=0; $b5_td_id=0; $c5_td_id=0; $d5_td_id=0; $e5_td_id=0; $f5_td_id=0; $g5_td_id=0;
+  $a6_td_id=0; $b6_td_id=0; $c6_td_id=0; $d6_td_id=0; $e6_td_id=0; $f6_td_id=0; $g6_td_id=0;
+  $a7_td_id=0; $b7_td_id=0; $c7_td_id=0; $d7_td_id=0; $e7_td_id=0; $f7_td_id=0; $g7_td_id=0;
+
+               $b1_in_id=0; $c1_in_id=0; $d1_in_id=0; $e1_in_id=0; $f1_in_id=0;
+  $a2_in_id=0; $b2_in_id=0; $c2_in_id=0; $d2_in_id=0; $e2_in_id=0; $f2_in_id=0; $g2_in_id=0;
+  $a3_in_id=0; $b3_in_id=0; $c3_in_id=0; $d3_in_id=0; $e3_in_id=0; $f3_in_id=0; $g3_in_id=0;
+  $a4_in_id=0; $b4_in_id=0; $c4_in_id=0; $d4_in_id=0; $e4_in_id=0; $f4_in_id=0; $g4_in_id=0;
+  $a5_in_id=0; $b5_in_id=0; $c5_in_id=0; $d5_in_id=0; $e5_in_id=0; $f5_in_id=0; $g5_in_id=0;
+  $a6_in_id=0; $b6_in_id=0; $c6_in_id=0; $d6_in_id=0; $e6_in_id=0; $f6_in_id=0; $g6_in_id=0;
+  $a7_in_id=0; $b7_in_id=0; $c7_in_id=0; $d7_in_id=0; $e7_in_id=0; $f7_in_id=0; $g7_in_id=0;
+
+  $_SESSION['array_jogadas'] = array($init_string);
+
+  $_SESSION["a1_count"] = 0; $_SESSION["a2_count"] = 0; $_SESSION["a3_count"] = 0; $_SESSION["a4_count"] = 0; $_SESSION["a5_count"] = 0; $_SESSION["a6_count"] = 0; $_SESSION["a7_count"] = 0;
+  $_SESSION["b1_count"] = 0; $_SESSION["b2_count"] = 0; $_SESSION["b3_count"] = 0; $_SESSION["b4_count"] = 0; $_SESSION["b5_count"] = 0; $_SESSION["b6_count"] = 0; $_SESSION["b7_count"] = 0;
+  $_SESSION["c1_count"] = 0; $_SESSION["c2_count"] = 0; $_SESSION["c3_count"] = 0; $_SESSION["c4_count"] = 0; $_SESSION["c5_count"] = 0; $_SESSION["c6_count"] = 0; $_SESSION["c7_count"] = 0;
+  $_SESSION["d1_count"] = 0; $_SESSION["d2_count"] = 0; $_SESSION["d3_count"] = 0; $_SESSION["d4_count"] = 0; $_SESSION["d5_count"] = 0; $_SESSION["d6_count"] = 0; $_SESSION["d7_count"] = 0;
+  $_SESSION["e1_count"] = 0; $_SESSION["e2_count"] = 0; $_SESSION["e3_count"] = 0; $_SESSION["e4_count"] = 0; $_SESSION["e5_count"] = 0; $_SESSION["e6_count"] = 0; $_SESSION["e7_count"] = 0;
+  $_SESSION["f1_count"] = 0; $_SESSION["f2_count"] = 0; $_SESSION["f3_count"] = 0; $_SESSION["f4_count"] = 0; $_SESSION["f5_count"] = 0; $_SESSION["f6_count"] = 0; $_SESSION["f7_count"] = 0;
+  $_SESSION["g1_count"] = 0; $_SESSION["g2_count"] = 0; $_SESSION["g3_count"] = 0; $_SESSION["g4_count"] = 0; $_SESSION["g5_count"] = 0; $_SESSION["g6_count"] = 0; $_SESSION["g7_count"] = 0;
+
+  $validar = 0;
+}
 
 
 

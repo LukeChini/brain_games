@@ -53,11 +53,11 @@
                           </div>
                           </div>
                           <div class="col-lg-8 col-12" style="margin: 0 auto;display:flex;flex-direction: row;flex-wrap: wrap;justify-content: center;">
-                            <p class="font-weight-bold mt-3">A Função Executiva soluciona problemas,
+                            <p align="justify" class="font-weight-bold mt-3">A Função Executiva soluciona problemas,
                               organizando os dados em ordem de causa e efeito para testar a sua utilidade em atingir um objetivo selecionado - descartando o que
                               é inútil enquanto prossegue. </p>
                               <br/>
-                              <a href="abajogos.php" class="btn btn-info mt-2 mb-3" style="width:200px; height:50px; font-size:20px;margin: 0 auto;">Jogos Executiva</a>
+                              <a href="artigo_executiva.php" class="btn btn-info mt-2 mb-3" style="width:200px; height:50px; font-size:20px;margin: 0 auto;">Artigo Executiva</a>
 
 
                             </div> </div> </div> </div>
@@ -74,10 +74,10 @@
                                     </div>
                                     </div>
                                     <div class="col-lg-8 col-12" style="margin: 0 auto;display:flex;flex-direction: row;flex-wrap: wrap;justify-content: center;">
-                                      <p class="font-weight-bold mt-3">A memória é a mãe do pensamento. O foco é o pai. Exercícios como esses desenvlvem as capacidades de concentração.
+                                      <p align="justify" class="font-weight-bold mt-3">A memória é a mãe do pensamento. O foco é o pai. Exercícios como esses desenvlvem as capacidades de concentração.
                                       Os trabalhos que exigem constantemente a memória aumentam o hipocampo. </p>
                                       <br/>
-                                      <a href="jogosmemoria.php" class="btn btn-info mt-2 mb-3" style="width:200px; height:50px; font-size:20px;margin: 0 auto;">Jogos Memória</a>
+                                      <a href="artigo_memoria.php" class="btn btn-info mt-2 mb-3" style="width:200px; height:50px; font-size:20px;margin: 0 auto;">Artigo Memória</a>
 
 
                                       </div> </div> </div> </div>
@@ -94,11 +94,11 @@
                                               </div>
                                               </div>
                                               <div class="col-lg-8 col-12" style="margin: 0 auto;display:flex;flex-direction: row;flex-wrap: wrap;justify-content: center;">
-                                                <p class="font-weight-bold mt-3">Girar formas na imaginação é uma capacidade de nascença. Geralmente, os arquitetos e os canhotos são mais bem equipados para fazer isso.
+                                                <p align="justify" class="font-weight-bold mt-3">Girar formas na imaginação é uma capacidade de nascença. Geralmente, os arquitetos e os canhotos são mais bem equipados para fazer isso.
                                                 Os homens a usam para ler mapas de cabeça para baixo,
                                               colocar objetos no porta-malas de carros e construir impérios. </p>
                                                 <br/>
-                                                <a href="jogosespacial.php" class="btn btn-info mt-2 mb-3" style="width:200px; height:50px; font-size:20px;margin: 0 auto;">Jogos Espacial</a>
+                                                <a href="artigo_espacial.php" class="btn btn-info mt-2 mb-3" style="width:200px; height:50px; font-size:20px;margin: 0 auto;">Artigo Espacial</a>
 
 
                                                 </div> </div> </div> </div>
@@ -115,12 +115,12 @@
                                                         </div>
                                                         </div>
                                                         <div class="col-lg-8 col-12" style="margin: 0 auto;display:flex;flex-direction: row;flex-wrap: wrap;justify-content: center;">
-                                                          <p class="font-weight-bold mt-3">A Função de Cálculo ajusta os valores relativos em estruturas orientadas por regras.
+                                                          <p align="justify" class="font-weight-bold mt-3">A Função de Cálculo ajusta os valores relativos em estruturas orientadas por regras.
                                                           Nesse sentido, a matemática é uma liguagem de relações medidas com exatidão,
                                                         que levam a mente a conclusões, com algumas das quais sendo surpresas, exatamente como a sua irmã arte,
                                                       música, faz. </p>
                                                           <br/>
-                                                          <a href="jogoscalculo.php" class="btn btn-info mt-2 mb-3" style="width:200px; height:50px; font-size:20px;margin: 0 auto;">Jogos Cálculo</a>
+                                                          <a href="artigo_calculo.php" class="btn btn-info mt-2 mb-3" style="width:200px; height:50px; font-size:20px;margin: 0 auto;">Artigo Cálculo</a>
 
 
                                                           </div> </div> </div> </div>
@@ -137,10 +137,10 @@
                                                           </div>
                                                           </div>
                                                           <div class="col-lg-8 col-12" style="margin: 0 auto;display:flex;flex-direction: row;flex-wrap: wrap;justify-content: center;">
-                                                          <p class="font-weight-bold mt-3">As tarefas operacionais de palavras com o hemisfério esquerdo libera neurotransmissores da sensação de prazer.
+                                                          <p align="justify" class="font-weight-bold mt-3">As tarefas operacionais de palavras com o hemisfério esquerdo libera neurotransmissores da sensação de prazer.
                                                           E também desenvolve o vocabulário. Muito bom? </p>
                                                           <br/>
-                                                          <a href="jogoslinguagem.php" class="btn btn-info mt-2 mb-3" style="width:200px; height:50px; font-size:20px;margin: 0 auto;">Jogos Linguagem</a>
+                                                          <a href="artigo_linguagem.php" class="btn btn-info mt-2 mb-3" style="width:200px; height:50px; font-size:20px;margin: 0 auto;">Artigo Linguagem</a>
                                                           </div> </div> </div> </div>
                                                         </div>
 
