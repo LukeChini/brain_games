@@ -27,12 +27,6 @@ $array = [];
 $n = $verificação->fetchAll();
 $c = count($n);
 
-
-
-
-
-
-
  ?>
 
     <div class="bg-light text-center">
