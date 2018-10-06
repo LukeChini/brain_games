@@ -21,12 +21,65 @@
 include ('conn.php');
 
 $verificação = $conn->query('SELECT * FROM jogos ORDER BY id DESC');
-
-$array = [];
-
 $n = $verificação->fetchAll();
 $c = count($n);
 
+//variaveis_para_ordenação_asc_desc:
+$id_order       = 'id_asc';
+$nome_order     = 'nome_asc';
+$funcao_order   = 'funcao_asc';
+$gratuito_order = 'gratuito_asc';
+
+
+
+
+if(isset($_POST['id_asc']))
+{
+  $verificação = $conn->query('SELECT * FROM jogos ORDER BY id ASC');
+  $n = $verificação->fetchAll(); $c = count($n); $id_order = 'id_desc';
+}
+
+if(isset($_POST['id_desc']))
+{
+  $verificação = $conn->query('SELECT * FROM jogos ORDER BY id DESC');
+  $n = $verificação->fetchAll(); $c = count($n); $id_order = 'id_asc';
+}
+
+if(isset($_POST['nome_asc']))
+{
+  $verificação = $conn->query('SELECT * FROM jogos ORDER BY nome ASC');
+  $n = $verificação->fetchAll(); $c = count($n); $nome_order = 'nome_desc';
+}
+
+if(isset($_POST['nome_desc']))
+{
+  $verificação = $conn->query('SELECT * FROM jogos ORDER BY nome DESC');
+  $n = $verificação->fetchAll(); $c = count($n); $nome_order = 'nome_asc';
+}
+
+if(isset($_POST['funcao_asc']))
+{
+  $verificação = $conn->query('SELECT * FROM jogos ORDER BY funcao ASC');
+  $n = $verificação->fetchAll(); $c = count($n); $funcao_order = 'funcao_desc';
+}
+
+if(isset($_POST['funcao_desc']))
+{
+  $verificação = $conn->query('SELECT * FROM jogos ORDER BY funcao DESC');
+  $n = $verificação->fetchAll(); $c = count($n); $funcao_order = 'funcao_asc';
+}
+
+if(isset($_POST['gratuito_asc']))
+{
+  $verificação = $conn->query('SELECT * FROM jogos ORDER BY gratuito ASC');
+  $n = $verificação->fetchAll(); $c = count($n); $gratuito_order = 'gratuito_desc';
+}
+
+if(isset($_POST['gratuito_desc']))
+{
+  $verificação = $conn->query('SELECT * FROM jogos ORDER BY gratuito DESC');
+  $n = $verificação->fetchAll(); $c = count($n); $gratuito_order = 'gratuito_asc';
+}
 
 
 
@@ -34,7 +87,7 @@ $c = count($n);
 
 
  ?>
-
+<form class="" action="view_jogos_tabela.php" method="post">
     <div class="bg-light text-center">
 
       <div class="col-12 bg-white border text-center">
@@ -53,14 +106,16 @@ $c = count($n);
       <table class="table table-hover">
         <thead class="bg-success text-white">
           <tr class="">
-            <th scope="col">id</th>
-            <th scope="col">Nome</th>
-            <th scope="col">Função</th>
-            <th scope="col">Gratuito?</th>
-            <th scope="col">Imagem</th>
+            <th scope="col"> <button type="submit" class="btn btn-success" name="<?php echo $id_order; ?>"> id </button> </th>
+            <th scope="col"> <button type="submit" class="btn btn-success" name="<?php echo $nome_order; ?>"> Nome </button></th>
+            <th scope="col"> <button type="submit" class="btn btn-success" name="<?php echo $funcao_order; ?>"> Função </button></th>
+            <th scope="col"> <button type="submit" class="btn btn-success" name="<?php echo $gratuito_order; ?>"> Gratuito? </button></th>
+            <th scope="col"> <a class="btn btn-success" > Imagem </a></th>
           </tr>
         </thead>
+
         <tbody>
+
 
           <?php
           for ($i=0; $i < $c; $i++)
@@ -83,7 +138,7 @@ $c = count($n);
 
         </tbody>
       </table>
-
+</form>
 
 </div>
 
