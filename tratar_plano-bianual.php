@@ -44,13 +44,14 @@ $plano = 'bianual';
   $today = date("Y-m-d"); $_SESSION['premium_logado'] = false;
 if($verifica['validade_premium']>$today || $verifica['plano'] == 'vitalicio'){$_SESSION['premium_logado'] = true;}
 
-  if($_SESSION['src_perfil'] == NULL && $_SESSION['sexo_logado'] == 'masculino'){$_SESSION['src_perfil']='images/perfil_masculino.jpg';}
+if($_SESSION['src_perfil'] == NULL && $_SESSION['admin'])                     {$_SESSION['src_perfil']='images/perfil_admin.png';}
+elseif($_SESSION['src_perfil'] == NULL && $_SESSION['sexo_logado'] == 'masculino'){$_SESSION['src_perfil']='images/perfil_masculino.jpg';}
 elseif($_SESSION['src_perfil'] == NULL && $_SESSION['sexo_logado'] == 'feminino' ){$_SESSION['src_perfil']='images/perfil_feminino.jpg'; }
 }
 
 
 
-  header("location:inicio-logado.php");
+  header("location:boas_vindas.php");
 
 
 

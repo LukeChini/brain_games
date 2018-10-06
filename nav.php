@@ -25,7 +25,7 @@ if($_SESSION['username_logado']==NULL){header('location:entrar.php');}
      <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarTogglerDemo03' aria-controls='navbarTogglerDemo03' aria-expanded='false' aria-label='Toggle navigation'>
      <span class='navbar-toggler-icon'></span>
      </button>
-     <a class='navbar-brand text-white font-weight-bold' href='#'>Brain Games</a>
+     <a class='navbar-brand text-white font-weight-bold' href='inicio-logado.php'>Brain Games</a>
      <div class='collapse navbar-collapse' id='navbarTogglerDemo03'>
      <ul class='navbar-nav mr-auto mt-2 mt-lg-0'>
      <li class='nav-item active'>
@@ -34,16 +34,12 @@ if($_SESSION['username_logado']==NULL){header('location:entrar.php');}
      <li class='nav-item'>
      <a class='nav-link text-white' href='abajogos.php'>Jogos</a>
      </li>
+     <?php if(!$_SESSION['premium_logado'])
+     {echo '<li><a href="planos.php" class="btn btn-danger mr-3 mt-1" >Torne-se premium</a></li>';} ?>
      </ul>
      <div class='nav-item dropdown'>
      <div class='row'>
-
-
-       <?php if(!$_SESSION['premium_logado'])
-       {echo '<div><a href="planos.php" class="btn btn-danger mr-3 mt-1" >Torne-se premium</a></div>';} ?>
-
-
-     <div class=' border' id='div-img' style='height:50px; width:50px; margin: 0 auto; overflow:hidden; text-align:center;'>
+     <div class='border bg-white' id='div-img' style='height:50px; width:50px; margin: 0 auto; overflow:hidden; text-align:center;'>
      <style media='screen'>
      @media (max-width: 992px) {#div-img{display:none;}}
      </style>

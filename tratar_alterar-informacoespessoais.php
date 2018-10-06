@@ -56,12 +56,13 @@ $aniversario = $ano.'-'.$mes.'-'.$dia;
 $validar = checkdate($mes,$dia,$ano);
 
 $type_img = substr($_FILES['imagem']['name'],-3);
-$src_img_nome = 'jogos_img/'.$nome_sem_espaco.'.'.$type_img;
+$src_img_nome = 'upload/'.$_SESSION['id_logado'].'.'.$type_img;
 
 $src_perfil = NULL;
+$null = NULL;
 
-if($_FILES['imagem']['tmp_name'] != NULL){move_uploaded_file($_FILES['imagem']['tmp_name'], 'upload/'.$_SESSION['id_logado'].$src_img_nome);}
-if($_FILES['imagem']['tmp_name'] != NULL){$src_perfil = 'upload/'.$_SESSION['id_logado'].$src_img_nome;}
+if($_FILES['imagem']['tmp_name'] != NULL){move_uploaded_file($_FILES['imagem']['tmp_name'], $src_img_nome);}
+if($_FILES['imagem']['tmp_name'] != NULL){$src_perfil = $src_img_nome;}
 
 $_SESSION['username_logado'] = $username;
 // $_SESSION['email_logado'] = $verifica['email'];
@@ -71,8 +72,24 @@ $_SESSION['aniversario_logado'] = $aniversario;
 // $_SESSION['id_logado'] = $verifica['id'];
 if($_FILES['imagem']['tmp_name'] != NULL){$_SESSION['src_perfil'] = $src_perfil;}
 
-    if($src_perfil == NULL && $sexo == 'masculino'){$_SESSION['src_perfil']='images/perfil_masculino.jpg';}
-elseif($src_perfil == NULL && $sexo == 'feminino' ){$_SESSION['src_perfil']='images/perfil_feminino.jpg'; }
+if($src_perfil == NULL && $_SESSION['admin']){$_SESSION['src_perfil']='images/perfil_admin.png';}
+elseif($src_perfil == NULL && $_SESSION['sexo_logado'] == 'masculino'){$_SESSION['src_perfil']='images/perfil_masculino.jpg';}
+elseif($src_perfil == NULL && $_SESSION['sexo_logado'] == 'feminino' ){$_SESSION['src_perfil']='images/perfil_feminino.jpg'; }
+
+if(isset($_POST['excluir_foto']))
+{
+  $alteração_src = $conn->prepare("UPDATE usuarios SET src_perfil = '$null' WHERE id = '$id'");
+  $alteração_src->bindParam(':src_perfil', $src_perfil, PDO::PARAM_STR);
+  $alteração_src->bindParam(':id', $id, PDO::PARAM_INT);
+  $alteração_src->execute();
+  header("location:conta.php");
+
+  if($_SESSION['admin']){$_SESSION['src_perfil']='images/perfil_admin.png';}
+  elseif($_SESSION['sexo_logado'] == 'masculino'){$_SESSION['src_perfil']='images/perfil_masculino.jpg';}
+  elseif($_SESSION['sexo_logado'] == 'feminino' ){$_SESSION['src_perfil']='images/perfil_feminino.jpg'; }
+
+
+}
 
 
 
@@ -96,6 +113,8 @@ if($validar){
   $alteração_src->bindParam(':src_perfil', $src_perfil, PDO::PARAM_STR);
   $alteração_src->bindParam(':id', $id, PDO::PARAM_INT);
   $alteração_src->execute();
+
+
 
 
   header("location:conta.php");}

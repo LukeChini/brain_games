@@ -31,7 +31,7 @@
             <div class="row">
               <div class="col-lg-4 col-12" style="margin: 0 auto; display:flex;flex-direction: row;flex-wrap: wrap;justify-content: center;">
                 <div class="m-3 rounded-circle bg-white" style="height:150px; width:150px;overflow:hidden; margin: 0 auto; text-align:center; overflow:hidden; display:inline-block">
-                  <img src="images/4501967d-ed3b-43d0-a158-774de9d62ec5.png" alt="" style="width:130px; margin-top:15px"></img>
+                  <a href="boas_vindas.php"> <img src="images/4501967d-ed3b-43d0-a158-774de9d62ec5.png" alt="" style="width:130px; margin-top:15px"></a>
                 </div>
                 </div>
                 <div class="col-lg-8 col-12" style="margin: 0 auto;display:flex;flex-direction: row;flex-wrap: wrap;justify-content: center;">

@@ -55,11 +55,20 @@
 
                 </script>
 
+                <?php
+                if($_SESSION['src_perfil'] !== NULL)
+                {
+                  echo '
+                  <div  class="col-lg-8 col-12 mt-3 ">
+                  <input type="submit" name="excluir_foto" value="Excluir Foto" class="btn btn-dark mt-2" >
+                  </div>';
+                }
+
+                ?>
 
 
 
           </div>
-
 
 
 

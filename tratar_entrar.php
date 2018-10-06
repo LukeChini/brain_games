@@ -68,8 +68,8 @@ if($verifica['validade_premium']>$today || $verifica['plano'] == 'vitalicio'){$_
 
 
 
-
-    if($_SESSION['src_perfil'] == NULL && $_SESSION['sexo_logado'] == 'masculino'){$_SESSION['src_perfil']='images/perfil_masculino.jpg';}
+if($_SESSION['src_perfil'] == NULL && $_SESSION['admin']){$_SESSION['src_perfil']='images/perfil_admin.png';}
+elseif($_SESSION['src_perfil'] == NULL && $_SESSION['sexo_logado'] == 'masculino'){$_SESSION['src_perfil']='images/perfil_masculino.jpg';}
 elseif($_SESSION['src_perfil'] == NULL && $_SESSION['sexo_logado'] == 'feminino' ){$_SESSION['src_perfil']='images/perfil_feminino.jpg'; }
 
 if($verifica['email']==NULL){;}else{return header("location:inicio-logado.php");}
