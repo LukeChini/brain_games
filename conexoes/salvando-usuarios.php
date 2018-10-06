@@ -52,7 +52,7 @@
    $sexo = $_POST['sexo'];
    $termos = $_POST['termos'];
 
-   if(str_word_count($user_name)<1){return header("location:criar_conta.php");}
+   if(str_word_count($user_name)<1){return header("location:criar-conta.php");}
 
 
    $aniversario = $ano_nascimento.'-'.$mes_nascimento.'-'.$dia_nascimento;
@@ -79,19 +79,19 @@
   <a href="entrar.php" class="btn btn-danger mt-2">Entrar</a>';
 
     $conta_insucesso ='<p style="font-size:40px"> Senha e Confirmar Senha não conferem! </p>
-  <a href="criar_conta.php" class="btn btn-danger mt-2">Confirmar Cadastro</a><br />';
+  <a href="criar-conta.php" class="btn btn-danger mt-2">Confirmar Cadastro</a><br />';
 
     if(!$validar_data && $senha === $confirmar_senha)
     {
       $conta_insucesso ='<p style="font-size:40px"> Data inserida não é válida! </p>
-    <a href="criar_conta.php" class="btn btn-danger mt-2">Confirmar Cadastro</a><br />';
+    <a href="criar-conta.php" class="btn btn-danger mt-2">Confirmar Cadastro</a><br />';
     }
 
     if(!$validar_data && $senha !== $confirmar_senha)
     {
       $conta_insucesso ='<p style="font-size:40px"> Data inserida não é válida! </p><br />
                          <p style="font-size:40px"> Senha e Confirmar Senha não conferem! </p><br />
-    <a href="criar_conta.php" class="btn btn-danger mt-2">Confirmar Cadastro</a><br />';
+    <a href="criar-conta.php" class="btn btn-danger mt-2">Confirmar Cadastro</a><br />';
     }
 
 

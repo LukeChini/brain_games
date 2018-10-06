@@ -26,7 +26,7 @@
             </button>
 
             <div class="botoes-topo collapse navbar-collapse mx-3 mx-sm-5 mr-lg-2 mt-1 mt-sm-2 flex-column flex-md-row col-lg-3" id="navbarSupportedContent">
-                <a href="criar_conta.php" class="cadastre btn btn-danger my-1 mt-sm-2">Cadastre-se agora!</a>
+                <a href="criar-conta.php" class="cadastre btn btn-danger my-1 mt-sm-2">Cadastre-se agora!</a>
             </div>
         </nav>
     </header>
@@ -62,4 +62,4 @@
       
       </section>
     </main>
-<?php include "footer.php"; ?>
+<?php include "helpers/footer.php"; ?>

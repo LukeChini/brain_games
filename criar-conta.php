@@ -132,4 +132,4 @@
       </section>
     </div>
   </body>
-<?php include "footer.php"; ?>
+<?php include "helpers/footer.php"; ?>
