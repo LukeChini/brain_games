@@ -8,7 +8,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>Jogos Memoria</title>
+<?php
+//___Dados iniciais:
+$inicial = 0; $form_php = 'jogosespacial.php';  $funcao = 'espacial';
+
+
+?>
+
+    <title>Jogos <?php echo ucfirst($funcao); ?></title>
   </head>
   <body>
     <?php require('nav.php'); ?>
@@ -25,28 +32,32 @@
 
           <div id="list-example" class="col-12 col-sm-3 col-lg-2 list-group mb-3 text-align">
             <p class="list-group-item list-group-item-action bg-info text-center font-weight-bold text-white">Funções</p>
-            <a class="list-group-item list-group-item-action" href="abajogos.php">Executiva</a>
-            <a class="list-group-item list-group-item-action" href="jogosmemoria.php">Memória</a>
-            <a class="list-group-item list-group-item-action bg-primary font-weight-bold text-white" href="jogosespacial.php">Espacial</a>
-            <a class="list-group-item list-group-item-action" href="jogoscalculo.php">Cálculo</a>
-            <a class="list-group-item list-group-item-action" href="jogoslinguagem.php">Linguagem</a>
+            <a class="list-group-item list-group-item-action <?php if($funcao == 'executiva'){echo 'bg-primary font-weight-bold text-white';} ?>" href="abajogos.php">Executiva</a>
+            <a class="list-group-item list-group-item-action <?php if($funcao == 'memoria'){echo 'bg-primary font-weight-bold text-white';} ?>" href="jogosmemoria.php">Memória</a>
+            <a class="list-group-item list-group-item-action <?php if($funcao == 'espacial'){echo 'bg-primary font-weight-bold text-white';} ?>" href="jogosespacial.php">Espacial</a>
+            <a class="list-group-item list-group-item-action <?php if($funcao == 'calculo'){echo 'bg-primary font-weight-bold text-white';} ?>" href="jogoscalculo.php">Cálculo</a>
+            <a class="list-group-item list-group-item-action <?php if($funcao == 'linguagem'){echo 'bg-primary font-weight-bold text-white';} ?>" href="jogoslinguagem.php">Linguagem</a>
           </div>
 
           <?php
           include ('conn.php');
 
 
-
-          $verificação = $conn->query("SELECT * FROM jogos WHERE funcao = 'espacial' ");
+          $verificação = $conn->query("SELECT * FROM jogos WHERE funcao = '$funcao' ");
 
 
           $n = $verificação->fetchAll();
           $c = count($n);
 
 
+          if(isset($_GET['p1'])){$inicial = 0;}  if(isset($_GET['p6'])){$inicial = 45;}
+          if(isset($_GET['p2'])){$inicial = 9;}  if(isset($_GET['p7'])){$inicial = 54;}
+          if(isset($_GET['p3'])){$inicial = 18;} if(isset($_GET['p8'])){$inicial = 63;}
+          if(isset($_GET['p4'])){$inicial = 27;} if(isset($_GET['p9'])){$inicial = 72;}
+          if(isset($_GET['p5'])){$inicial = 36;}
 
           $array_abertura = []; $array_fechamento = [];
-          for ($i=0; $i < 9; $i++)
+          for ($i=0; $i < $c; $i++)
           {
             if($i>$c || $i==$c){array_push($array_abertura,"<!--");}
             else{array_push($array_abertura,"");}
@@ -97,46 +108,47 @@
         <div class="col-12 col-sm-9 col-lg-10 bg-white border">
 
 
-            <div class="col-12 mb-4 font-weight-bold" style="font-size:25px">Função Espacial</div>
+            <div class="col-12 mb-4 font-weight-bold" style="font-size:25px">Função <?php echo ucfirst($funcao); ?></div>
 
             <div class="row mt-3 mb-2" >
-            <?php printar_jogos(0,2,$n,$array_abertura,$array_fechamento,$c); ?>
+            <?php printar_jogos($inicial,($inicial+2),$n,$array_abertura,$array_fechamento,$c); ?>
 
           </div>
 
           <div class="row mt-1 mb-2" >
 
-            <?php printar_jogos(3,5,$n,$array_abertura,$array_fechamento,$c); ?>
+            <?php printar_jogos(($inicial+3),($inicial+5),$n,$array_abertura,$array_fechamento,$c); ?>
 
         </div>
+
+        <form class="" action="<?php echo $form_php; ?>" method="get">
 
 
         <div class="row mt-1 mb-2" >
 
-          <?php printar_jogos(6,8,$n,$array_abertura,$array_fechamento,$c); ?>
+          <?php printar_jogos(($inicial+6),($inicial+8),$n,$array_abertura,$array_fechamento,$c); ?>
 
 
           <?php echo $tg_ap1; ?><nav class="col-12 mt-3" aria-label="Page navigation example">
             <ul class="pagination">
-              
-              <li class="page-item"><a class="page-link bg-info text-white" href="abajogos.php">1</a></li>
-              <?php echo $tg_ap2; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap2.php">2</a></li><?php echo $tg_fp2; ?>
-              <?php echo $tg_ap3; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap3.php">3</a></li><?php echo $tg_fp3; ?>
+                                    <li class="page-item"><input type="submit" name="p1" value="1" class="page-link <?php if($inicial == 0){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li>
+              <?php echo $tg_ap2; ?><li class="page-item"><input type="submit" name="p2" value="2" class="page-link <?php if($inicial == 9){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp2; ?>
+              <?php echo $tg_ap3; ?><li class="page-item"><input type="submit" name="p3" value="3" class="page-link <?php if($inicial == 18){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp3; ?>
 
-              <?php echo $tg_ap4; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap4.php">4</a></li><?php echo $tg_fp4; ?>
-              <?php echo $tg_ap5; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap5.php">5</a></li><?php echo $tg_fp5; ?>
-              <?php echo $tg_ap6; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap6.php">6</a></li><?php echo $tg_fp6; ?>
+              <?php echo $tg_ap4; ?><li class="page-item"><input type="submit" name="p4" value="4" class="page-link <?php if($inicial == 27){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp4; ?>
+              <?php echo $tg_ap5; ?><li class="page-item"><input type="submit" name="p5" value="5" class="page-link <?php if($inicial == 36){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp5; ?>
+              <?php echo $tg_ap6; ?><li class="page-item"><input type="submit" name="p6" value="6" class="page-link <?php if($inicial == 45){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp6; ?>
 
-              <?php echo $tg_ap7; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap7.php">7</a></li><?php echo $tg_fp7; ?>
-              <?php echo $tg_ap8; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap8.php">8</a></li><?php echo $tg_fp8; ?>
-              <?php echo $tg_ap9; ?><li class="page-item"><a class="page-link" href="funcaoexecutivap9.php">9</a></li><?php echo $tg_fp9; ?>
+              <?php echo $tg_ap7; ?><li class="page-item"><input type="submit" name="p7" value="7" class="page-link <?php if($inicial == 54){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp7; ?>
+              <?php echo $tg_ap8; ?><li class="page-item"><input type="submit" name="p8" value="8" class="page-link <?php if($inicial == 63){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp8; ?>
+              <?php echo $tg_ap9; ?><li class="page-item"><input type="submit" name="p9" value="9" class="page-link <?php if($inicial == 72){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp9; ?>
 
 
 
               <?php echo $tg_ap1; ?>
             </ul>
           </nav><?php echo $tg_fp1; ?>
-
+    </form>
       </div>
 
 

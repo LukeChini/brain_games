@@ -24,53 +24,24 @@
       <div class="bg-light p-3">
       <div class="container bg-white border col-lg-8" >
         <div class="text-center font-weight-bold p-3" style="font-size:30px">
-          <p>Conta</p>
+          <p>Excluir Usuario</p>
         </div>
 
 
 
-        <div class="border-top mt-3">
-          <?php
-          if(!$_SESSION['premium_logado'])
-          {
-            echo
-            '<div class="p-3" style="font-size:25px">
-            <p>Você tem Acesso Limitado ao Brain Games</p>
-            <a href="planos.php" class="btn btn-danger mr-3 mt-2" style="-webkit-text-stroke-width: 0px;">Liberar Acesso Total</a>
-          </div>';
-          }
 
-          if($_SESSION['plano_logado'])
-          {
-            echo
-            '<div class="p-3 text-center" style="font-size:25px; margin: 0 auto">
-            <p>Você é um Usuario Premium '.ucfirst($_SESSION['plano_logado']).'</p>
-            <div style="width:100px; height:100px;margin: 0 auto"><img src="images/premium.png" style="width:100px;"></div>
-            </div>
-
-
-          ';
-          }
-
-
-          ?>
-        </div>
 
         <div class="border-top ">
           <p class="p-3 col-12" style="font-size:25px">Informações de acesso</p>
           <div class="row">
           <p class="p-3 ml-3 col-lg-4 col-12" style="font-size:15px">Email:</p>
           <p class="p-3 ml-3 col-lg-4 col-12 font-weight-bold" style="font-size:15px"><?php echo $_SESSION['email_logado']; ?></p>
-          <a href="alterar-email.php" class="p-3 col-lg-3 col-12 ml-3 font-weight-bold" style="font-size:15px">Alterar email</a>
           </div>
 
-          <div class="">
-          <a href="alterar-senha.php" class="p-3 col-lg-4 col-12 font-weight-bold" style="font-size:15px">Alterar senha</a>
-          </div>
-        </div>
+
 
         <div class="border-top mt-3">
-          <p class="p-3 col-12" style="font-size:25px">Informações pessoais</p>
+          <p class="p-3 col-12" style="font-size:25px">Ao acionar o botão "Excluir Usuario" este usuario não terá mais acesso ao Brain Games</p>
           <div class="row">
             <div class="col-lg-3 col-12">
               <div class="m-3 border" style="height:150px; width:150px; margin: 0 auto; overflow:hidden; text-align:center;">
@@ -113,7 +84,7 @@
                     </tr>
 
                     <tr>
-                      <th scope="row" colspan="2"> <a href="alterar-informacoes-pessoais.php">Alterar informações Pessoais</a> </th>
+                      <th scope="row" colspan="2"> <a href="alterar-informacoes-pessoais.php"><a href="excluir_usuario.php" type="button" class="btn btn-dark total mt-3 mb-3 font-weight-bold" style="width:200px">Excluir Usuario</a> </th>
                     </tr>
                   </tbody>
                 </table>
