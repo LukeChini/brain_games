@@ -1,4 +1,4 @@
-
+<?php if(!$_SESSION['admin']){header('location:inicio-logado.php');} ?>
    <?php
 
    include ('conn.php');
@@ -30,7 +30,7 @@
    $stmt->bindParam(':descricao', $descricao, PDO::PARAM_STR);
    $stmt->bindParam(':gratuito', $gratuito, PDO::PARAM_BOOL);
    $stmt->bindParam(':nome_arquivo_nome', $nome_arquivo_nome, PDO::PARAM_STR);
-   $stmt->execute();
+  if(isset($_POST['salvar_jogo'])){$stmt->execute();}
 
    move_uploaded_file($_FILES['arquivo_img']['tmp_name'], 'jogos_img/'.$nome_sem_espaco.'.'.$type_img);
    move_uploaded_file($_FILES['arquivo_php']['tmp_name'], 'play/'.$nome_sem_espaco.".php");

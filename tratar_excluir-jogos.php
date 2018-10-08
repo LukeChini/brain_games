@@ -1,3 +1,5 @@
+<?php if(!$_SESSION['admin']){header('location:inicio-logado.php');} ?>
+
 <?php
 session_start();
 include ('conn.php');
@@ -7,10 +9,12 @@ include ('conn.php');
 
 
 
+  if(isset($_POST['excluir_jogo'])){
+  $excluir_jogo = $conn->prepare("DELETE FROM jogos WHERE id = '$id' ");
+  $excluir_jogo->bindParam(':id', $id, PDO::PARAM_INT);
+  $excluir_jogo->execute();}
+  else{ header("location:inicio-logado.php");}
 
-  $exluir_jogo = $conn->prepare('DELETE FROM jogos WHERE id = :id ');
-  $exluir_jogo->bindParam(':id', $id, PDO::PARAM_INT)
-  $exluir_jogo->execute();
 
 
 

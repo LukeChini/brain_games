@@ -1,86 +1,38 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <title>Em Desenvolvimento</title>
-  </head>
-  <?php
-
-  if(!isset($_SESSION))
-  {
-      session_start();
-  }
-
-  $usuario_logado = $_SESSION['username_logado'];
-  $src = $_SESSION['src_perfil'];
-
-
-  if($_SESSION['username_logado']==NULL){header('location:entrar.php');}
-
-   ?>
-
-
-     <body>
-
-
-       <div class='' style='background-color:rgb(14,145,161)'>
-       <div class='container'>
-       <nav class='navbar navbar-expand-lg navbar-light' style='background-color:rgb(14,145,161)'>
-       <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarTogglerDemo03' aria-controls='navbarTogglerDemo03' aria-expanded='false' aria-label='Toggle navigation'>
-       <span class='navbar-toggler-icon'></span>
-       </button>
-       <a class='navbar-brand text-white font-weight-bold' href='#'>Brain Games</a>
-       <div class='collapse navbar-collapse' id='navbarTogglerDemo03'>
-       <ul class='navbar-nav mr-auto mt-2 mt-lg-0'>
-       <li class='nav-item active'>
-       <a class='nav-link text-white' href='../inicio-logado.php'>Início <span class='sr-only'>(current)</span></a>
-       </li>
-       <li class='nav-item'>
-       <a class='nav-link text-white' href='../abajogos.php'>Jogos</a>
-       </li>
-       <li class='nav-item'>
-       <a class='nav-link text-white disabled' href='#'>Descobertas</a>
-       </li>
-       </ul>
-       <div class='nav-item dropdown'>
-       <div class='row'>
-       <div class=' border' id='div-img' style='height:50px; width:50px; margin: 0 auto; overflow:hidden; text-align:center;'>
-       <style media='screen'>
-       @media (max-width: 992px) {#div-img{display:none;}}
-       </style>
-       <img src=<?php  echo '../'.$src?> alt='' style='height:50px;'></img>
-       </div>
-       <a class='nav-link dropdown-toggle text-white font-weight-bold mt-1' data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false'><?php echo $usuario_logado ?></a>
-       <div class='dropdown-menu'>
-       <a class='dropdown-item' href='conta.php'>Configurações da conta</a>
-       <a class='dropdown-item' href='#'>Ajuda</a>
-       <div class='dropdown-divider'></div>
-       <a class='dropdown-item' href='tratar_sair.php'>Sair</a>
-       </div>
-       </div>
-       </div>
-       </div>
-       </nav>
+<?php
+// Função Executiva:
+// $nome_arquivo='play/astro-lógico.php'; // id: 31 - funcao:Executiva - nome:Astro-Lógico
+// $nome_arquivo='play/escolha_do_jogador.php'; // id: 26 - funcao:Executiva - nome:Escolha do Jogador
+// $nome_arquivo='play/numero_da_sorte.php'; // id: 25 - funcao:Executiva - nome:Numero da Sorte
+// $nome_arquivo='play/o_quadrado_que_remexe.php'; // id: 27 - funcao:Executiva - nome:O Quadrado que Remexe
+// $nome_arquivo='play/os_cinco_são_fantásticos.php'; // id: 29 - funcao:Executiva - nome:Os Cinco são Fantásticos
+// $nome_arquivo='play/os_nove_mágicos.php'; // id: 32 - funcao:Executiva - nome:Os Nove Mágicos
+// $nome_arquivo='play/roda_da_fortuna_mágica.php'; // id: 33 - funcao:Executiva - nome:Roda da Fortuna Mágica
+// $nome_arquivo='play/sequência_lógica.php'; // id: 28 - funcao:Executiva - nome:Sequência Lógica
+// $nome_arquivo='play/todos_os_trinta.php'; // id: 30 - funcao:Executiva - nome:Todos os Trinta
+// $nome_arquivo='play/todos_trinta_e_quatro.php'; // id: 24 - funcao:Executiva - nome:Todos Trinta e Quatro
+//
+// // Função Memoria:
+// $nome_arquivo='play/a_madrugadora.php'; // id: 40 - funcao:Memoria - nome:A Madrugadora
+// $nome_arquivo='play/digi-tais.php'; // id: 34 - funcao:Memoria - nome:Digi-tais
+//
+// // Função Espacial:
+// $nome_arquivo='play/bolo_crocante.php'; // id: 46 - funcao:Espacial - nome:Bolo Crocante
+// $nome_arquivo='play/de_a_a_b.php'; // id: 45 - funcao:Espacial - nome:De A a B
+// $nome_arquivo='play/duas_vezes_queimado.php'; // id: 44 - funcao:Espacial - nome:Duas Vezes Queimado
+$nome_arquivo='play/quadrados_do_tabuleiro.php'; // id: 43 - funcao:Espacial - nome:Quadrados do Tabuleiro
+// $nome_arquivo='play/quebra-cabeça_chinês.php'; // id: 41 - funcao:Espacial - nome:Quebra-cabeça Chinês
+// $nome_arquivo='play/um_l_de_uma_questão.php'; // id: 47 - funcao:Espacial - nome:Um L de uma Questão
+// $nome_arquivo='play/um_pedaço_de_pizza.php'; // id: 42 - funcao:Espacial - nome:Um Pedaço de Pizza
+//
+// // Função Calculo:
+// $nome_arquivo='play/dentro_dos_limites.php'; // id: 49 - funcao:Calculo - nome:Dentro dos Limites
+// $nome_arquivo='play/sacos_de_parede_a_parede.php'; // id: 48 - funcao:Calculo - nome:Sacos de Parede a Parede
+//
+// // Função Linguagem:
+// $nome_arquivo='play/galinha_conselheira.php'; // id: 50 - funcao:Linguagem - nome:Galinha Conselheira
 
 
-    </div>
 
-</div>
+ ?>
 
-      <div class="bg-light text-center" style="font-size:50px;">
-    Página em Construção
-  </div>
-
-    <div class="">
-      <?php require('../variaveisPHPecho.php'); echo $html_footer; ?>
-    </div>
-
-
-  </body>
-</html>
+ <?php     include ('jogo_em_construção_zwf.php'); ?>

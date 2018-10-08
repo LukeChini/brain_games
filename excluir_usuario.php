@@ -15,6 +15,7 @@
   </head>
   <body>
 <?php if(!isset($_SESSION)){session_start();} ?>
+<?php if(!$_SESSION['admin']){header('location:inicio-logado.php');} ?>
 
 <?php require('nav.php'); ?>
     </div>
@@ -27,6 +28,8 @@
           <p>Excluir Usuario</p>
         </div>
 
+
+        <form class="" action="tratar_excluir-usuario.php" method="post">
 
 
 
@@ -41,7 +44,7 @@
 
 
         <div class="border-top mt-3">
-          <p class="p-3 col-12" style="font-size:25px">Ao acionar o botão "Excluir Usuario" este usuario não terá mais acesso ao Brain Games</p>
+          <p class="p-3 col-12 font-weight-bold" style="font-size:25px; color:red;">Ao acionar o botão "Excluir Usuario" este usuario não terá mais acesso ao Brain Games</p>
           <div class="row">
             <div class="col-lg-3 col-12">
               <div class="m-3 border" style="height:150px; width:150px; margin: 0 auto; overflow:hidden; text-align:center;">
@@ -84,7 +87,7 @@
                     </tr>
 
                     <tr>
-                      <th scope="row" colspan="2"> <a href="alterar-informacoes-pessoais.php"><a href="excluir_usuario.php" type="button" class="btn btn-dark total mt-3 mb-3 font-weight-bold" style="width:200px">Excluir Usuario</a> </th>
+                      <th scope="row" colspan="2"> <input type="submit" class="btn btn-dark total mt-3 mb-3 font-weight-bold" style="width:200px" name="excluir_usuario" value="Excluir Usuario"> </th>
                     </tr>
                   </tbody>
                 </table>
@@ -94,9 +97,7 @@
 
           </div>
 
-        <!-- <div class="border-top mt-3 mb-3">
-          <a href="#" class="m-3 font-weight-bold">Excluir conta</a>
-        </div> -->
+</form>
 
 
         </div>

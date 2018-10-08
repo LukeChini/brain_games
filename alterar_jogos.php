@@ -13,7 +13,7 @@
   <body>
     <?php require('nav.php'); ?>
     </div>
-
+<?php if(!$_SESSION['admin']){header('location:inicio-logado.php');} ?>
 </div>
 
 <?php

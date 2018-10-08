@@ -30,7 +30,7 @@
 
 
             <div class=" text-center" role="group" style="margin:0 auto" aria-label="Basic example">
-              <?php if($_SESSION['plano_logado']){echo '<a href="alterar_jogos.php" type="button" class="btn btn-danger total mt-3 mb-3 font-weight-bold" style="width:200px">Cancelar conta premium</a>';} ?>
+              <?php if($_SESSION['plano_logado']){echo '<a href="cancelar_conta_premium.php" type="button" class="btn btn-danger total mt-3 mb-3 font-weight-bold" style="width:200px">Cancelar conta premium</a>';} ?>
               <a href="excluir_usuario.php" type="button" class="btn btn-dark total mt-3 mb-3 font-weight-bold" style="width:200px">Excluir Usuario</a>
             </div>
 

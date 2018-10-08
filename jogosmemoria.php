@@ -32,7 +32,7 @@ $inicial = 0; $form_php = 'jogosmemoria.php';  $funcao = 'memoria';
 
           <div id="list-example" class="col-12 col-sm-3 col-lg-2 list-group mb-3 text-align">
             <p class="list-group-item list-group-item-action bg-info text-center font-weight-bold text-white">Funções</p>
-            <a class="list-group-item list-group-item-action <?php if($funcao == 'executiva'){echo 'bg-primary font-weight-bold text-white';} ?>" href="abajogos.php">Executiva</a>
+            <a class="list-group-item list-group-item-action <?php if($funcao == 'executiva'){echo 'bg-primary font-weight-bold text-white';} ?>" href="jogosexecutiva.php">Executiva</a>
             <a class="list-group-item list-group-item-action <?php if($funcao == 'memoria'){echo 'bg-primary font-weight-bold text-white';} ?>" href="jogosmemoria.php">Memória</a>
             <a class="list-group-item list-group-item-action <?php if($funcao == 'espacial'){echo 'bg-primary font-weight-bold text-white';} ?>" href="jogosespacial.php">Espacial</a>
             <a class="list-group-item list-group-item-action <?php if($funcao == 'calculo'){echo 'bg-primary font-weight-bold text-white';} ?>" href="jogoscalculo.php">Cálculo</a>
@@ -43,7 +43,7 @@ $inicial = 0; $form_php = 'jogosmemoria.php';  $funcao = 'memoria';
           include ('conn.php');
 
 
-          $verificação = $conn->query("SELECT * FROM jogos WHERE funcao = '$funcao' ");
+          $verificação = $conn->query("SELECT * FROM jogos WHERE funcao = '$funcao' ORDER BY gratuito DESC ");
 
 
           $n = $verificação->fetchAll();
@@ -84,7 +84,7 @@ $inicial = 0; $form_php = 'jogosmemoria.php';  $funcao = 'memoria';
           function printar_jogos($valor_inicial,$valor_final,$n,$array_abertura,$array_fechamento,$c)
           {
           for ($i=$valor_inicial; $i <= $valor_final; $i++) {
-            if($i<$c){
+            if($i<$c && $_SESSION['premium_logado'] || $i<$c && !$_SESSION['premium_logado'] && $n[$i]['gratuito']){
             echo
             $array_abertura[$i]."<div class='col-12 col-lg-4'>
               <div class='card'>
@@ -99,7 +99,54 @@ $inicial = 0; $form_php = 'jogosmemoria.php';  $funcao = 'memoria';
               </div>
             </div>".$array_fechamento[$i];
           }
+
+          if($i<$c && !$_SESSION['premium_logado'] && !$n[$i]['gratuito'] ){
+          echo
+          $array_abertura[$i]."<div class='col-12 col-lg-4'>
+            <div class='card'>
+              <div class='card-header bg-info text-center font-weight-bold text-white'>
+              <p style='color:white; display:inline-block'>".$n[$i]['nome']."</p>
+              <img src='images/bloquear-simbolo-azul.jpg' style='width:20px; height:20px; margin-bottom:10px;' ></a></div>
+
+              <div id='div_img_".$n[$i]['funcao'].$n[$i]['id']."' class='border-bottom divh300 text-center' style='overflow:hidden; min-height:100px; max-height:300px; margin: 0 auto'>
+              <style media='screen'>@media (min-width: 992px){.divh300{height:300px;}}</style>
+              <a id='div_premium_".$n[$i]['funcao'].$n[$i]['id']."' href='planos.php' style='display:none;' class='btn btn-danger mr-3 mt-2' >Liberar Acesso Total</a>
+                  <img id='img_".$n[$i]['funcao'].$n[$i]['id']."' src='".$n[$i]['src_perfil']."' class='card-img-top p-3; '>
+                   </div>
+              <div class='card-body'>".$n[$i]['descricao']."</div>
+            </div>
+          </div>".$array_fechamento[$i];
+        }
         }}
+
+        function printar_script($valor_inicial,$valor_final,$n,$array_abertura,$array_fechamento,$c)
+        {
+        for ($i=$valor_inicial; $i <= $valor_final; $i++) {
+
+        if($i<$c && !$_SESSION['premium_logado'] && !$n[$i]['gratuito'] ){
+        echo"
+        const div_img_".$n[$i]['funcao'].$n[$i]['id']." = document.querySelector('#div_img_".$n[$i]['funcao'].$n[$i]['id']."')
+        const div_premium_".$n[$i]['funcao'].$n[$i]['id']." = document.querySelector('#div_premium_".$n[$i]['funcao'].$n[$i]['id']."')
+        const img_".$n[$i]['funcao'].$n[$i]['id']." = document.querySelector('#img_".$n[$i]['funcao'].$n[$i]['id']."')
+
+        div_img_".$n[$i]['funcao'].$n[$i]['id'].".addEventListener('mouseover', function()
+        {
+          img_".$n[$i]['funcao'].$n[$i]['id'].".src = 'images/cadeado300.jpg'
+          div_premium_".$n[$i]['funcao'].$n[$i]['id'].".style.display = 'inline-block'
+        })
+
+        div_img_".$n[$i]['funcao'].$n[$i]['id'].".addEventListener('mouseout', function()
+        {
+          img_".$n[$i]['funcao'].$n[$i]['id'].".src = '".$n[$i]['src_perfil']."'
+          div_premium_".$n[$i]['funcao'].$n[$i]['id'].".style.display = 'none'
+        })
+
+        ";
+
+      }
+      }}
+
+
 
 
 
@@ -127,6 +174,11 @@ $inicial = 0; $form_php = 'jogosmemoria.php';  $funcao = 'memoria';
         <div class="row mt-1 mb-2" >
 
           <?php printar_jogos(($inicial+6),($inicial+8),$n,$array_abertura,$array_fechamento,$c); ?>
+
+          <script type="text/javascript">
+          <?php printar_script($inicial,($inicial+8),$n,$array_abertura,$array_fechamento,$c); ?>
+
+          </script>
 
 
           <?php echo $tg_ap1; ?><nav class="col-12 mt-3" aria-label="Page navigation example">

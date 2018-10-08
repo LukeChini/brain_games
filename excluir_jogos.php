@@ -15,7 +15,7 @@
     </div>
 
 </div>
-
+<?php if(!$_SESSION['admin']){header('location:inicio-logado.php');} ?>
 <?php
 include ('conn.php');
 
@@ -80,7 +80,7 @@ $c = count($n);
           </div>
 
 <?php echo $tag_abertura; ?>
-<form class="" enctype="multipart/form-data" action="tratar_alterar-jogos.php" method="post">
+<form class="" enctype="multipart/form-data" action="tratar_excluir-jogos.php" method="post">
 
 
 
@@ -117,7 +117,7 @@ $c = count($n);
 
               <hr />
 
-              <div class="text-center" ><input type="submit" class="btn btn-dark mr-3 mt-2" name="alterar_jogo" value="Excluir Jogo">  </div>
+              <div class="text-center" ><input type="submit" class="btn btn-dark mr-3 mt-2" name="excluir_jogo" value="Excluir Jogo">  </div>
             </div>
           </form>
 

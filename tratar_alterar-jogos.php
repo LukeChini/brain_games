@@ -1,3 +1,5 @@
+<?php if(!$_SESSION['admin']){header('location:inicio-logado.php');} ?>
+
 <?php
 session_start();
 include ('conn.php');
@@ -17,7 +19,7 @@ include ('conn.php');
   $src_img_nome = 'jogos_img/'.$nome_sem_espaco.'.'.$type_img;
   $nome_arquivo_nome = 'play/'.$nome_sem_espaco.'.php';
 
-
+if(isset($_POST['alterar_jogo'])){
   $alteração_funcao = $conn->prepare('UPDATE jogos SET funcao = :funcao WHERE id = :id');
   $alteração_funcao->bindParam(':funcao', $funcao, PDO::PARAM_STR);
   $alteração_funcao->bindParam(':id', $id, PDO::PARAM_INT);
@@ -28,7 +30,7 @@ include ('conn.php');
   $alteração_nome->bindParam(':id', $id, PDO::PARAM_INT);
   $alteração_nome->execute();
 
-  if($src_img !== NULL){
+  if($src_img['name'] != NULL){
   $alteração_src = $conn->prepare('UPDATE jogos SET src_perfil = :src_img_nome WHERE id = :id');
   $alteração_src->bindParam(':src_img_nome', $src_img_nome, PDO::PARAM_STR);
   $alteração_src->bindParam(':id', $id, PDO::PARAM_INT);
@@ -44,14 +46,16 @@ include ('conn.php');
   $alteração_gratuito->bindParam(':id', $id, PDO::PARAM_INT);
   $alteração_gratuito->execute();
 
-  if($nome_arquivo !== NULL){
+  if($nome_arquivo['name'] != NULL){
   $alteração_arquivo_php = $conn->prepare('UPDATE jogos SET nome_arquivo = :nome_arquivo_nome WHERE id = :id');
   $alteração_arquivo_php->bindParam(':nome_arquivo_nome', $nome_arquivo_nome, PDO::PARAM_STR);
   $alteração_arquivo_php->bindParam(':id', $id, PDO::PARAM_INT);
-  $alteração_arquivo_php->execute();}
+  $alteração_arquivo_php->execute();}}
 
-  if($src_img !== NULL){move_uploaded_file($_FILES['arquivo_img']['tmp_name'], 'jogos_img/'.$nome_sem_espaco.'.'.$type_img);}
-  if($nome_arquivo !== NULL){move_uploaded_file($_FILES['arquivo_php']['tmp_name'], 'play/'.$nome_sem_espaco.".php");}
+  if($src_img['name'] != NULL){move_uploaded_file($_FILES['arquivo_img']['tmp_name'], 'jogos_img/'.$nome_sem_espaco.'.'.$type_img);}
+  if($nome_arquivo['name'] != NULL){move_uploaded_file($_FILES['arquivo_php']['tmp_name'], 'play/'.$nome_sem_espaco.".php");}
+
+
 
 
    header("location:view_jogos_tabela.php");

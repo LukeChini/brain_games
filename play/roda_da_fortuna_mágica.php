@@ -6,7 +6,7 @@
 // $nome_arquivo='play/o_quadrado_que_remexe.php'; // id: 27 - funcao:Executiva - nome:O Quadrado que Remexe
 // $nome_arquivo='play/os_cinco_são_fantásticos.php'; // id: 29 - funcao:Executiva - nome:Os Cinco são Fantásticos
 // $nome_arquivo='play/os_nove_mágicos.php'; // id: 32 - funcao:Executiva - nome:Os Nove Mágicos
-// $nome_arquivo='play/roda_da_fortuna_mágica.php'; // id: 33 - funcao:Executiva - nome:Roda da Fortuna Mágica
+$nome_arquivo='play/roda_da_fortuna_mágica.php'; // id: 33 - funcao:Executiva - nome:Roda da Fortuna Mágica
 // $nome_arquivo='play/sequência_lógica.php'; // id: 28 - funcao:Executiva - nome:Sequência Lógica
 // $nome_arquivo='play/todos_os_trinta.php'; // id: 30 - funcao:Executiva - nome:Todos os Trinta
 // $nome_arquivo='play/todos_trinta_e_quatro.php'; // id: 24 - funcao:Executiva - nome:Todos Trinta e Quatro
@@ -26,7 +26,7 @@
 //
 // // Função Calculo:
 // $nome_arquivo='play/dentro_dos_limites.php'; // id: 49 - funcao:Calculo - nome:Dentro dos Limites
-$nome_arquivo='play/sacos_de_parede_a_parede.php'; // id: 48 - funcao:Calculo - nome:Sacos de Parede a Parede
+// $nome_arquivo='play/sacos_de_parede_a_parede.php'; // id: 48 - funcao:Calculo - nome:Sacos de Parede a Parede
 //
 // // Função Linguagem:
 // $nome_arquivo='play/galinha_conselheira.php'; // id: 50 - funcao:Linguagem - nome:Galinha Conselheira

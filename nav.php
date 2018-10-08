@@ -32,7 +32,7 @@ if($_SESSION['username_logado']==NULL){header('location:entrar.php');}
      <a class='nav-link text-white' href='inicio-logado.php'>Início <span class='sr-only'>(current)</span></a>
      </li>
      <li class='nav-item'>
-     <a class='nav-link text-white' href='abajogos.php'>Jogos</a>
+     <a class='nav-link text-white' href='jogosexecutiva.php'>Jogos</a>
      </li>
      <?php if(!$_SESSION['premium_logado'])
      {echo '<li><a href="planos.php" class="btn btn-danger mr-3 mt-1" >Torne-se premium</a></li>';} ?>
