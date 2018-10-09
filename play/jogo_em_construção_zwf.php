@@ -17,7 +17,7 @@
     $usuario_logado = $_SESSION['username_logado'];
     $src = $_SESSION['src_perfil'];
 
-    include ('../conn.php');
+    include ('../include/conn.php');
 
 
 
@@ -96,7 +96,7 @@
 
 
     <div class="">
-      <?php require('../variaveisPHPecho.php'); echo $html_footer; ?>
+      <?php require('../include/variaveis_php_echo.php'); echo $html_footer; ?>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
