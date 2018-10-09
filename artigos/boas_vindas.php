@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>Jogos Memoria</title>
+        <link rel='shortcut icon' href="../images/brain_icon.gif" /> 
   </head>
   <body>
 <?php require('../include/nav.php'); ?>
@@ -31,14 +32,24 @@
 
               <?php        if($_SESSION['plano_logado'])
                         {
+                          if($_SESSION['sexo_logado'] == 'masculino'){
                           echo
                           '<div class="p-3 text-center" style="font-size:25px; margin: 0 auto">
                           <p>Você é um Usuario Premium '.ucfirst($_SESSION['plano_logado']).'</p>
                           <div style="width:100px; height:100px;margin: 0 auto"><img src="../images/premium.png" style="width:100px;"></div>
                           </div>
 
+                        ';}
+                        else
+                        {
+                          echo
+                          '<div class="p-3 text-center" style="font-size:25px; margin: 0 auto">
+                          <p>Você é uma Usuaria Premium '.ucfirst($_SESSION['plano_logado']).'</p>
+                          <div style="width:100px; height:100px;margin: 0 auto"><img src="../images/premium.png" style="width:100px;"></div>
+                          </div>
 
                         ';
+                        }
                         } ?>
 
             </div>

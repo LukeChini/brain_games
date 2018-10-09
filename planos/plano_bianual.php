@@ -8,12 +8,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>Compra - BiAnual</title>
+    <title>Brain Games - Bianual Plano</title>
+        <link rel='shortcut icon' href="../images/brain_icon.gif" /> 
   </head>
   <body>
 <?php require('../include/nav.php'); ?>
     </div>
-    <?php if($_SESSION['premium_logado']){header('location:inicio-logado.php');} ?>
+    <?php if($_SESSION['premium_logado']){header('location:../artigos/inicio_logado.php');} ?>
 </div>
       <div class="bg-light pt-3">
 
@@ -30,7 +31,7 @@
 
 
 
-          <form action="tratar_plano_bianual.php" method="post">
+          <form action="../controller/tratar_plano_bianual.php" method="post">
             <div class="form-group p-2">
               <label for="nome_titular">Nome do titular do cartão:</label>
               <input type="text" class="form-control col-12 col-lg-8" id="exampleInputEmail1" aria-describedby="emailHelp" >

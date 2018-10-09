@@ -11,7 +11,8 @@
 
 
 
-    <title>Criar Conta</title>
+    <title>Brain Games - Criar Conta</title>
+        <link rel='shortcut icon' href="../images/brain_icon.gif" /> 
   </head>
   <body>
     <div class="" style="background-color:white">

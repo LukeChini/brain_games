@@ -11,7 +11,7 @@
 
 
 
-    <title>Alterar Email</title>
+    <title>Brain Games - Alterar email</title>
   </head>
   <body>
     <?php if(!isset($_SESSION)){session_start();} ?>

@@ -10,13 +10,14 @@
 
 <?php
 //___Dados iniciais:
-$funcao = 'linguagem'; // escolha uma destas funções: executiva , memoria , espacial , calculo ou linguagem 
+$funcao = 'linguagem'; // escolha uma destas funções: executiva , memoria , espacial , calculo ou linguagem
 $njp = 6; //$njp significa número de jogos por página (preferencialmente multiplos de 3)
 
 
 ?>
 
     <title>Jogos <?php echo ucfirst($funcao); ?></title>
+        <link rel='shortcut icon' href="../images/brain_icon.gif" /> 
   </head>
   <body>
     <?php require('../include/nav.php'); ?>

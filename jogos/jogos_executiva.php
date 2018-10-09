@@ -17,6 +17,7 @@ $njp = 6; //$njp significa número de jogos por página (preferencialmente multi
 ?>
 
     <title>Jogos <?php echo ucfirst($funcao); ?></title>
+        <link rel='shortcut icon' href="../images/brain_icon.gif" /> 
   </head>
   <body>
     <?php require('../include/nav.php'); ?>

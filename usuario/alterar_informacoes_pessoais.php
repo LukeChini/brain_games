@@ -11,7 +11,7 @@
 
 
 
-    <title>Alterar informaÃ§Ãµes pessoais</title>
+    <title>Brain Games - Alterar informações pessoais</title>
   </head>
   <body>
     <?php if(!isset($_SESSION)){session_start();} ?>

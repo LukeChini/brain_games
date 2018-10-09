@@ -8,7 +8,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>Jogos Memoria</title>
+    <title>Brain Games - Acesso Restrito</title>
+        <link rel='shortcut icon' href="../images/brain_icon.gif" />
   </head>
   <body>
     <?php require('../include/nav.php'); ?>
@@ -16,7 +17,7 @@
 
 </div>
 
-<?php if(!$_SESSION['admin']){header('location:inicio-logado.php');} ?>
+<?php if(!$_SESSION['admin']){header('location:../artigos/inicio_logado.php');} ?>
 
       <div class="bg-light">
 

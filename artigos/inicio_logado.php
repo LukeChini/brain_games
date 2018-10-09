@@ -11,7 +11,8 @@
 
 
 
-    <title>Alterar Email</title>
+    <title>Brain Games - Inicio</title>
+        <link rel='shortcut icon' href="../images/brain_icon.gif" /> 
   </head>
   <body>
 

@@ -51,7 +51,7 @@ elseif($_SESSION['src_perfil'] == NULL && $_SESSION['sexo_logado'] == 'feminino'
 
 
 
-  header("location:boas_vindas.php");
+  header("location:../artigos/boas_vindas.php");
 
 
 

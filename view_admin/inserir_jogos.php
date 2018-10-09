@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>Inserir Jogos -ADMIN</title>
+        <link rel='shortcut icon' href="../images/brain_icon.gif" /> 
   </head>
   <body>
     <?php require('../include/nav.php'); ?>
     </div>
 
-    <?php if(!$_SESSION['admin']){header('location:../artigo/inicio_logado.php');} ?>
+    <?php if(!$_SESSION['admin']){header('location:../artigos/inicio_logado.php');} ?>
 
 </div>
 

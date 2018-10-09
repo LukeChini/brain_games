@@ -11,7 +11,7 @@
 
 
 
-    <title>Conta</title>
+    <title>Brain Games - Conta</title>
   </head>
   <body>
 <?php if(!isset($_SESSION)){session_start();} ?>
@@ -41,16 +41,26 @@
           }
 
           if($_SESSION['plano_logado'])
-          {
-            echo
-            '<div class="p-3 text-center" style="font-size:25px; margin: 0 auto">
-            <p>Você é um Usuario Premium '.ucfirst($_SESSION['plano_logado']).'</p>
-            <div style="width:100px; height:100px;margin: 0 auto"><img src="../images/premium.png" style="width:100px;"></div>
-            </div>
+                  {
+                    if($_SESSION['sexo_logado'] == 'masculino'){
+                    echo
+                    '<div class="p-3 text-center" style="font-size:25px; margin: 0 auto">
+                    <p>Você é um Usuario Premium '.ucfirst($_SESSION['plano_logado']).'</p>
+                    <div style="width:100px; height:100px;margin: 0 auto"><img src="../images/premium.png" style="width:100px;"></div>
+                    </div>
 
+                  ';}
+                  else
+                  {
+                    echo
+                    '<div class="p-3 text-center" style="font-size:25px; margin: 0 auto">
+                    <p>Você é uma Usuaria Premium '.ucfirst($_SESSION['plano_logado']).'</p>
+                    <div style="width:100px; height:100px;margin: 0 auto"><img src="../images/premium.png" style="width:100px;"></div>
+                    </div>
 
-          ';
-          }
+                  ';
+                  }
+                  }
 
 
           ?>
