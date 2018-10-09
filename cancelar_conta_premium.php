@@ -61,6 +61,7 @@ if(!$_SESSION['premium_logado']){header('location:inicio-logado.php');}
           <form class="" action="tratar_cancelar-conta-premium.php" method="post">
 
 
+
           <p class="p-3 col-12 font-weight-bold" style="font-size:25px; color:red;">
             Ao acionar o botão "Cancelar conta premium" este usuario não terá mais acesso premium Brain Games e estará sujeito aos Termos de Serviço estabelecidos.</p>
           <input type="submit" class="btn btn-danger mt-3 mb-3 font-weight-bold" style="width:200px" name="cancelar_premium" value="Cancelar conta premium">

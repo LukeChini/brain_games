@@ -15,15 +15,14 @@ if(isset($_POST['cancelar_premium']))
   $alteração_plano = $conn->prepare("UPDATE usuarios SET plano = '$null' WHERE id = '$id'");
   $alteração_plano->execute();
 
-  $_SESSION['username_logado'] = $verifica['username'];
-  $_SESSION['email_logado'] = $verifica['email'];
-  $_SESSION['sexo_logado'] = $verifica['sexo'];
-  $_SESSION['aniversario_logado'] = $verifica['aniversario'];
-  $_SESSION['validade_premium_logado'] = $verifica['validade_premium'];
-  $_SESSION['plano_logado'] = $verifica['plano'];
-  $_SESSION['id_logado'] = $verifica['id'];
-  $_SESSION['src_perfil'] = $verifica['src_perfil'];
-  $_SESSION['admin'] = $verifica['admin'];
+  $_SESSION['username_logado'] = NULL;
+  $_SESSION['email_logado'] = NULL;
+  $_SESSION['sexo_logado'] = NULL;
+  $_SESSION['aniversario_logado'] = NULL;
+  $_SESSION['validade_premium_logado'] = NULL;
+  $_SESSION['id_logado'] = NULL;
+  $_SESSION['src_perfil'] = NULL;
+
 }
 
 

@@ -15,7 +15,7 @@
   </head>
   <body>
 <?php if(!isset($_SESSION)){session_start();} ?>
-<?php if(!$_SESSION['admin']){header('location:inicio-logado.php');} ?>
+
 
 <?php require('nav.php'); ?>
     </div>
