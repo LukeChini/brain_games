@@ -28,7 +28,8 @@
 
             <div class="col-12 mb-4 font-weight-bold text-center" style="font-size:25px">
               <h1><?php if($_SESSION['sexo_logado'] == 'masculino'){echo 'Bem Vindo!';}else{echo 'Bem Vinda';} ?></h1>
-              <?php           if($_SESSION['plano_logado'])
+
+              <?php        if($_SESSION['plano_logado'])
                         {
                           echo
                           '<div class="p-3 text-center" style="font-size:25px; margin: 0 auto">

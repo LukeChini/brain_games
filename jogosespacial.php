@@ -10,7 +10,8 @@
 
 <?php
 //___Dados iniciais:
-$inicial = 0; $form_php = 'jogosespacial.php';  $funcao = 'espacial';
+$funcao = 'espacial';
+$njp = 6; //$njp significa número de jogos por página (preferencialmente multiplos de 3)
 
 
 ?>
@@ -42,6 +43,8 @@ $inicial = 0; $form_php = 'jogosespacial.php';  $funcao = 'espacial';
           <?php
           include ('conn.php');
 
+          $inicial = 0;
+          $form_php = 'jogos'.$funcao.'.php';
 
           $verificação = $conn->query("SELECT * FROM jogos WHERE funcao = '$funcao' ORDER BY gratuito DESC ");
 
@@ -50,11 +53,11 @@ $inicial = 0; $form_php = 'jogosespacial.php';  $funcao = 'espacial';
           $c = count($n);
 
 
-          if(isset($_GET['p1'])){$inicial = 0;}  if(isset($_GET['p6'])){$inicial = 45;}
-          if(isset($_GET['p2'])){$inicial = 9;}  if(isset($_GET['p7'])){$inicial = 54;}
-          if(isset($_GET['p3'])){$inicial = 18;} if(isset($_GET['p8'])){$inicial = 63;}
-          if(isset($_GET['p4'])){$inicial = 27;} if(isset($_GET['p9'])){$inicial = 72;}
-          if(isset($_GET['p5'])){$inicial = 36;}
+          if(isset($_GET['p1'])){$inicial = ($njp*0);}  if(isset($_GET['p6'])){$inicial = ($njp*5);}
+          if(isset($_GET['p2'])){$inicial = ($njp*1);}  if(isset($_GET['p7'])){$inicial = ($njp*6);}
+          if(isset($_GET['p3'])){$inicial = ($njp*2);} if(isset($_GET['p8'])){$inicial = ($njp*7);}
+          if(isset($_GET['p4'])){$inicial = ($njp*3);} if(isset($_GET['p9'])){$inicial = ($njp*8);}
+          if(isset($_GET['p5'])){$inicial = ($njp*4);}
 
           $array_abertura = []; $array_fechamento = [];
           for ($i=0; $i < $c; $i++)
@@ -71,19 +74,21 @@ $inicial = 0; $form_php = 'jogosespacial.php';  $funcao = 'espacial';
           $tg_ap1="<!--";$tg_ap2="<!--";$tg_ap3="<!--";$tg_ap4="<!--";$tg_ap5="<!--";$tg_ap6="<!--";$tg_ap7="<!--";$tg_ap8="<!--";$tg_ap9="<!--";
           $tg_fp1="-->";$tg_fp2="-->";$tg_fp3="-->";$tg_fp4="-->";$tg_fp5="-->";$tg_fp6="-->";$tg_fp7="-->";$tg_fp8="-->";$tg_fp9="-->";
 
-          if($c>9){$tg_ap1="";$tg_ap2="";$tg_fp1="";$tg_fp2="";}
-          if($c>18){$tg_ap3="";$tg_fp3="";}
-          if($c>27){$tg_ap4="";$tg_fp4="";}
-          if($c>36){$tg_ap5="";$tg_fp5="";}
-          if($c>45){$tg_ap6="";$tg_fp6="";}
-          if($c>54){$tg_ap7="";$tg_fp7="";}
-          if($c>63){$tg_ap8="";$tg_fp8="";}
-          if($c>72){$tg_ap9="";$tg_fp9="";}
+          if($c>($njp*1)){$tg_ap1="";$tg_ap2="";$tg_fp1="";$tg_fp2="";}
+          if($c>($njp*2)){$tg_ap3="";$tg_fp3="";}
+          if($c>($njp*3)){$tg_ap4="";$tg_fp4="";}
+          if($c>($njp*4)){$tg_ap5="";$tg_fp5="";}
+          if($c>($njp*5)){$tg_ap6="";$tg_fp6="";}
+          if($c>($njp*6)){$tg_ap7="";$tg_fp7="";}
+          if($c>($njp*7)){$tg_ap8="";$tg_fp8="";}
+          if($c>($njp*8)){$tg_ap9="";$tg_fp9="";}
 
 
-          function printar_jogos($valor_inicial,$valor_final,$n,$array_abertura,$array_fechamento,$c)
+          function printar_jogos($valor_inicial,$valor_final,$n,$array_abertura,$array_fechamento,$c,$contagem)
           {
-          for ($i=$valor_inicial; $i <= $valor_final; $i++) {
+          for ($i=$valor_inicial; $i <= $valor_final; $i++)
+          {
+            if($contagem == 0){echo '<div class="row mt-3 mb-2" >';}
             if($i<$c && $_SESSION['premium_logado'] || $i<$c && !$_SESSION['premium_logado'] && $n[$i]['gratuito']){
             echo
             $array_abertura[$i]."<div class='col-12 col-lg-4'>
@@ -98,6 +103,7 @@ $inicial = 0; $form_php = 'jogosespacial.php';  $funcao = 'espacial';
                 <div class='card-body'>".$n[$i]['descricao']."</div>
               </div>
             </div>".$array_fechamento[$i];
+            $contagem = $contagem + 1;
           }
 
           if($i<$c && !$_SESSION['premium_logado'] && !$n[$i]['gratuito'] ){
@@ -116,7 +122,9 @@ $inicial = 0; $form_php = 'jogosespacial.php';  $funcao = 'espacial';
               <div class='card-body'>".$n[$i]['descricao']."</div>
             </div>
           </div>".$array_fechamento[$i];
+          $contagem = $contagem + 1;
         }
+        if($contagem == 3 & $i != $valor_final){echo '</div>'; $contagem = 0;}
         }}
 
         function printar_script($valor_inicial,$valor_final,$n,$array_abertura,$array_fechamento,$c)
@@ -157,43 +165,30 @@ $inicial = 0; $form_php = 'jogosespacial.php';  $funcao = 'espacial';
 
             <div class="col-12 mb-4 font-weight-bold" style="font-size:25px">Função <?php echo ucfirst($funcao); ?></div>
 
-            <div class="row mt-3 mb-2" >
-            <?php printar_jogos($inicial,($inicial+2),$n,$array_abertura,$array_fechamento,$c); ?>
+            <?php printar_jogos($inicial,($inicial+($njp-1)),$n,$array_abertura,$array_fechamento,$c,0); ?>
+
 
           </div>
-
-          <div class="row mt-1 mb-2" >
-
-            <?php printar_jogos(($inicial+3),($inicial+5),$n,$array_abertura,$array_fechamento,$c); ?>
-
-        </div>
-
-        <form class="" action="<?php echo $form_php; ?>" method="get">
-
-
-        <div class="row mt-1 mb-2" >
-
-          <?php printar_jogos(($inicial+6),($inicial+8),$n,$array_abertura,$array_fechamento,$c); ?>
 
           <script type="text/javascript">
           <?php printar_script($inicial,($inicial+8),$n,$array_abertura,$array_fechamento,$c); ?>
 
           </script>
 
-
+<form class="" action="<?php echo $form_php; ?>" method="get">
           <?php echo $tg_ap1; ?><nav class="col-12 mt-3" aria-label="Page navigation example">
             <ul class="pagination">
-                                    <li class="page-item"><input type="submit" name="p1" value="1" class="page-link <?php if($inicial == 0){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li>
-              <?php echo $tg_ap2; ?><li class="page-item"><input type="submit" name="p2" value="2" class="page-link <?php if($inicial == 9){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp2; ?>
-              <?php echo $tg_ap3; ?><li class="page-item"><input type="submit" name="p3" value="3" class="page-link <?php if($inicial == 18){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp3; ?>
+                                    <li class="page-item"><input type="submit" name="p1" value="1" class="page-link <?php if($inicial == ($njp*0)){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li>
+              <?php echo $tg_ap2; ?><li class="page-item"><input type="submit" name="p2" value="2" class="page-link <?php if($inicial == ($njp*1)){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp2; ?>
+              <?php echo $tg_ap3; ?><li class="page-item"><input type="submit" name="p3" value="3" class="page-link <?php if($inicial == ($njp*2)){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp3; ?>
 
-              <?php echo $tg_ap4; ?><li class="page-item"><input type="submit" name="p4" value="4" class="page-link <?php if($inicial == 27){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp4; ?>
-              <?php echo $tg_ap5; ?><li class="page-item"><input type="submit" name="p5" value="5" class="page-link <?php if($inicial == 36){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp5; ?>
-              <?php echo $tg_ap6; ?><li class="page-item"><input type="submit" name="p6" value="6" class="page-link <?php if($inicial == 45){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp6; ?>
+              <?php echo $tg_ap4; ?><li class="page-item"><input type="submit" name="p4" value="4" class="page-link <?php if($inicial == ($njp*3)){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp4; ?>
+              <?php echo $tg_ap5; ?><li class="page-item"><input type="submit" name="p5" value="5" class="page-link <?php if($inicial == ($njp*4)){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp5; ?>
+              <?php echo $tg_ap6; ?><li class="page-item"><input type="submit" name="p6" value="6" class="page-link <?php if($inicial == ($njp*5)){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp6; ?>
 
-              <?php echo $tg_ap7; ?><li class="page-item"><input type="submit" name="p7" value="7" class="page-link <?php if($inicial == 54){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp7; ?>
-              <?php echo $tg_ap8; ?><li class="page-item"><input type="submit" name="p8" value="8" class="page-link <?php if($inicial == 63){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp8; ?>
-              <?php echo $tg_ap9; ?><li class="page-item"><input type="submit" name="p9" value="9" class="page-link <?php if($inicial == 72){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp9; ?>
+              <?php echo $tg_ap7; ?><li class="page-item"><input type="submit" name="p7" value="7" class="page-link <?php if($inicial == ($njp*6)){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp7; ?>
+              <?php echo $tg_ap8; ?><li class="page-item"><input type="submit" name="p8" value="8" class="page-link <?php if($inicial == ($njp*7)){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp8; ?>
+              <?php echo $tg_ap9; ?><li class="page-item"><input type="submit" name="p9" value="9" class="page-link <?php if($inicial == ($njp*8)){echo 'bg-info text-white';}else{echo ' bg-secundary';} ?>"></li><?php echo $tg_fp9; ?>
 
 
 
