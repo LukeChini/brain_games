@@ -12,7 +12,7 @@
 
 
     <title>Brain Games - Criar Conta</title>
-        <link rel='shortcut icon' href="../images/brain_icon.gif" /> 
+        <link rel='shortcut icon' href="../images/brain_icon.gif" />
   </head>
   <body>
     <div class="" style="background-color:white">
@@ -146,7 +146,7 @@
 
 
                               <div class="text-center" style="margin: 0 auto">
-                              <input type="submit" class="btn btn-danger mr-3 mt-2 mb-3" style="width:300px; height:50px; font-size:20px" value="Inscrever-se"></input>
+                              <input type="submit" name="enviar" class="btn btn-danger mr-3 mt-2 mb-3" style="width:300px; height:50px; font-size:20px" value="Inscrever-se"></input>
                               </div>
 
                             </div>

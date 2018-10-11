@@ -10,7 +10,8 @@
      <!-- Bootstrap CSS -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-     <title>Hello, world!</title>
+     <title>Brain Games - Salvar usuario</title>
+     <link rel='shortcut icon' href="../images/brain_icon.gif" />
    </head>
    <body>
      <div class='' style='background-color:rgb(255,255,255)'>
@@ -19,8 +20,8 @@
      <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarTogglerDemo03' aria-controls='navbarTogglerDemo03' aria-expanded='false' aria-label='Toggle navigation'>
      <span class='navbar-toggler-icon'></span>
      </button>
-     <img src="images/human-brain-white -menor.jpg" alt="logo" style="width:60px">
-     <a class='navbar-brand text-info font-weight-bold' href='#'>Brain Games</a>
+     <img src="../images/human-brain-white -menor.jpg" alt="logo" style="width:60px">
+     <a class='navbar-brand text-info font-weight-bold' href='../inicial/criar_conta.php'>Brain Games</a>
      <div class='collapse navbar-collapse' id='navbarTogglerDemo03'>
      <ul class='navbar-nav mr-auto mt-2 mt-lg-0'>
      <li class='nav-item active'>
@@ -30,7 +31,7 @@
      <li class='nav-item'>
      </li>
      </ul>
-     <button type="button" class="btn btn-light mt-2">Entrar</button>
+     <a href="../inicial/entrar.php" class="btn btn-light mt-2">Entrar</a>
      </div>
      </div>
      </div>
@@ -52,7 +53,7 @@
    $sexo = $_POST['sexo'];
    $termos = $_POST['termos'];
 
-   if(str_word_count($user_name)<1){return header("location:criar_conta.php");}
+   if(str_word_count($user_name)<1){return header("location:../inicial/criar_conta.php");}
 
 
    $aniversario = $ano_nascimento.'-'.$mes_nascimento.'-'.$dia_nascimento;
@@ -61,37 +62,41 @@
    $senha_e_confirmar_senha_nao_conferem = "";
    if($senha !== $confirmar_senha){$senha_e_confirmar_senha_nao_conferem ="Senha e Confirmar Senha não conferem";}
 
-   $stmt = $conn->prepare('INSERT INTO usuarios(username, email, senha, aniversario, sexo) VALUES (:username, :email, :senha, :aniversario, :sexo )');
+   if (isset($_POST['enviar'])) {
+     $stmt = $conn->prepare('INSERT INTO usuarios(username, email, senha, aniversario, sexo) VALUES (:username, :email, :senha, :aniversario, :sexo )');
 
 
-   $stmt->bindParam(':username', $user_name, PDO::PARAM_STR);
-   $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-   $stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
-   $stmt->bindParam(':aniversario', $aniversario, PDO::PARAM_STR);
-   $stmt->bindParam(':sexo', $sexo, PDO::PARAM_STR);
+     $stmt->bindParam(':username', $user_name, PDO::PARAM_STR);
+     $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+     $stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
+     $stmt->bindParam(':aniversario', $aniversario, PDO::PARAM_STR);
+     $stmt->bindParam(':sexo', $sexo, PDO::PARAM_STR);
 
 
-   if ($senha === $confirmar_senha && $validar_data) { $stmt->execute();}
+     if ($senha === $confirmar_senha && $validar_data) { $stmt->execute();}
+
+   }
+
 
 
 
    $conta_sucesso = '<p style="font-size:40px"> Conta criada com Sucesso! </p>
-  <a href="entrar.php" class="btn btn-danger mt-2">Entrar</a>';
+  <a href="../inicial/entrar.php" class="btn btn-danger mt-2">Entrar</a>';
 
     $conta_insucesso ='<p style="font-size:40px"> Senha e Confirmar Senha não conferem! </p>
-  <a href="criar_conta.php" class="btn btn-danger mt-2">Confirmar Cadastro</a><br />';
+  <a href="../inicial/criar_conta.php" class="btn btn-danger mt-2">Confirmar Cadastro</a><br />';
 
     if(!$validar_data && $senha === $confirmar_senha)
     {
       $conta_insucesso ='<p style="font-size:40px"> Data inserida não é válida! </p>
-    <a href="criar_conta.php" class="btn btn-danger mt-2">Confirmar Cadastro</a><br />';
+    <a href="../inicial/criar_conta.php" class="btn btn-danger mt-2">Confirmar Cadastro</a><br />';
     }
 
     if(!$validar_data && $senha !== $confirmar_senha)
     {
       $conta_insucesso ='<p style="font-size:40px"> Data inserida não é válida! </p><br />
                          <p style="font-size:40px"> Senha e Confirmar Senha não conferem! </p><br />
-    <a href="criar_conta.php" class="btn btn-danger mt-2">Confirmar Cadastro</a><br />';
+    <a href="../inicial/criar_conta.php" class="btn btn-danger mt-2">Confirmar Cadastro</a><br />';
     }
 
 
@@ -116,15 +121,15 @@
 
 
 
-             <footer class="container mt-3">
-                 <ul class="nav border-top border-bottom col-12">
-                 <li class="nav-item col-12 col-lg-2 text-center"><a class="nav-link text-secondary" href="#">Sobre Nós</a></li>
-                 <li class="nav-item col-12 col-lg-2 text-center"><a class="nav-link text-secondary" href="#">Contato</a></li>
-                 <li class="nav-item col-12 col-lg-3 text-center"><a class="nav-link text-secondary" href="#">Termos de Serviço</a></li>
-                 <li class="nav-item col-12 col-lg-3 text-center"><a class="nav-link text-secondary" href="#">Política de Privacidade</a></li>
-                 <li class="nav-item col-12 col-lg-2 text-center"><a class="nav-link text-secondary" href="#">Ajuda</a></li>
-                 </ul>
-             </footer>
+         <footer class="container mt-3">
+             <ul class="nav border-top border-bottom col-12">
+             <li class="nav-item col-12 col-lg-2 text-center"><a class="nav-link text-secondary" href="../footer/sobre_nos.php">Sobre Nós</a></li>
+             <li class="nav-item col-12 col-lg-2 text-center"><a class="nav-link text-secondary" href="../footer/contato.php">Contato</a></li>
+             <li class="nav-item col-12 col-lg-3 text-center"><a class="nav-link text-secondary" href="../footer/termos_de_servico.php">Termos de Serviço</a></li>
+             <li class="nav-item col-12 col-lg-3 text-center"><a class="nav-link text-secondary" href="../footer/politica_de_privacidade.php">Política de Privacidade</a></li>
+             <li class="nav-item col-12 col-lg-2 text-center"><a class="nav-link text-secondary" href="../footer/ajuda.php">Ajuda</a></li>
+             </ul>
+         </footer>
 
              </div>
 

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>Inserir Jogos -ADMIN</title>
-        <link rel='shortcut icon' href="../images/brain_icon.gif" /> 
+        <link rel='shortcut icon' href="../images/brain_icon.gif" />
   </head>
   <body>
     <?php require('../include/nav.php'); ?>
@@ -34,7 +34,6 @@
                 <a href="alterar_jogos.php" type="button" class="btn btn-danger total mt-3 mb-3 font-weight-bold" style="width:200px">Alterar Jogos</a>
               <a href="excluir_jogos.php" type="button" class="btn btn-dark total mt-3 mb-3 font-weight-bold" style="width:200px">Excluir Jogos</a>
               </div>
-
 
 
 <form class="" enctype="multipart/form-data" action="tratar_inserir-jogos.php" method="post">
