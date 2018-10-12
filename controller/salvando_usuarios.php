@@ -41,7 +41,7 @@
 
    <?php
 
-    // include ('../include/conn.php');
+    include ('../include/conn.php');
 
   //  $user_name = $_POST['user_name'];
   //  $email = $_POST['email'];
@@ -133,11 +133,20 @@
               }
             }
           }
-          $stm = $conn
+          $stm = $conn->query("SELECT * FROM usuarios WHERE `username`='".$username."' OR `email`='".$email."'");
+          if($r = $stm->fetch()){
+            $errors = true;
+            $error = "Já existe um usuário com este nome ou e-mail!";
+          }
           if($errors == true){
             ?>
             <p style="font-size:40px"> <?php echo $error; ?> </p>
-         <?php }else{ ?>
+         <?php }else{
+           $pass = md5($password);
+            $insert = $conn->prepare("INSERT INTO `usuarios` (`username`, `email`, `senha`, `aniversario`, `sexo`) VALUES ('".$username."', '".$email."','".$pass."', '25/08/2001', '".$genre."')");
+            $insert->execute();
+           ?>
+         
           <p style="font-size:40px">Conta criada com sucesso!</p>
            <?php }?>
 
