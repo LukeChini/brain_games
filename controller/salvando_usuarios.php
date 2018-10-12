@@ -41,78 +41,106 @@
 
    <?php
 
-   include ('../include/conn.php');
+    // include ('../include/conn.php');
 
-   $user_name = $_POST['user_name'];
-   $email = $_POST['email'];
-   $senha = $_POST['senha'];
-   $confirmar_senha = $_POST['confirmar_senha'];
-   $dia_nascimento = $_POST['dia_nascimento'];
-   $mes_nascimento = $_POST['mes_nascimento'];
-   $ano_nascimento = $_POST['ano_nascimento'];
-   $sexo = $_POST['sexo'];
-   $termos = $_POST['termos'];
+  //  $user_name = $_POST['user_name'];
+  //  $email = $_POST['email'];
+  //  $senha = $_POST['senha'];
+  //  $confirmar_senha = $_POST['confirmar_senha'];
+  //  $dia_nascimento = $_POST['dia_nascimento'];
+  //  $mes_nascimento = $_POST['mes_nascimento'];
+  //  $ano_nascimento = $_POST['ano_nascimento'];
+  //  $sexo = $_POST['sexo'];
+  //  $termos = $_POST['termos'];
 
-   if(str_word_count($user_name)<1){return header("location:../inicial/criar_conta.php");}
+  
 
-
-   $aniversario = $ano_nascimento.'-'.$mes_nascimento.'-'.$dia_nascimento;
-   $validar_data = checkdate($mes_nascimento,$dia_nascimento,$ano_nascimento);
-
-   $senha_e_confirmar_senha_nao_conferem = "";
-   if($senha !== $confirmar_senha){$senha_e_confirmar_senha_nao_conferem ="Senha e Confirmar Senha não conferem";}
-
-   if (isset($_POST['enviar'])) {
-     $stmt = $conn->prepare('INSERT INTO usuarios(username, email, senha, aniversario, sexo) VALUES (:username, :email, :senha, :aniversario, :sexo )');
+  //  if(str_word_count($user_name)<1){
+     
+  //   return header("location:../inicial/criar_conta.php");}
 
 
-     $stmt->bindParam(':username', $user_name, PDO::PARAM_STR);
-     $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-     $stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
-     $stmt->bindParam(':aniversario', $aniversario, PDO::PARAM_STR);
-     $stmt->bindParam(':sexo', $sexo, PDO::PARAM_STR);
+  //  $aniversario = $ano_nascimento.'-'.$mes_nascimento.'-'.$dia_nascimento;
+  //  $validar_data = checkdate($mes_nascimento,$dia_nascimento,$ano_nascimento);
+
+  //  $senha_e_confirmar_senha_nao_conferem = "";
+  //  if($senha !== $confirmar_senha){$senha_e_confirmar_senha_nao_conferem ="Senha e Confirmar Senha não conferem";}
+
+  //  if (isset($_POST['enviar'])) {
+  //   //  $stmt = $conn->prepare('INSERT INTO usuarios(username, email, senha, aniversario, sexo) VALUES (:username, :email, :senha, :aniversario, :sexo )');
 
 
-     if ($senha === $confirmar_senha && $validar_data) { $stmt->execute();}
-
-   }
-
-
-
-
-   $conta_sucesso = '<p style="font-size:40px"> Conta criada com Sucesso! </p>
-  <a href="../inicial/entrar.php" class="btn btn-danger mt-2">Entrar</a>';
-
-    $conta_insucesso ='<p style="font-size:40px"> Senha e Confirmar Senha não conferem! </p>
-  <a href="../inicial/criar_conta.php" class="btn btn-danger mt-2">Confirmar Cadastro</a><br />';
-
-    if(!$validar_data && $senha === $confirmar_senha)
-    {
-      $conta_insucesso ='<p style="font-size:40px"> Data inserida não é válida! </p>
-    <a href="../inicial/criar_conta.php" class="btn btn-danger mt-2">Confirmar Cadastro</a><br />';
-    }
-
-    if(!$validar_data && $senha !== $confirmar_senha)
-    {
-      $conta_insucesso ='<p style="font-size:40px"> Data inserida não é válida! </p><br />
-                         <p style="font-size:40px"> Senha e Confirmar Senha não conferem! </p><br />
-    <a href="../inicial/criar_conta.php" class="btn btn-danger mt-2">Confirmar Cadastro</a><br />';
-    }
+  //   //  $stmt->bindParam(':username', $user_name, PDO::PARAM_STR);
+  //   //  $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+  //   //  $stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
+  //   //  $stmt->bindParam(':aniversario', $aniversario, PDO::PARAM_STR);
+  //   //  $stmt->bindParam(':sexo', $sexo, PDO::PARAM_STR);
 
 
-    ?>
+  //    if ($senha === $confirmar_senha && $validar_data) {
+  //       // $stmt->execute();
+  //     }
+
+  //  }
+
+
+
+
+  //  $conta_sucesso = '<p style="font-size:40px"> Conta criada com Sucesso! </p>
+  // <a href="../inicial/entrar.php" class="btn btn-danger mt-2">Entrar</a>';
+
+  //   $conta_insucesso ='<p style="font-size:40px"> Senha e Confirmar Senha não conferem! </p>
+  // <a href="../inicial/criar_conta.php" class="btn btn-danger mt-2">Confirmar Cadastro</a><br />';
+
+  //   if(!$validar_data && $senha === $confirmar_senha)
+  //   {
+  //     $conta_insucesso ='<p style="font-size:40px"> Data inserida não é válida! </p>
+  //   <a href="../inicial/criar_conta.php" class="btn btn-danger mt-2">Confirmar Cadastro</a><br />';
+  //   }
+
+  //   if(!$validar_data && $senha !== $confirmar_senha)
+  //   {
+  //     $conta_insucesso ='<p style="font-size:40px"> Data inserida não é válida! </p><br />
+  //                        <p style="font-size:40px"> Senha e Confirmar Senha não conferem! </p><br />
+  //   <a href="../inicial/criar_conta.php" class="btn btn-danger mt-2">Confirmar Cadastro</a><br />';
+  //   }
+
+
+  //   ?>
 
        <div class="bg-light text-center">
 
+        <?php
+          $username = $_POST['user_name'];
+          $email = $_POST['email'];
+          $password = $_POST['senha'];
+          $password_confirmation = $_POST['confirmar_senha'];
+          // $born = $_POST["born"];
+          $genre = $_POST['sexo'];
+          $errors = false;
+          $error = "";
+          if(str_word_count($username) < 1){
+            $errors = true;
+            $error = "Seu nome de usuario é invalido";
+          }else{
+            if($password !== $password_confirmation){
+              $errors = true;
+              $error = "Suas senhas não conferem!";
+            }else{
+              if(!isset($_POST['termos'])){
+                $errors = true;
+                $error = "Você precisa concordar com os termos de uso";
+              }
+            }
+          }
+          $stm = $conn
+          if($errors == true){
+            ?>
+            <p style="font-size:40px"> <?php echo $error; ?> </p>
+         <?php }else{ ?>
+          <p style="font-size:40px">Conta criada com sucesso!</p>
+           <?php }?>
 
-         <?php
-         if($senha === $confirmar_senha && $validar_data){echo $conta_sucesso;}
-         if($senha !== $confirmar_senha || !$validar_data){echo $conta_insucesso;}
-
-
-
-
-         ?>
 
 
          </div>
