@@ -141,13 +141,15 @@
           if($errors == true){
             ?>
             <p style="font-size:40px"> <?php echo $error; ?> </p>
+            <a href="../inicial/criar_conta.php" class="btn btn-sucess mt-2">Clique aqui para voltar!</a>
          <?php }else{
            $pass = md5($password);
             $insert = $conn->prepare("INSERT INTO `usuarios` (`username`, `email`, `senha`, `aniversario`, `sexo`) VALUES ('".$username."', '".$email."','".$pass."', '25/08/2001', '".$genre."')");
             $insert->execute();
            ?>
          
-          <p style="font-size:40px">Conta criada com sucesso!</p>
+          <p style="font-size:40px">Parabéns, <?php echo $username ?> seja muito bem vindo ao Brain Games! Sua conta foi criada com sucesso!</p>
+          <a href="../inicial/entrar.php" class="btn btn-sucess mt-2">Clique aqui para entrar!</a>
            <?php }?>
 
 
