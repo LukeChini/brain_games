@@ -133,10 +133,10 @@
               }
             }
           }
-          $stm = $conn->query("SELECT * FROM usuarios WHERE `username`='".$username."' OR `email`='".$email."'");
+          $stm = $conn->query("SELECT * FROM usuarios WHERE `email`='".$email."'");
           if($r = $stm->fetch()){
             $errors = true;
-            $error = "Já existe um usuário com este nome ou e-mail!";
+            $error = "Já existe um usuário com este e-mail!";
           }
           if($errors == true){
             ?>
