@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>Brain Games - Linguagem Artigo</title>
-        <link rel='shortcut icon' href="../images/brain_icon.gif" /> 
+        <link rel='shortcut icon' href="../images/brain_icon.gif" />
   </head>
   <body>
 <?php require('../include/nav.php'); ?>
@@ -24,7 +24,7 @@
         <div class="row">
 
 
-          <div id="list-example" class="col-12 col-sm-3 col-lg-2 list-group mb-3 text-align">
+          <div id="list-example" class="col-12 col-sm-3 col-lg-2 list-group mb-3 text-align lista_funcoes">
             <p class="list-group-item list-group-item-action bg-info text-center font-weight-bold text-white">Funções</p>
             <a class="list-group-item list-group-item-action" href="artigo_executiva.php">Executiva</a>
             <a class="list-group-item list-group-item-action" href="artigo_memoria.php">Memória</a>
@@ -32,9 +32,12 @@
             <a class="list-group-item list-group-item-action" href="artigo_calculo.php">Cálculo</a>
             <a class="list-group-item list-group-item-action bg-primary font-weight-bold text-white" href="artigo_linguagem.php">Linguagem</a>
           </div>
+          <style media='screen'>
+          @media (max-width: 992px) {.lista_funcoes{margin-left:8px;}}
+          </style>
 
 
-        <div class="col-12 col-sm-9 col-lg-10 bg-white border">
+        <div class="col-12 col-sm-8 col-lg-10 bg-white border">
 
 
             <div class="col-12 mb-4 font-weight-bold" style="font-size:25px">Função Linguagem - Artigo</div>

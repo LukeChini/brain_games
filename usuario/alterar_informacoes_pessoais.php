@@ -12,6 +12,7 @@
 
 
     <title>Brain Games - Alterar informações pessoais</title>
+      <link rel='shortcut icon' href="../images/brain_icon.gif" />
   </head>
   <body>
     <?php if(!isset($_SESSION)){session_start();} ?>
@@ -111,7 +112,7 @@ $dia_10="";if('10' === $dia ){$dia_10="selected";} $dia_20="";if('20' === $dia )
                                  ?>
 
                                 <div class="form-group col-3 col-lg-3">
-                                  <select required class="form-control dorm-control-lg" name="dia">
+                                  <select required class="form-control form-control-sm" name="dia">
                                                      <option  value="">Dia</option>
 <option  value="01" <?php echo $dia_01 ?>>1</option>  <option value="02" <?php echo $dia_02 ?>>2</option>   <option value="03" <?php echo $dia_03 ?>>3</option>
 <option  value="04" <?php echo $dia_04 ?>>4</option>  <option value="05" <?php echo $dia_05 ?>>5</option>   <option value="06" <?php echo $dia_06 ?>>6</option>
@@ -139,7 +140,7 @@ $mes_06="";if('06' === $mes ){$mes_06="selected";} $mes_12="";if('12' === $mes )
  ?>
 
                                 <div class="form-group col-6 col-lg-3">
-                                  <select required class="form-control dorm-control-lg" name="mes">
+                                  <select required class="form-control form-control-sm" name="mes">
                                     <option value="01" <?php echo $mes_01 ?>>Janeiro</option>  <option value="02" <?php echo $mes_02 ?>>Fevereiro</option> <option value="03" <?php echo $mes_03 ?>>Março</option>
                                     <option value="04" <?php echo $mes_04 ?>>Abril</option>    <option value="05" <?php echo $mes_05 ?>>Maio</option>      <option value="06" <?php echo $mes_06 ?>>Junho</option>
                                     <option value="07" <?php echo $mes_07 ?>>Julho</option>    <option value="08" <?php echo $mes_08 ?>>Agosto</option>    <option value="09" <?php echo $mes_09 ?>>Setembro</option>
@@ -150,7 +151,7 @@ $mes_06="";if('06' === $mes ){$mes_06="selected";} $mes_12="";if('12' === $mes )
                                 <?php $ano = substr ( $_SESSION['aniversario_logado'] , 0 , 4 ); ?>
 
                                 <div class="form-group col-3">
-                                  <input required type="text" name="ano" value=<?php echo '"'.$ano.'"'?> class="form-control dorm-control-lg" placeholder="Ano">
+                                  <input required type="text" name="ano" value=<?php echo '"'.$ano.'"'?> class="form-control form-control-sm" placeholder="Ano">
                                 </div>
                                 </div>
 
@@ -158,7 +159,7 @@ $mes_06="";if('06' === $mes ){$mes_06="selected";} $mes_12="";if('12' === $mes )
                                 <div class="form-check form-check-inline p-3">
                                   <a href="#" class="btn btn-light border-0 " style="background-color:white" >Sexo:</a>
                                   <input class="form-check-input " type="radio" name="sexo" value="masculino" <?php echo $m; ?>>Masculino</input>
-                                  <input class="form-check-input ml-5" type="radio" name="sexo" value="feminino" <?php echo $f; ?>>Feminino</input>
+                                  <input class="form-check-input ml-2" type="radio" name="sexo" value="feminino" <?php echo $f; ?>>Feminino</input>
                                 </div>
                                 <br />
 

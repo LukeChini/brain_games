@@ -12,7 +12,7 @@
 
 
     <title>Brain Games - Alterar Senha</title>
-    <link rel='shortcut icon' href="../images/brain_icon.gif" /> 
+    <link rel='shortcut icon' href="../images/brain_icon.gif" />
   </head>
   <body>
     <?php require('../include/nav.php'); ?>

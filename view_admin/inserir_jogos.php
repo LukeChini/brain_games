@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Inserir Jogos -ADMIN</title>
         <link rel='shortcut icon' href="../images/brain_icon.gif" />
   </head>
@@ -35,11 +35,36 @@
               <a href="excluir_jogos.php" type="button" class="btn btn-dark total mt-3 mb-3 font-weight-bold" style="width:200px">Excluir Jogos</a>
               </div>
 
+              <script type="text/javascript">
+                $(document).ready(function(){
+                  $('#ajax_form').submit(function(e){
+                    e.preventDefault();
 
-<form class="" enctype="multipart/form-data" action="tratar_inserir-jogos.php" method="post">
+                    let dados = jQuery(this).serialize();
 
+                    $("[type=submit]",this).each(function(){
+                      dados += "&" + escape($(this).attr("name")) + "=" + escape($(this).val())
+                    })
 
+                    $.ajax({
+                      type:"POST",
+                      url:"processa.php",
+                      data: dados,
+                      success: function(data)
+                      {
+                        alert(data);
+                      }
+                    })
+                    return false;
+                  })
+                })
+              </script>
 
+              <form class="" id="ajax_form" enctype="multipart/form-data" action="tratar_carregar_imagem.php" method="post">
+
+              </form>
+
+        <form class="" enctype="multipart/form-data" action="tratar_inserir-jogos.php" method="post">
         <div class="col-12 col-sm-9 col-lg-10 bg-white border" style="margin: 0 auto;">
 
           <div class="bg-info" style="height:50px;">
@@ -67,7 +92,31 @@
                   <input required type="text" name="nome" class="card-header bg-info text-center font-weight-bold text-white" style="color:white; margin-left:-12px;" placeholder="Nome do Jogo"></input>
                 </div>
                 <div id='divjogoMemoria1'class="border-bottom" style="overflow:hidden; height:300px">
-                  <input required name="arquivo_img" type="file" style="color:white;font-size:15px"></input>
+                  <form enctype="multipart/form-data" action="perfil.php" method="post">
+                        <input required name="arquivo_img" type="file" style="color:white;font-size:15px"></input>
+                        <input type="submit" name="enviar" value="Enviar"></input>
+                  </form>
+
+                  <?php
+
+
+                  if(isset($_POST['enviar']))
+                  {
+                    print_r($_FILES['imagem']);
+                    move_uploaded_file($_FILES['imagem']['tmp_name'], 'upload/'.$_FILES['imagem']['name']);
+                  }
+
+
+                   ?>
+
+                  <br /><br/>
+
+                    <figure class="fig">
+                      <img class="img" src="<?php echo 'upload/'.$_FILES['imagem']['name'] ?>" >
+                      <br />
+                  </figure>
+
+
                   <p class="card-img-top p-3 text-center">Insira uma Imagem</p>
                 </div>
                 <div class="card-body">
@@ -93,53 +142,6 @@
             </div>
           </form>
 
-            <script type="text/javascript">
-
-
-              const jogoMemoria3 = document.querySelector('#jogoMemoria3')
-              const jogoMemoria4 = document.querySelector('#jogoMemoria4')
-              const jogoMemoria5 = document.querySelector('#jogoMemoria5')
-              const jogoMemoria6 = document.querySelector('#jogoMemoria6')
-
-
-
-              jogoMemoria3.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogoMemoria3.addEventListener('mouseout', function() {this.src = 'images/human-brain-white.jpg'})
-
-              jogoMemoria4.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogoMemoria4.addEventListener('mouseout', function() {this.src = 'images/depositphotos_90095212-stock-illustration-illustration-of-albert-einstein.jpg'})
-
-              jogoMemoria5.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogoMemoria5.addEventListener('mouseout', function() {this.src = 'images/913183098-1024x1024.jpg'})
-
-              jogoMemoria6.addEventListener('mouseover', function() {this.src = 'images/cadeado300.jpg'})
-              jogoMemoria6.addEventListener('mouseout', function() {this.src = 'images/9170503-en-forme-de-dessin-monochrome-éléments-de-puzzle.jpg'})
-
-              const divjogoMemoria1 = document.querySelector('#divjogoMemoria1')
-              const divjogoMemoria2 = document.querySelector('#divjogoMemoria2')
-              const divjogoMemoria3 = document.querySelector('#divjogoMemoria3')
-              const divjogoMemoria4 = document.querySelector('#divjogoMemoria4')
-              const divjogoMemoria5 = document.querySelector('#divjogoMemoria5')
-              const divjogoMemoria6 = document.querySelector('#divjogoMemoria6')
-
-              if(window.innerWidth > 991)
-              {
-                divjogoMemoria1.style.height = "300px";
-                divjogoMemoria2.style.height = "300px";
-                divjogoMemoria3.style.height = "300px";
-
-                divjogoMemoria4.style.height = "300px";
-                divjogoMemoria5.style.height = "300px";
-                divjogoMemoria6.style.height = "300px";
-
-
-
-              }
-
-
-
-
-            </script>
               </div></div></div></div>
 
 <?php require('../include/variaveis_php_echo.php'); echo $html_footer; ?>
