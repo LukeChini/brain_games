@@ -21,7 +21,7 @@
         </div>
 
         <div class="col-7 col-lg-5 p-1">
-            <a class='logo-text nav-link text-info font-weight-bold px-lg-0' href='../index.php'>
+            <a class='logo-text nav-link text-info font-weight-bold px-lg-0' href='index.php'>
               Brain Games
             </a>
         </div>
