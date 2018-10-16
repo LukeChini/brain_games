@@ -12,6 +12,7 @@
 
 
     <title>Brain Games - Alterar email</title>
+      <link rel='shortcut icon' href="../images/brain_icon.gif" />
   </head>
   <body>
     <?php if(!isset($_SESSION)){session_start();} ?>

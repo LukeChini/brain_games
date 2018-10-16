@@ -15,16 +15,30 @@
         <link rel='shortcut icon' href="../images/brain_icon.gif" />
   </head>
   <body>
-    <div class="" style="background-color:white">
-    <div class="media container" style="background-color:white">
-      <img src="../images/human-brain-white -menor.jpg" alt="logo" style="width:100px">
-      <div class="media-body">
-        <h2 class="mt-0 text-info font-weight-bold" style="padding-left:5px">Brain Games</h2>
-      </div>
-      <p class="btn btn-light mr-3 mt-2 border-0" style="background-color:white">Não é membro?</p>
-      <a href="entrar.php" class="btn btn-light mt-2">Entrar</a>
-      </div>
-      </div>
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-light w-100 d-flex justify-content-around align-items-center row mx-0 px-1">
+        <div class="logo-box col-2 p-1">
+            <a class="nav-link p-0" href="index.php">
+                <img src="../images/logo.jpg" alt="logo" class="img-fluid" style="width:100px;">
+            </a>
+        </div>
+
+        <div class="col-7 col-lg-5 p-1">
+            <a class='logo-text nav-link text-info font-weight-bold px-lg-0' href='../index.php'>
+              Brain Games
+            </a>
+        </div>
+
+        <button class="navbar-toggler mr-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon top-menu-button"></span>
+        </button>
+
+        <div class="botoes-topo collapse navbar-collapse mx-3 mx-sm-5 mr-lg-2 mt-1 mt-sm-2 flex-column flex-md-row col-lg-4" id="navbarSupportedContent">
+            <a href="entrar.php" class="btn btn-block my-1 mt-sm-2 mr-sm-3">É membro?</a>
+            <a href="entrar.php" class="btn btn-light btn-block mt-sm-2 my-1">Entrar</a>
+        </div>
+    </nav>
+</header>
 
 
       <div class="bg-light" >
@@ -90,7 +104,7 @@
                             </div>
 
                             <div class="form-group col-3 col-lg-3">
-                              <select required class="form-control dorm-control-lg" name="dia_nascimento">
+                              <select required class="form-control form-control-sm" name="dia_nascimento">
                                 <option  value="">Dia</option>
                                 <option  value="01">1</option>  <option value="02">2</option>   <option value="03">3</option>
                                 <option  value="04">4</option>  <option value="05">5</option>   <option value="06">6</option>
@@ -107,7 +121,7 @@
                             </div>
 
                             <div class="form-group col-6 col-lg-3">
-                              <select required class="form-control dorm-control-lg" name="mes_nascimento">
+                              <select required class="form-control form-control-sm" name="mes_nascimento">
                                 <option value="">Mês</option>
                                 <option value="01">Janeiro</option>  <option value="02">Fevereiro</option> <option value="03">Março</option>
                                 <option value="04">Abril</option>    <option value="05">Maio</option>      <option value="06">Junho</option>
@@ -120,15 +134,16 @@
 
 
                             <div class="form-group col-3">
-                              <input type="text" required name="ano_nascimento" value="" class="form-control dorm-control-lg" placeholder="Ano">
+                              <input type="text" required name="ano_nascimento" value="" class="form-control form-control-sm" placeholder="Ano">
                             </div>
                             </div>
 
                             <div class="form-check form-check-inline p-3">
                               <a href="#" class="btn btn-light border-0 " style="background-color:rgb(238,238,238)">Sexo:</a>
                               <input class="form-check-input" checked type="radio" name="sexo" value="masculino">Masculino</input>
-                              <input class="form-check-input ml-5" type="radio" name="sexo" value="feminino">Feminino</input>
+                              <input class="form-check-input ml-3" type="radio" name="sexo" value="feminino">Feminino</input>
                             </div>
+
 
 
                             <div class="form-row">
@@ -146,7 +161,7 @@
 
 
                               <div class="text-center" style="margin: 0 auto">
-                              <input type="submit" name="enviar" class="btn btn-danger mr-3 mt-2 mb-3" style="width:300px; height:50px; font-size:20px" value="Inscrever-se"></input>
+                              <input type="submit" name="enviar" class="btn btn-danger mr-3 mt-2 mb-3" style="font-size:20px" value="Inscrever-se"></input>
                               </div>
 
                             </div>

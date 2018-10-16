@@ -12,30 +12,30 @@
         <link rel='shortcut icon' href="images/brain_icon.gif" />
   </head>
   <body>
-    <div class='' style='background-color:rgb(255,255,255)'>
-    <div class='container'>
-    <nav class='navbar navbar-expand-lg navbar-light' style='background-color:rgb(255,255,255)'>
-    <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarTogglerDemo03' aria-controls='navbarTogglerDemo03' aria-expanded='false' aria-label='Toggle navigation'>
-    <span class='navbar-toggler-icon'></span>
-    </button>
-    <img src="images/human-brain-white -menor.jpg" alt="logo" style="width:60px">
-    <a class='navbar-brand text-info font-weight-bold' href='#'>Brain Games</a>
-    <div class='collapse navbar-collapse' id='navbarTogglerDemo03'>
-    <ul class='navbar-nav mr-auto mt-2 mt-lg-0'>
-    <li class='nav-item active'>
-    </li>
-    <li class='nav-item'>
-    </li>
-    <li class='nav-item'>
-    </li>
-    </ul>
-    <a href="inicial/criar_conta.php" class="btn btn-danger mr-3 mt-2" style="-webkit-text-stroke-width: 0px;">Comece Agora</a>
-    <a href="inicial/entrar.php" class="btn btn-light mt-2">Entrar</a>
-    </div>
-    </div>
-    </div>
-    </div>
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-light w-100 d-flex justify-content-around align-items-center row mx-0 px-1">
+        <div class="logo-box col-2 p-1">
+            <a class="nav-link p-0" href="index.php">
+                <img src="images/logo.jpg" alt="logo" class="img-fluid" style="width:100px;">
+            </a>
+        </div>
+
+        <div class="col-7 col-lg-5 p-1">
+            <a class='logo-text nav-link text-info font-weight-bold px-lg-0' href='index.php'>
+              Brain Games
+            </a>
+        </div>
+
+        <button class="navbar-toggler mr-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon top-menu-button"></span>
+        </button>
+
+        <div class="botoes-topo collapse navbar-collapse mx-3 mx-sm-5 mr-lg-2 mt-1 mt-sm-2 flex-column flex-md-row col-lg-4" id="navbarSupportedContent">
+            <a href="inicial/criar_conta.php" class="btn btn-danger btn-block my-1 mt-sm-2 mr-sm-3">Cadastre-se agora</a>
+            <a href="inicial/entrar.php" class="btn btn-light btn-block mt-sm-2 my-1">Entrar</a>
+        </div>
     </nav>
+</header>
   </div>
 
       <div class="bg-light">

@@ -84,7 +84,7 @@ if($verifica['email']==NULL){;}else{return header("location:../artigos/inicio_lo
 
 
       <p style="font-size:40px"> Email e Senha Senha não conferem! </p>
-     <a href="entrar.php" class="btn btn-danger mt-2">Retornar</a>
+     <a href="../inicial/entrar.php" class="btn btn-danger mt-2">Retornar</a>
 
 
       </div>
