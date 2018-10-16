@@ -107,7 +107,7 @@ if(isset($_POST['gratuito_desc']))
            ."<td>".$n[$i]['nome']."</td>"
            ."<td>".ucfirst($n[$i]['funcao'])."</td>"
            ."<td>".$gratuito."</td>"
-           ."<td> <div class='border text-center' style='height:50px;width:50px; margin-left:50px; overflow:hidden;';><img src='../".$n[$i]['src_perfil']."' style='height:50px'></img></div></td>
+           ."<td> <div class='border text-center' style='height:50px;width:50px; margin-left:50px; overflow:hidden;';><img src='../".$n[$i]['src_img']."' style='height:50px'></img></div></td>
            </tr>";
          }
          ?>

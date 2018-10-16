@@ -17,7 +17,7 @@ $njp = 6; //$njp significa número de jogos por página (preferencialmente multi
 ?>
 
     <title>Jogos <?php echo ucfirst($funcao); ?></title>
-        <link rel='shortcut icon' href="../images/brain_icon.gif" /> 
+        <link rel='shortcut icon' href="../images/brain_icon.gif" />
   </head>
   <body>
     <?php require('../include/nav.php'); ?>
@@ -100,7 +100,7 @@ $njp = 6; //$njp significa número de jogos por página (preferencialmente multi
                 <div class='border-bottom divh300' style='overflow:hidden; min-height:100px; max-height:300px'>
                 <style media='screen'>@media (min-width: 992px){.divh300{height:300px;}}</style>
                   <a href='../".$n[$i]['nome_arquivo']."'style='color:white'>
-                    <img src='../".$n[$i]['src_perfil']."' class='card-img-top p-3'></a> </div>
+                    <img src='../".$n[$i]['src_img']."' class='card-img-top p-3'></a> </div>
                 <div class='card-body'>".$n[$i]['descricao']."</div>
               </div>
             </div>".$array_fechamento[$i];
@@ -118,7 +118,7 @@ $njp = 6; //$njp significa número de jogos por página (preferencialmente multi
               <div id='div_img_".$n[$i]['funcao'].$n[$i]['id']."' class='border-bottom divh300 text-center' style='overflow:hidden; min-height:100px; max-height:300px; margin: 0 auto'>
               <style media='screen'>@media (min-width: 992px){.divh300{height:300px;}}</style>
               <a id='div_premium_".$n[$i]['funcao'].$n[$i]['id']."' href='../planos/planos.php' style='display:none;' class='btn btn-danger mr-3 mt-2' >Liberar Acesso Total</a>
-                  <img id='img_".$n[$i]['funcao'].$n[$i]['id']."' src='../".$n[$i]['src_perfil']."' class='card-img-top p-3; '>
+                  <img id='img_".$n[$i]['funcao'].$n[$i]['id']."' src='../".$n[$i]['src_img']."' class='card-img-top p-3; '>
                    </div>
               <div class='card-body'>".$n[$i]['descricao']."</div>
             </div>
@@ -146,7 +146,7 @@ $njp = 6; //$njp significa número de jogos por página (preferencialmente multi
 
         div_img_".$n[$i]['funcao'].$n[$i]['id'].".addEventListener('mouseout', function()
         {
-          img_".$n[$i]['funcao'].$n[$i]['id'].".src = '../".$n[$i]['src_perfil']."'
+          img_".$n[$i]['funcao'].$n[$i]['id'].".src = '../".$n[$i]['src_img']."'
           div_premium_".$n[$i]['funcao'].$n[$i]['id'].".style.display = 'none'
         })
 

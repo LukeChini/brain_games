@@ -49,7 +49,7 @@
 
       <div class="bg-light text-center" style="font-size:50px;">
     <p>Jogo em Construção</p>
-    <img src="<?php echo '../'.$n[0]['src_perfil']; ?>" style="width:50%; margin-bottom:30px;" alt="">
+    <img src="<?php echo '../'.$n[0]['src_img']; ?>" style="width:50%; margin-bottom:30px;" alt="">
   </div>
 
 

@@ -1,6 +1,6 @@
 <?php
 
-  $dsn = 'mysql:host=localhost;dbname=brain_games;charset=utf8mb4;port:3306';
+  $dsn = 'mysql:host=localhost;dbname=brain_games_db;charset=utf8mb4;port:3306';
 	$db_user = 'root';
 	$db_pass = '';
   //

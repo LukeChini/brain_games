@@ -53,10 +53,10 @@
   //  $sexo = $_POST['sexo'];
   //  $termos = $_POST['termos'];
 
-  
+
 
   //  if(str_word_count($user_name)<1){
-     
+
   //   return header("location:../inicial/criar_conta.php");}
 
 
@@ -147,7 +147,7 @@
             $insert = $conn->prepare("INSERT INTO `usuarios` (`username`, `email`, `senha`, `aniversario`, `sexo`) VALUES ('".$username."', '".$email."','".$pass."', '25/08/2001', '".$genre."')");
             $insert->execute();
            ?>
-         
+
           <p style="font-size:40px">Parabéns, <?php echo $username ?> seja muito bem vindo ao Brain Games! Sua conta foi criada com sucesso!</p>
           <a href="../inicial/entrar.php" class="btn btn-sucess mt-2">Clique aqui para entrar!</a>
            <?php }?>

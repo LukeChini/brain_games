@@ -46,7 +46,7 @@ include ('../include/conn.php');
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
-$verificação = $conn->prepare('SELECT * FROM usuarios WHERE email LIKE :email AND senha LIKE :senha');
+$verificação = $conn->prepare('SELECT * FROM usuarios WHERE email = :email AND senha = :senha');
 $verificação->bindParam(':email', $email, PDO::PARAM_STR);
 $verificação->bindParam(':senha', $senha, PDO::PARAM_STR);
 $verificação->execute();

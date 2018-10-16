@@ -105,7 +105,7 @@ $c = count($n);
                 </div>
                 <div id='divjogoMemoria1'class="border-bottom" style="overflow:hidden; height:300px">
 
-                  <img class="card-img-top p-3 text-center" src="<?php echo $n[ $_POST['id_jogo'] ]['src_perfil']; ?>"></img>
+                  <img class="card-img-top p-3 text-center" src="<?php echo '../'.$n[ $_POST['id_jogo'] ]['src_img']; ?>"></img>
                 </div>
                 <div class="card-body">
                   <p style="width:100%; height:50px;"><?php echo $n[ $_POST['id_jogo'] ]['descricao']; ?></p>
