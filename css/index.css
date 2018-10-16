@@ -1,0 +1,28 @@
+.principal{
+    background-image: url('../images/9443xadrez3.jpg');
+    background-size: cover;
+    min-height: 300px;
+}
+
+h2{
+    color: white;
+    text-shadow: -3px 2px 3px rgba(150, 150, 150, 0.9);
+}
+
+@media(min-width: 576px){
+    .principal{
+        min-height: 400px;
+    }
+}
+
+@media(min-width: 768px){
+    .principal{
+        min-height: 450px;
+    }
+}
+
+@media(min-width: 992px){
+    .principal{
+        min-height: 500px;
+    }
+}

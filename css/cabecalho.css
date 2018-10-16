@@ -1,0 +1,35 @@
+.top-menu-button{
+    font-size: .8rem;
+}
+
+nav .logo-text{
+    font-size: 1.3rem;
+}
+
+nav a img{
+    min-width: 60px;
+}
+
+@media(min-width:576px){
+    nav .logo-text{
+        font-size: 1.9rem;
+    }
+}
+
+@media(min-width:768px){
+    nav .logo-text{
+        font-size: 2rem;
+    }
+
+    .logo-box a img{
+        width: 80px;
+    }
+}
+
+@media(min-width:992px){
+    .logo-box a img{
+        width: 100px;
+        margin-left: 16px;
+        margin-top: 8px;
+    }
+}

@@ -26,7 +26,3 @@
   catch( PDOException $Exception ) {
       echo $Exception->getMessage();
   }
-
-
-
- ?>
