@@ -1811,12 +1811,28 @@
     <td class="coluna_invisivel"></td>
     <td> <input type="submit" name="reset" value="reset"></input></td>
   </table>
-<div class="box_parabens">
+<div class="box_parabens" style="display:inline-block; margin: 0 auto;">
   <h1><?php echo $parabens ?></h1>
 </div>
   </div>
   </form>
 </div>
+
+<div class="bg-ligth col-12 p-5" style="display:inline-block; margin: 0 auto;">
+<h4>
+  <p>Orientações:</p>
+  Usando todos os números de 5 a 16 apenas uma vez, forme um quadrado mágico,
+  onde a soma dos números que você insere nos quadrados serão os mesmos,
+  tanto na horizontal quanto na vertical, e em cada diagonal.
+  Neste caso, 34 é o número mágico.
+  <p> Os quadrados
+  <img src="../images/quadrado_marrom.png" style="height:25px;">
+  representam a soma dos números inseridos nas verticais e horizontais.</p>
+  <p> Os quadrados
+  <img src="../images/quadrado_marrom_claro.png" style="height:25px;">
+  representam a soma dos números inseridos nas diagonais.</p>
+</h4>
+</div></div>
 
 <div class="" style="margin-top:10px" >
 <?php require('../include/variaveis_php_echo.php'); echo $html_footer; ?>

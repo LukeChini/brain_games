@@ -57,7 +57,13 @@
                 </script>
 
                 <?php
-                if(!$_SESSION['src_perfil'])
+                $id = $_SESSION['id_logado'];
+                $src_perfil = $_SESSION['src_perfil'];
+                include ('../include/conn.php');
+                $verificação = $conn->query("SELECT * FROM usuarios WHERE id = '$id'");
+                $n = $verificação->fetchAll();
+
+                if(str_word_count($n[0]['src_perfil']) > 0 )
                 {
                   echo '
                   <div  class="col-lg-8 col-12 mt-3 ">

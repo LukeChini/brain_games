@@ -35,36 +35,11 @@
               <a href="excluir_jogos.php" type="button" class="btn btn-dark total mt-3 mb-3 font-weight-bold" style="width:200px">Excluir Jogos</a>
               </div>
 
-              <script type="text/javascript">
-                $(document).ready(function(){
-                  $('#ajax_form').submit(function(e){
-                    e.preventDefault();
 
-                    let dados = jQuery(this).serialize();
 
-                    $("[type=submit]",this).each(function(){
-                      dados += "&" + escape($(this).attr("name")) + "=" + escape($(this).val())
-                    })
 
-                    $.ajax({
-                      type:"POST",
-                      url:"processa.php",
-                      data: dados,
-                      success: function(data)
-                      {
-                        alert(data);
-                      }
-                    })
-                    return false;
-                  })
-                })
-              </script>
 
-              <form class="" id="ajax_form" enctype="multipart/form-data" action="tratar_carregar_imagem.php" method="post">
-
-              </form>
-
-        <form class="" enctype="multipart/form-data" action="tratar_inserir-jogos.php" method="post">
+        <form class="" enctype="multipart/form-data" action="../controller/tratar_inserir_jogos.php" method="post">
         <div class="col-12 col-sm-9 col-lg-10 bg-white border" style="margin: 0 auto;">
 
           <div class="bg-info" style="height:50px;">
@@ -92,22 +67,10 @@
                   <input required type="text" name="nome" class="card-header bg-info text-center font-weight-bold text-white" style="color:white; margin-left:-12px;" placeholder="Nome do Jogo"></input>
                 </div>
                 <div id='divjogoMemoria1'class="border-bottom" style="overflow:hidden; height:300px">
-                  <form enctype="multipart/form-data" action="perfil.php" method="post">
                         <input required name="arquivo_img" type="file" style="color:white;font-size:15px"></input>
-                        <input type="submit" name="enviar" value="Enviar"></input>
-                  </form>
-
-                  <?php
 
 
-                  if(isset($_POST['enviar']))
-                  {
-                    print_r($_FILES['imagem']);
-                    move_uploaded_file($_FILES['imagem']['tmp_name'], 'upload/'.$_FILES['imagem']['name']);
-                  }
 
-
-                   ?>
 
                   <br /><br/>
 

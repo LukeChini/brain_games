@@ -29,7 +29,7 @@
         </div>
 
 
-        <form class="" action="../controller/tratar_excluir-usuario.php" method="post">
+        <form class="" action="../controller/tratar_excluir_usuario.php" method="post">
 
 
 

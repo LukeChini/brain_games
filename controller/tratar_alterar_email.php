@@ -70,7 +70,7 @@ if($verifica['email']==NULL){
 
 
       <p style="font-size:40px"> Email já cadastrado no Brain Games! </p>
-     <a href="alterar-email.php" class="btn btn-danger mt-2">Retornar</a>
+     <a href="../usuario/alterar_email.php" class="btn btn-danger mt-2">Retornar</a>
 
 
       </div>

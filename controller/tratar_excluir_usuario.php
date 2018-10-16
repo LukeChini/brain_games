@@ -1,7 +1,7 @@
 <?php
 session_start();
 include ('../include/conn.php');
-if(!$_SESSION['admin']){header('location:inicio-logado.php');}
+if(!$_SESSION['admin']){header('location:../artigos/inicio_logado.php');}
 
   $id = $_SESSION['id_logado'];
 
@@ -9,12 +9,12 @@ if(!$_SESSION['admin']){header('location:inicio-logado.php');}
   $excluir_usuario = $conn->prepare("DELETE FROM usuarios WHERE id = '$id' ");
   $excluir_usuario->bindParam(':id', $id, PDO::PARAM_INT);
   $excluir_usuario->execute();}
-  else{ header("location:inicio-logado.php");}
+  else{ header("location:../artigos/inicio_logado.php");}
 
 
 
 
-   header("location:inicio.php");
+   header("location:../index.php");
 
 
 

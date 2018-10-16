@@ -61,7 +61,7 @@ $src_img_nome = 'upload/'.$_SESSION['id_logado'].'.'.$type_img;
 $src_perfil = NULL;
 $null = NULL;
 
-if($_FILES['imagem']['tmp_name'] != NULL){move_uploaded_file($_FILES['imagem']['tmp_name'], $src_img_nome);}
+if($_FILES['imagem']['tmp_name'] != NULL){move_uploaded_file($_FILES['imagem']['tmp_name'], '../'.$src_img_nome);}
 if($_FILES['imagem']['tmp_name'] != NULL){$src_perfil = $src_img_nome;}
 
 $_SESSION['username_logado'] = $username;

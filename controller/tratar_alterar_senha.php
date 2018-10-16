@@ -42,8 +42,8 @@
 <?php
 session_start();
 include ('../include/conn.php');
-$confirmar_senha = $_POST['confirmarsenha'];
-$senha = $_POST['senha'];
+$confirmar_senha = md5($_POST['confirmarsenha']);
+$senha = md5($_POST['senha']);
 $id = $_SESSION['id_logado'];
 
 

@@ -47,7 +47,6 @@
               <div class='pixels'>
               <script>
               //<![CDATA[
-
                 Eventd = (typeof(Eventd) === 'object') ? Eventd : {};
                 Eventd.disabled = true;
                 Eventd.clientName = '';
@@ -55,7 +54,6 @@
                 Eventd.controllerAction = "show";
                 var _leq = _leq || [];
                 _leq.push(['page_view']);
-
               //]]>
               </script>
       </div>

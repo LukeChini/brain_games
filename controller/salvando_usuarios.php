@@ -119,9 +119,21 @@
           $genre = $_POST['sexo'];
           $errors = false;
           $error = "";
+
+           $dia_nascimento = $_POST['dia_nascimento'];
+           $mes_nascimento = $_POST['mes_nascimento'];
+           $ano_nascimento = $_POST['ano_nascimento'];
+
+           $aniversario = $ano_nascimento.'-'.$mes_nascimento.'-'.$dia_nascimento;
+           $validar_data = checkdate($mes_nascimento,$dia_nascimento,$ano_nascimento);
+
           if(str_word_count($username) < 1){
             $errors = true;
             $error = "Seu nome de usuario é invalido";
+          }else{
+            if(!$validar_data){
+              $errors = true;
+              $error = "A data inserida é inválida.";
           }else{
             if($password !== $password_confirmation){
               $errors = true;
@@ -133,6 +145,7 @@
               }
             }
           }
+        }
           $stm = $conn->query("SELECT * FROM usuarios WHERE `email`='".$email."'");
           if($r = $stm->fetch()){
             $errors = true;
@@ -144,7 +157,7 @@
             <a href="../inicial/criar_conta.php" class="btn btn-sucess mt-2">Clique aqui para voltar!</a>
          <?php }else{
            $pass = md5($password);
-            $insert = $conn->prepare("INSERT INTO `usuarios` (`username`, `email`, `senha`, `aniversario`, `sexo`) VALUES ('".$username."', '".$email."','".$pass."', '25/08/2001', '".$genre."')");
+            $insert = $conn->prepare("INSERT INTO `usuarios` (`username`, `email`, `senha`, `aniversario`, `sexo`) VALUES ('".$username."', '".$email."','".$pass."', '$aniversario', '".$genre."')");
             $insert->execute();
            ?>
 

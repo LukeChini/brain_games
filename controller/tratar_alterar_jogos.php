@@ -31,7 +31,7 @@ if(isset($_POST['alterar_jogo'])){
   $alteração_nome->execute();
 
   if($src_img['name'] != NULL){
-  $alteração_src = $conn->prepare('UPDATE jogos SET src_perfil = :src_img_nome WHERE id = :id');
+  $alteração_src = $conn->prepare('UPDATE jogos SET src_img = :src_img_nome WHERE id = :id');
   $alteração_src->bindParam(':src_img_nome', $src_img_nome, PDO::PARAM_STR);
   $alteração_src->bindParam(':id', $id, PDO::PARAM_INT);
   $alteração_src->execute();}
@@ -52,8 +52,8 @@ if(isset($_POST['alterar_jogo'])){
   $alteração_arquivo_php->bindParam(':id', $id, PDO::PARAM_INT);
   $alteração_arquivo_php->execute();}}
 
-  if($src_img['name'] != NULL){move_uploaded_file($_FILES['arquivo_img']['tmp_name'], 'jogos_img/'.$nome_sem_espaco.'.'.$type_img);}
-  if($nome_arquivo['name'] != NULL){move_uploaded_file($_FILES['arquivo_php']['tmp_name'], 'play/'.$nome_sem_espaco.".php");}
+  if($src_img['name'] != NULL){move_uploaded_file($_FILES['arquivo_img']['tmp_name'], '../jogos_img/'.$nome_sem_espaco.'.'.$type_img);}
+  if($nome_arquivo['name'] != NULL){move_uploaded_file($_FILES['arquivo_php']['tmp_name'], '../play/'.$nome_sem_espaco.".php");}
 
 
 

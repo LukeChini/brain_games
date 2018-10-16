@@ -10,7 +10,8 @@
      <!-- Bootstrap CSS -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-     <title>Hello, world!</title>
+     <title>Brain Games - Erro Entrar</title>
+          <link rel='shortcut icon' href="../images/brain_icon.gif" />
    </head>
    <body>
      <div class='' style='background-color:rgb(255,255,255)'>
@@ -19,8 +20,8 @@
      <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarTogglerDemo03' aria-controls='navbarTogglerDemo03' aria-expanded='false' aria-label='Toggle navigation'>
      <span class='navbar-toggler-icon'></span>
      </button>
-     <img src="images/human-brain-white -menor.jpg" alt="logo" style="width:60px">
-     <a class='navbar-brand text-info font-weight-bold' href='#'>Brain Games</a>
+     <img src="../images/human-brain-white -menor.jpg" alt="logo" style="width:60px">
+     <a class='navbar-brand text-info font-weight-bold' href='../index.php'>Brain Games</a>
      <div class='collapse navbar-collapse' id='navbarTogglerDemo03'>
      <ul class='navbar-nav mr-auto mt-2 mt-lg-0'>
      <li class='nav-item active'>
@@ -44,9 +45,11 @@ session_start();
 include ('../include/conn.php');
 
 $email = $_POST['email'];
-$senha = $_POST['senha'];
+$senha = md5($_POST['senha']);
 
-$verificação = $conn->prepare('SELECT * FROM usuarios WHERE email = :email AND senha = :senha');
+
+
+$verificação = $conn->prepare("SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'");
 $verificação->bindParam(':email', $email, PDO::PARAM_STR);
 $verificação->bindParam(':senha', $senha, PDO::PARAM_STR);
 $verificação->execute();
@@ -61,6 +64,7 @@ $_SESSION['plano_logado'] = $verifica['plano'];
 $_SESSION['id_logado'] = $verifica['id'];
 $_SESSION['src_perfil'] = $verifica['src_perfil'];
 $_SESSION['admin'] = $verifica['admin'];
+
 
 $today = date("Y-m-d"); $_SESSION['premium_logado'] = false;
 if($verifica['validade_premium']>$today || $verifica['plano'] == 'vitalicio'){$_SESSION['premium_logado'] = true;}
@@ -83,7 +87,7 @@ if($verifica['email']==NULL){;}else{return header("location:../artigos/inicio_lo
     <div class="bg-light text-center">
 
 
-      <p style="font-size:40px"> Email e Senha Senha não conferem! </p>
+      <p style="font-size:40px"> Email e Senha não conferem! </p>
      <a href="../inicial/entrar.php" class="btn btn-danger mt-2">Retornar</a>
 
 
