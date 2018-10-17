@@ -56,13 +56,13 @@ $html_nav = "
 
 $html_footer =
 "<footer class='container mt-3'>
-<ul class='nav border-top border-bottom col-12'>
-<li class='nav-item col-12 col-lg-2 text-center'><a class='nav-link text-secondary' href='../footer/sobre_nos.php'>Sobre Nós</a></li>
-<li class='nav-item col-12 col-lg-2 text-center'><a class='nav-link text-secondary' href='../footer/contato.php'>Contato</a></li>
-<li class='nav-item col-12 col-lg-3 text-center'><a class='nav-link text-secondary' href='../footer/termos_de_servico.php'>Termos de Serviço</a></li>
-<li class='nav-item col-12 col-lg-3 text-center'><a class='nav-link text-secondary' href='../footer/politica_de_privacidade.php'>Política de Privacidade</a></li>
-<li class='nav-item col-12 col-lg-2 text-center'><a class='nav-link text-secondary' href='../footer/ajuda.php'>Ajuda</a></li>
-</ul>
+    <ul class='nav col-12'>
+        <li class='nav-item col-12 col-lg-2 text-center'><a class='nav-link text-secondary' href='../footer/sobre_nos.php'>Sobre Nós</a></li>
+        <li class='nav-item col-12 col-lg-2 text-center'><a class='nav-link text-secondary' href='../footer/contato.php'>Contato</a></li>
+        <li class='nav-item col-12 col-lg-3 text-center'><a class='nav-link text-secondary' href='../footer/termos_de_servico.php'>Termos de Serviço</a></li>
+        <li class='nav-item col-12 col-lg-3 text-center'><a class='nav-link text-secondary' href='../footer/politica_de_privacidade.php'>Política de Privacidade</a></li>
+        <li class='nav-item col-12 col-lg-2 text-center'><a class='nav-link text-secondary' href='../footer/ajuda.php'>Ajuda</a></li>
+    </ul>
 </footer>";
 
 
