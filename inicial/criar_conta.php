@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <title>Brain Games - Criar Conta</title>
@@ -19,9 +20,10 @@
         <h1 class="h2">Criar conta gratuita</h1>
       </div>
       
-      <section class="col-12 col-lg-6 bg-info font-weight-bold text-white px-0 py-4">
+      <section class="col-12 col-lg-6 bg-info font-weight-bold text-white px-0 py-4 text-center">
+        <a class="text-white nav-brand btn" href="../index.php"><h4 class="text-center h1">Brain Games</h4></a>
         <img src="../images/brain-areas-cards-fundo-info.png" class="col-12 mb-5 mx-auto">
-        <h3 class="ml-3">Crie uma conta para:</h3>
+        <h3 class="ml-3 text-left">Crie uma conta para:</h3>
         <p class="ml-3 text-left"> - Experimentar 2 execícios cerebrais</p>
         <p class="ml-3 text-left"> - Garantir um alto desempenho no trabalho</p>
         <p class="ml-3 text-left"> - Reduzir a perda de atividades dos neurônios</p>
