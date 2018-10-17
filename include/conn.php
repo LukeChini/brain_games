@@ -1,8 +1,8 @@
 <?php
 
-  $dsn = 'mysql:host=localhost;dbname=brain_games_db;charset=utf8mb4;port:8889';
-	$db_user = 'root';
-	$db_pass = 'root';
+ //  $dsn = 'mysql:host=localhost;dbname=brain_games_db;charset=utf8mb4;port:8889';
+	// $db_user = 'root';
+	// $db_pass = 'root';
   //
   // try {
   //     $conn = new PDO($dsn, $db_user, $db_pass);
@@ -14,9 +14,9 @@
   // }
 
 
-//   $dsn = 'mysql:host=localhost;dbname=brain_games_db;charset=utf8mb4;port:3306';
-//   $db_user = 'root';
-//   $db_pass = '';
+  $dsn = 'mysql:host=localhost;dbname=brain_games_db;charset=utf8mb4;port:3306';
+  $db_user = 'root';
+  $db_pass = '';
 
   try {
       $conn = new PDO($dsn, $db_user, $db_pass);

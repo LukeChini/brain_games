@@ -60,7 +60,7 @@
             </div>
 
             <div class="text-center">
-                <a class="my-4 d-block" href="#">Esqueci minha senha</a>
+                <a class="my-4 d-block" href="esqueci_minha_senha.php">Esqueci minha senha</a>
                 <button type="submit" class="mb-4 btn btn-primary col-8">Entrar</button>
             </div>
             </form>
