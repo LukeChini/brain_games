@@ -40,7 +40,7 @@
         <section class="container">
             <h1 class="text-center p-4">Acesso para membro</h1>
 
-            <form class="col-md-8 col-lg-6 mx-auto" action="conexoes/tratar_entrar.php" method="post">
+            <form class="col-md-8 col-lg-6 mx-auto" action="../controller/tratar_entrar.php" method="post">
             <div class="form-group mb-4">
                 <div class="input-group mb-2">
                 <div class="input-group-prepend">

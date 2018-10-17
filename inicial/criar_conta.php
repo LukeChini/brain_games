@@ -30,7 +30,7 @@
       </section>
         
       <section class="col-12 col-lg-6">
-        <form action="salvando_usuarios.php" method="post">
+        <form action="../controller/salvando_usuarios.php" method="post">
           <div class="input-group mt-2 mb-3">
             <div class="input-group-prepend">
               <div class="input-group-text"><i class="fas fa-user"></i></div>
