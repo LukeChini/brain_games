@@ -51,11 +51,20 @@
                     </div>
 
                   ';}
-                  else
-                  {
+                  if($_SESSION['sexo_logado'] == 'feminino'){
                     echo
                     '<div class="p-3 text-center" style="font-size:25px; margin: 0 auto">
                     <p>Você é uma Usuaria Premium '.ucfirst($_SESSION['plano_logado']).'</p>
+                    <div style="width:100px; height:100px;margin: 0 auto"><img src="../images/premium.png" style="width:100px;"></div>
+                    </div>
+
+                  ';
+                  }
+
+                  if($_SESSION['sexo_logado'] == 'outro'){
+                    echo
+                    '<div class="p-3 text-center" style="font-size:25px; margin: 0 auto">
+                    <p>Você é uma Usuario(a) Premium '.ucfirst($_SESSION['plano_logado']).'</p>
                     <div style="width:100px; height:100px;margin: 0 auto"><img src="../images/premium.png" style="width:100px;"></div>
                     </div>
 

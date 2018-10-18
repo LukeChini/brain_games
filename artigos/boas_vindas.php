@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>Jogos Memoria</title>
-        <link rel='shortcut icon' href="../images/brain_icon.gif" /> 
+        <link rel='shortcut icon' href="../images/brain_icon.gif" />
   </head>
   <body>
 <?php require('../include/nav.php'); ?>
@@ -28,7 +28,13 @@
 
 
             <div class="col-12 mb-4 font-weight-bold text-center" style="font-size:25px">
-              <h1><?php if($_SESSION['sexo_logado'] == 'masculino'){echo 'Bem Vindo!';}else{echo 'Bem Vinda';} ?></h1>
+              <h1>
+              <?php
+              if($_SESSION['sexo_logado'] == 'masculino'){echo 'Bem Vindo!';}
+              if($_SESSION['sexo_logado'] == 'feminino'){echo 'Bem Vinda!';}
+              if($_SESSION['sexo_logado'] == 'outro'){echo 'Bem Vindo(a)!';} 
+              ?>
+            </h1>
 
               <?php        if($_SESSION['plano_logado'])
                         {
