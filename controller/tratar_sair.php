@@ -50,6 +50,9 @@ $_SESSION['validade_premium_logado'] = NULL;
 $_SESSION['id_logado'] = NULL;
 $_SESSION['src_perfil'] = NULL;
 
+$_SESSION['index_logar'] = true;
+$_SESSION['usuario_logado'] = false;
+
 header("location:../index.php");
 
 

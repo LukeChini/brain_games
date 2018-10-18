@@ -47,6 +47,8 @@ include ('../include/conn.php');
 $email = $_POST['email'];
 $senha = md5($_POST['senha']);
 
+echo $senha;
+
 
 
 $verificação = $conn->prepare("SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'");
@@ -65,6 +67,9 @@ $_SESSION['id_logado'] = $verifica['id'];
 $_SESSION['src_perfil'] = $verifica['src_perfil'];
 $_SESSION['admin'] = $verifica['admin'];
 
+$_SESSION['index_logar'] = false;
+$_SESSION['usuario_logado'] = true;
+
 
 $today = date("Y-m-d"); $_SESSION['premium_logado'] = false;
 if($verifica['validade_premium']>$today || $verifica['plano'] == 'vitalicio'){$_SESSION['premium_logado'] = true;}
@@ -75,6 +80,7 @@ if($verifica['validade_premium']>$today || $verifica['plano'] == 'vitalicio'){$_
 if($_SESSION['src_perfil'] == NULL && $_SESSION['admin']){$_SESSION['src_perfil']='images/perfil_admin.png';}
 elseif($_SESSION['src_perfil'] == NULL && $_SESSION['sexo_logado'] == 'masculino'){$_SESSION['src_perfil']='images/perfil_masculino.jpg';}
 elseif($_SESSION['src_perfil'] == NULL && $_SESSION['sexo_logado'] == 'feminino' ){$_SESSION['src_perfil']='images/perfil_feminino.jpg'; }
+elseif($_SESSION['src_perfil'] == NULL && $_SESSION['sexo_logado'] == 'outro' ){$_SESSION['src_perfil']='images/perfil_outro.jpg'; }
 
 if($verifica['email']==NULL){;}else{return header("location:../artigos/inicio_logado.php");}
 

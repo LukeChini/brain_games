@@ -50,6 +50,8 @@ $sexo = $_POST['sexo'];
 $id = $_SESSION['id_logado'];
 $img_perfil = $_FILES['imagem'];
 
+$_SESSION['sexo_logado'] = $_POST['sexo'];
+
 $aniversario = $ano.'-'.$mes.'-'.$dia;
 
 
@@ -75,6 +77,9 @@ if($_FILES['imagem']['tmp_name'] != NULL){$_SESSION['src_perfil'] = $src_perfil;
 if($src_perfil == NULL && $_SESSION['admin']){$_SESSION['src_perfil']='images/perfil_admin.png';}
 elseif($src_perfil == NULL && $_SESSION['sexo_logado'] == 'masculino'){$_SESSION['src_perfil']='images/perfil_masculino.jpg';}
 elseif($src_perfil == NULL && $_SESSION['sexo_logado'] == 'feminino' ){$_SESSION['src_perfil']='images/perfil_feminino.jpg'; }
+elseif($src_perfil == NULL && $_SESSION['sexo_logado'] == 'outro' ){$_SESSION['src_perfil']='images/perfil_outro.jpg'; }
+
+
 
 if(isset($_POST['excluir_foto']))
 {
@@ -87,6 +92,7 @@ if(isset($_POST['excluir_foto']))
   if($_SESSION['admin']){$_SESSION['src_perfil']='images/perfil_admin.png';}
   elseif($_SESSION['sexo_logado'] == 'masculino'){$_SESSION['src_perfil']='images/perfil_masculino.jpg';}
   elseif($_SESSION['sexo_logado'] == 'feminino' ){$_SESSION['src_perfil']='images/perfil_feminino.jpg'; }
+  elseif($src_perfil == NULL && $_SESSION['sexo_logado'] == 'outro' ){$_SESSION['src_perfil']='images/perfil_outro.jpg'; }
 
 
 }

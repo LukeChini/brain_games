@@ -161,11 +161,21 @@ $mes_06="";if('06' === $mes ){$mes_06="selected";} $mes_12="";if('12' === $mes )
                                 </div>
                                 </div>
 
-                                <?php  $sexo = $_SESSION['sexo_logado'];  $m='';if($sexo === 'masculino'){$m='checked';} $f='';if($sexo === 'feminino'){$f='checked';}?>
-                                <div class="form-check form-check-inline p-3">
-                                  <a href="#" class="btn btn-light border-0 " style="background-color:white" >Sexo:</a>
-                                  <input class="form-check-input " type="radio" name="sexo" value="masculino" <?php echo $m; ?>>Masculino</input>
-                                  <input class="form-check-input ml-2" type="radio" name="sexo" value="feminino" <?php echo $f; ?>>Feminino</input>
+                                <?php
+
+                                $sexo = $_SESSION['sexo_logado'];
+                                $m='';if($sexo == 'masculino'){$m='selected';}
+                                $f='';if($sexo == 'feminino'){$f='selected';}
+                                $o='';if($sexo == 'outro'){$o='selected';}
+                                ?>
+                                <div class="form-group">
+                                  <select required class="form-control dorm-control-lg" name="sexo">
+                                    <option disabled>Sexo</option>
+                                    <option <?php echo $f?> value="feminino">Feminino</option>
+                                    <option <?php echo $m?> value="masculino">Masculino</option>
+                                    <option <?php echo $o?> value="outro">Outro</option>
+                                  </select>
+
                                 </div>
                                 <br />
 

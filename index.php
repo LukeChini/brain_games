@@ -12,6 +12,16 @@
         <link rel='shortcut icon' href="images/brain_icon.gif" />
   </head>
   <body>
+    <?php
+    session_start();
+    $_SESSION['index_logar'] = true;
+    $_SESSION['usuario_logado'] = false;
+
+
+
+
+     ?>
+
     <header>
     <nav class="navbar navbar-expand-lg navbar-light w-100 d-flex justify-content-around align-items-center row mx-0 px-1">
         <div class="logo-box col-2 p-1">
