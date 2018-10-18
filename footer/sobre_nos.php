@@ -58,13 +58,12 @@
   <section class='informação' id='about'>
 
   <p class=" font-weight-bold" style="font-size:30px">Sobre Nós</p>
-    <p>Na Brain Games, acreditamos em ajudar as pessoas a manterem o cérebro desafiado. Por isso, criamos uma ferramenta online simples que permite que qualquer um treine suas habilidades cognitivas essenciais. De neurociência a artes visuais, combinamos diversas disciplinas para criar um programa de treinamento cerebral envolvente, colocando pesquisa cognitiva ao alcance de todos. Através do
-      <a href="https://www.lumosity.com/hcp">Projeto Cognição Humana</a>, colaboramos com mais de 100 pesquisadores líderes, médicos e professores de instituições ao redor do mundo.
+    <p align="justify">Na Brain Games, acreditamos em ajudar as pessoas a manterem o cérebro desafiado. Por isso, criamos uma ferramenta online simples que permite que qualquer um treine suas habilidades cognitivas essenciais. De neurociência a artes visuais, combinamos diversas disciplinas para criar um programa de treinamento cerebral envolvente, colocando pesquisa cognitiva ao alcance de todos. Através do
+    Projeto Cognição Humana, colaboramos com mais de 100 pesquisadores líderes, médicos e professores de instituições ao redor do mundo.
     </P></section>
 
-  <section class='row' id='team'>
 
-    <p class=" font-weight-bold" style="font-size:30px">Nossa Equipe</p>
+    <p align="justify" class=" font-weight-bold" style="font-size:30px">Nossa Equipe</p>
       <p>Nossa equipe da Brain Games é composta por um time de alunos da Digital House co curso de FullStack que criou ferramentas digitais que ajudam usuários em diversas áreas, como treino cognitivo, sono e atenção plena (mindfulness).
       </p></section>
 
