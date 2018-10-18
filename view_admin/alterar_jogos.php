@@ -107,7 +107,7 @@ $c = count($n);
             <div class="col-12 col-lg-4" >
               <div class="card">
                 <div class="card-header bg-info text-center font-weight-bold text-white">
-                  <input required type="text" name="nome" value="<?php echo $n[ $_POST['id_jogo'] ]['nome']; ?>"class="card-header bg-info text-center font-weight-bold text-white" style="color:white; margin-left:-12px;" placeholder="Nome do Jogo"></input>
+                  <p class="card-header bg-info text-center font-weight-bold text-white" style="color:white; margin-left:-12px;"> <?php echo $n[ $_POST['id_jogo'] ]['nome']; ?> </p>
                 </div>
                 <div id='divjogoMemoria1'class="border-bottom" style="overflow:hidden; height:300px">
                   <input name="arquivo_img" type="file" style="color:white;font-size:15px"></input>
